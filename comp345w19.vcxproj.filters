@@ -16,6 +16,12 @@
     <Filter Include="Source Files\Map">
       <UniqueIdentifier>{a4627e25-a429-45ae-8a0a-9a0a46daa04d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Player">
+      <UniqueIdentifier>{4eae104f-5dc9-4a87-acfe-e2a913213b53}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Piece">
+      <UniqueIdentifier>{bddb3137-f3d3-4a19-b1e7-2c904e453347}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\hello.cpp">
@@ -29,6 +35,18 @@
     </ClCompile>
     <ClCompile Include="MapLoader.cpp">
       <Filter>Source Files\Map</Filter>
+    </ClCompile>
+    <ClCompile Include="House.cpp">
+      <Filter>Source Files\Piece</Filter>
+    </ClCompile>
+    <ClCompile Include="Money.cpp">
+      <Filter>Source Files\Piece</Filter>
+    </ClCompile>
+    <ClCompile Include="Resource.cpp">
+      <Filter>Source Files\Piece</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>Source Files\Player</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
