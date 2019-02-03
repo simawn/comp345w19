@@ -1,14 +1,26 @@
 #include "Resources.h"
-
-Resource::Coal::Coal(int v) {
+using namespace Resources;
+Coal::Coal(int v) {
 	value = v;
 }
-Resource::Gas::Gas(int v) {
+int Coal::getValue() {
+	return value;
+}
+Gas::Gas(int v) {
 	value = v;
 }
-Resource::Uranium::Uranium(int v) {
+int Gas::getValue() {
+	return value;
+}
+Uranium::Uranium(int v) {
 	value = v;
 }
-Resource::Garbage::Garbage(int v) {
+int Uranium::getValue() {
+	return value;
+}
+Garbage::Garbage(int v) {
 	value = v;
+}
+int Garbage::getValue() {
+	return value;
 }

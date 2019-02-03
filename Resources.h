@@ -1,12 +1,11 @@
 #pragma once
 #ifndef RES_H
-class Resource
-{
-public:
+namespace Resources{
 	class Coal
 	{
 	public:
 		Coal(int v);
+		int getValue();
 	private:
 		int value;
 	};
@@ -14,7 +13,7 @@ public:
 	{
 	public:
 		Uranium(int v);
-
+		int getValue();
 	private:
 		int value;
 	};
@@ -22,7 +21,7 @@ public:
 	{
 	public:
 		Garbage(int v);
-
+		int getValue();
 	private:
 		int value;
 	};
@@ -30,10 +29,10 @@ public:
 	{
 	public:
 		Gas(int v);
-
+		int getValue();
 	private:
 		int value;
 	};
-};
+}
 
 #endif // !RES_H
