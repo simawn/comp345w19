@@ -19,18 +19,17 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="House.cpp" />
     <ClCompile Include="Map.cpp" />
     <ClCompile Include="MapCustomizer.cpp" />
     <ClCompile Include="MapLoader.cpp" />
-    <ClCompile Include="Money.cpp" />
     <ClCompile Include="Player.cpp" />
-    <ClCompile Include="Resource.cpp" />
     <ClCompile Include="src\hello.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="House.h" />
     <ClInclude Include="Map.h" />
     <ClInclude Include="MapLoader.h" />
+    <ClInclude Include="Money.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
