@@ -1,15 +1,13 @@
-#include "House.h"
-#include "Money.h"
-class Player
-{
+#include "Player.h"
 
-private:
-	House* house;
-	Money* money;
-public:
-	Player(char* c){
+	Player::Player(const char* c){
 		house = new House(c);
 		money = new Money();
 	}
+	int Player::getPlayersMoney() {
+		return money->getMoney();
+	}
+	const char* Player::getPlayerColour() {
+		return house->getColour();
+	}
 
-};

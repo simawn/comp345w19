@@ -4,22 +4,13 @@
 class House
 {
 private:
-	char * colour;
+	const char * colour;
 	int amount;
 public:
-	House(char *c) {
-		colour = c;
-		amount = 22;
-	}
-	int placeHouse() {
-		amount = amount - 1;
-		return amount;
-	}
-	int getHouseAmount() {
-		return amount;
-	}
-	void setHouseAmount(int a) {
-		amount = a;
-	}
+	House(const char *c);
+	int placeHouse();
+	int getHouseAmount();
+	void setHouseAmount(int a);
+	const char * getColour();
 };
 #endif // HOUSE_H

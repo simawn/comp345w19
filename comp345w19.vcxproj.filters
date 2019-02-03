@@ -19,8 +19,8 @@
     <Filter Include="Source Files\Player">
       <UniqueIdentifier>{4eae104f-5dc9-4a87-acfe-e2a913213b53}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\Piece">
-      <UniqueIdentifier>{bddb3137-f3d3-4a19-b1e7-2c904e453347}</UniqueIdentifier>
+    <Filter Include="Source Files\Items">
+      <UniqueIdentifier>{feaf4a7b-a82f-41d6-a30f-818d9eb66d34}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -39,6 +39,12 @@
     <ClCompile Include="Player.cpp">
       <Filter>Source Files\Player</Filter>
     </ClCompile>
+    <ClCompile Include="House.cpp">
+      <Filter>Source Files\Items</Filter>
+    </ClCompile>
+    <ClCompile Include="Money.cpp">
+      <Filter>Source Files\Items</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Map.h">
@@ -51,6 +57,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Money.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

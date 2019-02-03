@@ -3,34 +3,13 @@
 class Money
 {
 public:
-	Money() {
-		amount = 50;
-	}
-	int getMoney() {
-		return amount;
-	}
-	void setMoney(int a) {
-		if (a < 0) {
-			//error cannot do
-		}
-		else
-		{
-			amount = a;
-		}
-	}
+	Money();
+	int getMoney();
+	void setMoney(int a);
 	/*
 	* Return true if it is succesful, return false if it is not sucessful
 	*/
-	bool removeMoney(int a) {
-		if (amount - a < 0) {
-			return false;
-		}
-		else {
-			amount = amount - a;
-			return true;
-		}
-	}
-
+	bool removeMoney(int a);
 
 private:
 	int amount;
