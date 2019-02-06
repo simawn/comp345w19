@@ -11,5 +11,8 @@ public:
 	Player(const char* c);
 	int getPlayersMoney();
 	const char* getPlayerColour();
+	void pay(int amount);
+	void destroy();
+
 };
 #endif // !PLAYER_H

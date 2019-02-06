@@ -7,7 +7,7 @@ int Money::getMoney() {
 }
 void Money::setMoney(int a) {
 	if (a < 0) {
-		//error cannot do
+		throw "Cannot have negative money";
 	}
 	else
 	{
