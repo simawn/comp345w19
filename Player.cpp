@@ -19,6 +19,14 @@
 			std::cout << "Cannot go into the negatives, try another purchase" << std::endl;
 		}
 	}
+
+	Resource * Player::getResources() {
+		return resource;
+	}
+	bool Player::buyResources(Resource * res) {
+		resource = res;
+		return true;
+	}
 	void Player::destroy() {
 		delete money;
 		delete house;

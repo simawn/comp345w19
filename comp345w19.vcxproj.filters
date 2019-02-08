@@ -45,7 +45,7 @@
     <ClCompile Include="Money.cpp">
       <Filter>Source Files\Items</Filter>
     </ClCompile>
-    <ClCompile Include="Resources.cpp">
+    <ClCompile Include="PowerPlant.cpp">
       <Filter>Source Files\Items</Filter>
     </ClCompile>
   </ItemGroup>
@@ -66,6 +66,21 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Resources.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PowerPlant.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Coal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Uranium.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Gas.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Garbage.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

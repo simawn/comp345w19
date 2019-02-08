@@ -1,38 +1,11 @@
 #pragma once
 #ifndef RES_H
-namespace Resources{
-	class Coal
-	{
-	public:
-		Coal(int v);
-		int getValue();
-	private:
-		int value;
-	};
-	class Uranium
-	{
-	public:
-		Uranium(int v);
-		int getValue();
-	private:
-		int value;
-	};
-	class Garbage
-	{
-	public:
-		Garbage(int v);
-		int getValue();
-	private:
-		int value;
-	};
-	class Gas
-	{
-	public:
-		Gas(int v);
-		int getValue();
-	private:
-		int value;
-	};
-}
-
+class Resource {
+protected:
+	int value;
+public:
+	Resource(int v) { value = v; }
+	int getValue() { return value; }
+	virtual const char* getName() = 0;
+};
 #endif // !RES_H

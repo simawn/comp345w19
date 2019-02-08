@@ -25,16 +25,21 @@
     <ClCompile Include="MapLoader.cpp" />
     <ClCompile Include="Money.cpp" />
     <ClCompile Include="Player.cpp" />
-    <ClCompile Include="Resources.cpp" />
+    <ClCompile Include="PowerPlant.cpp" />
     <ClCompile Include="src\hello.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Coal.h" />
+    <ClInclude Include="Garbage.h" />
     <ClInclude Include="House.h" />
     <ClInclude Include="Map.h" />
     <ClInclude Include="MapLoader.h" />
     <ClInclude Include="Money.h" />
+    <ClInclude Include="Gas.h" />
     <ClInclude Include="Player.h" />
+    <ClInclude Include="PowerPlant.h" />
     <ClInclude Include="Resources.h" />
+    <ClInclude Include="Uranium.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
