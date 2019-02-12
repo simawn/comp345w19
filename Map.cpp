@@ -1,43 +1,80 @@
+/*
+Very likely that I'll rewrite the entire code to be more simple.
+I feel like the things I'm using are out of the scope of what we are supposed to learn.
+Lots of Googling involved...
+*/
+
 #include "Map.h"
-#include <vector>
-#include <list>
 #include <iostream>
 #include <string>
+#include <unordered_set> //.find: avg O(1), worst O(n)
 
-struct Node;
-struct Edge;
+template <typename T> struct Node;
+template <typename T> struct Edge;
 
-struct Node {
-	std::string content;
-	std::list<Edge> edgeList;
+//Custom Hash and Comparison for unordered_set
+//We need that since we are passing user defined objects
+namespace std {
+	//Custom hash for Node
+	template<typename T> struct hash<Node<T>> {
+		std::size_t operator()(const Node<T> &obj) const {
+			return std::hash<int>()(obj.content);
+		}
+	};
 
-	Node(std::string content) : content(content) {};
+	//Custom hash for Edge
+	template<typename T> struct hash<Edge<T>> {
+		std::size_t operator()(const Edge<T> &obj) const {
+			return std::hash<int>()(obj.to);
+		}
+	};
 
-	void addEdge(Edge edge) {
-		edgeList.push_back(edge);
+
+};
+
+
+template<typename T> struct Node {
+	T content;
+	std::unordered_set<Edge<T>> edgeList;
+
+	Node(T content) : content(content) {};
+
+	void addEdge(Edge<T> edge) {
+		edgeList.insert(edge);
 	}
 };
 
-struct Edge {
-	Node to;
+template<typename T> struct Edge {
+	Node<T> to;
 	int weight;
 
-	Edge(Node to, int weight) : to(to), weight(weight) {};
+	Edge(Node<T> to, int weight) : to(to), weight(weight) {};
 };
 
-class Map {
+template<typename T> class Map {
 public:
 	Map() {};
 
-	void addNode(std::string city) {
-		Node node(city);
-		nodeList.push_back(node);
+	void addNode(T content) {
+		Node<T> node(content);
+		nodeList.insert(node);
 	};
+
+	void displayAllNodes() {
+		for (auto iterator = nodeList.begin; iterator != nodeList.end; iterator++) {
+			std::cout << *iterator << std::endl;
+		}
+	}
+
 private:
-	std::list<Node> nodeList;
+	std::unordered_set<Node<T>> nodeList;
 };
 
 int main() {
-	Map map;
-	map.addNode("s");
+	Map<int> map; //Create a map of strings
+	map.addNode(9);
+	map.addNode(7);
+	map.addNode(0);
+	map.addNode(34);
+	map.addNode(87);
 }
