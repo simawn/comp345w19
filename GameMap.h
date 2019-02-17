@@ -1,27 +1,12 @@
 #pragma once
 #include "City.h"
-#include <vector>
+#include <set>
 
-class Graph {
-	std::vector<Node> adjList;
+class GameMap {
+	std::set<City*> adjList; //Using sets to avoid duplicate cities
+
 public:
-	Graph();
-	void addNode(Node);
-	void displayAllNodes();
-};
-
-struct Node {
-	std::vector<Edge> edges;
-	City content;
-
-	Node(City);
-	void addEdge(Edge);
-	void removeEdge(Edge);
-};
-
-struct Edge {
-	Node* toNode;
-	int weight;
-
-	Edge(Node, int);
+	GameMap();
+	void addCity(City*);
+	void displayAllCities();
 };

@@ -1,14 +1,14 @@
 #include "GameMap.h"
+#include <iostream>
 
-Graph::Graph() {}
+GameMap::GameMap(){}
 
-void Graph::addNode(Node node) {
-	adjList.push_back(node);
+void GameMap::addCity(City* city) {
+	adjList.insert(city);
 }
 
-void Graph::displayAllNodes() {
-
+void GameMap::displayAllCities() {
+	for (auto it = adjList.begin(); it != adjList.end(); it++) {
+		std::cout << "ID: " << (*it)->getCityId() << ", City Name: " << (*it)->getName() << std::endl;
+	}
 }
-
-Node::Node(City city) : content(city) {}
-

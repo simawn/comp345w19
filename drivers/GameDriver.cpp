@@ -4,7 +4,7 @@
 #include "../PowerPlant.h"
 using namespace std;
 
-int main() {
+int main0000() {
 	//set up
 	cout << "Player testing" << endl;
 	Player * p = new Player("RED");

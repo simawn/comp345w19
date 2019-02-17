@@ -57,6 +57,9 @@
     <ClCompile Include="GameMap.cpp">
       <Filter>Source Files\Map</Filter>
     </ClCompile>
+    <ClCompile Include="drivers\GameMapDriver.cpp">
+      <Filter>Source Files\Drivers</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="House.h">
@@ -89,10 +92,10 @@
     <ClInclude Include="Uranium.h">
       <Filter>Header Files\Resources</Filter>
     </ClInclude>
-    <ClInclude Include="GameMap.h">
+    <ClInclude Include="GameMapLoader.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="GameMapLoader.h">
+    <ClInclude Include="GameMap.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
