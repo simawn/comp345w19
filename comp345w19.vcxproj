@@ -21,7 +21,9 @@
   <ItemGroup>
     <ClCompile Include="City.cpp" />
     <ClCompile Include="drivers\GameDriver.cpp" />
-    <ClCompile Include="GameMap.cpp" />
+    <ClCompile Include="GameMap.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="House.cpp" />
     <ClCompile Include="GameMapCustomizer.cpp" />
     <ClCompile Include="GameMapLoader.cpp" />
