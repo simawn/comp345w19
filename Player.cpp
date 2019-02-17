@@ -1,6 +1,8 @@
 #include "Player.h"
 #include <iostream>
 
+	Player::Player(){} //Added to prevent City.cpp errors
+
 	Player::Player(const char* c){
 		house = new House(c);
 		money = new Money();
