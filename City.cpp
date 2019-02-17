@@ -1,13 +1,31 @@
 #include "Player.h"
 #include "City.h"
 #include <string>
+#include <iostream>
 
-City::City() : name("not set") {}
+int City::cityIdGen = 0; //static
 
-City::City(std::string name) : name(name) {}
+//Upon ctor call, assign unique custom ID to city
+City::City() : 
+	name("City name not set"),
+	cityId(cityIdGen) {
+	cityIdGen++;
+}
 
-City::City(std::string name, Player player) : name(name), player(player) {}
+City::City(std::string name) : 
+	name(name), 
+	cityId(cityIdGen) {
+	cityIdGen++;
+}
 
+City::City(std::string name, Player player) : 
+	name(name), 
+	player(player), 
+	cityId(cityIdGen) {
+	cityIdGen++;
+}
+
+//getters/setters
 void City::setName(std::string name){
 	this->name = name;
 }
@@ -23,3 +41,21 @@ void City::setPlayer(Player player) {
 Player City::getPlayer() {
 	return this->player;
 }
+
+int City::getCityId() {
+	return this->cityId;
+}
+
+//neighbours
+void City::addNeighbour(City* city, int weight) {
+	neighbours[city] = weight;
+}
+
+void City::displayAllNeighbours() {
+	std::cout << "========" << std::endl;
+	std::cout << "Neighbours for " << this->getName() << " (" << this->getCityId() << "):" << std::endl;
+	for (auto it = neighbours.begin(); it != neighbours.end(); it++) {
+		std::cout << "To: " << it->first->getName() << " (" << it->first->getCityId() << ") Cost: " << it->second << std::endl;
+	}
+}
+
