@@ -1,6 +1,7 @@
 #include "Player.h"
 #include "City.h"
 #include <string>
+#include <iostream>
 
 int City::cityIdGen = 0; //static
 
@@ -45,20 +46,16 @@ int City::getCityId() {
 	return this->cityId;
 }
 
-/*
-//override hash/equal
-size_t OverrideHash::operator()(const char *addr) const {
-	return std::hash<std::string>()(addr);
-}
-
-bool OverrideEqual::operator()(const char *addr1, const char *addr2) const {
-	return std::string(addr1) == std::string(addr2);
-}
-*/
-
 //neighbours
 void City::addNeighbour(City* city, int weight) {
 	neighbours[city] = weight;
 }
 
+void City::displayAllNeighbours() {
+	std::cout << "========" << std::endl;
+	std::cout << "Neighbours for " << this->getName() << " (" << this->getCityId() << "):" << std::endl;
+	for (auto it = neighbours.begin(); it != neighbours.end(); it++) {
+		std::cout << "To: " << it->first->getName() << " (" << it->first->getCityId() << ") Cost: " << it->second << std::endl;
+	}
+}
 

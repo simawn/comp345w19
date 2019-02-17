@@ -3,19 +3,6 @@
 #include "Player.h"
 #include <unordered_map>
 
-/*
-//Overrides needed for custom keys in map
-class OverrideHash {
-public:
-	size_t operator() (const char*) const;
-};
-
-class OverrideEqual {
-public:
-	bool operator() (const char*, const char*) const;
-};
-*/
-
 class City {
 	static int cityIdGen;
 	int cityId;
@@ -40,5 +27,6 @@ public:
 
 	//addNeighbours
 	void addNeighbour(City*, int);
+	void displayAllNeighbours();
 };
 
