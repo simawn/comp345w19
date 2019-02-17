@@ -1,5 +1,5 @@
-#pragma once
 #ifndef MONEY_H
+#define MONEY_H
 class Money
 {
 public:
@@ -14,5 +14,5 @@ public:
 private:
 	int amount;
 };
-#define MONEY_H
+
 #endif // MONEY_H

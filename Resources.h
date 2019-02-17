@@ -1,5 +1,5 @@
-#pragma once
 #ifndef RES_H
+#define RES_H
 class Resource {
 protected:
 	int value;

@@ -1,4 +1,3 @@
-#pragma once
 #ifndef PLAYER_H
 #define PLAYER_H
 #include "Money.h"
@@ -10,6 +9,7 @@ private:
 	House* house;
 	Resource* resource;
 public:
+	Player(); //Added to prevent City.cpp errors
 	Player(const char* c);
 	int getPlayersMoney();
 	const char* getPlayerColour();
