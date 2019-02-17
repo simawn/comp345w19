@@ -1,4 +1,3 @@
-#pragma once
 #ifndef GAS_H
 #define GAS_H
 #include "Resources.h"

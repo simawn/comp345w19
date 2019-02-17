@@ -19,21 +19,23 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="City.cpp" />
+    <ClCompile Include="drivers\GameDriver.cpp" />
+    <ClCompile Include="GameMap.cpp" />
     <ClCompile Include="House.cpp" />
-    <ClCompile Include="Map.cpp" />
-    <ClCompile Include="MapCustomizer.cpp" />
-    <ClCompile Include="MapLoader.cpp" />
+    <ClCompile Include="GameMapCustomizer.cpp" />
+    <ClCompile Include="GameMapLoader.cpp" />
     <ClCompile Include="Money.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="PowerPlant.cpp" />
-    <ClCompile Include="src\hello.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="City.h" />
     <ClInclude Include="Coal.h" />
     <ClInclude Include="Garbage.h" />
     <ClInclude Include="House.h" />
-    <ClInclude Include="Map.h" />
-    <ClInclude Include="MapLoader.h" />
+    <ClInclude Include="GameMap.h" />
+    <ClInclude Include="GameMapLoader.h" />
     <ClInclude Include="Money.h" />
     <ClInclude Include="Gas.h" />
     <ClInclude Include="Player.h" />

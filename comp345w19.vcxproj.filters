@@ -22,20 +22,14 @@
     <Filter Include="Source Files\Items">
       <UniqueIdentifier>{feaf4a7b-a82f-41d6-a30f-818d9eb66d34}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Resources">
+      <UniqueIdentifier>{0104c7e4-2ed6-401e-a3e2-dec0a1dbc96e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Drivers">
+      <UniqueIdentifier>{88423476-b927-4696-baa1-4c5f685e6055}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\hello.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Map.cpp">
-      <Filter>Source Files\Map</Filter>
-    </ClCompile>
-    <ClCompile Include="MapCustomizer.cpp">
-      <Filter>Source Files\Map</Filter>
-    </ClCompile>
-    <ClCompile Include="MapLoader.cpp">
-      <Filter>Source Files\Map</Filter>
-    </ClCompile>
     <ClCompile Include="Player.cpp">
       <Filter>Source Files\Player</Filter>
     </ClCompile>
@@ -48,14 +42,23 @@
     <ClCompile Include="PowerPlant.cpp">
       <Filter>Source Files\Items</Filter>
     </ClCompile>
+    <ClCompile Include="City.cpp">
+      <Filter>Source Files\Map</Filter>
+    </ClCompile>
+    <ClCompile Include="GameMapCustomizer.cpp">
+      <Filter>Source Files\Map</Filter>
+    </ClCompile>
+    <ClCompile Include="GameMapLoader.cpp">
+      <Filter>Source Files\Map</Filter>
+    </ClCompile>
+    <ClCompile Include="drivers\GameDriver.cpp">
+      <Filter>Source Files\Drivers</Filter>
+    </ClCompile>
+    <ClCompile Include="GameMap.cpp">
+      <Filter>Source Files\Map</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Map.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="MapLoader.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="House.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -65,22 +68,31 @@
     <ClInclude Include="Player.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Resources.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="PowerPlant.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="City.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="Coal.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Uranium.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Gas.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Resources</Filter>
     </ClInclude>
     <ClInclude Include="Garbage.h">
+      <Filter>Header Files\Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="Gas.h">
+      <Filter>Header Files\Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="Resources.h">
+      <Filter>Header Files\Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="Uranium.h">
+      <Filter>Header Files\Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="GameMap.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GameMapLoader.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -1,4 +1,3 @@
-#pragma once
 #ifndef URANIUM_H
 #define URANIUM_H
 #include "Resources.h"

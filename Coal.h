@@ -1,4 +1,3 @@
-#pragma once
 #ifndef COAL_H
 #define COAL_H
 #include"Resources.h"

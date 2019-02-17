@@ -1,4 +1,3 @@
-#pragma once
 #ifndef POWERPLANT_H
 #define POWERPLANT_H
 #include "Resources.h"
