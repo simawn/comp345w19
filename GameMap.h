@@ -1,9 +1,10 @@
 #pragma once
 #include "City.h"
-#include <set>
+#include <unordered_map>
+#include <string>
 
 class GameMap {
-	std::set<City*> adjList; //Using sets to avoid duplicate cities
+	std::unordered_map<std::string, City*> adjList;
 
 public:
 	GameMap();

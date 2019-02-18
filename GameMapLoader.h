@@ -1,3 +1,6 @@
-#ifndef MAPLOADER_H
-#define MAPLOADER_H
-#endif // !MAPLOADER_H
+#pragma once
+#include <iostream>
+#include <string>
+
+void openMap(std::string);
+void createMap();

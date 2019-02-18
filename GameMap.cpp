@@ -4,11 +4,12 @@
 GameMap::GameMap(){}
 
 void GameMap::addCity(City* city) {
-	adjList.insert(city);
+	adjList[city->getName()] = city;
+	std::cout << "Added!" << std::endl;
 }
 
 void GameMap::displayAllCities() {
 	for (auto it = adjList.begin(); it != adjList.end(); it++) {
-		std::cout << "ID: " << (*it)->getCityId() << ", City Name: " << (*it)->getName() << std::endl;
+		std::cout << "City Name: " << it->first << " (ID: " << it->second->getCityId() << ")" <<std::endl;
 	}
 }

@@ -25,6 +25,7 @@
     <ClCompile Include="GameMap.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="GameMapLoaderDriver.cpp" />
     <ClCompile Include="House.cpp" />
     <ClCompile Include="GameMapCustomizer.cpp" />
     <ClCompile Include="GameMapLoader.cpp" />

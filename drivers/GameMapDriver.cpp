@@ -2,12 +2,12 @@
 #include "../City.h"
 #include <iostream>
 
-int main() {
+int main1234() {
 
 	//Create cities
-	City city1;
-	City city2;
-	City city3;
+	City city1("Toronto");
+	City city2("Montreal");
+	City city3("Vancouver");
 
 	std::cout << city1.getCityId() << std::endl;
 	std::cout << city2.getCityId() << std::endl;
@@ -21,7 +21,9 @@ int main() {
 	gameMap.addCity(&city2);
 	gameMap.addCity(&city3);
 
+	std::cout << "Display all cities: " << std::endl;
 	gameMap.displayAllCities();
+	std::cout << "Display all cities END" << std::endl;
 
 	//Add neighbours + weight
 	/*
@@ -40,4 +42,5 @@ int main() {
 	city3.displayAllNeighbours();
 
 	std::cin.get();
+	return 0;
 }
