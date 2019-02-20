@@ -3,6 +3,7 @@
 	"type": "object",
 	"required": ["Region", "RegionEdges"],
 	"properties":{
+	
 		"Region": [{
 			"type": "array",
 			"items" : [{"type":"array"},{"type":"array"}],
@@ -56,7 +57,7 @@
 		
 		"RegionEdges":[{
 			"type": "array",
-			"minItems":9,
+			"minItems":6,
 			"Edge":{
 				"type": "object",
 				"required": ["NodeA", "NodeB", "edgePrice"],
