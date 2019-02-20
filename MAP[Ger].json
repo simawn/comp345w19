@@ -19,7 +19,7 @@ Map={
 					{"NodeA":{"Hamburg"},"NodeB":{"Bremen"},"price":11},
 					{"NodeA":{"Cuxhaven"},"NodeB":{"Bremen"},"price":8},
 					{"NodeA":{"Bremen"},"NodeB":{"Wilhelmshaven"},"price":11},
-					{"NodeA":{"Bremen},"NodeB":{"Hannover"},"price":10}
+					{"NodeA":{"Bremen"},"NodeB":{"Hannover"},"price":10}
 				]
 			}
 			
