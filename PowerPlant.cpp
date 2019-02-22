@@ -1,5 +1,5 @@
 #include "PowerPlant.h"
-
+PowerPlant::PowerPlant(){}
 PowerPlant::PowerPlant(int c, int rc, int hv, Resource * rt) {
 	cost = c;
 	resource_cost = rc;

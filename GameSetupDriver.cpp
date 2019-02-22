@@ -42,7 +42,7 @@ const char * setPlayerColours(int pn) {
 			return "Green";
 			break;
 	default:
-		
+		return "error";
 		break;
 	}
 }

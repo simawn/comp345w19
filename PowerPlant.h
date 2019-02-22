@@ -9,6 +9,7 @@ private:
 	Resource * resource_type;
 public:
 	PowerPlant(int c, int rc, int hv, Resource * rt);
+	PowerPlant();
 	int getCost();
 	int getResourceCost();
 	int getHouseValue();
