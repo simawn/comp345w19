@@ -7,6 +7,7 @@
 #include "Uranium.h"
 using namespace std;
 
+/*USE THIS CLASS, CREATE A METHOD AND RUN TASKS FOR TESTING FOR EACH*/
 
 //DONE
 void testPlayer(){
