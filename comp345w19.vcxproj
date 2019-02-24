@@ -33,6 +33,7 @@
     <ClCompile Include="Money.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="PowerPlant.cpp" />
+    <ClCompile Include="Tester.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="City.h" />

@@ -3,11 +3,17 @@
 #include "Money.h"
 #include "House.h"
 #include "Resources.h"
+#include "City.h"
+#include "PowerPlant.h"
+#include <vector>
+
 class Player{
 private:
+	std::vector<Resource *> resources;
+	std::vector<City *> cities;
+	std::vector<PowerPlant *> powerplants;
 	Money* money;
 	House* house;
-	Resource* resource;
 public:
 	Player(); //Added to prevent City.cpp errors
 	Player(const char* c);
@@ -15,8 +21,14 @@ public:
 	const char* getPlayerColour();
 	void pay(int amount);
 	void destroy();
-	Resource * getResources();
+	Resource * getResourceByType(std::string);
+	std::vector<Resource *> getResources();
 	bool buyResources(Resource * res);
+	Resource * placeResource(std::string res);
+	std::vector<City *> getCities();
+	bool buyCity(City * city);
+	std::vector<PowerPlant *> getPowerPlants();
+	bool buyPowerPlant(PowerPlant *pp);
 
 };
 #endif // !PLAYER_H

@@ -5,7 +5,7 @@ class Gas : public Resource
 {
 public:
 	Gas(int v) :Resource(v) {};
-	const char* getName() { return "Gas"; }
+	std::string getName() { return "Gas"; }
 
 };
 #endif // !GAS_H

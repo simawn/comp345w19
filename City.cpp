@@ -18,12 +18,13 @@ City::City(std::string name) :
 	cityIdGen++;
 }
 
-City::City(std::string name, Player player) : 
-	name(name), 
-	player(player), 
-	cityId(cityIdGen) {
-	cityIdGen++;
-}
+//City::City(std::string name, Player player) : 
+//	name(name), 
+//	player(player), 
+//	cityId(cityIdGen) {
+//	cityIdGen++;
+//}
+
 
 //getters/setters
 void City::setName(std::string name){
@@ -34,13 +35,17 @@ std::string City::getName() {
 	return this->name;
 }
 
-void City::setPlayer(Player player) {
-	this->player = player;
+int City::getValue() {
+	return cost;
 }
 
-Player City::getPlayer() {
-	return this->player;
-}
+//void City::setPlayer(Player player) {
+//	this->player = player;
+//}
+//
+//Player City::getPlayer() {
+//	return this->player;
+//}
 
 int City::getCityId() {
 	return this->cityId;
