@@ -1,0 +1,183 @@
+Map={
+		"Region": [
+		
+			{//Teal		
+				"NODES":[
+					{"name":"Flensburg"},
+					{"name":"Kiel"},
+					{"name":"Hamburg"},
+					{"name":"Cuxhaven"},
+					{"name":"Wilhelmshaven"},
+					{"name":"Bremen"},
+					{"name":"Hannover"}
+				],
+				"EDGES":[
+					{"NodeA":{"Flensburg"},"NodeB":{"Kiel"},"price":4},
+					{"NodeA":{"Kiel"},"NodeB":{"Hamburg"},"price":8},
+					{"NodeA":{"Hamburg"},"NodeB":{"Hannover"},"price":17},
+					{"NodeA":{"Hamburg"},"NodeB":{"Cuxhaven"},"price":11},
+					{"NodeA":{"Hamburg"},"NodeB":{"Bremen"},"price":11},
+					{"NodeA":{"Cuxhaven"},"NodeB":{"Bremen"},"price":8},
+					{"NodeA":{"Bremen"},"NodeB":{"Wilhelmshaven"},"price":11},
+					{"NodeA":{"Bremen"},"NodeB":{"Hannover"},"price":10}
+				]
+			}
+			
+			{//Brown		
+				"NODES":[
+					{"name":"Lubek"},
+					{"name":"Schwerin"},
+					{"name":"Rostock"},
+					{"name":"Torgelow"},
+					{"name":"Berlin"},
+					{"name":"Frankfurt-O"},
+					{"name":"Magdeburg"},
+				],
+				"EDGES":[
+					{"NodeA":{"Lubek"},"NodeB":{"Schwerin"},"price":6},
+					{"NodeA":{"Schwerin"},"NodeB":{"Rostock"},"price":6},
+					{"NodeA":{"Schwerin"},"NodeB":{"Torgelow"},"price":19},
+					{"NodeA":{"Schwerin"},"NodeB":{"Berlin"},"price":18},
+					{"NodeA":{"Schwerin"},"NodeB":{"Magdeburg"},"price":16},
+					{"NodeA":{"Rostock"},"NodeB":{"Torgelow"},"price":19},
+					{"NodeA":{"Torgelow"},"NodeB":{"Berlin"},"price":15},
+					{"NodeA":{"Berlin"},"NodeB":{"Frankfurt-O"},"price":6},
+					{"NodeA":{"Berlin"},"NodeB":{"Magdeburg"},"price":10}
+				]
+			}
+			
+			{//Red		
+				"NODES":[
+					{"name":"Osnabruk"},
+					{"name":"Munster"},
+					{"name":"Essen"},
+					{"name":"Duisburg"},
+					{"name":"Dortmund"},
+					{"name":"Kassel"},
+					{"name":"Dussledorf"}
+				],
+				"EDGES":[
+					{"NodeA":{"Osnabruk"},"NodeB":{"Munster"},"price":7},
+					{"NodeA":{"Munster"},"NodeB":{"Essen"},"price":6},
+					{"NodeA":{"Munster"},"NodeB":{"Dortmund"},"price":2},
+					{"NodeA":{"Essen"},"NodeB":{"Dortmund"},"price":4},
+					{"NodeA":{"Essen"},"NodeB":{"Dussledorf"},"price":2},
+					{"NodeA":{"Essen"},"NodeB":{"Duisburg"},"price":0},
+					{"NodeA":{"Dortmund"},"NodeB":{"Kassel"},"price":18},
+					{"NodeA":{"Osnabruk"},"NodeB":{"Kassel"},"price":20}
+				]
+			}
+			
+			{//Yellow		
+				"NODES":[
+					{"name":"Halle"},
+					{"name":"Leipzig"},
+					{"name":"Dresden"},
+					{"name":"Erfurt"},
+					{"name":"Fulda"},
+					{"name":"Wurzburg"},
+					{"name":"Nurnberg"}
+				],
+				"EDGES":[
+					{"NodeA":{"Halle"},"NodeB":{"Leipzig"},"price":0},
+					{"NodeA":{"Halle"},"NodeB":{"Erfurt"},"price":6},
+					{"NodeA":{"Leipzig"},"NodeB":{"Dresden"},"price":13},
+					{"NodeA":{"Dresden"},"NodeB":{"Erfurt"},"price":19},
+					{"NodeA":{"Erfurt"},"NodeB":{"Fulda"},"price":13},
+					{"NodeA":{"Erfurt"},"NodeB":{"Nurnberg"},"price":21},
+					{"NodeA":{"Fulda"},"NodeB":{"Wurzburg"},"price":11},
+					{"NodeA":{"Wurzburg"},"NodeB":{"Nurnberg"},"price":8}
+				]
+			}
+			
+			{//Blue		
+				"NODES":[
+					{"name":"Koln"},
+					{"name":"Aachen"},
+					{"name":"Frankfurt-M"},
+					{"name":"Wiesbaden"},
+					{"name":"Trier"},
+					{"name":"Saarbruken"},
+					{"name":"Mannheim"}
+				],
+				"EDGES":[
+					{"NodeA":{"Koln"},"NodeB":{"Aachen"},"price":7},
+					{"NodeA":{"Koln"},"NodeB":{"Wiesbaden"},"price":21},
+					{"NodeA":{"Koln"},"NodeB":{"Trier"},"price":20},
+					{"NodeA":{"Aachen"},"NodeB":{"Trier"},"price":19},
+					{"NodeA":{"Frankfurt-M"},"NodeB":{"Wiesbaden"},"price":0},
+					{"NodeA":{"Wiesbaden"},"NodeB":{"Trier"},"price":18},
+					{"NodeA":{"Wiesbaden"},"NodeB":{"Saarbruken"},"price":10},
+					{"NodeA":{"Wiesbaden"},"NodeB":{"Mannheim"},"price":11},
+					{"NodeA":{"Trier"},"NodeB":{"Saarbruken"},"price":11},
+					{"NodeA":{"Saarbruken"},"NodeB":{"Mannheim"},"price":11}
+				]
+			}
+			
+			{//Purple		
+				"NODES":[
+					{"name":"Stuttgart"},
+					{"name":"Regensburg"},
+					{"name":"Freiburg"},
+					{"name":"Konstanz"},
+					{"name":"Augsburg"},
+					{"name":"Munchen"},
+					{"name":"Passau"}
+				],
+				"EDGES":[
+					{"NodeA":{"Stuttgart"},"NodeB":{"Freiburg"},"price":16},
+					{"NodeA":{"Stuttgart"},"NodeB":{"Konstanz"},"price":16},
+					{"NodeA":{"Stuttgart"},"NodeB":{"Augsburg"},"price":15},
+					{"NodeA":{"Freiburg"},"NodeB":{"Konstanz"},"price":14},
+					{"NodeA":{"Konstanz"},"NodeB":{"Augsburg"},"price":17},
+					{"NodeA":{"Augsburg"},"NodeB":{"Regensburg"},"price":13},
+					{"NodeA":{"Augsburg"},"NodeB":{"Munchen"},"price":6},
+					{"NodeA":{"Regensburg"},"NodeB":{"Munchen"},"price":10},
+					{"NodeA":{"Regensburg"},"NodeB":{"Passau"},"price":14},
+					{"NodeA":{"Munchen"},"NodeB":{"Passau"},"price":14}
+				]
+			}			
+		],
+		
+		"RegionEdges":[
+			{"NodeA":{"Kiel"},"NodeB":{"Lubek"},"price":4},
+			{"NodeA":{"Hamburg"},"NodeB":{"Lubek"},"price":6},
+			{"NodeA":{"Hamburg"},"NodeB":{"Schwerin"},"price":8},
+			{"NodeA":{"Hannover"},"NodeB":{"Schwerin"},"price":19},
+			{"NodeA":{"Hannover"},"NodeB":{"Magdeburg"},"price":15},
+			
+			{"NodeA":{"Wilhelmshaven"},"NodeB":{"Osnabruk"},"price":14},
+			{"NodeA":{"Bremen"},"NodeB":{"Osnabruk"},"price":11},
+			{"NodeA":{"Hannover"},"NodeB":{"Osnabruk"},"price":16},
+			{"NodeA":{"Hannover"},"NodeB":{"Kassel"},"price":15},
+			
+			{"NodeA":{"Hannover"},"NodeB":{"Erfurt"},"price":19},
+			
+			{"NodeA":{"Magdeburg"},"NodeB":{"Halle"},"price":11},
+			{"NodeA":{"Berlin"},"NodeB":{"Halle"},"price":17},
+			{"NodeA":{"Frankfurt-O"},"NodeB":{"Leipzig"},"price":21},
+			{"NodeA":{"Frankfurt-O"},"NodeB":{"Dresden"},"price":16},
+			
+			{"NodeA":{"Kassel"},"NodeB":{"Erfurt"},"price":15},
+			{"NodeA":{"Kassel"},"NodeB":{"Fulda"},"price":8},
+			
+			{"NodeA":{"Dussledorf"},"NodeB":{"Aachen"},"price":9},
+			{"NodeA":{"Dussledorf"},"NodeB":{"Koln"},"price":4},
+			{"NodeA":{"Dortmund"},"NodeB":{"Koln"},"price":10},
+			{"NodeA":{"Dortmund"},"NodeB":{"Frankfurt-M"},"price":20},
+			{"NodeA":{"Kassel"},"NodeB":{"Frankfurt-M"},"price":13},
+			
+			{"NodeA":{"Fulda"},"NodeB":{"Frankfurt-M"},"price":8},
+			{"NodeA":{"Wurzburg"},"NodeB":{"Frankfurt-M"},"price":13},
+			{"NodeA":{"Wurzburg"},"NodeB":{"Mannheim"},"price":10},
+			
+			{"NodeA":{"Mannheim"},"NodeB":{"Stuttgart"},"price":6},
+			{"NodeA":{"Saarbruken"},"NodeB":{"Stuttgart"},"price":17},
+			
+			{"NodeA":{"Wurzburg"},"NodeB":{"Stuttgart"},"price":12},
+			{"NodeA":{"Wurzburg"},"NodeB":{"Augsburg"},"price":19},
+			{"NodeA":{"Nurnberg"},"NodeB":{"Augsburg"},"price":18},
+			{"NodeA":{"Nurnberg"},"NodeB":{"Regensburg"},"price":12}
+		]
+	}
+}
