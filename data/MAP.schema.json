@@ -1,0 +1,80 @@
+{
+	"title": "Map",
+	"type": "object",
+	"required": ["Region", "RegionEdges"],
+	"properties":{
+	
+		"Region": [{
+			"type": "array",
+			"items" : [{"type":"array"},{"type":"array"}],
+			"required": ["NODES", "EDGES"],
+			"minItems": 3,
+			"maxItems": 6,
+			"items":{
+				
+				"NODES":[{
+					"type":"array",
+					"items" : [{"type":"object"}],
+					"minItems": 7,
+					"maxItems": 7,
+					
+					"Node":{
+						"type": "object",
+						"required": ["name"],
+						"description": "Node for Cities",
+						"properties":{
+							"name":{
+								"type": "string"
+							}
+						}
+					}	
+				}],
+				
+				"EDGES":[{
+					"type": "array",
+					"items" : [{"type":"object"}],
+					"minItems": 8,
+					"Edge":{
+						"type": "object",
+						"required": ["NodeA, NodeB, edgePrice"],
+						"properties":{
+							"NodeA":{
+								"type":"object"
+							},
+							"NodeB":{
+								"type":"object"
+							},
+							"edgePrice": {
+								"type": "number",
+								"minimum": 0
+							}
+						}
+					}
+				}]
+				
+			}
+		}],
+		
+		"RegionEdges":[{
+			"type": "array",
+			"minItems":6,
+			"Edge":{
+				"type": "object",
+				"required": ["NodeA", "NodeB", "edgePrice"],
+				"description": "Linked Edges that connect two cities of differing regions",
+				"properties":{
+					"NodeA":{
+						"type":"object"
+					},
+					"NodeB":{
+						"type":"object"
+					},
+					"edgePrice": {
+						"type": "number",
+						"minimum": 0
+					}
+				}
+			}
+		}]
+	}
+}
