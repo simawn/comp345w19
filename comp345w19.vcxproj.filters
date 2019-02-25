@@ -61,6 +61,13 @@
       <Filter>Source Files\Drivers</Filter>
     </ClCompile>
     <ClCompile Include="GameMapLoaderDriver.cpp">
+    <ClCompile Include="GameSetupDriver.cpp">
+      <Filter>Source Files\Drivers</Filter>
+    </ClCompile>
+    <ClCompile Include="MarketPlaceDriver.cpp">
+      <Filter>Source Files\Drivers</Filter>
+    </ClCompile>
+    <ClCompile Include="Tester.cpp">
       <Filter>Source Files\Drivers</Filter>
     </ClCompile>
   </ItemGroup>

@@ -5,6 +5,6 @@ class Uranium : public Resource
 {
 public:
 	Uranium(int v) :Resource(v) {};
-	const char* getName() { return "Uranium"; }
+	std::string getName() { return "Uranium"; }
 };
 #endif // !URANIUM_H
