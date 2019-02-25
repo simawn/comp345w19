@@ -1,6 +1,7 @@
 #pragma once
 #include <iostream>
 #include <string>
+#include <nlohmann/json.hpp>
 
 void openMap(std::string);
-void createMap();
+void processMap(nlohmann::json);

@@ -4,18 +4,24 @@
 #include <iostream>
 #include <fstream>
 #include <string>
-#include <nlohmann/json.hpp>
+#include <nlohmann/json.hpp> //Used to process .json files
 
 using json = nlohmann::json;
 
 void openMap(std::string path) {
-	std::ifstream file(path);
-	json jsonMap;
-	file >> jsonMap; //jsonMap will be 'null' if .json is not valid
-	std::cout << jsonMap << std::endl << std::endl;
-	std::cout << jsonMap["1"]["Boston"] << std::endl; //test
+	try { //We want try/catch for json library
+		std::ifstream file(path);
+		json jsonMap;
+		file >> jsonMap;
+		processMap(jsonMap);
+		file.close();
+	} catch (std::exception &e) {
+		std::cerr << "Invalid .json file : " << e.what() << std::endl;
+	}
 }
 
-void createMap() {
-
+void processMap(json jsonMap) {
+	std::cout << jsonMap << std::endl;
+	//Create cities
+	//Add neighbours connections
 }
