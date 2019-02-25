@@ -49,6 +49,7 @@ int City::getCityId() {
 //neighbours
 void City::addNeighbour(City* city, int weight) {
 	neighbours[city] = weight;
+	std::cout << this->getName() << " to " << city->getName() << " for " << weight << " added." << std::endl;
 }
 
 void City::displayAllNeighbours() {
@@ -57,5 +58,9 @@ void City::displayAllNeighbours() {
 	for (auto it = neighbours.begin(); it != neighbours.end(); it++) {
 		std::cout << "To: " << it->first->getName() << " (" << it->first->getCityId() << ") Cost: " << it->second << std::endl;
 	}
+	std::cout << "========" << std::endl;
 }
 
+std::unordered_map<City*, int> City::getNeighbours() {
+	return neighbours;
+}

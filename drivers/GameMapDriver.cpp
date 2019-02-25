@@ -2,16 +2,19 @@
 #include "../City.h"
 #include <iostream>
 
-int main1234() {
+int main() {
 
 	//Create cities
 	City city1("Toronto");
 	City city2("Montreal");
 	City city3("Vancouver");
+	//City city4("Calgary"); //Invalid city (alone)
 
+	/*
 	std::cout << city1.getCityId() << std::endl;
 	std::cout << city2.getCityId() << std::endl;
 	std::cout << city3.getCityId() << std::endl;
+	*/
 
 	//Create game map
 	GameMap gameMap;
@@ -20,10 +23,11 @@ int main1234() {
 	gameMap.addCity(&city1);
 	gameMap.addCity(&city2);
 	gameMap.addCity(&city3);
+	//gameMap.addCity(&city4);
 
 	std::cout << "Display all cities: " << std::endl;
 	gameMap.displayAllCities();
-	std::cout << "Display all cities END" << std::endl;
+	std::cout << std::endl << std::endl;
 
 	//Add neighbours + weight
 	/*
@@ -40,6 +44,8 @@ int main1234() {
 	city1.displayAllNeighbours();
 	city2.displayAllNeighbours();
 	city3.displayAllNeighbours();
+
+	gameMap.checkMapValidity() ? std::cout << "Game map is VALID" << std::endl : std::cout << "Game map is INVALID" << std::endl;
 
 	std::cin.get();
 	return 0;

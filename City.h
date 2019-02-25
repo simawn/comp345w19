@@ -28,5 +28,6 @@ public:
 	//addNeighbours
 	void addNeighbour(City*, int);
 	void displayAllNeighbours();
+	std::unordered_map<City*, int> getNeighbours();
 };
 
