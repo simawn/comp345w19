@@ -1,5 +1,5 @@
 #include <iostream>
-#include "Player.h"
+#include "../Player.h"
 using namespace std;
 /*To get the amount of players that will be playing*/
 int getPlayerCount() {

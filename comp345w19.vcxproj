@@ -22,19 +22,19 @@
     <ClCompile Include="City.cpp" />
     <ClCompile Include="drivers\GameDriver.cpp" />
     <ClCompile Include="drivers\GameMapDriver.cpp" />
+    <ClCompile Include="drivers\GameMapLoaderDriver.cpp" />
+    <ClCompile Include="drivers\GameSetupDriver.cpp" />
+    <ClCompile Include="drivers\MarketPlaceDriver.cpp" />
+    <ClCompile Include="drivers\Tester.cpp" />
     <ClCompile Include="GameMap.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="GameMapLoaderDriver.cpp" />
-    <ClCompile Include="GameSetupDriver.cpp" />
     <ClCompile Include="House.cpp" />
     <ClCompile Include="GameMapCustomizer.cpp" />
     <ClCompile Include="GameMapLoader.cpp" />
-    <ClCompile Include="MarketPlaceDriver.cpp" />
     <ClCompile Include="Money.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="PowerPlant.cpp" />
-    <ClCompile Include="Tester.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="City.h" />

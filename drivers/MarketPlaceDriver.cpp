@@ -1,4 +1,4 @@
-#include "PowerPlant.h"
+#include "../PowerPlant.h"
 /*
 * Set up marketplace when the game board is initialized
 * Due to the uniqueness of the set up

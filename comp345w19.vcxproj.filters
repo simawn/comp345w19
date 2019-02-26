@@ -60,16 +60,16 @@
     <ClCompile Include="drivers\GameMapDriver.cpp">
       <Filter>Source Files\Drivers</Filter>
     </ClCompile>
-    <ClCompile Include="GameSetupDriver.cpp">
+    <ClCompile Include="drivers\GameMapLoaderDriver.cpp">
       <Filter>Source Files\Drivers</Filter>
     </ClCompile>
-    <ClCompile Include="MarketPlaceDriver.cpp">
+    <ClCompile Include="drivers\GameSetupDriver.cpp">
       <Filter>Source Files\Drivers</Filter>
     </ClCompile>
-    <ClCompile Include="Tester.cpp">
+    <ClCompile Include="drivers\MarketPlaceDriver.cpp">
       <Filter>Source Files\Drivers</Filter>
     </ClCompile>
-    <ClCompile Include="GameMapLoaderDriver.cpp">
+    <ClCompile Include="drivers\Tester.cpp">
       <Filter>Source Files\Drivers</Filter>
     </ClCompile>
   </ItemGroup>
