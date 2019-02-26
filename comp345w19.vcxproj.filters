@@ -110,5 +110,11 @@
     <ClInclude Include="GameMap.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="drivers\GameDriver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="drivers\GameMapDriver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
