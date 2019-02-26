@@ -2,7 +2,7 @@
 #include "../City.h"
 #include <iostream>
 
-int main() {
+int main456789() {
 
 	//Create cities
 	City city1("Toronto");

@@ -60,7 +60,6 @@
     <ClCompile Include="drivers\GameMapDriver.cpp">
       <Filter>Source Files\Drivers</Filter>
     </ClCompile>
-    <ClCompile Include="GameMapLoaderDriver.cpp">
     <ClCompile Include="GameSetupDriver.cpp">
       <Filter>Source Files\Drivers</Filter>
     </ClCompile>
@@ -68,6 +67,9 @@
       <Filter>Source Files\Drivers</Filter>
     </ClCompile>
     <ClCompile Include="Tester.cpp">
+      <Filter>Source Files\Drivers</Filter>
+    </ClCompile>
+    <ClCompile Include="GameMapLoaderDriver.cpp">
       <Filter>Source Files\Drivers</Filter>
     </ClCompile>
   </ItemGroup>
