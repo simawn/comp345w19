@@ -52,6 +52,7 @@
     <ClInclude Include="Player.h" />
     <ClInclude Include="PowerPlant.h" />
     <ClInclude Include="Resources.h" />
+    <ClInclude Include="SummaryCard.h" />
     <ClInclude Include="Uranium.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
