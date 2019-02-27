@@ -116,5 +116,8 @@
     <ClInclude Include="drivers\GameMapDriver.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="drivers\GameMapLoaderDriver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

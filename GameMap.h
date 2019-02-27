@@ -10,6 +10,7 @@ class GameMap {
 public:
 	GameMap();
 	void addCity(City*);
+	City* getCity(std::string);
 	void displayAllCities();
 	bool checkMapValidity();
 	void traverse(City*, std::set<std::string>*);

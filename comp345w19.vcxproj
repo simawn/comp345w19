@@ -41,6 +41,7 @@
     <ClInclude Include="Coal.h" />
     <ClInclude Include="drivers\GameDriver.h" />
     <ClInclude Include="drivers\GameMapDriver.h" />
+    <ClInclude Include="drivers\GameMapLoaderDriver.h" />
     <ClInclude Include="GameMap.h">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
     </ClInclude>

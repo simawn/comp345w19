@@ -2,6 +2,7 @@
 #include <iostream>
 #include <string>
 #include <set>
+#include <unordered_map>
 
 GameMap::GameMap(){}
 
@@ -9,6 +10,10 @@ void GameMap::addCity(City* city) {
 	std::string cityName = city->getName();
 	adjList[cityName] = city;
 	std::cout << cityName << " added to map." << std::endl;
+}
+
+City* GameMap::getCity(std::string cityName) {
+	return adjList.find(cityName)->second;
 }
 
 void GameMap::displayAllCities() {
