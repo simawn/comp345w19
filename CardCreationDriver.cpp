@@ -1,0 +1,57 @@
+#include "../PowerPlantCard.h"
+#include "../SummaryCard.h"
+#include "../Resources.h"
+#include <vector>;
+std::vector<Cards> createDeckCards(){
+	std::vector<Cards> deck;
+	PowerPlantCard PowerPlantCard3(3, 1, 2, "Gas");
+		PowerPlantCard PowerPlantCard4();
+		PowerPlantCard PowerPlantCard5();
+		PowerPlantCard PowerPlantCard6();
+		PowerPlantCard PowerPlantCard7();
+		PowerPlantCard PowerPlantCard8();
+		PowerPlantCard PowerPlantCard9();
+		PowerPlantCard PowerPlantCard10();
+		PowerPlantCard PowerPlantCard11();
+		PowerPlantCard PowerPlantCard12();
+		PowerPlantCard PowerPlantCard13();
+		PowerPlantCard PowerPlantCard14();
+		PowerPlantCard PowerPlantCard15();
+		PowerPlantCard PowerPlantCard16();
+		PowerPlantCard PowerPlantCard17();
+		PowerPlantCard PowerPlantCard18();
+		PowerPlantCard PowerPlantCard19();
+		PowerPlantCard PowerPlantCard20();
+		PowerPlantCard PowerPlantCard21();
+		PowerPlantCard PowerPlantCard22();
+		PowerPlantCard PowerPlantCard23();
+		PowerPlantCard PowerPlantCard24();
+		PowerPlantCard PowerPlantCard25();
+		PowerPlantCard PowerPlantCard26();
+		PowerPlantCard PowerPlantCard27();
+		PowerPlantCard PowerPlantCard28();
+		PowerPlantCard PowerPlantCard29();
+		PowerPlantCard PowerPlantCard30();
+		PowerPlantCard PowerPlantCard31();
+		PowerPlantCard PowerPlantCard32();
+		PowerPlantCard PowerPlantCard33();
+		PowerPlantCard PowerPlantCard34();
+		PowerPlantCard PowerPlantCard35();
+		PowerPlantCard PowerPlantCard36();
+		PowerPlantCard PowerPlantCard37();
+		PowerPlantCard PowerPlantCard38();
+		PowerPlantCard PowerPlantCard39();
+		PowerPlantCard PowerPlantCard40();
+		PowerPlantCard PowerPlantCard41();
+		PowerPlantCard PowerPlantCard42();
+		PowerPlantCard PowerPlantCard43();
+		PowerPlantCard PowerPlantCard44();
+		PowerPlantCard PowerPlantCard45();
+		PowerPlantCard PowerPlantCard46();
+		PowerPlantCard PowerPlantCard47();
+		PowerPlantCard PowerPlantCard48();
+		PowerPlantCard PowerPlantCard49();
+		PowerPlantCard PowerPlantCard50();
+		
+	
+}

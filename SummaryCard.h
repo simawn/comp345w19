@@ -1,6 +1,7 @@
 #pragma once
 #include <string>; 
-class SummaryCard {
+#include "Cards.h"
+class SummaryCard :public Cards {
 
 private:
 	struct GameSteps {

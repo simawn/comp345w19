@@ -1,13 +1,21 @@
 #pragma once
 #include "Resources.h"
 #include <vector>
-class PowerPlantCard {
+#include "Cards.h"
+class PowerPlantCard:public Cards{
 private:
 	int maxCitiesSupplied;
 	int cardNumber;
-	PowerPlantCard(int cardNumber, int maxCitiesSupplied, std::vector<Resource> ressourcedNeeded);
-	std::vector<Resource> ressourcesNeeded;
+	std::vector<std::string> resourcesNeeded;
+	int nbResourceNeeded;
 	int getmaxCitiesSupplied();
 	int getCardNumber();
-	std::vector<Resource> getRessourcesNeeded();
+	int getNbResourceNeeded();
+	std::vector<std::string> getRessourcesNeeded();
+public:
+	PowerPlantCard(int cardNumber, int maxCitiesSupplied,int nbResourceNeeded);
+	PowerPlantCard(int cardNumber, int maxCitiesSupplied, int nbResourceNeeded,std::string resource1 );
+	PowerPlantCard(int cardNumber, int maxCitiesSupplied, int nbResourceNeeded, std::string resource1, std::string resource2);
+	PowerPlantCard(int cardNumber, int maxCitiesSupplied, int nbResourceNeeded, std::string resource1, std::string resource2, std::string resource3 );
+
 };
