@@ -35,6 +35,7 @@
     <ClCompile Include="Money.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="PowerPlant.cpp" />
+    <ClCompile Include="PowerPlantCard.cpp" />
     <ClCompile Include="SummaryCard.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -52,6 +53,7 @@
     <ClInclude Include="Gas.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="PowerPlant.h" />
+    <ClInclude Include="PowerPlantCard.h" />
     <ClInclude Include="Resources.h" />
     <ClInclude Include="SummaryCard.h" />
     <ClInclude Include="Uranium.h" />

@@ -43,7 +43,7 @@ public:
 
 	void print() {	
 		//displays deck
-		std::cout << "BOTTOM\t";
+		cout << "BOTTOM\t";
 		for(const V& D : stack) { std::cout << D << " "; }
 		std::cout <<"\tTOP"<< std::endl;
 	}
