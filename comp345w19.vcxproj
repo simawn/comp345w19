@@ -20,6 +20,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="City.cpp" />
+    <ClCompile Include="Deck.cpp" />
     <ClCompile Include="drivers\GameDriver.cpp" />
     <ClCompile Include="drivers\GameMapDriver.cpp" />
     <ClCompile Include="drivers\GameMapLoaderDriver.cpp" />
@@ -36,11 +37,14 @@
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="PowerPlant.cpp" />
     <ClCompile Include="PowerPlantCard.cpp" />
+    <ClCompile Include="CardCreationDriver.cpp" />
     <ClCompile Include="SummaryCard.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Cards.h" />
     <ClInclude Include="City.h" />
     <ClInclude Include="Coal.h" />
+    <ClInclude Include="Deck.h" />
     <ClInclude Include="drivers\GameDriver.h" />
     <ClInclude Include="drivers\GameMapDriver.h" />
     <ClInclude Include="GameMap.h">
