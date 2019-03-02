@@ -1,8 +1,9 @@
 #include "../PowerPlantCard.h"
 #include "../SummaryCard.h"
 #include "../Step3Card.h"
+#include "../Deck.h"
 #include <vector>
-std::vector<Cards> createDeckCards(){
+void createDeckCards(){
 		PowerPlantCard PowerPlantCard3(3, 1, 2, "Gas");
 		PowerPlantCard PowerPlantCard4(4,1,2,"Coal");
 		PowerPlantCard PowerPlantCard5(5,1,2,"Gas","Coal");
@@ -55,7 +56,6 @@ std::vector<Cards> createDeckCards(){
 		Deck DECK(src, 42);
 		DECK.shuffle();
 		DECK.insert(Step3Card());
-	
 }
 std::vector<Cards> createSummaryCards() {
 	std::vector<Cards> summaryCardsPack;
