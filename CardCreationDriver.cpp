@@ -3,8 +3,7 @@
 #include "../Step3Card.h"
 #include <vector>
 std::vector<Cards> createDeckCards(){
-	std::vector<Cards> deck;
-	PowerPlantCard PowerPlantCard3(3, 1, 2, "Gas");
+		PowerPlantCard PowerPlantCard3(3, 1, 2, "Gas");
 		PowerPlantCard PowerPlantCard4(4,1,2,"Coal");
 		PowerPlantCard PowerPlantCard5(5,1,2,"Gas","Coal");
 		PowerPlantCard PowerPlantCard6(6,1,1,"Garbage");
@@ -46,48 +45,16 @@ std::vector<Cards> createDeckCards(){
 		PowerPlantCard PowerPlantCard44(44,5,0);
 		PowerPlantCard PowerPlantCard46(46,7,3,"Gas","Coal");
 		PowerPlantCard PowerPlantCard50(50,6,0);
-		deck.push_back(PowerPlantCard3);
-		deck.push_back(PowerPlantCard4);
-		deck.push_back(PowerPlantCard5);
-		deck.push_back(PowerPlantCard6);
-		deck.push_back(PowerPlantCard7);
-		deck.push_back(PowerPlantCard8);
-		deck.push_back(PowerPlantCard9);
-		deck.push_back(PowerPlantCard10);
-		deck.push_back(PowerPlantCard11);
-		deck.push_back(PowerPlantCard12);
-		deck.push_back(PowerPlantCard13);
-		deck.push_back(PowerPlantCard14);
-		deck.push_back(PowerPlantCard15);
-		deck.push_back(PowerPlantCard16);
-		deck.push_back(PowerPlantCard17);
-		deck.push_back(PowerPlantCard18);
-		deck.push_back(PowerPlantCard19);
-		deck.push_back(PowerPlantCard20);
-		deck.push_back(PowerPlantCard21);
-		deck.push_back(PowerPlantCard22);
-		deck.push_back(PowerPlantCard23);
-		deck.push_back(PowerPlantCard24);
-		deck.push_back(PowerPlantCard25);
-		deck.push_back(PowerPlantCard26);
-		deck.push_back(PowerPlantCard27);
-		deck.push_back(PowerPlantCard28);
-		deck.push_back(PowerPlantCard29);
-		deck.push_back(PowerPlantCard30);
-		deck.push_back(PowerPlantCard31);
-		deck.push_back(PowerPlantCard32);
-		deck.push_back(PowerPlantCard33);
-		deck.push_back(PowerPlantCard34);
-		deck.push_back(PowerPlantCard35);
-		deck.push_back(PowerPlantCard36);
-		deck.push_back(PowerPlantCard37);
-		deck.push_back(PowerPlantCard38);
-		deck.push_back(PowerPlantCard39);
-		deck.push_back(PowerPlantCard40);
-		deck.push_back(PowerPlantCard42);
-		deck.push_back(PowerPlantCard44);
-		deck.push_back(PowerPlantCard50);
-		deck.push_back(Step3Card());
+
+		PowerPlantCard src[42] = { PowerPlantCard3,PowerPlantCard4,PowerPlantCard5,PowerPlantCard6,PowerPlantCard7,PowerPlantCard8,PowerPlantCard9,
+		PowerPlantCard10,PowerPlantCard11,PowerPlantCard12,PowerPlantCard13,PowerPlantCard14,PowerPlantCard15,PowerPlantCard16,PowerPlantCard17,PowerPlantCard18,PowerPlantCard19,
+		PowerPlantCard20,PowerPlantCard21,PowerPlantCard22,PowerPlantCard23,PowerPlantCard24,PowerPlantCard25,PowerPlantCard26,PowerPlantCard27,PowerPlantCard28,PowerPlantCard29,
+		PowerPlantCard30,PowerPlantCard31,PowerPlantCard32,PowerPlantCard33,PowerPlantCard34,PowerPlantCard35,PowerPlantCard36,PowerPlantCard37,PowerPlantCard38,PowerPlantCard39,
+		PowerPlantCard40,PowerPlantCard42,PowerPlantCard44,PowerPlantCard46,PowerPlantCard50 };
+		
+		Deck DECK(src, 42);
+		DECK.shuffle();
+		DECK.insert(Step3Card());
 	
 }
 std::vector<Cards> createSummaryCards() {
