@@ -2,20 +2,20 @@
 #include <iostream>
 #include <vector>
 #include <ctime>
-
-template <class V> class Deck {
-
+#include "Cards.h"
+class Deck:public Cards {
 private:
-	//member variables
-	std::vector<V *> stack;
+	std::vector<Cards> stack;
 
 public:
-	//constructors
 	Deck();
-	Deck(const V[], int);
-	//member functions
-	void fill(const V[], int);
+	Deck(const Cards src[], int size);
+	void fill(const Cards src[], int size);
+	void push(const Cards card);
+	void insert(const Cards card);
 	void shuffle();
 	void print();
-	V draw();
+	Cards draw();
 };
+
+
