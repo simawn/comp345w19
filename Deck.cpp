@@ -39,7 +39,7 @@
 	*adds 'card' to the bottom of the deck.
 	*/
 	void Deck::insert(const Cards card) {
-		Deck::stack.insert(card);
+		Deck::stack.insert(stack.begin(),card);
 	}
 
 	/**shuffle
@@ -63,14 +63,14 @@
 	/*print
 	Displays all elements in the vector with the back most element on the right.
 	*/
-	void Deck::print() {	
+	/*void Deck::print() {	
 		//displays deck
 		std::cout << "BOTTOM\t";
 		for(const Cards& D : Deck::stack) {
 			std::cout << D << " "; 
 		}
 		std::cout <<"\tTOP"<< std::endl;
-	}
+	}*/
 	
 	/**draw
 	*@returns Card
