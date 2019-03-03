@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -20,6 +20,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="City.cpp" />
+    <ClCompile Include="Deck.cpp" />
     <ClCompile Include="drivers\GameDriver.cpp" />
     <ClCompile Include="drivers\GameMapDriver.cpp" />
     <ClCompile Include="drivers\GameMapLoaderDriver.cpp" />
@@ -35,10 +36,16 @@
     <ClCompile Include="Money.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="PowerPlant.cpp" />
+    <ClCompile Include="PowerPlantCard.cpp" />
+    <ClCompile Include="CardCreationDriver.cpp" />
+    <ClCompile Include="Step3Card.cpp" />
+    <ClCompile Include="SummaryCard.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Cards.h" />
     <ClInclude Include="City.h" />
     <ClInclude Include="Coal.h" />
+    <ClInclude Include="Deck.h" />
     <ClInclude Include="drivers\GameDriver.h" />
     <ClInclude Include="drivers\GameMapDriver.h" />
     <ClInclude Include="drivers\GameMapLoaderDriver.h" />
@@ -52,7 +59,10 @@
     <ClInclude Include="Gas.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="PowerPlant.h" />
+    <ClInclude Include="PowerPlantCard.h" />
     <ClInclude Include="Resources.h" />
+    <ClInclude Include="Step3Card.h" />
+    <ClInclude Include="SummaryCard.h" />
     <ClInclude Include="Uranium.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
