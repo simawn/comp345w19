@@ -38,6 +38,7 @@
     <ClCompile Include="PowerPlant.cpp" />
     <ClCompile Include="PowerPlantCard.cpp" />
     <ClCompile Include="CardCreationDriver.cpp" />
+    <ClCompile Include="Step3Card.cpp" />
     <ClCompile Include="SummaryCard.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -59,6 +60,7 @@
     <ClInclude Include="PowerPlant.h" />
     <ClInclude Include="PowerPlantCard.h" />
     <ClInclude Include="Resources.h" />
+    <ClInclude Include="Step3Card.h" />
     <ClInclude Include="SummaryCard.h" />
     <ClInclude Include="Uranium.h" />
   </ItemGroup>
