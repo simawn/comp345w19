@@ -81,14 +81,14 @@
     <ClCompile Include="Deck.cpp">
       <Filter>Source Files\Items</Filter>
     </ClCompile>
-    <ClCompile Include="CardCreationDriver.cpp">
-      <Filter>Source Files\Drivers</Filter>
-    </ClCompile>
     <ClCompile Include="Step3Card.cpp">
       <Filter>Source Files\Items</Filter>
     </ClCompile>
     <ClCompile Include="Cards.cpp">
       <Filter>Source Files\Items</Filter>
+    </ClCompile>
+    <ClCompile Include="drivers\CardCreationDriver.cpp">
+      <Filter>Source Files\Drivers</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

@@ -22,6 +22,7 @@
     <ClCompile Include="Cards.cpp" />
     <ClCompile Include="City.cpp" />
     <ClCompile Include="Deck.cpp" />
+    <ClCompile Include="drivers\CardCreationDriver.cpp" />
     <ClCompile Include="drivers\GameDriver.cpp" />
     <ClCompile Include="drivers\GameMapDriver.cpp" />
     <ClCompile Include="drivers\GameMapLoaderDriver.cpp" />
@@ -38,7 +39,6 @@
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="PowerPlant.cpp" />
     <ClCompile Include="PowerPlantCard.cpp" />
-    <ClCompile Include="CardCreationDriver.cpp" />
     <ClCompile Include="Step3Card.cpp" />
     <ClCompile Include="SummaryCard.cpp" />
   </ItemGroup>
