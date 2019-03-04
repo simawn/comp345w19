@@ -2,6 +2,7 @@
 #include "../SummaryCard.h"
 #include "../Step3Card.h"
 #include "../Deck.h"
+#include "../drivers/CardCreationDriver.h"
 #include <vector>
 void createDeckCards(){
 		PowerPlantCard PowerPlantCard3(3, 1, 2, "Gas");
@@ -56,6 +57,7 @@ void createDeckCards(){
 		Deck DECK(src, 42);
 		DECK.shuffle();
 		DECK.insert(Step3Card());
+		DECK.print();
 }
 std::vector<Cards> createSummaryCards() {
 	std::vector<Cards> summaryCardsPack;

@@ -152,5 +152,8 @@
     <ClInclude Include="Step3Card.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="drivers\CardCreationDriver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

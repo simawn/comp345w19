@@ -43,3 +43,6 @@ std::vector<std::string> PowerPlantCard:: getRessourcesNeeded(){
 int PowerPlantCard::getNbResourceNeeded(){
 	return PowerPlantCard::nbResourceNeeded;
 }
+std::ostream& operator<< (std::ostream &os, const PowerPlantCard &f) {
+	return os << "This card number is" << f.cardNumber << " max cities supplied is " << f.maxCitiesSupplied << "Resource needed is " << f.nbResourceNeeded << "Resource needed is";
+}
