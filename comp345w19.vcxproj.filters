@@ -87,6 +87,9 @@
     <ClCompile Include="Step3Card.cpp">
       <Filter>Source Files\Items</Filter>
     </ClCompile>
+    <ClCompile Include="Cards.cpp">
+      <Filter>Source Files\Items</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="House.h">
@@ -147,7 +150,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Step3Card.h">
-
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

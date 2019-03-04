@@ -63,14 +63,14 @@
 	/*print
 	Displays all elements in the vector with the back most element on the right.
 	*/
-	/*void Deck::print() {	
+	void Deck::print() {	
 		//displays deck
 		std::cout << "BOTTOM\t";
 		for(const Cards& D : Deck::stack) {
 			std::cout << D << " "; 
 		}
 		std::cout <<"\tTOP"<< std::endl;
-	}*/
+	}
 	
 	/**draw
 	*@returns Card
