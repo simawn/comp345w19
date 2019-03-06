@@ -1,20 +1,31 @@
 #pragma once
 #include "City.h"
+#include "GameMap.h"
 #include <unordered_map>
 #include <string>
 #include <set>
+#include <nlohmann/json.hpp>
+
+using json = nlohmann::json;
 
 /**
  * Class that creates the game map
  */
 class GameMap {
 	std::unordered_map<std::string, City*> adjList;
+	void openMap(std::string);
+	void processMap(json, GameMap*);
 
 public:
 	/**
 	 * Constuctor for GameMap
 	 */
 	GameMap();
+
+	/**
+	 * Constructor taking a custom map file
+	 */
+	GameMap(std::string);
 
 	/**
 	 * Adds a city to the map. Takes a City pointer.
