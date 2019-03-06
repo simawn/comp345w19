@@ -44,5 +44,5 @@ int PowerPlantCard::getNbResourceNeeded(){
 	return PowerPlantCard::nbResourceNeeded;
 }
  void PowerPlantCard:: print() {
-	 std::cout << "powerplantcard";
+	 std::cout << "powerplantcard" << " ";
 }

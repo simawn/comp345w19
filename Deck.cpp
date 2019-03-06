@@ -10,7 +10,7 @@
 	*@param int size - size of powerplant array
 	*generates a deck and then fills it with the members of the source array
 	*/
-	Deck::Deck(const Cards src[], int size) {
+	Deck::Deck( Cards *src[], int size) {
 		Deck::fill(src, size);
 	}
 
@@ -19,10 +19,10 @@
 	*@param int size - size of powerplant array
 	*fill a deck with the members of the source array
 	*/
-	void Deck::fill(const Cards src[], int size) {
+	void Deck::fill( Cards *src[], int size) {
 		//fill deck with elements
 		for (int i = 0; i < size;i++) { 
-			Deck::stack.push_back(src[i]);
+			Deck::stack.push_back(*src[i]);
 		}
 	}
 
@@ -30,16 +30,16 @@
 	*@param Cards card
 	*adds 'card' to the top of the deck.
 	*/
-	void Deck::push(const Cards card) {
-		Deck::stack.push_back(card);
+	void Deck::push( Cards *card) {
+		Deck::stack.push_back(*card);
 	}
 
 	/**insert
 	*@param Cards card
 	*adds 'card' to the bottom of the deck.
 	*/
-	void Deck::insert(const Cards card) {
-		Deck::stack.insert(stack.begin(),card);
+	void Deck::insert( Cards *card) {
+		Deck::stack.insert(stack.begin(),*card);
 	}
 
 	/**shuffle
@@ -66,7 +66,7 @@
 	void Deck::print() {	
 		//displays deck
 		std::cout << "BOTTOM\t";
-		for( Cards& D : Deck::stack) {
+		for(  Cards D : Deck::stack) {
 			D.print(); 
 		}
 		std::cout <<"\tTOP"<< std::endl;

@@ -15,26 +15,26 @@ public:
 	*@param int size - size of powerplant array
 	*generates a deck and then fills it with the members of the source array
 	*/
-	Deck(const Cards src[], int size);
+	Deck( Cards *src[], int size);
 	
 	/**Fill
 	*@param Powerplant[] src
 	*@param int size - size of powerplant array
 	*fill a deck with the members of the source array
 	*/
-	void fill(const Cards src[], int size);
+	void fill( Cards *src[], int size);
 	
 	/**push
 	*@param Cards card
 	*adds 'card' to the top of the deck.
 	*/
-	void push(const Cards card);
+	void push( Cards *card);
 	
 	/**insert
 	*@param Cards card
 	*adds 'card' to the bottom of the deck.
 	*/
-	void insert(const Cards card);
+	void insert( Cards *card);
 	
 	/**shuffle
 	shuffles the elements of the vector in an inline fashion.
