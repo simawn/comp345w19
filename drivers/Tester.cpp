@@ -9,10 +9,12 @@ using namespace std;
 
 //DONE
 void testPlayer(){
+	cout << "\n === TESTING PLAYER === \n";
 	GameDriver();
 }
 
 void testMap() {
+	cout << "\n === TESTING MAP  === \n";
 	GameMapDriver();
 }
 
