@@ -1,6 +1,7 @@
 #ifndef POWERPLANT_H
 #define POWERPLANT_H
 #include "Resources.h"
+/**Class that represents the power plants, what resources they cost, how much they cost ans and the housing value*/
 class PowerPlant {
 private:
 	int cost;/**<The cost of the given powerplant.*/

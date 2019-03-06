@@ -1,5 +1,6 @@
 #ifndef MONEY_H
 #define MONEY_H
+/**Class to represent money*/
 class Money
 {
 public:
