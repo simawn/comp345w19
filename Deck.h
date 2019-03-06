@@ -9,12 +9,47 @@ private:
 
 public:
 	Deck();
+	
+	/**General Constructor
+	*@param Powerplant[] src
+	*@param int size - size of powerplant array
+	*generates a deck and then fills it with the members of the source array
+	*/
 	Deck(const Cards src[], int size);
+	
+	/**Fill
+	*@param Powerplant[] src
+	*@param int size - size of powerplant array
+	*fill a deck with the members of the source array
+	*/
 	void fill(const Cards src[], int size);
+	
+	/**push
+	*@param Cards card
+	*adds 'card' to the top of the deck.
+	*/
 	void push(const Cards card);
+	
+	/**insert
+	*@param Cards card
+	*adds 'card' to the bottom of the deck.
+	*/
 	void insert(const Cards card);
+	
+	/**shuffle
+	shuffles the elements of the vector in an inline fashion.
+	*/
 	void shuffle();
+	
+	/*print
+	Displays all elements in the vector with the back most element on the right.
+	*/
 	void print();
+	
+	/**draw
+	*@returns Card
+	*pops the backmost Powerplant card element form the vector and returns it
+	*/
 	Cards draw();
 };
 
