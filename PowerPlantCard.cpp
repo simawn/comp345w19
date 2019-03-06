@@ -36,5 +36,10 @@ int PowerPlantCard::getNbResourceNeeded(){
 	return PowerPlantCard::nbResourceNeeded;
 }
  void PowerPlantCard:: print() {
-	 std::cout << "powerplantcard number is " << PowerPlantCard::cardNumber << " nb of resource needed is " << PowerPlantCard::nbResourceNeeded << " max number of cities supplied is "<< PowerPlantCard::nbResourceNeeded;
-}
+	 std::cout << "powerplantcard number is " << PowerPlantCard::cardNumber << " nb of resource needed is " << PowerPlantCard::nbResourceNeeded << " max number of cities supplied is "<< PowerPlantCard::nbResourceNeeded << " Resource needed are: ";
+	 
+	 for (std::string a : PowerPlantCard::resourcesNeeded) {
+		 std::cout << a << "";
+	 }
+
+ }

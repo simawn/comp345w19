@@ -53,12 +53,9 @@ void createDeckCards(){
 		PowerPlantCard20,PowerPlantCard21,PowerPlantCard22,PowerPlantCard23,PowerPlantCard24,PowerPlantCard25,PowerPlantCard26,PowerPlantCard27,PowerPlantCard28,PowerPlantCard29,
 		PowerPlantCard30,PowerPlantCard31,PowerPlantCard32,PowerPlantCard33,PowerPlantCard34,PowerPlantCard35,PowerPlantCard36,PowerPlantCard37,PowerPlantCard38,PowerPlantCard39,
 		PowerPlantCard40,PowerPlantCard42,PowerPlantCard44,PowerPlantCard46,PowerPlantCard50 };
-		for ( Cards *a : src) {
-			a->print();
-			std::cout << "\n";
-		}
+		
 		Cards* step3Card = new Step3Card();
-		step3Card->print();
+		
 		Deck DECK(src, 42);
 	    DECK.shuffle();
 		DECK.insert(step3Card);

@@ -22,7 +22,7 @@
 	void Deck::fill( Cards *src[], int size) {
 		//fill deck with elements
 		for (int i = 0; i < size;i++) { 
-			Deck::stack.push_back(*src[i]);
+			Deck::stack.push_back(src[i]);
 		}
 	}
 
@@ -31,7 +31,7 @@
 	*adds 'card' to the top of the deck.
 	*/
 	void Deck::push( Cards *card) {
-		Deck::stack.push_back(*card);
+		Deck::stack.push_back(card);
 	}
 
 	/**insert
@@ -39,7 +39,7 @@
 	*adds 'card' to the bottom of the deck.
 	*/
 	void Deck::insert( Cards *card) {
-		Deck::stack.insert(stack.begin(),*card);
+		Deck::stack.insert(stack.begin(),card);
 	}
 
 	/**shuffle
@@ -66,8 +66,9 @@
 	void Deck::print() {	
 		//displays deck
 		std::cout << "BOTTOM\t";
-		for(  Cards D : Deck::stack) {
-			D.print(); 
+		for(  Cards *D : Deck::stack) {
+			D->print();
+			std::cout << "\n";
 		}
 		std::cout <<"\tTOP"<< std::endl;
 	}
@@ -78,7 +79,7 @@
 	*/
 	Cards Deck::draw() {
 		// returns the last element of the vector, and removes it 
-		Cards x = Deck::stack.back();
+		Cards* x = Deck::stack.back();
 		Deck::stack.pop_back();
-		return x;
+		return *x;
 	}
