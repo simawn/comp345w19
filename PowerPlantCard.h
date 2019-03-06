@@ -45,6 +45,15 @@ public:
 	*@param cards nb identifier
 	*@param max cities it can supply
 	*@param number of resource it needs
+	
+	*constructor
+	*/
+	PowerPlantCard(int cardNumber, int maxCitiesSupplied, int nbResourceNeeded);
+
+	/**
+	*@param cards nb identifier
+	*@param max cities it can supply
+	*@param number of resource it needs
 	@param type of resource needed
 	*constructor
 	*/

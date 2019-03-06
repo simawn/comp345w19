@@ -55,6 +55,7 @@ void createDeckCards(){
 		PowerPlantCard40,PowerPlantCard42,PowerPlantCard44,PowerPlantCard46,PowerPlantCard50 };
 		for ( Cards *a : src) {
 			a->print();
+			std::cout << "\n";
 		}
 		Cards* step3Card = new Step3Card();
 		step3Card->print();
