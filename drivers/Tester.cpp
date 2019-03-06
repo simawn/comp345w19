@@ -35,8 +35,8 @@ int main() {
 	testMap(); //Part 1
 	testMapLoader(); //Part 2
 
-	//testPlayer(); //Part 4
-	//testCardCreation(); //Part 5
+	testPlayer(); //Part 4
+	testCardCreation(); //Part 5
 	system("pause");
 	return 0;
 }
