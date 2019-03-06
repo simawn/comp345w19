@@ -12,9 +12,20 @@ using json = nlohmann::json;
  * Class that creates the game map
  */
 class GameMap {
+	/**
+	 * Adjacency list for the cities
+	 */
 	std::unordered_map<std::string, City*> adjList;
+
+	/**
+	 * Reads a .json and checks if it's valid before processing it
+	 */
 	void openMap(std::string);
-	void processMap(json, GameMap*);
+
+	/**
+	 * Processes the .json file by creating all the Cities and neighbours specified in the file
+	 */
+	void processMap(json);
 
 public:
 	/**

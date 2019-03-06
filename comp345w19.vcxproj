@@ -34,7 +34,6 @@
     </ClCompile>
     <ClCompile Include="House.cpp" />
     <ClCompile Include="GameMapCustomizer.cpp" />
-    <ClCompile Include="GameMapLoader.cpp" />
     <ClCompile Include="Money.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="PowerPlant.cpp" />
@@ -56,7 +55,6 @@
     </ClInclude>
     <ClInclude Include="Garbage.h" />
     <ClInclude Include="House.h" />
-    <ClInclude Include="GameMapLoader.h" />
     <ClInclude Include="Money.h" />
     <ClInclude Include="Gas.h" />
     <ClInclude Include="Player.h" />

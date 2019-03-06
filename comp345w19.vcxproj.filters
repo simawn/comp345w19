@@ -48,9 +48,6 @@
     <ClCompile Include="GameMapCustomizer.cpp">
       <Filter>Source Files\Map</Filter>
     </ClCompile>
-    <ClCompile Include="GameMapLoader.cpp">
-      <Filter>Source Files\Map</Filter>
-    </ClCompile>
     <ClCompile Include="drivers\GameDriver.cpp">
       <Filter>Source Files\Drivers</Filter>
     </ClCompile>
@@ -121,9 +118,6 @@
     </ClInclude>
     <ClInclude Include="Uranium.h">
       <Filter>Header Files\Resources</Filter>
-    </ClInclude>
-    <ClInclude Include="GameMapLoader.h">
-      <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="GameMap.h">
       <Filter>Header Files</Filter>

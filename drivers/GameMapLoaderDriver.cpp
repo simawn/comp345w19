@@ -1,5 +1,4 @@
-#include "../GameMapLoader.h"
-
+#include "../GameMap.h"
 void GameMapLoaderDriver() {
-	openMap("./data/MAP[Ger].json");
+	GameMap("./data/MAP[Ger].json");
 }
