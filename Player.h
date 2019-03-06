@@ -6,7 +6,7 @@
 #include "City.h"
 #include "PowerPlant.h"
 #include <vector>
-
+/**Class that represents a player, playable character in the game*/
 class Player{
 private:
 	std::vector<Resource *> resources;/**<The resources that a given player has.*/

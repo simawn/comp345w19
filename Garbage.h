@@ -1,7 +1,7 @@
 #ifndef GARBAGE_H
 #define GARBAGE_H
 #include "Resources.h"
-
+/**Derived class from Resource to make garbage resource*/
 class Garbage: public Resource
 {
 public:

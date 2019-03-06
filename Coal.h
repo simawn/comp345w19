@@ -1,6 +1,7 @@
 #ifndef COAL_H
 #define COAL_H
 #include"Resources.h"
+/**Derived class from Resource to make coal resource*/
 class Coal : public Resource
 {
 public:
