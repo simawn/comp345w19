@@ -4,4 +4,5 @@
 class Step3Card :public Cards {
 public:
 	Step3Card();
+	virtual void print();
 };

@@ -18,5 +18,5 @@ public:
 	PowerPlantCard(int cardNumber, int maxCitiesSupplied, int nbResourceNeeded,std::string resource1 );
 	PowerPlantCard(int cardNumber, int maxCitiesSupplied, int nbResourceNeeded, std::string resource1, std::string resource2);
 	PowerPlantCard(int cardNumber, int maxCitiesSupplied, int nbResourceNeeded, std::string resource1, std::string resource2, std::string resource3 );
-
+	virtual void print();
 };

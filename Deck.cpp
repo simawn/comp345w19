@@ -66,8 +66,8 @@
 	void Deck::print() {	
 		//displays deck
 		std::cout << "BOTTOM\t";
-		for(const Cards& D : Deck::stack) {
-			std::cout << D << " "; 
+		for( Cards& D : Deck::stack) {
+			D.print(); 
 		}
 		std::cout <<"\tTOP"<< std::endl;
 	}

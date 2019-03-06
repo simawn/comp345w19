@@ -17,4 +17,5 @@ public:
 	SummaryCard();
 	GameSteps StepsOfTheGame[5];
 	struct GameSteps one, two, three, four, five;
+	virtual void print();
 };

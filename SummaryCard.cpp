@@ -27,3 +27,6 @@ std::string SummaryCard::getGeneral(int stepNumber) {
 std::string SummaryCard::getDetails(int stepNumber) {
 	return StepsOfTheGame[stepNumber].Details;
 }
+ void SummaryCard::print() {
+std::cout << "summarycard";
+}
