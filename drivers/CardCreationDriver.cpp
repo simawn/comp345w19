@@ -64,6 +64,11 @@ void createDeckCards(){
 		DECK.insert(step3Card);
 		std::cout << "=== Shuffled deck and inserted step3 Card ===" << "\n";
 		DECK.print();
+		for (Cards* a : src) {
+			delete a;
+		}	
+		delete step3Card;
+
 }
 std::vector<Cards> createSummaryCards() {
 	std::vector<Cards> summaryCardsPack;
