@@ -1,6 +1,7 @@
 #ifndef GAS_H
 #define GAS_H
 #include "Resources.h"
+/**Derived class from Resource to make gas resource*/
 class Gas : public Resource
 {
 public:

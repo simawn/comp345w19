@@ -1,6 +1,7 @@
 #ifndef URANIUM_H
 #define URANIUM_H
 #include "Resources.h"
+/**Derived class from Resource to make uranium resource*/
 class Uranium : public Resource
 {
 public:
