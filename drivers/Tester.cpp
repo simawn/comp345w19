@@ -5,34 +5,38 @@
 #include "CardCreationDriver.h"
 using namespace std;
 
-/*USE THIS CLASS, CREATE A METHOD AND RUN TASKS FOR TESTING FOR EACH*/
 
-//DONE
+
 void testPlayer(){
-	cout << "\n === TESTING PLAYER === \n";
+	cout << "\n === START TESTING PLAYER === \n";
 	GameDriver();
+	cout << "\n === END TESTING PLAYER === \n";
 }
 
 void testMap() {
-	cout << "\n === TESTING MAP  === \n";
+	cout << "\n === START TESTING MAP  === \n";
 	GameMapDriver();
+	cout << "\n === END TESTING MAP  === \n";
 }
 
 void testMapLoader() {
 	cout << "\n === TESTING MAP LOADER === \n";
 	GameMapLoaderDriver();
+	cout << "\n === END MAP LOADER === \n";
 }
 void testCardCreation() {
 	cout << "\n === TESTING CARD CREATION ===\n";
 	createDeckCards();
-
+	cout << "\n === END TESTING CARD CREATION ===\n";
 }
 
 int main() {
-	testPlayer();
-	testMap();
-	testMapLoader();
-	testCardCreation();
+	
+	testMap(); //Part 1
+	testMapLoader(); //Part 2
+
+	//testPlayer(); //Part 4
+	//testCardCreation(); //Part 5
 	system("pause");
 	return 0;
 }

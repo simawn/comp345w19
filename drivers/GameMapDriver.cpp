@@ -3,7 +3,6 @@
 #include <iostream>
 
 void GameMapDriver() {
-	std::cout << "==== TESTING GAME MAP CREATION ====" << std::endl;
 	//Create cities
 	City city1("Toronto");
 	City city2("Montreal");
