@@ -65,7 +65,7 @@
 	*/
 	void Deck::print() {	
 		//displays deck
-		std::cout << "BOTTOM\t";
+		std::cout << "BOTTOM\t"<< "\n";
 		for(  Cards *D : Deck::stack) {
 			D->print();
 			std::cout << "\n";

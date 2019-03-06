@@ -57,8 +57,12 @@ void createDeckCards(){
 		Cards* step3Card = new Step3Card();
 		
 		Deck DECK(src, 42);
+		std::cout << "=== INITIAL DECK == " << "\n";
+		DECK.print();
+		
 	    DECK.shuffle();
 		DECK.insert(step3Card);
+		std::cout << "=== Shuffled deck and inserted step3 Card ===" << "\n";
 		DECK.print();
 }
 std::vector<Cards> createSummaryCards() {
