@@ -20,7 +20,7 @@ class GameMap {
 	/*
 	*The market for the resources
 	*/
-	std::vector<std::vector<Resource>> resourceMarket;
+	std::vector<std::vector<Resource*>> resourceMarket;
 	
 	/**
 	 * Adjacency list for the cities
@@ -80,7 +80,7 @@ public:
 	@param number of resource to be added
 	@param type of resource to be added
 	*/
-	void addResource(int Grid, int nbOfResource, std::vector<Coal> resource);
+	void addResource(int Grid, int nbOfResource, std::vector<Coal*> resource);
 
 	/**
 	*add resources to the resource market
@@ -88,7 +88,7 @@ public:
 	@param number of resource to be added
 	@param type of resource to be added
 	*/
-	void addResource(int Grid, int nbOfResource, std::vector<Garbage> resource);
+	void addResource(int Grid, int nbOfResource, std::vector<Garbage*> resource);
 
 	/**
 	*add resources to the resource market
@@ -96,7 +96,7 @@ public:
 	@param number of resource to be added
 	@param type of resource to be added
 	*/
-	void addResource(int Grid, int nbOfResource, std::vector<Uranium> resource);
+	void addResource(int Grid, int nbOfResource, std::vector<Uranium*> resource);
 
 	/**
 	*add resources to the resource market
@@ -104,6 +104,9 @@ public:
 	@param number of resource to be added
 	@param type of resource to be added
 	*/
-	void addResource(int Grid, int nbOfResource, std::vector<Gas> resource);
-
+	void addResource(int Grid, int nbOfResource, std::vector<Gas*> resource);
+	/*
+	*Indicates what is currently in the resource market
+	*/
+	void printResourceMarket();
 };

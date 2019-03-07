@@ -87,7 +87,7 @@
     <ClCompile Include="drivers\CardCreationDriver.cpp">
       <Filter>Source Files\Drivers</Filter>
     </ClCompile>
-    <ClCompile Include="ResourcesLoader.cpp">
+    <ClCompile Include="drivers\ResourcesLoaderDriver.cpp">
       <Filter>Source Files\Drivers</Filter>
     </ClCompile>
   </ItemGroup>
@@ -152,7 +152,7 @@
     <ClInclude Include="drivers\CardCreationDriver.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="ResourcesLoader.h">
+    <ClInclude Include="drivers\ResourcesLoaderDriver.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

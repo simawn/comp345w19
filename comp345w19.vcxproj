@@ -28,6 +28,7 @@
     <ClCompile Include="drivers\GameMapLoaderDriver.cpp" />
     <ClCompile Include="drivers\GameSetupDriver.cpp" />
     <ClCompile Include="drivers\MarketPlaceDriver.cpp" />
+    <ClCompile Include="drivers\ResourcesLoaderDriver.cpp" />
     <ClCompile Include="drivers\Tester.cpp" />
     <ClCompile Include="GameMap.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
@@ -38,7 +39,6 @@
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="PowerPlant.cpp" />
     <ClCompile Include="PowerPlantCard.cpp" />
-    <ClCompile Include="ResourcesLoader.cpp" />
     <ClCompile Include="Step3Card.cpp" />
     <ClCompile Include="SummaryCard.cpp" />
   </ItemGroup>
@@ -51,6 +51,7 @@
     <ClInclude Include="drivers\GameDriver.h" />
     <ClInclude Include="drivers\GameMapDriver.h" />
     <ClInclude Include="drivers\GameMapLoaderDriver.h" />
+    <ClInclude Include="drivers\ResourcesLoaderDriver.h" />
     <ClInclude Include="GameMap.h">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
     </ClInclude>
@@ -62,7 +63,6 @@
     <ClInclude Include="PowerPlant.h" />
     <ClInclude Include="PowerPlantCard.h" />
     <ClInclude Include="Resources.h" />
-    <ClInclude Include="ResourcesLoader.h" />
     <ClInclude Include="Step3Card.h" />
     <ClInclude Include="SummaryCard.h" />
     <ClInclude Include="Uranium.h" />

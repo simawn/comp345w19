@@ -3,6 +3,7 @@
 #include "GameMapDriver.h"
 #include "GameMapLoaderDriver.h"
 #include "CardCreationDriver.h"
+#include "ResourcesLoaderDriver.h"
 using namespace std;
 
 
@@ -17,6 +18,11 @@ void testMap() {
 	cout << "\n === START TESTING MAP  === \n";
 	GameMapDriver();
 	cout << "\n === END TESTING MAP  === \n";
+}
+void TestResourceLoader() {
+	cout << "\n === TESTING RESOURCE LOADER === \n";
+	resourceLoaderDriver();
+	cout << "\n === END TESTING RESOURCE LOADER  === \n";
 }
 
 void testMapLoader() {
@@ -34,7 +40,7 @@ int main() {
 	
 	testMap(); //Part 1
 	testMapLoader(); //Part 2
-
+	TestResourceLoader(); //Part3
 	testPlayer(); //Part 4
 	testCardCreation(); //Part 5
 	system("pause");

@@ -102,25 +102,25 @@ void GameMap::processMap(json jsonMap) {
 
 	this->checkMapValidity() ? std::cout << "Game map is VALID" << std::endl : std::cout << "Game map is INVALID" << std::endl;
 }
-void GameMap::addResource(int Grid, int nbOfResource, std::vector<Coal> resource) {
+void GameMap::addResource(int Grid, int nbOfResource, std::vector<Coal*> resource) {
 	for (int i = 0; i < nbOfResource; i++) {
 		resourceMarket[Grid].push_back(resource[0]);
 		resource.erase(resource.begin());
 	}
 }
-	void GameMap::addResource(int Grid, int nbOfResource, std::vector<Gas> resource) {
+	void GameMap::addResource(int Grid, int nbOfResource, std::vector<Gas*> resource) {
 		for (int i = 0; i < nbOfResource; i++) {
 			resourceMarket[Grid].push_back(resource[0]);
 			resource.erase(resource.begin());
 		}
 	}
-	void GameMap::addResource(int Grid, int nbOfResource, std::vector<Uranium> resource) {
+	void GameMap::addResource(int Grid, int nbOfResource, std::vector<Uranium*> resource) {
 		for (int i = 0; i < nbOfResource; i++) {
 			resourceMarket[Grid].push_back(resource[0]);
 			resource.erase(resource.begin());
 		}
 	}
-void GameMap::addResource(int Grid, int nbOfResource, std::vector<Garbage> resource  ) {
+void GameMap::addResource(int Grid, int nbOfResource, std::vector<Garbage*> resource  ) {
 	for (int i = 0; i < nbOfResource; i++) {
 		resourceMarket[Grid].push_back(resource[0]);
 		resource.erase(resource.begin());
@@ -128,8 +128,9 @@ void GameMap::addResource(int Grid, int nbOfResource, std::vector<Garbage> resou
 }
 void GameMap::printResourceMarket() {
 	for (int i = 0; i < resourceMarket.size(); i++) {
+		std::cout << "\n In grid " << i << " Resources: ";
 		for (int j = 0;j < resourceMarket[i].size(); j++) {
-
+			std::cout << resourceMarket[i][j]->getName() <<" ";
 		}
 
 	}
