@@ -128,7 +128,7 @@ void GameMap::addResource(int Grid, int nbOfResource, std::vector<Garbage*> reso
 }
 void GameMap::printResourceMarket() {
 	for (int i = 0; i < resourceMarket.size(); i++) {
-		std::cout << "\n In grid " << i << " Resources: ";
+		std::cout << "\n In grid " << (i+1) << " Resources: ";
 		for (int j = 0;j < resourceMarket[i].size(); j++) {
 			std::cout << resourceMarket[i][j]->getName() <<" ";
 		}
