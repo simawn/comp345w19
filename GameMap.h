@@ -1,6 +1,11 @@
 #pragma once
 #include "City.h"
 #include "GameMap.h"
+#include "Resources.h"
+#include "Coal.h"
+#include "Garbage.h"
+#include "Gas.h"
+#include "Uranium.h"
 #include <unordered_map>
 #include <string>
 #include <set>
@@ -12,6 +17,11 @@ using json = nlohmann::json;
  * Class that creates the game map
  */
 class GameMap {
+	/*
+	*The market for the resources
+	*/
+	std::vector<std::vector<Resource>> resourceMarket;
+	
 	/**
 	 * Adjacency list for the cities
 	 */
@@ -64,4 +74,36 @@ public:
 	 * A recursive depth-first search algorithm to traverse the game map
 	 */
 	void traverse(City*, std::set<std::string>*);
+	/**
+	*add resources to the resource market
+	@param Grid number
+	@param number of resource to be added
+	@param type of resource to be added
+	*/
+	void addResource(int Grid, int nbOfResource, std::vector<Coal> resource);
+
+	/**
+	*add resources to the resource market
+	@param Grid number
+	@param number of resource to be added
+	@param type of resource to be added
+	*/
+	void addResource(int Grid, int nbOfResource, std::vector<Garbage> resource);
+
+	/**
+	*add resources to the resource market
+	@param Grid number
+	@param number of resource to be added
+	@param type of resource to be added
+	*/
+	void addResource(int Grid, int nbOfResource, std::vector<Uranium> resource);
+
+	/**
+	*add resources to the resource market
+	@param Grid number
+	@param number of resource to be added
+	@param type of resource to be added
+	*/
+	void addResource(int Grid, int nbOfResource, std::vector<Gas> resource);
+
 };

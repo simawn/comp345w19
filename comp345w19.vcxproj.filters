@@ -87,6 +87,9 @@
     <ClCompile Include="drivers\CardCreationDriver.cpp">
       <Filter>Source Files\Drivers</Filter>
     </ClCompile>
+    <ClCompile Include="ResourcesLoader.cpp">
+      <Filter>Source Files\Drivers</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="House.h">
@@ -147,6 +150,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="drivers\CardCreationDriver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ResourcesLoader.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
