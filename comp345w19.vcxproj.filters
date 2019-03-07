@@ -28,6 +28,9 @@
     <Filter Include="Source Files\Drivers">
       <UniqueIdentifier>{88423476-b927-4696-baa1-4c5f685e6055}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\DriverHeads">
+      <UniqueIdentifier>{f66e8125-ab10-4072-9724-5fe31d8146d8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Player.cpp">
@@ -90,6 +93,9 @@
     <ClCompile Include="drivers\ResourcesLoaderDriver.cpp">
       <Filter>Source Files\Drivers</Filter>
     </ClCompile>
+    <ClCompile Include="GameInstance.cpp">
+      <Filter>Source Files\Drivers</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="House.h">
@@ -125,15 +131,6 @@
     <ClInclude Include="GameMap.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="drivers\GameDriver.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="drivers\GameMapDriver.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="drivers\GameMapLoaderDriver.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="SummaryCard.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -149,11 +146,38 @@
     <ClInclude Include="Step3Card.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="drivers\CardCreationDriver.h">
+    <ClInclude Include="GameInstance.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="drivers\CardCreationDriver.h">
+      <Filter>Header Files\DriverHeads</Filter>
+    </ClInclude>
+    <ClInclude Include="drivers\GameDriver.h">
+      <Filter>Header Files\DriverHeads</Filter>
+    </ClInclude>
+    <ClInclude Include="drivers\GameMapDriver.h">
+      <Filter>Header Files\DriverHeads</Filter>
+    </ClInclude>
+    <ClInclude Include="drivers\GameMapLoaderDriver.h">
+      <Filter>Header Files\DriverHeads</Filter>
+    </ClInclude>
     <ClInclude Include="drivers\ResourcesLoaderDriver.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\DriverHeads</Filter>
+    </ClInclude>
+    <ClInclude Include="GameSetupDriver.h">
+      <Filter>Header Files\DriverHeads</Filter>
+    </ClInclude>
+    <ClInclude Include="BuyResourceStepDriver.h">
+      <Filter>Header Files\DriverHeads</Filter>
+    </ClInclude>
+    <ClInclude Include="BuildingStepDriver.h">
+      <Filter>Header Files\DriverHeads</Filter>
+    </ClInclude>
+    <ClInclude Include="BureaucracyStepDriver.h">
+      <Filter>Header Files\DriverHeads</Filter>
+    </ClInclude>
+    <ClInclude Include="AuctionStepDriver.h">
+      <Filter>Header Files\DriverHeads</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

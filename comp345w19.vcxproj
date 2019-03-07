@@ -39,6 +39,7 @@
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="PowerPlant.cpp" />
     <ClCompile Include="PowerPlantCard.cpp" />
+    <ClCompile Include="GameInstance.cpp" />
     <ClCompile Include="Step3Card.cpp" />
     <ClCompile Include="SummaryCard.cpp" />
   </ItemGroup>
@@ -56,6 +57,12 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
     </ClInclude>
     <ClInclude Include="Garbage.h" />
+    <ClInclude Include="GameInstance.h" />
+    <ClInclude Include="GameSetupDriver.h" />
+    <ClInclude Include="BuyResourceStepDriver.h" />
+    <ClInclude Include="BuildingStepDriver.h" />
+    <ClInclude Include="BureaucracyStepDriver.h" />
+    <ClInclude Include="AuctionStepDriver.h" />
     <ClInclude Include="House.h" />
     <ClInclude Include="Money.h" />
     <ClInclude Include="Gas.h" />
