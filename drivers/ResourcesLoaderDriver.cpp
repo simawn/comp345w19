@@ -1,6 +1,6 @@
 #include "../drivers/ResourcesLoaderDriver.h"
 
-#include "..\GameMap.h"
+#include "../GameMap.h"
 void resourceLoaderDriver() {
 	GameMap map;
 	std::vector<Coal*> TotalCoal;
