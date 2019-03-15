@@ -49,3 +49,9 @@ const char * setPlayerColours(int pn) {
 
 /*Places the resources on map based on the configuration loaded*/
 void placeResourcesonMap(){}
+
+void loadPowerPlants() {}
+void loadSummaryCards() {}
+void loadStep3() {}
+void selectMap() {}
+void choosePlayableArea(Player p) {}
