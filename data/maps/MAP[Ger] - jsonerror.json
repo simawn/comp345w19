@@ -87,15 +87,9 @@
             {
                "name":"Frankfurt-O"
             },
-            {
-               "name":"Magdeburg"
-            }
-         ],
-         "EDGES":[
-            {
-               "NodeA":"Lubek",
-               "NodeB":"Schwerin",
-               "price":6
+        
+               "rin",
+               "pric
             },
             {
                "NodeA":"Schwerin",
