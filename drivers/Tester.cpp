@@ -38,11 +38,11 @@ void testCardCreation() {
 
 int main() {
 	
-	testMap(); //Part 1
+	//testMap(); //Part 1
 	testMapLoader(); //Part 2
-	TestResourceLoader(); //Part3
-	testPlayer(); //Part 4
-	testCardCreation(); //Part 5
+	//TestResourceLoader(); //Part3
+	//testPlayer(); //Part 4
+	//testCardCreation(); //Part 5
 	system("pause");
 	return 0;
 }

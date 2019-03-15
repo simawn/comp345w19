@@ -5,12 +5,31 @@
 #include <set>
 #include <unordered_map>
 #include <fstream>
+#include <vector>
+#include <filesystem> //Need C++17
 #include <nlohmann/json.hpp> //Used to process .json files
 
 using json = nlohmann::json;
 
 GameMap::GameMap() {
 	resourceMarket.resize(16);
+	std::cout << "Select a starting map:" << std::endl;
+
+	std::vector<std::filesystem::path> files;
+	std::string path = "./data/maps";
+
+	int count = 0;
+	//Loops through files in path and add it into files array
+	for (const auto &entry : std::filesystem::directory_iterator(path)) {
+		files.push_back(entry.path());
+		std::cout << "[" << count << "] " << entry.path().filename() << std::endl;
+		count++;
+	}
+
+	int chosen = 0;
+	std::cout << "Enter your selection: (Integer in []): " << std::endl;
+	std::cin >> chosen;
+	openMap(files[chosen].string()); //TODO: Handle exceptions
 }
 
 GameMap::GameMap(std::string filePath) {
