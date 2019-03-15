@@ -54,7 +54,7 @@ int City::getCityId() {
 //neighbours
 void City::addNeighbour(City* city, int weight) {
 	neighbours[city] = weight;
-	std::cout << this->getName() << " to " << city->getName() << " for " << weight << " added." << std::endl;
+	//std::cout << this->getName() << " to " << city->getName() << " for " << weight << " added." << std::endl;
 }
 
 void City::displayAllNeighbours() {

@@ -5,12 +5,53 @@
 #include <set>
 #include <unordered_map>
 #include <fstream>
+#include <vector>
+#include <filesystem> //Need C++17
 #include <nlohmann/json.hpp> //Used to process .json files
 
 using json = nlohmann::json;
 
 GameMap::GameMap() {
 	resourceMarket.resize(16);
+
+	bool mapIsValid = false;
+
+	while (!mapIsValid) {
+		std::cout << "Select a starting map:" << std::endl;
+
+		std::vector<std::filesystem::path> files;
+		std::string path = "./data/maps";
+
+		int count = 0;
+		//Loops through files in path and add it into files array
+		for (const auto &entry : std::filesystem::directory_iterator(path)) {
+			files.push_back(entry.path());
+			std::cout << "[" << count << "] " << entry.path().filename() << std::endl;
+			count++;
+		}
+
+		int chosen = 0;
+		std::cout << "Enter your selection: (Integer in [ ]): " << std::endl;
+		std::cin >> chosen;
+
+		if (chosen >= 0 && chosen < files.size()) { //Choice is valid
+			try {
+				openMap(files[chosen].string()); //Load map if .json is valid and exists, throws exception if not
+				if (!this->checkMapValidity()) { //Check if loaded map is valid
+					adjList.clear(); //we might want to create a function that wipes adjlist + all cities objects that were created
+					throw "Invalid map.";
+				} else {
+					mapIsValid = true; //Map is valid, exit menu
+				}
+			} catch (std::exception &e) { //TODO: Better exception handling?
+				std::cerr << "Cannot load map: " << e.what() << " \nPlease select another map. \n\n" << std::endl;
+			} catch (const char* e) {
+				std::cerr << e << " Please select another map. \n\n" << std::endl;
+			}
+		} else {
+			std::cerr << "Invalid choice. Please try again. \n\n" << std::endl;
+		}
+	}
 }
 
 GameMap::GameMap(std::string filePath) {
@@ -20,7 +61,7 @@ GameMap::GameMap(std::string filePath) {
 void GameMap::addCity(City* city) {
 	std::string cityName = city->getName();
 	adjList[cityName] = city;
-	std::cout << cityName << " added to map." << std::endl;
+	//std::cout << cityName << " added to map." << std::endl;
 }
 
 City* GameMap::getCity(std::string cityName) {
@@ -37,21 +78,21 @@ bool GameMap::checkMapValidity() {
 	//Using 'new' so we can access it outside of scope
 	std::set<std::string>* checked = new std::set<std::string>();
 
-	std::cout << "Checking map validity..." << std::endl;
+	//std::cout << "Checking map validity..." << std::endl;
 	traverse(adjList.begin()->second, checked);
 
 	int checkedSize = checked->size();
 	delete checked;
 
-	std::cout << "Checked size : " << checkedSize << std::endl;
-	std::cout << "Adj size : " << adjList.size() << std::endl;
+	//std::cout << "Checked size : " << checkedSize << std::endl;
+	//std::cout << "Adj size : " << adjList.size() << std::endl;
 
 	return checkedSize == adjList.size();
 }
 
 void GameMap::traverse(City* city, std::set<std::string>* checked) {
 	if (checked->find(city->getName()) == checked->end()) { //If city NOT in checked
-		std::cout << "In: " << city->getName() << std::endl;
+		//std::cout << "In: " << city->getName() << std::endl;
 		checked->insert(city->getName()); //Mark it as checked
 		std::unordered_map<City*, int> neighbours = city->getNeighbours(); //Get their neighbours
 		for (auto it : neighbours) { //Traverse the neighbours
@@ -62,16 +103,16 @@ void GameMap::traverse(City* city, std::set<std::string>* checked) {
 
 //Functions for processing map file
 void GameMap::openMap(std::string path) {
-	try { //We want try/catch for json library
+	//try { //We want try/catch for json library
 		std::ifstream file(path);
 		json jsonMap;
 		file >> jsonMap;
 		processMap(jsonMap);
 		file.close();
-	}
-	catch (std::exception &e) {
-		std::cerr << "Invalid .json file : " << e.what() << std::endl;
-	}
+	//}
+	//catch (std::exception &e) {
+	//	std::cerr << "Invalid .json file : " << e.what() << std::endl;
+	//}
 }
 
 void GameMap::processMap(json jsonMap) {
@@ -85,7 +126,7 @@ void GameMap::processMap(json jsonMap) {
 		}
 	}
 
-	this->displayAllCities();
+	//this->displayAllCities();
 
 	//Adding all neighbours (EDGES)
 	for (auto regionLoop : jsonMap.at("Region")) {
@@ -103,7 +144,7 @@ void GameMap::processMap(json jsonMap) {
 		this->getCity(regionEdgesLoop.at("NodeB").get<std::string>())->addNeighbour(this->getCity(regionEdgesLoop.at("NodeA").get<std::string>()), regionEdgesLoop.at("price").get<int>());
 	}
 
-	this->checkMapValidity() ? std::cout << "Game map is VALID" << std::endl : std::cout << "Game map is INVALID" << std::endl;
+	//this->checkMapValidity() ? std::cout << "Game map is VALID" << std::endl : std::cout << "Game map is INVALID" << std::endl;
 }
 
 void GameMap::addResource(int Grid, int nbOfResource, std::vector<Coal*> resource) {
