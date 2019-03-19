@@ -1,5 +1,6 @@
 #include "House.h"
-House::House(const char *c) {
+
+House::House(std::string c) {
 	colour = c;
 	amount = 22;
 }
@@ -19,6 +20,6 @@ int House::getHouseAmount() {
 void House::setHouseAmount(int a) {
 	amount = a;
 }
-const char * House::getColour() {
+std::string House::getColour() {
 	return colour;
 }

@@ -1,57 +1,63 @@
+#include "../GameSetupDriver.h"
 #include <iostream>
-#include "../Player.h"
-using namespace std;
+
 /*To get the amount of players that will be playing*/
 int getPlayerCount() {
 	int playerCount;
-	cout << "How many players will be playing the game? (2-6)"<<endl;
-	cin >> playerCount;
+	do {
+		cout << "How many players will be playing the game? (2-6)" << endl;
+		cin >> playerCount;
+		if (!cin) {
+			cout <<"Invalid entry please enter a number between 2 and 6"<<endl;
+		}
+	} while (playerCount < 2 || playerCount>6);
 	return playerCount;
 }
-
-const char * setPlayerColours(int pn) {
-	//Player players[4];
-	cout << "The colours available are:" << endl <<
-		"1. Blue" << endl <<
-		"2. Red" << endl <<
-		"3. Purple" << endl <<
-		"4. Black" << endl <<
-		"5. Yellow" << endl <<
-		"6. Green" << endl;
-	int colour;
-	cout << "Player " << pn << " colour?" << endl;
-	cin >> colour;
-	switch (colour)
-	{
-		case 1:
-		return "Blue";
-		break;
-		case 2:
-			return "Red";
-			break;
-		case 3:
-			return "Purple";
-			break;
-		case 4:
-			return "Black";
-			break;
-		case 5:
-			return "Yellow";
-			break;
-		case 6:
-			return "Green";
-			break;
-	default:
-		return "error";
-		break;
+vector<string> getColorArray() {
+	vector<string> colorArr;
+	colorArr.push_back("Green");
+	colorArr.push_back("Blue");
+	colorArr.push_back("Red");
+	colorArr.push_back("Purple");
+	colorArr.push_back("Black");
+	colorArr.push_back("Yellow");
+	return colorArr;
+}
+std::string setColors(int size,vector<string> colorArr) {
+	cout << "The colours available are:" << endl;
+	for (int i = 1; i <= size; ++i) {
+		cout<< i <<". " << colorArr[(i - 1)] << endl;
 	}
+	int color;
+	cin >> color;
+	string currColor = colorArr[(color-1)];
+	return currColor;
 }
 
+vector<Player> setUpPlayers() {
+	const int pc = getPlayerCount();
+	vector<Player> players;
+
+	vector<string> colorArr = getColorArray();
+	int size = 6;
+	for (int i = 0; i < pc; ++i) {
+		std::string s = setColors(size, colorArr);
+		players.push_back(Player(s));
+		--size;
+		auto itr = std::find(colorArr.begin(), colorArr.end(), s);
+		colorArr.erase(itr);
+	}
+	return players;
+}
 /*Places the resources on map based on the configuration loaded*/
 void placeResourcesOnMap(){}
 
 void loadPowerPlants() {}
 void loadSummaryCards() {}
 void loadStep3() {}
-void selectMap() {}
+
+GameMap selectMap() {
+	GameMap *gm = new GameMap();
+	return *gm;
+}
 void choosePlayableArea(Player p) {}

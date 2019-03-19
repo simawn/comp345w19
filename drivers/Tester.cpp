@@ -4,6 +4,7 @@
 #include "GameMapLoaderDriver.h"
 #include "CardCreationDriver.h"
 #include "ResourcesLoaderDriver.h"
+#include "..\GameSetupDriver.h"
 using namespace std;
 
 
@@ -36,13 +37,22 @@ void testCardCreation() {
 	cout << "\n === END TESTING CARD CREATION ===\n";
 }
 
+void testGameSetup() {
+	//vector<Player> players = setUpPlayers();
+	//for (int i = 0; i < players.size(); ++i) {
+	//	cout << players[i].getPlayerColour() << endl;
+	//}
+	selectMap();
+}
+
 int main() {
-	
+	testGameSetup();
 	//testMap(); //Part 1
-	testMapLoader(); //Part 2
+	//testMapLoader(); //Part 2
 	//TestResourceLoader(); //Part3
 	//testPlayer(); //Part 4
 	//testCardCreation(); //Part 5
+	
 	system("pause");
 	return 0;
 }

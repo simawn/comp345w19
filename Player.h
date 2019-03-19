@@ -18,11 +18,11 @@ public:
 	/**Default constructor.*/
 	Player(); //Added to prevent City.cpp errors
 	/**Set the player up with their colour.*/
-	Player(const char* c);
+	Player(std::string);
 	/**Get the amount of money a player has.*/
 	int getPlayersMoney();
 	/**Get the colour for a given player set up for their house.*/
-	const char* getPlayerColour();
+	std::string getPlayerColour();
 	/**Pay for something, may be deprecated in the next release.*/
 	void pay(int amount);
 	/**Destructor.*/
@@ -43,6 +43,8 @@ public:
 	std::vector<PowerPlant *> getPowerPlants();
 	/**Buy a power plant for the player.*/
 	bool buyPowerPlant(PowerPlant *pp);
+	/**Set the colour of the player*/
+	void setPlayerColor(std::string c);
 
 };
 #endif // !PLAYER_H

@@ -2,9 +2,11 @@
 #include <iostream>
 #include <string>
 	
-	Player::Player(){}
+	Player::Player(){
+		money = new Money();
+	}
 	
-	Player::Player(const char* c){
+	Player::Player(std::string c){
 		house = new House(c);
 		money = new Money();
 	}
@@ -13,7 +15,7 @@
 		return money->getMoney();
 	}
 	
-	const char* Player::getPlayerColour() {
+	std::string Player::getPlayerColour() {
 		return house->getColour();
 	}
 	
@@ -80,6 +82,12 @@
 			return true;
 		}
 		return false;
+	}
+
+	void Player::setPlayerColor(std::string c) {
+		delete house;
+		house = nullptr;
+		house = new House(c);
 	}
 	
 	void Player::destroy() {
