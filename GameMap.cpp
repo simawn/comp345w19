@@ -150,20 +150,25 @@ void GameMap::processMap(json jsonMap) {
 
 void GameMap::addResource(int Grid, int nbOfResource, std::vector<Coal*> resource) {
 	for (int i = 0; i < nbOfResource; i++) {
-		resourceMarket[Grid].push_back(resource[0]);
+		resource[0] = new Coal(Grid);
+ 		resourceMarket[Grid].push_back(resource[0]);
 		resource.erase(resource.begin());
 	}
 }
 
 void GameMap::addResource(int Grid, int nbOfResource, std::vector<Gas*> resource) {
 	for (int i = 0; i < nbOfResource; i++) {
+		resource[0] = new Gas(Grid);
+
 		resourceMarket[Grid].push_back(resource[0]);
 		resource.erase(resource.begin());
+		
 	}
 }
 
 void GameMap::addResource(int Grid, int nbOfResource, std::vector<Uranium*> resource) {
 	for (int i = 0; i < nbOfResource; i++) {
+		resource[0] = new Uranium(Grid);
 		resourceMarket[Grid].push_back(resource[0]);
 		resource.erase(resource.begin());
 	}
@@ -171,6 +176,7 @@ void GameMap::addResource(int Grid, int nbOfResource, std::vector<Uranium*> reso
 
 void GameMap::addResource(int Grid, int nbOfResource, std::vector<Garbage*> resource) {
 	for (int i = 0; i < nbOfResource; i++) {
+		resource[0] = new Garbage(Grid);
 		resourceMarket[Grid].push_back(resource[0]);
 		resource.erase(resource.begin());
 	}

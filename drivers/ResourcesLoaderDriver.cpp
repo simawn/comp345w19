@@ -3,24 +3,10 @@
 #include "../GameMap.h"
 void resourceLoaderDriver() {
 	GameMap map;
-	std::vector<Coal*> TotalCoal;
-	std::vector<Garbage*> TotalGarbage;
-	std::vector<Gas*> TotalGas;
-	std::vector<Uranium*> TotalUranium;
-	for (int i = 0; i < 24; i++)
-	{
-
-		TotalCoal.push_back(new Coal(1));
-	}
-	for (int i = 0; i < 24; i++) {
-		TotalGas.push_back(new Gas(7));
-	}
-	for (int i = 0; i < 24; i++) {
-		TotalGarbage.push_back(new Garbage(3));
-	}
-	for (int i = 0; i < 12; i++) {
-		TotalUranium.push_back(new Uranium(14));
-	}
+	std::vector<Coal*> TotalCoal(24);
+	std::vector<Garbage*> TotalGarbage(24);
+	std::vector<Gas*> TotalGas(24);
+	std::vector<Uranium*> TotalUranium(12);
 	for (int i = 0; i < 8; i++) {
 		map.addResource(i, 3, TotalCoal);
 	}
@@ -29,8 +15,8 @@ void resourceLoaderDriver() {
 	}
 	map.addResource(6, 3, TotalGarbage);
 	map.addResource(7, 3, TotalGarbage);
-	map.addResource(13, 3, TotalUranium);
-	map.addResource(15, 3, TotalUranium);
+	map.addResource(13, 1, TotalUranium);
+	map.addResource(15, 1, TotalUranium);
 	map.printResourceMarket();
 
 }
