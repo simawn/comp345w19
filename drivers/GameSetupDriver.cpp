@@ -60,4 +60,8 @@ GameMap selectMap() {
 	GameMap *gm = new GameMap();
 	return *gm;
 }
-void choosePlayableArea(Player p) {}
+
+
+void choosePlayableArea(Player p,GameMap gm) {
+	
+}

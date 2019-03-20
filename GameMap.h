@@ -9,6 +9,7 @@
 #include <unordered_map>
 #include <string>
 #include <set>
+#include <vector>
 #include <nlohmann/json.hpp>
 
 using json = nlohmann::json;
@@ -63,7 +64,8 @@ public:
 	 * Shows all the cities in GameMap on the console 
 	 */
 	void displayAllCities();
-
+	/**Get all the districts so that a player may choose their starting area*/
+	std::vector<std::string> getAllDistricts(int playerCount);
 	/**
 	 * Checks if GameMap is valid. Checks if all the cities are connected.
 	 * @return A boolean indicating if the game map is valid

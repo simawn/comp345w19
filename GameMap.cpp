@@ -33,10 +33,6 @@ GameMap::GameMap() {
 		int chosen = 0;
 		std::cout << "Enter your selection: (Integer in [ ]): " << std::endl;
 		std::cin >> chosen;
-		if (!std::cin) {
-			std::cerr << "Invalid choice. Please try again. \n\n" << std::endl;
-			std::cin.clear();
-		}
 		if (chosen >= 0 && chosen < files.size()) { //Choice is valid
 			try {
 				openMap(files[chosen].string()); //Load map if .json is valid and exists, throws exception if not
@@ -190,4 +186,10 @@ void GameMap::printResourceMarket() {
 		}
 
 	}
+}
+
+std::vector<std::string> GameMap::getAllDistricts(int playerCount) {
+	std::vector<std::string> districts;
+
+	return districts;
 }
