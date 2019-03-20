@@ -38,11 +38,11 @@ void testCardCreation() {
 }
 
 void testGameSetup() {
-	//vector<Player> players = setUpPlayers();
-	//for (int i = 0; i < players.size(); ++i) {
-	//	cout << players[i].getPlayerColour() << endl;
-	//}
-	selectMap();
+	vector<Player> players = setUpPlayers();
+	for (int i = 0; i < players.size(); ++i) {
+		cout << players[i].getPlayerColour() << endl;
+	}
+	//selectMap();
 }
 
 int main() {

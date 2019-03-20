@@ -114,9 +114,10 @@ void GameMap::openMap(std::string path) {
 
 void GameMap::processMap(json jsonMap) {
 	//std::cout << jsonMap.at("Region")[0].at("NODES") << "\n\n";
-
+	
 	//Adding main cities to map (NODES)
 	for (auto regionLoop : jsonMap.at("Region")) {
+		districtList.push_back(regionLoop.at("NAME").get<std::string>());
 		for (auto nodesLoop : regionLoop.at("NODES")) {
 			//std::cout << nodesLoop.at("name").get<std::string>() << "\n";
 			this->addCity(new City(nodesLoop.at("name").get<std::string>()));

@@ -28,6 +28,8 @@ class GameMap {
 	 */
 	std::unordered_map<std::string, City*> adjList;
 
+	std::vector<std::string> districtList;/**<List of districts (outer regions for the cities).*/
+
 	/**
 	 * Reads a .json and checks if it's valid before processing it
 	 */
