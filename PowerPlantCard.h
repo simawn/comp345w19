@@ -3,7 +3,7 @@
 #include <vector>
 #include "Cards.h"
 class PowerPlantCard:public Cards{
-private:
+public:
 	/**Max Cities Supplied
 	*@return max nb cities it can supply
 	* Getter
@@ -24,7 +24,6 @@ private:
 	*Getter
 	*/
 	std::vector<std::string> getRessourcesNeeded();
-public:
 	/**
 	* Max Nb of cities it can supply
 	*/

@@ -96,6 +96,9 @@
     <ClCompile Include="GameInstance.cpp">
       <Filter>Source Files\Drivers</Filter>
     </ClCompile>
+    <ClCompile Include="Marketplace.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="House.h">
@@ -178,6 +181,9 @@
     </ClInclude>
     <ClInclude Include="AuctionStepDriver.h">
       <Filter>Header Files\DriverHeads</Filter>
+    </ClInclude>
+    <ClInclude Include="Marketplace.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

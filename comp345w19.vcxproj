@@ -35,6 +35,9 @@
     </ClCompile>
     <ClCompile Include="House.cpp" />
     <ClCompile Include="GameMapCustomizer.cpp" />
+    <ClCompile Include="Marketplace.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="Money.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="PowerPlant.cpp" />
@@ -64,6 +67,9 @@
     <ClInclude Include="BureaucracyStepDriver.h" />
     <ClInclude Include="AuctionStepDriver.h" />
     <ClInclude Include="House.h" />
+    <ClInclude Include="Marketplace.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClInclude>
     <ClInclude Include="Money.h" />
     <ClInclude Include="Gas.h" />
     <ClInclude Include="Player.h" />
