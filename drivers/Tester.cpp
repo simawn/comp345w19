@@ -42,7 +42,7 @@ void testGameSetup() {
 	for (int i = 0; i < players.size(); ++i) {
 		cout << players[i].getPlayerColour() << endl;
 	}
-	//selectMap();
+	selectMap();
 }
 
 int main() {
