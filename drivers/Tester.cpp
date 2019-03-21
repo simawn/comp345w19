@@ -37,12 +37,13 @@ void testCardCreation() {
 	cout << "\n === END TESTING CARD CREATION ===\n";
 }
 
-void testGameSetup() {/**
+void testGameSetup() {
 	vector<Player> players = setUpPlayers();
 	for (int i = 0; i < players.size(); ++i) {
 		cout << players[i].getPlayerColour() << endl;
 	}
-	selectMap();*/
+	selectMap();
+	setUpStartingArea();
 	
 }
 
@@ -52,7 +53,7 @@ int main() {
 	//testMapLoader(); //Part 2
 	//TestResourceLoader(); //Part3
 	//testPlayer(); //Part 4
-	testCardCreation(); //Part 5
+	//testCardCreation(); //Part 5
 	
 	system("pause");
 	return 0;

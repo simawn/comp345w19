@@ -189,8 +189,6 @@ void GameMap::printResourceMarket() {
 	}
 }
 
-std::vector<std::string> GameMap::getAllDistricts(int playerCount) {
-	std::vector<std::string> districts;
-
-	return districts;
+std::vector<std::string> GameMap::getAllDistricts() {
+	return districtList;
 }

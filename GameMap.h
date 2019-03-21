@@ -67,7 +67,7 @@ public:
 	 */
 	void displayAllCities();
 	/**Get all the districts so that a player may choose their starting area*/
-	std::vector<std::string> getAllDistricts(int playerCount);
+	std::vector<std::string> getAllDistricts();
 	/**
 	 * Checks if GameMap is valid. Checks if all the cities are connected.
 	 * @return A boolean indicating if the game map is valid

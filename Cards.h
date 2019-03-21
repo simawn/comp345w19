@@ -6,4 +6,6 @@ public:
 	*output class object description
 	*/
 	virtual void print();
+	virtual int getCost() = 0;
+
 };
