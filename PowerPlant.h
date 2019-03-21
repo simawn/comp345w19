@@ -11,9 +11,11 @@ private:
 	int housing_value;/**<The amount of houses it powers.*/
 	std::vector<Resource *> resource_type;/**<The type of resource that the powerplant uses.*/
 public:
-	/**Constructor to set up all the values.*/
+	/**Constructor for renewable resources.*/
+	PowerPlant(int c, int rc, int hv);
+	/**Constructor for one resource.*/
 	PowerPlant(int c, int rc, int hv, Resource * rt);
-	/**Constructor for two resorces*/
+	/**Constructor for two resorces.*/
 	PowerPlant(int c, int rc, int hv, Resource * rt, Resource * rt1);
 	/**Default constructor.*/
 	PowerPlant();
@@ -25,5 +27,7 @@ public:
 	int getHouseValue();
 	/**Get the resource type for the powerplant ie Coal.*/
 	std::vector<Resource *> getResourceType();
+	/**Print function*/
+	void print();
 };
 #endif // !POWERPLANT_H

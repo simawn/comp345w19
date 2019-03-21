@@ -49,7 +49,7 @@ void GameDriver() {
 	pp = new PowerPlant(1, 2, 1, &c);
 	p->buyPowerPlant(pp);
 	cout << "Power Plant" << endl << "cost: " << pp->getCost() << endl << "Resource cost: " << pp->getResourceCost() << endl <<
-		"Housing cost: " << pp->getHouseValue() << endl << "Resource type: " << pp->getResourceType()->getName() << endl;
+		"Housing cost: " << pp->getHouseValue() << endl << "Resource type: " << pp->getResourceType()[0]->getName() << endl;
 	cout << "Balance: " << p->getPlayersMoney() << endl << endl;
 
 	cout << "Cities testing" << endl << endl;
