@@ -6,6 +6,7 @@
 #include "ResourcesLoaderDriver.h"
 #include "../GameSetupDriver.h"
 #include "MarketPlaceDriver.h"
+#include "BureaucracyStepDriver.h"
 
 using namespace std;
 
@@ -65,8 +66,10 @@ void testBureaucracy() {
 	cout << "\n === END TESTING BUREAUCRACY ===\n";
 }
 
+int step = 1; //should be moved into a game driver eventually.
+
 int main() {
-	step = 1;	//should be moved into a game driver eventually.
+	//step = 1;	
 
 		//testMap(); //Part 1
 		//testMapLoader(); //Part 2

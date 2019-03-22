@@ -93,6 +93,9 @@
     <ClCompile Include="Marketplace.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="drivers\BureaucracyStepDriver.cpp">
+      <Filter>Source Files\Drivers</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="House.h">
@@ -167,9 +170,6 @@
     <ClInclude Include="BuildingStepDriver.h">
       <Filter>Header Files\DriverHeads</Filter>
     </ClInclude>
-    <ClInclude Include="BureaucracyStepDriver.h">
-      <Filter>Header Files\DriverHeads</Filter>
-    </ClInclude>
     <ClInclude Include="AuctionStepDriver.h">
       <Filter>Header Files\DriverHeads</Filter>
     </ClInclude>
@@ -177,6 +177,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="drivers\MarketPlaceDriver.h">
+      <Filter>Header Files\DriverHeads</Filter>
+    </ClInclude>
+    <ClInclude Include="drivers\BureaucracyStepDriver.h">
       <Filter>Header Files\DriverHeads</Filter>
     </ClInclude>
   </ItemGroup>
