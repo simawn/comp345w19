@@ -50,7 +50,8 @@ public:
 	 * Constructor taking a custom map file
 	 */
 	GameMap(std::string);
-
+	/**Loads the map from a selected json file*/
+	void loadMap();
 	/**
 	 * Adds a city to the map. Takes a City pointer.
 	 */
@@ -67,7 +68,7 @@ public:
 	 */
 	void displayAllCities();
 	/**Get all the districts so that a player may choose their starting area*/
-	std::vector<std::string> getAllDistricts();
+	std::vector<std::string> getAllDistricts(int pc);
 	/**
 	 * Checks if GameMap is valid. Checks if all the cities are connected.
 	 * @return A boolean indicating if the game map is valid

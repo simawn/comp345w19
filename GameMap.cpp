@@ -14,6 +14,10 @@ using json = nlohmann::json;
 GameMap::GameMap() {
 	resourceMarket.resize(16);
 
+	
+}
+
+void GameMap::loadMap() {
 	bool mapIsValid = false;
 
 	while (!mapIsValid) {
@@ -39,18 +43,20 @@ GameMap::GameMap() {
 				if (!this->checkMapValidity()) { //Check if loaded map is valid
 					adjList.clear(); //we might want to create a function that wipes adjlist + all cities objects that were created
 					throw "Invalid map.";
-				} else {
+				}
+				else {
 					mapIsValid = true; //Map is valid, exit menu
 				}
-			} catch (std::exception &e) { //TODO: Better exception handling?
+			}
+			catch (std::exception &e) { //TODO: Better exception handling?
 				std::cerr << "Cannot load map: " << e.what() << " \nPlease select another map. \n\n" << std::endl;
-			} catch (const char* e) {
+			}
+			catch (const char* e) {
 				std::cerr << e << " Please select another map. \n\n" << std::endl;
 			}
 		}
 	}
 }
-
 GameMap::GameMap(std::string filePath) {
 	openMap(filePath);
 }
@@ -189,6 +195,21 @@ void GameMap::printResourceMarket() {
 	}
 }
 
-std::vector<std::string> GameMap::getAllDistricts() {
+std::vector<std::string> GameMap::getAllDistricts(int pc) {
+	if (pc < 4) {
+		for (int i = 0; i < 3; ++i) {
+			districtList.pop_back();
+		}
+	}
+	else if (pc < 5) {
+		for (int i = 0; i < 2; ++i) {
+			districtList.pop_back();
+		}
+	}
+	else if (pc < 7) {
+		for (int i = 0; i < 1; ++i) {
+			districtList.pop_back();
+		}
+	}
 	return districtList;
 }

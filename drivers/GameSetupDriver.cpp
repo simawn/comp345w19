@@ -11,6 +11,9 @@ int getPlayerCount() {
 		if (!cin) {
 			cout <<"Invalid entry please enter a number between 2 and 6"<<endl;
 		}
+		else if (playerCount < 2 || playerCount>6) {
+			cout << "Invalid entry please enter a number between 2 and 6" << endl;
+		}
 	} while (playerCount < 2 || playerCount>6);
 	return playerCount;
 }
@@ -35,9 +38,12 @@ string selectorHelper(vector<string> arr) {
 	do {
 		cin >> selection;
 		if (!cin) {
-			cout << "Invalid entry please enter a number between 1 and " << (size + 1) << endl;
+			cout << "Invalid entry please enter a number between 1 and " << (size) << endl;
 		}
-	} while (selection < 0 || selection >(size + 1));
+		else if (selection < 1 || selection >size) {
+			cout << "Invalid entry please enter a number between 1 and " << (size) << endl;
+		}
+	} while (selection < 1 || selection >size);
 	string currSelection = arr[(selection - 1)];
 	return currSelection;
 }
@@ -70,14 +76,18 @@ void loadStep3() {}
 
 GameMap selectMap() {
 	GameMap *gm = new GameMap();
+	gm->loadMap();
 	gameMap = *gm;
 	return *gm;
 }
 
 void setUpStartingArea() {
-	std::vector<std::string> districts(gameMap.getAllDistricts());
+	int pc = currentPlayers.size();
+	std::vector<std::string> districts(gameMap.getAllDistricts(pc));
+
 	for (Player p : currentPlayers) {
 		string s = choosePlayableArea(p,districts);
+		p.setStartingDistrict(s);
 		auto itr = std::find(districts.begin(), districts.end(), s);
 		districts.erase(itr);
 	}

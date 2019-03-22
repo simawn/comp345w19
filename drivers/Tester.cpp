@@ -48,7 +48,7 @@ void testGameSetup() {
 }
 
 int main() {
-	//testGameSetup();
+	testGameSetup();
 	//testMap(); //Part 1
 	//testMapLoader(); //Part 2
 	//TestResourceLoader(); //Part3
