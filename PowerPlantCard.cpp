@@ -1,44 +1,44 @@
 #include "PowerPlantCard.h"
-PowerPlantCard::PowerPlantCard(int cardNumber, int maxCitiesSupplied, int nbResourceNeeded) {
-	PowerPlantCard::cardNumber = cardNumber;
-	PowerPlantCard::maxCitiesSupplied = maxCitiesSupplied;
-	PowerPlantCard::nbResourceNeeded = nbResourceNeeded;
+PowerPlant::PowerPlant(int cardNumber, int maxCitiesSupplied, int nbResourceNeeded) {
+	PowerPlant::cardNumber = cardNumber;
+	PowerPlant::maxCitiesSupplied = maxCitiesSupplied;
+	PowerPlant::nbResourceNeeded = nbResourceNeeded;
 }
 
-PowerPlantCard::PowerPlantCard(int cardNumber, int maxCitiesSupplied, int nbResourceNeeded, std::string resource1) {
-	PowerPlantCard::cardNumber = cardNumber;
-	PowerPlantCard::maxCitiesSupplied = maxCitiesSupplied;
-	PowerPlantCard::nbResourceNeeded = nbResourceNeeded;
-	PowerPlantCard::resourcesNeeded.push_back(resource1);
+PowerPlant::PowerPlant(int cardNumber, int maxCitiesSupplied, int nbResourceNeeded, std::string resource1) {
+	PowerPlant::cardNumber = cardNumber;
+	PowerPlant::maxCitiesSupplied = maxCitiesSupplied;
+	PowerPlant::nbResourceNeeded = nbResourceNeeded;
+	PowerPlant::resourcesNeeded.push_back(resource1);
 }
-PowerPlantCard::PowerPlantCard(int cardNumber, int maxCitiesSupplied, int nbResourceNeeded, std::string resource1, std::string resource2) {
-	PowerPlantCard::cardNumber = cardNumber;
-	PowerPlantCard::maxCitiesSupplied = maxCitiesSupplied;
-	PowerPlantCard::nbResourceNeeded = nbResourceNeeded;
-	PowerPlantCard::resourcesNeeded.push_back(resource1);
-	PowerPlantCard::resourcesNeeded.push_back(resource2);
+PowerPlant::PowerPlant(int cardNumber, int maxCitiesSupplied, int nbResourceNeeded, std::string resource1, std::string resource2) {
+	PowerPlant::cardNumber = cardNumber;
+	PowerPlant::maxCitiesSupplied = maxCitiesSupplied;
+	PowerPlant::nbResourceNeeded = nbResourceNeeded;
+	PowerPlant::resourcesNeeded.push_back(resource1);
+	PowerPlant::resourcesNeeded.push_back(resource2);
 
 
 
 }
 
 
-int PowerPlantCard:: getmaxCitiesSupplied(){
-	return PowerPlantCard::maxCitiesSupplied;
+int PowerPlant:: getmaxCitiesSupplied(){
+	return PowerPlant::maxCitiesSupplied;
 }
-int PowerPlantCard::getCardNumber(){
-	return PowerPlantCard::cardNumber;
+int PowerPlant::getCardNumber(){
+	return PowerPlant::cardNumber;
 }
-std::vector<std::string> PowerPlantCard:: getRessourcesNeeded(){
-	return PowerPlantCard::resourcesNeeded;
+std::vector<std::string> PowerPlant:: getRessourcesNeeded(){
+	return PowerPlant::resourcesNeeded;
 }
-int PowerPlantCard::getNbResourceNeeded(){
-	return PowerPlantCard::nbResourceNeeded;
+int PowerPlant::getNbResourceNeeded(){
+	return PowerPlant::nbResourceNeeded;
 }
- void PowerPlantCard:: print() {
-	 std::cout << "powerplantcard number is " << PowerPlantCard::cardNumber << " nb of resource needed is " << PowerPlantCard::nbResourceNeeded << " max number of cities supplied is "<< PowerPlantCard::nbResourceNeeded << " Resource needed are: ";
+ void PowerPlant:: print() {
+	 std::cout << "powerplantcard number is " << PowerPlant::cardNumber << " nb of resource needed is " << PowerPlant::nbResourceNeeded << " max number of cities supplied is "<< PowerPlant::nbResourceNeeded << " Resource needed are: ";
 	 
-	 for (std::string a : PowerPlantCard::resourcesNeeded) {
+	 for (std::string a : PowerPlant::resourcesNeeded) {
 		 std::cout << a << "";
 	 }
 

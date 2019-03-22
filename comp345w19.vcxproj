@@ -41,7 +41,6 @@
     <ClCompile Include="Money.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="PowerPlant.cpp" />
-    <ClCompile Include="PowerPlantCard.cpp" />
     <ClCompile Include="GameInstance.cpp" />
     <ClCompile Include="Step3Card.cpp" />
     <ClCompile Include="SummaryCard.cpp" />
@@ -74,7 +73,6 @@
     <ClInclude Include="Gas.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="PowerPlant.h" />
-    <ClInclude Include="PowerPlantCard.h" />
     <ClInclude Include="Resources.h" />
     <ClInclude Include="Step3Card.h" />
     <ClInclude Include="SummaryCard.h" />

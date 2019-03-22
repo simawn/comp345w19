@@ -94,4 +94,10 @@
 		delete money;
 		delete house;
 	}
+	void Player::setStartingDistrict(std::string district) {
+		starting_district = district;
+	}
+	std::string Player::getStartingDistrict() {
+		return starting_district;
+	}
 

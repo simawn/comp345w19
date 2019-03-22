@@ -6,6 +6,7 @@
 #include "City.h"
 #include "PowerPlant.h"
 #include <vector>
+#include <string>
 /**Class that represents a player, playable character in the game*/
 class Player{
 private:
@@ -14,6 +15,7 @@ private:
 	std::vector<PowerPlant *> powerplants;/**<The power plants that a player has.*/
 	Money* money;/**<The money pointer for money management.*/
 	House* house;/**<The house pointer for the house management, colour and amounts.*/
+	std::string starting_district;/**<The starting district for the player.*/
 public:
 	/**Default constructor.*/
 	Player(); //Added to prevent City.cpp errors
@@ -45,6 +47,11 @@ public:
 	bool buyPowerPlant(PowerPlant *pp);
 	/**Set the colour of the player*/
 	void setPlayerColor(std::string c);
+	/**Set the starting district*/
+	void setStartingDistrict(std::string district);
+	/**Get the starting district*/
+	std::string getStartingDistrict();
+
 
 };
 #endif // !PLAYER_H

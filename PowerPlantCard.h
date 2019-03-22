@@ -47,7 +47,7 @@ public:
 	
 	*constructor
 	*/
-	PowerPlantCard(int cardNumber, int maxCitiesSupplied, int nbResourceNeeded);
+	PowerPlant(int cardNumber, int maxCitiesSupplied, int nbResourceNeeded);
 
 	/**
 	*@param cards nb identifier
@@ -57,7 +57,7 @@ public:
 	*constructor
 	*/
 	
-	PowerPlantCard(int cardNumber, int maxCitiesSupplied, int nbResourceNeeded,std::string resource1 );
+	PowerPlant(int cardNumber, int maxCitiesSupplied, int nbResourceNeeded,std::string resource1 );
 	/**
 	*@param cards nb identifier
 	*@param max cities it can supply
@@ -66,7 +66,7 @@ public:
 	@param type of resource needed
 	*constructor
 	*/
-	PowerPlantCard(int cardNumber, int maxCitiesSupplied, int nbResourceNeeded, std::string resource1, std::string resource2);
+	PowerPlant(int cardNumber, int maxCitiesSupplied, int nbResourceNeeded, std::string resource1, std::string resource2);
 	
 	/**print
 	* Output class objects details

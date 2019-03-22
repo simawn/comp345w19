@@ -1,7 +1,7 @@
 {
    "Region":[
       {
-         "NAME":"1",
+         "NAME":"Green",
          "NODES":[
             {
                "name":"Flensburg"
@@ -69,7 +69,7 @@
          ]
       },
       {
-         "NAME":"2",
+         "NAME":"Brown",
          "NODES":[
             {
                "name":"Lubek"
@@ -142,7 +142,7 @@
          ]
       },
       {
-         "NAME":"3",
+         "NAME":"Red",
          "NODES":[
             {
                "name":"Osnabruk"
@@ -210,7 +210,7 @@
          ]
       },
       {
-         "NAME":"4",
+         "NAME":"Yellow",
          "NODES":[
             {
                "name":"Halle"
@@ -278,7 +278,7 @@
          ]
       },
       {
-         "NAME":"5",
+         "NAME":"Blue",
          "NODES":[
             {
                "name":"Koln"
@@ -356,7 +356,7 @@
          ]
       },
       {
-         "NAME":"6",
+         "NAME":"Purple",
          "NODES":[
             {
                "name":"Stuttgart"
