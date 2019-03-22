@@ -16,3 +16,10 @@ void initializeMarketPlace(){
 	market.print();
 	delete deck;
 }
+
+Marketplace setupMarketplace() {
+	Deck* deck = new Deck();
+	Marketplace market(deck);
+	market.print();
+	return market;
+}
