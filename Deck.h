@@ -8,6 +8,9 @@ private:
 	std::vector<Cards*> stack;
 
 public:
+	/**Default constructor
+	Creates a deck of power plant cards and shuffles them. Does not include the initial set of 8 cards.
+	*/
 	Deck();
 	
 	/**General Constructor
@@ -51,6 +54,11 @@ public:
 	*pops the backmost Powerplant card element form the vector and returns it
 	*/
 	Cards draw();
+
+	/**size
+	Displays the numbers of cards in the deck
+	*/
+	int size();
 };
 
 

@@ -19,7 +19,6 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Cards.cpp" />
     <ClCompile Include="City.cpp" />
     <ClCompile Include="Deck.cpp" />
     <ClCompile Include="drivers\CardCreationDriver.cpp" />

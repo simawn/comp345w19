@@ -5,7 +5,7 @@ public:
 	/**print
 	*output class object description
 	*/
-	virtual void print();
+	virtual void print() {};
 	//virtual int getCost() = 0;
 
 };

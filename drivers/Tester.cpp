@@ -33,7 +33,8 @@ void testMapLoader() {
 }
 void testCardCreation() {
 	cout << "\n === TESTING CARD CREATION ===\n";
-	createDeckCards();
+	//createDeckCards();
+	createDeckCardsSimple();
 	cout << "\n === END TESTING CARD CREATION ===\n";
 }
 
