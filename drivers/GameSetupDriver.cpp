@@ -83,13 +83,30 @@ GameMap selectMap() {
 
 void setUpStartingArea() {
 	int pc = currentPlayers.size();
-	std::vector<std::string> districts(gameMap.getAllDistricts(pc));
-
+	std::vector<std::string> districts(gameMap.getAllDistricts());
+	std::vector<std::string> playing_districts;
+	bool first_choice = true;
+	int previous_player = 0;
 	for (Player p : currentPlayers) {
-		string s = choosePlayableArea(p,districts);
-		p.setStartingDistrict(s);
-		auto itr = std::find(districts.begin(), districts.end(), s);
-		districts.erase(itr);
+		if (first_choice) {
+			string s = choosePlayableArea(p, districts);
+			p.setStartingDistrict(s);
+			playing_districts.push_back(s);
+			first_choice = false;
+		}
+		else {
+
+			std::vector<std::string> districts_adj(gameMap.getAdjacentRegions(playing_districts[previous_player]));
+			for (string d : playing_districts) {
+				auto itr = std::find(districts_adj.begin(), districts_adj.end(), d);
+				districts_adj.erase(itr);
+			}
+			string s = choosePlayableArea(p, districts_adj);
+			p.setStartingDistrict(s);
+			playing_districts.push_back(s);
+			++previous_player;
+		}
+
 	}
 }
 string choosePlayableArea(Player p, vector<string> districts) {	

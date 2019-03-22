@@ -7,6 +7,7 @@
 #include "../GameSetupDriver.h"
 #include "MarketPlaceDriver.h"
 
+
 using namespace std;
 
 
@@ -47,7 +48,7 @@ void testMarketplaceCreation() {
 	cout << "\n === END TESTING MARKETPLACE ===\n";
 }
 
-/* Have this part as a main game loop on a seperate file?
+// Have this part as a main game loop on a seperate file?
 void testGameSetup() {
 	vector<Player> players = setUpPlayers();
 	for (int i = 0; i < players.size(); ++i) {
@@ -57,16 +58,16 @@ void testGameSetup() {
 	setUpStartingArea();
 	
 }
-*/
+
 
 void testBureaucracy() {
 	cout << "\n === TESTING BUREAUCRACY ===\n";
-	doBureaucracy(setupMarketplace());
+	//doBureaucracy(setupMarketplace());
 	cout << "\n === END TESTING BUREAUCRACY ===\n";
 }
 
 int main() {
-	step = 1;	//should be moved into a game driver eventually.
+	//step = 1;	//should be moved into a game driver eventually.
 
 		//testMap(); //Part 1
 		//testMapLoader(); //Part 2
@@ -74,9 +75,9 @@ int main() {
 		//testPlayer(); //Part 4
 		//testCardCreation(); //Part 5
 	
-	//testGameSetup();
+	testGameSetup();
 	//testMarketplaceCreation();
-	testBureaucracy();
+	//testBureaucracy();
 	system("pause");
 	return 0;
 }

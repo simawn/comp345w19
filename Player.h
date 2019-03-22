@@ -7,6 +7,7 @@
 #include "PowerPlant.h"
 #include <vector>
 #include <string>
+#include "SummaryCard.h"
 /**Class that represents a player, playable character in the game*/
 class Player{
 private:
@@ -16,6 +17,8 @@ private:
 	Money* money;/**<The money pointer for money management.*/
 	House* house;/**<The house pointer for the house management, colour and amounts.*/
 	std::string starting_district;/**<The starting district for the player.*/
+	SummaryCard sc;
+
 public:
 	/**Default constructor.*/
 	Player(); //Added to prevent City.cpp errors

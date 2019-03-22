@@ -13,8 +13,6 @@ using json = nlohmann::json;
 
 GameMap::GameMap() {
 	resourceMarket.resize(16);
-
-	
 }
 
 void GameMap::loadMap() {
@@ -26,20 +24,20 @@ void GameMap::loadMap() {
 		std::vector<std::filesystem::path> files;
 		std::string path = "./data/maps";
 
-		int count = 0;
+		int count = 1;
 		//Loops through files in path and add it into files array
 		for (const auto &entry : std::filesystem::directory_iterator(path)) {
 			files.push_back(entry.path());
-			std::cout << "[" << count << "] " << entry.path().filename() << std::endl;
-			count++;
+			std::cout << count << ". " << entry.path().filename() << std::endl;
+			++count;
 		}
-
-		int chosen = 0;
-		std::cout << "Enter your selection: (Integer in [ ]): " << std::endl;
-		std::cin >> chosen;
-		if (chosen >= 0 && chosen < files.size()) { //Choice is valid
+		int chosen = 1;
+		do {
+			std::cout << "Enter your selection: " << std::endl;
+			std::cin >> chosen;
+		} while (chosen < 1 || chosen > files.size());
 			try {
-				openMap(files[chosen].string()); //Load map if .json is valid and exists, throws exception if not
+				openMap(files[(chosen-1)].string()); //Load map if .json is valid and exists, throws exception if not
 				if (!this->checkMapValidity()) { //Check if loaded map is valid
 					adjList.clear(); //we might want to create a function that wipes adjlist + all cities objects that were created
 					throw "Invalid map.";
@@ -54,7 +52,6 @@ void GameMap::loadMap() {
 			catch (const char* e) {
 				std::cerr << e << " Please select another map. \n\n" << std::endl;
 			}
-		}
 	}
 }
 GameMap::GameMap(std::string filePath) {
@@ -70,6 +67,8 @@ void GameMap::addCity(City* city) {
 City* GameMap::getCity(std::string cityName) {
 	return adjList.find(cityName)->second;
 }
+
+
 
 void GameMap::displayAllCities() {
 	for (auto it = adjList.begin(); it != adjList.end(); it++) {
@@ -120,10 +119,10 @@ void GameMap::openMap(std::string path) {
 
 void GameMap::processMap(json jsonMap) {
 	//std::cout << jsonMap.at("Region")[0].at("NODES") << "\n\n";
-	
+	loadRegionAdjacency(jsonMap, 2);
 	//Adding main cities to map (NODES)
-	for (auto regionLoop : jsonMap.at("Region")) {
-		districtList.push_back(regionLoop.at("NAME").get<std::string>());
+	for(auto regionLoop : jsonMap.at("Region")) {
+		//districtList.push_back(regionLoop.at("NAME").get<std::string>());
 		for (auto nodesLoop : regionLoop.at("NODES")) {
 			//std::cout << nodesLoop.at("name").get<std::string>() << "\n";
 			this->addCity(new City(nodesLoop.at("name").get<std::string>()));
@@ -195,21 +194,20 @@ void GameMap::printResourceMarket() {
 	}
 }
 
-std::vector<std::string> GameMap::getAllDistricts(int pc) {
-	if (pc < 4) {
-		for (int i = 0; i < 3; ++i) {
-			districtList.pop_back();
-		}
-	}
-	else if (pc < 5) {
-		for (int i = 0; i < 2; ++i) {
-			districtList.pop_back();
-		}
-	}
-	else if (pc < 7) {
-		for (int i = 0; i < 1; ++i) {
-			districtList.pop_back();
-		}
-	}
+std::vector<std::string> GameMap::getAllDistricts() {
 	return districtList;
+}
+
+void GameMap::loadRegionAdjacency(json jsonMap) {
+	for (auto regionLoop : jsonMap.at("ConnectedRegions")) {
+		districtList.push_back(regionLoop.at("Region").get<std::string>());
+		for (auto nodesLoop : regionLoop.at("Neighbour")) {
+			adjRegion[regionLoop.at("Region").get<std::string>()].push_back(nodesLoop.at("Region").get<std::string>());
+			//nodesLoop.at("Region").get<std::string>();
+		}
+	}
+}
+
+std::vector<std::string> GameMap::getAdjacentRegions(std::string region) {
+	return adjRegion[region];
 }

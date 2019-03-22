@@ -585,5 +585,61 @@
          "NodeB":"Regensburg",
          "price":12
       }
+   ],
+   "ConnectedRegions":[
+      {
+         "Region":"Green",
+         "Neighbour":
+         [
+            {"Region":"Red"},
+            {"Region":"Brown"},
+            {"Region":"Yellow"}
+         ]
+      },
+      {
+         "Region":"Brown",
+         "Neighbour":
+         [
+            {"Region":"Green"},
+            {"Region":"Yellow"}
+         ]
+      },
+      {
+         "Region":"Red",
+         "Neighbour":
+         [
+            {"Region":"Green"},
+            {"Region":"Yellow"},
+            {"Region":"Blue"}
+         ]
+      },
+      {
+         "Region":"Yellow",
+         "Neighbour":
+         [
+            {"Region":"Green"},
+            {"Region":"Brown"},
+            {"Region":"Red"},
+            {"Region":"Blue"},
+            {"Region":"Purple"}
+         ]
+      },
+      {
+         "Region":"Blue",
+         "Neighbour":
+         [
+            {"Region":"Red"},
+            {"Region":"Yellow"},
+            {"Region":"Purple"}
+         ]
+      },
+      {
+         "Region":"Purple",
+         "Neighbour":
+         [
+            {"Region":"Blue"},
+            {"Region":"Yellow"}
+         ]
+      }
    ]
 }

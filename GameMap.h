@@ -27,6 +27,7 @@ class GameMap {
 	 * Adjacency list for the cities
 	 */
 	std::unordered_map<std::string, City*> adjList;
+	std::unordered_map<std::string, std::vector<std::string>> adjRegion;
 
 	std::vector<std::string> districtList;/**<List of districts (outer regions for the cities).*/
 
@@ -68,7 +69,11 @@ public:
 	 */
 	void displayAllCities();
 	/**Get all the districts so that a player may choose their starting area*/
-	std::vector<std::string> getAllDistricts(int pc);
+	std::vector<std::string> getAllDistricts();
+	/**Limit the map size by getting the list of cities based on the number of districts*/
+	void loadRegionAdjacency(json jsonMap);
+	/**Get adjecent regions for a given region*/
+	std::vector<std::string> getAdjacentRegions(std::string region);
 	/**
 	 * Checks if GameMap is valid. Checks if all the cities are connected.
 	 * @return A boolean indicating if the game map is valid

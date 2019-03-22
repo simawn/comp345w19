@@ -6,7 +6,7 @@
 #include "../AuctionStepdriver.h"
 #include "../BuyResourceStepDriver.h"
 #include "../BuildingStepDriver.h"
-#include "../BureaucracyStepDriver.h"
+#include "drivers/BureaucracyStepDriver.h"
 
 class GameInstance {
 private:
