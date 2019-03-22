@@ -3,11 +3,15 @@
 #include <vector>
 #include <ctime>
 #include "Cards.h"
-class Deck:public Cards {
+class Deck {
 private:
 	std::vector<Cards*> stack;
+	std::vector<Cards*> initialCards;
 
 public:
+	/**Default constructor
+	Creates a deck of power plant cards and shuffles them. Does not include the initial set of 8 cards.
+	*/
 	Deck();
 	
 	/**General Constructor
@@ -50,7 +54,17 @@ public:
 	*@returns Card
 	*pops the backmost Powerplant card element form the vector and returns it
 	*/
-	Cards draw();
+	Cards* draw();
+
+	/**size
+	Displays the numbers of cards in the deck
+	*/
+	int size();
+
+	/**getInitialCards
+	returns an array containing the starting cards
+	*/
+	std::vector<Cards*> getInitialCards();
 };
 
 

@@ -19,7 +19,6 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Cards.cpp" />
     <ClCompile Include="City.cpp" />
     <ClCompile Include="Deck.cpp" />
     <ClCompile Include="drivers\CardCreationDriver.cpp" />
@@ -35,6 +34,9 @@
     </ClCompile>
     <ClCompile Include="House.cpp" />
     <ClCompile Include="GameMapCustomizer.cpp" />
+    <ClCompile Include="Marketplace.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="Money.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="PowerPlant.cpp" />
@@ -51,6 +53,7 @@
     <ClInclude Include="drivers\GameDriver.h" />
     <ClInclude Include="drivers\GameMapDriver.h" />
     <ClInclude Include="drivers\GameMapLoaderDriver.h" />
+    <ClInclude Include="drivers\MarketPlaceDriver.h" />
     <ClInclude Include="drivers\ResourcesLoaderDriver.h" />
     <ClInclude Include="GameMap.h">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
@@ -63,6 +66,9 @@
     <ClInclude Include="BureaucracyStepDriver.h" />
     <ClInclude Include="AuctionStepDriver.h" />
     <ClInclude Include="House.h" />
+    <ClInclude Include="Marketplace.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+    </ClInclude>
     <ClInclude Include="Money.h" />
     <ClInclude Include="Gas.h" />
     <ClInclude Include="Player.h" />

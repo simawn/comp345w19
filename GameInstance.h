@@ -12,7 +12,7 @@ class GameInstance {
 private:
 	Player* playrArr;	//can double as player order
 	GameMap map;
-	Deck deck;
+	//Deck deck;
 	void InitializeGame();
 	void GetPlayerOrderStep();
 	void AuctionStep();
