@@ -93,6 +93,9 @@
     <ClCompile Include="Marketplace.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="drivers\BureaucracyStepDriver.cpp">
+      <Filter>Source Files\Drivers</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="House.h">

@@ -6,6 +6,7 @@ void doBureaucracy(Marketplace x) {
 	if (step == 1) { checkForStep2(); }
 	updateCardMarket(&x);
 	resupplyResourceMarket();
+	std::cout << "Current step: " << step << std::endl; //debug
 	//payPlayer();
 	x.print();
 }

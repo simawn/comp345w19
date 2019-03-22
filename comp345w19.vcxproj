@@ -21,6 +21,7 @@
   <ItemGroup>
     <ClCompile Include="City.cpp" />
     <ClCompile Include="Deck.cpp" />
+    <ClCompile Include="drivers\BureaucracyStepDriver.cpp" />
     <ClCompile Include="drivers\CardCreationDriver.cpp" />
     <ClCompile Include="drivers\GameDriver.cpp" />
     <ClCompile Include="drivers\GameMapDriver.cpp" />
