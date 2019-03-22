@@ -59,14 +59,24 @@ void testGameSetup() {
 }
 */
 
+void testBureaucracy() {
+	cout << "\n === TESTING BUREAUCRACY ===\n";
+	doBureaucracy(setupMarketplace());
+	cout << "\n === END TESTING BUREAUCRACY ===\n";
+}
+
 int main() {
+	step = 1;	//should be moved into a game driver eventually.
+
+		//testMap(); //Part 1
+		//testMapLoader(); //Part 2
+		//TestResourceLoader(); //Part3
+		//testPlayer(); //Part 4
+		//testCardCreation(); //Part 5
+	
 	//testGameSetup();
-	//testMap(); //Part 1
-	//testMapLoader(); //Part 2
-	//TestResourceLoader(); //Part3
-	//testPlayer(); //Part 4
-	//testCardCreation(); //Part 5
-	testMarketplaceCreation();
+	//testMarketplaceCreation();
+	testBureaucracy();
 	system("pause");
 	return 0;
 }
