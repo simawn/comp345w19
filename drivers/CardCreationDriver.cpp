@@ -9,6 +9,7 @@
 
 #include "../drivers/CardCreationDriver.h"
 #include <vector>
+/*
 void createDeckCards() {
 	Gas g(1);
 	Coal c(1);
@@ -77,7 +78,6 @@ void createDeckCards() {
 		delete a;
 	}
 	delete step3Card;
-
 }
 
 void createDeckCardsSimple() {
@@ -92,3 +92,4 @@ std::vector<Cards> createSummaryCards() {
 	}
 	return summaryCardsPack;
 }
+*/

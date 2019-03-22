@@ -4,7 +4,9 @@
 #include "GameMapLoaderDriver.h"
 #include "CardCreationDriver.h"
 #include "ResourcesLoaderDriver.h"
-#include "..\GameSetupDriver.h"
+#include "../GameSetupDriver.h"
+#include "MarketPlaceDriver.h"
+
 using namespace std;
 
 
@@ -31,13 +33,21 @@ void testMapLoader() {
 	GameMapLoaderDriver();
 	cout << "\n === END MAP LOADER === \n";
 }
+
 void testCardCreation() {
 	cout << "\n === TESTING CARD CREATION ===\n";
 	//createDeckCards();
-	createDeckCardsSimple();
+	//createDeckCardsSimple();
 	cout << "\n === END TESTING CARD CREATION ===\n";
 }
 
+void testMarketplaceCreation() {
+	cout << "\n === TESTING MARKETPLACE ===\n";
+	initializeMarketPlace();
+	cout << "\n === END TESTING MARKETPLACE ===\n";
+}
+
+/* Have this part as a main game loop on a seperate file?
 void testGameSetup() {
 	vector<Player> players = setUpPlayers();
 	for (int i = 0; i < players.size(); ++i) {
@@ -47,6 +57,7 @@ void testGameSetup() {
 	setUpStartingArea();
 	
 }
+*/
 
 int main() {
 	//testGameSetup();
@@ -54,8 +65,8 @@ int main() {
 	//testMapLoader(); //Part 2
 	//TestResourceLoader(); //Part3
 	//testPlayer(); //Part 4
-	testCardCreation(); //Part 5
-	
+	//testCardCreation(); //Part 5
+	testMarketplaceCreation();
 	system("pause");
 	return 0;
 }

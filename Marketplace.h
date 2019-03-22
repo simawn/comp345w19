@@ -10,9 +10,11 @@ class Marketplace {
 public:
 	Marketplace(Deck*);
 
-	bool buy(int);
-
 	void insert(Cards*);
 
-	void remove(Cards*);
+	void remove(int);
+
+	void print();
+
+	std::map<int, Cards*> getMarket();
 };

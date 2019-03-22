@@ -176,5 +176,8 @@
     <ClInclude Include="Marketplace.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="drivers\MarketPlaceDriver.h">
+      <Filter>Header Files\DriverHeads</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

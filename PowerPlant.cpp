@@ -34,12 +34,14 @@ int PowerPlant::getResourceCost() {
 std::vector<Resource *> PowerPlant::getResourceType() {
 	return resource_type;
 }
+
 void PowerPlant::print() {
-	std::cout << "powerplantcard number is " << PowerPlant::cost << " nb of resource needed is " << PowerPlant::resource_cost << " max number of cities supplied is " << PowerPlant::housing_value
-		<< " Resource needed are: ";
+	std::cout << "Power Plant number is " << PowerPlant::cost << "; Num of resource needed is " << PowerPlant::resource_cost << "; Max num of cities supplied is " << PowerPlant::housing_value
+		<< "; Resource needed are: ";
 
 	for (Resource * r : PowerPlant::resource_type) {
-		std::cout << r->getName() << "";
+		std::cout << r->getName() << " ";
 	}
 
+	std::cout << std::endl;
 }

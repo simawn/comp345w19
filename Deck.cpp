@@ -16,18 +16,16 @@
 		Garbage* ga = new Garbage(1);
 		Uranium* u = new Uranium(1);
 
-		//Below are starting cards. They won't be shuffled in
-		/*
-		Cards* PowerPlantCard3 = new PowerPlant(3, 1, 2, &g);
-		Cards* PowerPlantCard4 = new PowerPlant(4, 1, 2, &c);
-		Cards* PowerPlantCard5 = new PowerPlant(5, 1, 2, &g, &c);
-		Cards* PowerPlantCard6 = new PowerPlant(6, 1, 1, &ga);
-		Cards* PowerPlantCard7 = new PowerPlant(7, 2, 3, &g);
-		Cards* PowerPlantCard8 = new PowerPlant(8, 2, 3, &c);
-		Cards* PowerPlantCard9 = new PowerPlant(9, 1, 1, &g);
-		Cards* PowerPlantCard10 = new PowerPlant(10, 2, 2, &c);
-		*/
-		//End starting cards
+
+		Cards* PowerPlantCard3 = new PowerPlant(3, 1, 2, g);
+		Cards* PowerPlantCard4 = new PowerPlant(4, 1, 2, c);
+		Cards* PowerPlantCard5 = new PowerPlant(5, 1, 2, g, c);
+		Cards* PowerPlantCard6 = new PowerPlant(6, 1, 1, ga);
+		Cards* PowerPlantCard7 = new PowerPlant(7, 2, 3, g);
+		Cards* PowerPlantCard8 = new PowerPlant(8, 2, 3, c);
+		Cards* PowerPlantCard9 = new PowerPlant(9, 1, 1, g);
+		Cards* PowerPlantCard10 = new PowerPlant(10, 2, 2, c);
+		this->initialCards = { PowerPlantCard3, PowerPlantCard4, PowerPlantCard5, PowerPlantCard6, PowerPlantCard7, PowerPlantCard8, PowerPlantCard9, PowerPlantCard10 };
 
 		//Below are cards to be shuffled in the deck
 		//TODO: dtor for all
@@ -156,13 +154,17 @@ PowerPlantCard40,PowerPlantCard42,PowerPlantCard44,PowerPlantCard46,PowerPlantCa
 	*@returns Card
 	*pops the backmost Powerplant card element form the vector and returns it
 	*/
-	Cards Deck::draw() {
+	Cards* Deck::draw() {
 		// returns the last element of the vector, and removes it 
 		Cards* x = Deck::stack.back();
 		Deck::stack.pop_back();
-		return *x;
+		return x;
 	}
 
 	int Deck::size() {
 		return this->stack.size();
+	}
+
+	std::vector<Cards*> Deck::getInitialCards() {
+		return this->initialCards;
 	}
