@@ -18,5 +18,8 @@ void resourceLoaderDriver() {
 	map.addResource(13, 1, TotalUranium);
 	map.addResource(15, 1, TotalUranium);
 	map.printResourceMarket();
+	map.buyResource("Gas", 2,2);
+	map.printResourceMarket();
+
 
 }

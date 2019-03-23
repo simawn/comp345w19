@@ -119,7 +119,7 @@ void GameMap::openMap(std::string path) {
 
 void GameMap::processMap(json jsonMap) {
 	//std::cout << jsonMap.at("Region")[0].at("NODES") << "\n\n";
-	loadRegionAdjacency(jsonMap, 2);
+	loadRegionAdjacency(jsonMap);
 	//Adding main cities to map (NODES)
 	for(auto regionLoop : jsonMap.at("Region")) {
 		//districtList.push_back(regionLoop.at("NAME").get<std::string>());
@@ -150,7 +150,7 @@ void GameMap::processMap(json jsonMap) {
 	//this->checkMapValidity() ? std::cout << "Game map is VALID" << std::endl : std::cout << "Game map is INVALID" << std::endl;
 }
 
-void GameMap::addResource(int Grid, int nbOfResource, std::vector<Coal*> resource) {
+void GameMap::addResource(int Grid, int nbOfResource, std::vector<Coal*> &resource) {
 	for (int i = 0; i < nbOfResource; i++) {
 		resource[0] = new Coal(Grid);
  		resourceMarket[Grid].push_back(resource[0]);
@@ -158,7 +158,7 @@ void GameMap::addResource(int Grid, int nbOfResource, std::vector<Coal*> resourc
 	}
 }
 
-void GameMap::addResource(int Grid, int nbOfResource, std::vector<Gas*> resource) {
+void GameMap::addResource(int Grid, int nbOfResource, std::vector<Gas*> &resource) {
 	for (int i = 0; i < nbOfResource; i++) {
 		resource[0] = new Gas(Grid);
 
@@ -168,7 +168,7 @@ void GameMap::addResource(int Grid, int nbOfResource, std::vector<Gas*> resource
 	}
 }
 
-void GameMap::addResource(int Grid, int nbOfResource, std::vector<Uranium*> resource) {
+void GameMap::addResource(int Grid, int nbOfResource, std::vector<Uranium*> &resource) {
 	for (int i = 0; i < nbOfResource; i++) {
 		resource[0] = new Uranium(Grid);
 		resourceMarket[Grid].push_back(resource[0]);
@@ -176,13 +176,31 @@ void GameMap::addResource(int Grid, int nbOfResource, std::vector<Uranium*> reso
 	}
 }
 
-void GameMap::addResource(int Grid, int nbOfResource, std::vector<Garbage*> resource) {
+void GameMap::addResource(int Grid, int nbOfResource, std::vector<Garbage*> &resource) {
 	for (int i = 0; i < nbOfResource; i++) {
 		resource[0] = new Garbage(Grid);
 		resourceMarket[Grid].push_back(resource[0]);
 		resource.erase(resource.begin());
 	}
 }
+
+
+void GameMap::buyResource(std::string resourceType, int price,int nbOfResources) {
+	int counter = 0;
+	int resourceCounter=0;
+	for (Resource*a : resourceMarket[price]) {
+		if (a->getName() == resourceType) {
+			resourceMarket[price].erase(resourceMarket[price].begin()+counter);
+			--counter;
+			resourceCounter++;
+			if (resourceCounter == nbOfResources) {
+				break;
+			}
+		}
+		counter++;
+	}
+}
+
 
 void GameMap::printResourceMarket() {
 	for (int i = 0; i < resourceMarket.size(); i++) {
