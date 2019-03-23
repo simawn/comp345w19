@@ -100,4 +100,14 @@
 	std::string Player::getStartingDistrict() {
 		return starting_district;
 	}
-
+	int Player:: getNbPowerPlants() {
+		return Player::powerplants.size();
+	}
+	int Player::getLargestNbPowerPlant() {
+		int max = -1;
+		for (int i; i < Player::powerplants.size(); i++) {
+			if (powerplants[i]->getCost() > max) {
+				max = powerplants[i]->getCost();
+			}
+		}return max;
+	}
