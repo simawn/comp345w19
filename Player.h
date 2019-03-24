@@ -54,6 +54,10 @@ public:
 	void setStartingDistrict(std::string district);
 	/**Get the starting district*/
 	std::string getStartingDistrict();
+	/**Return the number of power plants a player possesses*/
+	int getNbPowerPlants();
+	/**Returns the power plant with the highest cost that a player possesses*/
+	int getLargestNbPowerPlant();
 
 
 };

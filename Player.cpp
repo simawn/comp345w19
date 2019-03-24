@@ -105,7 +105,7 @@
 	}
 	int Player::getLargestNbPowerPlant() {
 		int max = -1;
-		for (int i; i < Player::powerplants.size(); i++) {
+		for (int i = 0; i < Player::powerplants.size(); i++) {
 			if (powerplants[i]->getCost() > max) {
 				max = powerplants[i]->getCost();
 			}

@@ -31,6 +31,9 @@
     <Filter Include="Header Files\DriverHeads">
       <UniqueIdentifier>{f66e8125-ab10-4072-9724-5fe31d8146d8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Drivers\A1">
+      <UniqueIdentifier>{795d2e5b-0cf2-411a-8eb3-1db352f3825d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Player.cpp">
@@ -57,12 +60,6 @@
     <ClCompile Include="GameMap.cpp">
       <Filter>Source Files\Map</Filter>
     </ClCompile>
-    <ClCompile Include="drivers\GameMapDriver.cpp">
-      <Filter>Source Files\Drivers</Filter>
-    </ClCompile>
-    <ClCompile Include="drivers\GameMapLoaderDriver.cpp">
-      <Filter>Source Files\Drivers</Filter>
-    </ClCompile>
     <ClCompile Include="drivers\GameSetupDriver.cpp">
       <Filter>Source Files\Drivers</Filter>
     </ClCompile>
@@ -81,9 +78,6 @@
     <ClCompile Include="Step3Card.cpp">
       <Filter>Source Files\Items</Filter>
     </ClCompile>
-    <ClCompile Include="drivers\CardCreationDriver.cpp">
-      <Filter>Source Files\Drivers</Filter>
-    </ClCompile>
     <ClCompile Include="drivers\ResourcesLoaderDriver.cpp">
       <Filter>Source Files\Drivers</Filter>
     </ClCompile>
@@ -94,6 +88,21 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="drivers\BureaucracyStepDriver.cpp">
+      <Filter>Source Files\Drivers</Filter>
+    </ClCompile>
+    <ClCompile Include="drivers\CardCreationDriver.cpp">
+      <Filter>Source Files\Drivers\A1</Filter>
+    </ClCompile>
+    <ClCompile Include="drivers\GameMapLoaderDriver.cpp">
+      <Filter>Source Files\Drivers\A1</Filter>
+    </ClCompile>
+    <ClCompile Include="drivers\GameMapDriver.cpp">
+      <Filter>Source Files\Drivers\A1</Filter>
+    </ClCompile>
+    <ClCompile Include="TurnManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="drivers\TurnManagerDriver.cpp">
       <Filter>Source Files\Drivers</Filter>
     </ClCompile>
   </ItemGroup>
@@ -180,6 +189,12 @@
       <Filter>Header Files\DriverHeads</Filter>
     </ClInclude>
     <ClInclude Include="drivers\BureaucracyStepDriver.h">
+      <Filter>Header Files\DriverHeads</Filter>
+    </ClInclude>
+    <ClInclude Include="TurnManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="drivers\TurnManagerDriver.h">
       <Filter>Header Files\DriverHeads</Filter>
     </ClInclude>
   </ItemGroup>

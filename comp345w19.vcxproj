@@ -30,6 +30,7 @@
     <ClCompile Include="drivers\MarketPlaceDriver.cpp" />
     <ClCompile Include="drivers\ResourcesLoaderDriver.cpp" />
     <ClCompile Include="drivers\Tester.cpp" />
+    <ClCompile Include="drivers\TurnManagerDriver.cpp" />
     <ClCompile Include="GameMap.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
     </ClCompile>
@@ -44,6 +45,7 @@
     <ClCompile Include="GameInstance.cpp" />
     <ClCompile Include="Step3Card.cpp" />
     <ClCompile Include="SummaryCard.cpp" />
+    <ClCompile Include="TurnManager.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Cards.h" />
@@ -57,6 +59,7 @@
     <ClInclude Include="drivers\GameMapLoaderDriver.h" />
     <ClInclude Include="drivers\MarketPlaceDriver.h" />
     <ClInclude Include="drivers\ResourcesLoaderDriver.h" />
+    <ClInclude Include="drivers\TurnManagerDriver.h" />
     <ClInclude Include="GameMap.h">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
     </ClInclude>
@@ -77,6 +80,7 @@
     <ClInclude Include="Resources.h" />
     <ClInclude Include="Step3Card.h" />
     <ClInclude Include="SummaryCard.h" />
+    <ClInclude Include="TurnManager.h" />
     <ClInclude Include="Uranium.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

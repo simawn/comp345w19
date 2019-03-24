@@ -7,7 +7,7 @@
 #include "../GameSetupDriver.h"
 #include "MarketPlaceDriver.h"
 #include "BureaucracyStepDriver.h"
-
+#include "TurnManagerDriver.h"
 
 using namespace std;
 
@@ -60,6 +60,9 @@ void testGameSetup() {
 	
 }
 
+void testTurnOrder() {
+	TurnManagerDriver();
+}
 
 void testBureaucracy() {
 	cout << "\n === TESTING BUREAUCRACY ===\n";
@@ -80,9 +83,10 @@ int main() {
 		//testPlayer(); //Part 4
 		//testCardCreation(); //Part 5
 	
-	testGameSetup();
+	//testGameSetup();
 	//testMarketplaceCreation();
 	//testBureaucracy();
+	testTurnOrder();
 	system("pause");
 	return 0;
 }
