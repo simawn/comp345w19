@@ -8,11 +8,11 @@
 #include <vector>
 
 void printPlayerArray(std::vector<Player*> a) {
-	std::cout << "=== START PLAYER ORDER ===" << std::endl;
+	std::cout << "\n=== START PLAYER ORDER ===" << std::endl;
 	for (Player* player : a) {
-		std::cout << player->getPlayerColour() << std::endl;
+		std::cout << player->getPlayerColour() << " has: " << player->getCities().size() << " cities; " << player->getNbPowerPlants() << " powerplants; Largest power plant is: " << player->getLargestNbPowerPlant() << std::endl;
 	}
-	std::cout << "=== END PLAYER ORDER ===" << std::endl;
+	std::cout << "=== END PLAYER ORDER ===\n" << std::endl;
 }
 
 void TurnManagerDriver() {
@@ -45,26 +45,36 @@ void TurnManagerDriver() {
 	City* c3 = new City("Calgary");
 	City* c4 = new City("Vancouver");
 
-	//Turn manager
-	TurnManager tm(&pv);
-
-	//First turn
+	//Game begins
 	printPlayerArray(pv);
 	std::cout << "Game begins..." << std::endl;
-	tm.determineOrder(true); //Randomized
+	determineOrder(&pv, true); //All randomized
 	printPlayerArray(pv);
 
 	std::cout << "Player (pa) buys PP3 and City 1" << std::endl;
 	//Player a
 	pa->buyPowerPlant((PowerPlant*) PowerPlantCard3);
 	pa->buyCity(c1);
-
 	std::cout << "Player (pc) buys City 2" << std::endl;
 	//Player c
 	pc->buyCity(c2);
-
 	//Determine order
-	tm.determineOrder(false);
+	determineOrder(&pv);
+	printPlayerArray(pv);
+
+	std::cout << "Player (pc) buys PowerPlant8" << std::endl;
+	//Same amount of city but different powerplants
+	pc->buyPowerPlant((PowerPlant*) PowerPlantCard8);
+	//Determine order
+	determineOrder(&pv);
+	printPlayerArray(pv);
+
+	std::cout << "Player (pd) buys City 3 and City 4" << std::endl;
+	//Player d
+	pd->buyCity(c3);
+	pd->buyCity(c4);
+	//Determine order
+	determineOrder(&pv);
 	printPlayerArray(pv);
 
 	//Deletes

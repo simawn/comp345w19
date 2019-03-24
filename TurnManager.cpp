@@ -1,16 +1,7 @@
 #include "TurnManager.h"
 #include <algorithm>
 #include <random>
-#include <map>
 #include <vector>
-
-
-TurnManager::TurnManager() {
-}
-
-TurnManager::TurnManager(std::vector<Player*>* players) {
-	this->playerOrder = players;
-}
 
 bool compare(Player* a, Player* b) { //Custom sort function
 	int numA = a->getCities().size();
@@ -19,11 +10,11 @@ bool compare(Player* a, Player* b) { //Custom sort function
 	return numA > numB;
 }
 
-void TurnManager::determineOrder(bool gameBegin = false) {
+void determineOrder(std::vector<Player*>* playersVector, bool gameBegin) {
 	if (gameBegin) {
-		std::shuffle(std::begin(*(this->playerOrder)), std::end(*(this->playerOrder)), std::default_random_engine{});
+		std::shuffle(std::begin(*playersVector), std::end(*playersVector), std::default_random_engine{});
 	}
 	else {
-		std::sort(std::begin(*(this->playerOrder)), std::end(*(this->playerOrder)), compare);
+		std::sort(std::begin(*playersVector), std::end(*playersVector), compare);
 	}
 }

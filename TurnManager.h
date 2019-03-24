@@ -2,15 +2,8 @@
 #include <vector>
 #include "Player.h"
 
-/* Determines the turn order. It directly modifies the Player array
+/** Modifies the player array so the turn order is correct
+@param playersVector A pointer to a players array
+@param gameBegin If true, array will be randomized. False by default.
 */
-class TurnManager {
-	std::vector<Player*>* playerOrder;
-	//bool compare(Player, Player);
-
-public:
-	TurnManager();
-	TurnManager(std::vector<Player*>*);
-
-	void determineOrder(bool);
-};
+void determineOrder(std::vector<Player*>* playersVector, bool gameBegin = false);
