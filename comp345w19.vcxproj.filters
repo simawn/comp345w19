@@ -54,9 +54,6 @@
     <ClCompile Include="GameMapCustomizer.cpp">
       <Filter>Source Files\Map</Filter>
     </ClCompile>
-    <ClCompile Include="drivers\GameDriver.cpp">
-      <Filter>Source Files\Drivers</Filter>
-    </ClCompile>
     <ClCompile Include="GameMap.cpp">
       <Filter>Source Files\Map</Filter>
     </ClCompile>
@@ -77,9 +74,6 @@
     </ClCompile>
     <ClCompile Include="Step3Card.cpp">
       <Filter>Source Files\Items</Filter>
-    </ClCompile>
-    <ClCompile Include="drivers\ResourcesLoaderDriver.cpp">
-      <Filter>Source Files\Drivers</Filter>
     </ClCompile>
     <ClCompile Include="GameInstance.cpp">
       <Filter>Source Files\Drivers</Filter>
@@ -104,6 +98,15 @@
     </ClCompile>
     <ClCompile Include="drivers\TurnManagerDriver.cpp">
       <Filter>Source Files\Drivers</Filter>
+    </ClCompile>
+    <ClCompile Include="drivers\ResourceBuyingDriver.cpp">
+      <Filter>Source Files\Drivers</Filter>
+    </ClCompile>
+    <ClCompile Include="drivers\ResourcesLoaderDriver.cpp">
+      <Filter>Source Files\Drivers\A1</Filter>
+    </ClCompile>
+    <ClCompile Include="drivers\GameDriver.cpp">
+      <Filter>Header Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -173,9 +176,6 @@
     <ClInclude Include="GameSetupDriver.h">
       <Filter>Header Files\DriverHeads</Filter>
     </ClInclude>
-    <ClInclude Include="BuyResourceStepDriver.h">
-      <Filter>Header Files\DriverHeads</Filter>
-    </ClInclude>
     <ClInclude Include="BuildingStepDriver.h">
       <Filter>Header Files\DriverHeads</Filter>
     </ClInclude>
@@ -195,6 +195,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="drivers\TurnManagerDriver.h">
+      <Filter>Header Files\DriverHeads</Filter>
+    </ClInclude>
+    <ClInclude Include="ResourceBuyingDriver.h">
+      <Filter>Header Files\DriverHeads</Filter>
+    </ClInclude>
+    <ClInclude Include="drivers\ResourceBuyingDriver.h">
       <Filter>Header Files\DriverHeads</Filter>
     </ClInclude>
   </ItemGroup>

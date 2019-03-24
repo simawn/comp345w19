@@ -6,6 +6,7 @@
 #include "Garbage.h"
 #include "Gas.h"
 #include "Uranium.h"
+#include "Player.h"
 #include <unordered_map>
 #include <string>
 #include <set>
@@ -119,7 +120,7 @@ public:
 	*Indicates what is currently in the resource market
 	*/
 	void printResourceMarket();
-	void buyResource(std::string resourceType, int price,int nbOfResources);
+	int buyResource(std::string resourceType, int price,int nbOfResources,Player *currentPlayer);
 
 
 };

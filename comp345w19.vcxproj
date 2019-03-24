@@ -28,6 +28,7 @@
     <ClCompile Include="drivers\GameMapLoaderDriver.cpp" />
     <ClCompile Include="drivers\GameSetupDriver.cpp" />
     <ClCompile Include="drivers\MarketPlaceDriver.cpp" />
+    <ClCompile Include="drivers\ResourceBuyingDriver.cpp" />
     <ClCompile Include="drivers\ResourcesLoaderDriver.cpp" />
     <ClCompile Include="drivers\Tester.cpp" />
     <ClCompile Include="drivers\TurnManagerDriver.cpp" />
@@ -58,6 +59,7 @@
     <ClInclude Include="drivers\GameMapDriver.h" />
     <ClInclude Include="drivers\GameMapLoaderDriver.h" />
     <ClInclude Include="drivers\MarketPlaceDriver.h" />
+    <ClInclude Include="drivers\ResourceBuyingDriver.h" />
     <ClInclude Include="drivers\ResourcesLoaderDriver.h" />
     <ClInclude Include="drivers\TurnManagerDriver.h" />
     <ClInclude Include="GameMap.h">
@@ -66,7 +68,7 @@
     <ClInclude Include="Garbage.h" />
     <ClInclude Include="GameInstance.h" />
     <ClInclude Include="GameSetupDriver.h" />
-    <ClInclude Include="BuyResourceStepDriver.h" />
+    <ClInclude Include="ResourceBuyingDriver.h" />
     <ClInclude Include="BuildingStepDriver.h" />
     <ClInclude Include="AuctionStepDriver.h" />
     <ClInclude Include="House.h" />

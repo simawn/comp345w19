@@ -42,8 +42,15 @@
 	}
 	
 	bool Player::buyResources(Resource  *res) {
+		std::cout << this->getPlayersMoney() << "\n";
 		if (money->removeMoney(res->getValue())) {
-			resources.push_back(res);			
+			resources.push_back(res);
+			std::cout << "Current resources of player :";
+			for (int i = 0; i < resources.size(); i++) {
+				std::cout << resources[i]->getName() << " ";
+			}
+			
+			std::cout <<"\n" << this->getPlayersMoney() <<"\n";
 			return true;
 		}
 		return false;

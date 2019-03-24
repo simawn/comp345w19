@@ -4,7 +4,7 @@
 #include "../Deck.h"
 #include "../GameSetupDriver.h"
 #include "../AuctionStepdriver.h"
-#include "../BuyResourceStepDriver.h"
+#include "drivers/ResourceBuyingDriver.h"
 #include "../BuildingStepDriver.h"
 #include "drivers/BureaucracyStepDriver.h"
 

@@ -2,7 +2,7 @@
 
 #include "../GameMap.h"
 void resourceLoaderDriver() {
-	GameMap map;
+	static GameMap map;
 	std::vector<Coal*> TotalCoal(24);
 	std::vector<Garbage*> TotalGarbage(24);
 	std::vector<Gas*> TotalGas(24);
@@ -17,8 +17,6 @@ void resourceLoaderDriver() {
 	map.addResource(7, 3, TotalGarbage);
 	map.addResource(13, 1, TotalUranium);
 	map.addResource(15, 1, TotalUranium);
-	map.printResourceMarket();
-	map.buyResource("Gas", 2,2);
 	map.printResourceMarket();
 
 

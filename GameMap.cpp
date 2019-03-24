@@ -6,6 +6,7 @@
 #include <unordered_map>
 #include <fstream>
 #include <vector>
+#include "Player.h"
 #include <filesystem> //Need C++17
 #include <nlohmann/json.hpp> //Used to process .json files
 
@@ -152,7 +153,7 @@ void GameMap::processMap(json jsonMap) {
 
 void GameMap::addResource(int Grid, int nbOfResource, std::vector<Coal*> &resource) {
 	for (int i = 0; i < nbOfResource; i++) {
-		resource[0] = new Coal(Grid);
+		resource[0] = new Coal(Grid+1);
  		resourceMarket[Grid].push_back(resource[0]);
 		resource.erase(resource.begin());
 	}
@@ -160,7 +161,7 @@ void GameMap::addResource(int Grid, int nbOfResource, std::vector<Coal*> &resour
 
 void GameMap::addResource(int Grid, int nbOfResource, std::vector<Gas*> &resource) {
 	for (int i = 0; i < nbOfResource; i++) {
-		resource[0] = new Gas(Grid);
+		resource[0] = new Gas(Grid+1);
 
 		resourceMarket[Grid].push_back(resource[0]);
 		resource.erase(resource.begin());
@@ -170,7 +171,7 @@ void GameMap::addResource(int Grid, int nbOfResource, std::vector<Gas*> &resourc
 
 void GameMap::addResource(int Grid, int nbOfResource, std::vector<Uranium*> &resource) {
 	for (int i = 0; i < nbOfResource; i++) {
-		resource[0] = new Uranium(Grid);
+		resource[0] = new Uranium(Grid+1);
 		resourceMarket[Grid].push_back(resource[0]);
 		resource.erase(resource.begin());
 	}
@@ -178,27 +179,31 @@ void GameMap::addResource(int Grid, int nbOfResource, std::vector<Uranium*> &res
 
 void GameMap::addResource(int Grid, int nbOfResource, std::vector<Garbage*> &resource) {
 	for (int i = 0; i < nbOfResource; i++) {
-		resource[0] = new Garbage(Grid);
+		resource[0] = new Garbage(Grid+1);
 		resourceMarket[Grid].push_back(resource[0]);
 		resource.erase(resource.begin());
 	}
 }
 
 
-void GameMap::buyResource(std::string resourceType, int price,int nbOfResources) {
+int GameMap::buyResource(std::string resourceType, int price,int nbOfResources,Player *currentPlayer) {
 	int counter = 0;
 	int resourceCounter=0;
 	for (Resource*a : resourceMarket[price]) {
 		if (a->getName() == resourceType) {
-			resourceMarket[price].erase(resourceMarket[price].begin()+counter);
-			--counter;
-			resourceCounter++;
+			if (currentPlayer->buyResources(a)){
+				std::cout << "Bought one " << a->getName() << "\n";
+				resourceMarket[price].erase(resourceMarket[price].begin() + counter);
+				--counter;
+				resourceCounter++; }
 			if (resourceCounter == nbOfResources) {
-				break;
+				return resourceCounter;
 			}
 		}
 		counter++;
 	}
+	std::cout << "\n Not enough resources available to buy the requested amount";
+	return resourceCounter;
 }
 
 

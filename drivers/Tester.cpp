@@ -8,6 +8,7 @@
 #include "MarketPlaceDriver.h"
 #include "BureaucracyStepDriver.h"
 #include "TurnManagerDriver.h"
+#include "ResourceBuyingDriver.h"
 
 using namespace std;
 
@@ -29,7 +30,6 @@ void TestResourceLoader() {
 	resourceLoaderDriver();
 	cout << "\n === END TESTING RESOURCE LOADER  === \n";
 }
-
 void testMapLoader() {
 	cout << "\n === TESTING MAP LOADER === \n";
 	GameMapLoaderDriver();
@@ -66,10 +66,13 @@ void testTurnOrder() {
 
 void testBureaucracy() {
 	cout << "\n === TESTING BUREAUCRACY ===\n";
-	doBureaucracy();
+//	doBureaucracy();
 	cout << "\n === out of bureaucracy===\n";
 	market.print();
 	cout << "\n === END TESTING BUREAUCRACY ===\n";
+}
+void testResourceBuying() {
+	Phase3();
 }
 
 int step = 1; //should be moved into a game driver eventually.
@@ -82,14 +85,15 @@ int main() {
 
 		//testMap(); //Part 1
 		//testMapLoader(); //Part 2
-		//TestResourceLoader(); //Part3
+		TestResourceLoader(); //Part3
 		//testPlayer(); //Part 4
 		//testCardCreation(); //Part 5
 	
 	//testGameSetup();
 	//testMarketplaceCreation();
 	//testBureaucracy();
-	testTurnOrder();
+	//testTurnOrder();
+	testResourceBuying();
 	system("pause");
 	return 0;
 }
