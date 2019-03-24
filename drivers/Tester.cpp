@@ -66,11 +66,14 @@ void testTurnOrder() {
 
 void testBureaucracy() {
 	cout << "\n === TESTING BUREAUCRACY ===\n";
-	//doBureaucracy(setupMarketplace());
+	doBureaucracy();
+	cout << "\n === out of bureaucracy===\n";
+	market.print();
 	cout << "\n === END TESTING BUREAUCRACY ===\n";
 }
 
 int step = 1; //should be moved into a game driver eventually.
+Marketplace market = setupMarketplace(); //used for bureaucracy test
 
 int main() {
 
