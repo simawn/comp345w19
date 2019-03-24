@@ -28,7 +28,8 @@ class GameMap {
 	 * Adjacency list for the cities
 	 */
 	std::unordered_map<std::string, City*> adjList;
-	std::unordered_map<std::string, std::vector<std::string>> adjRegion;
+
+	std::unordered_map<std::string, std::vector<std::string>> adjRegion;/**<List of adjacent regions*/
 
 	std::vector<std::string> districtList;/**<List of districts (outer regions for the cities).*/
 

@@ -2,10 +2,13 @@
 #include <iostream>
 vector<Player> currentPlayers;//current players
 GameMap gameMap;//current gamemap
+vector<string>playing_districts;//the current playing districts for the game
+
 /*To get the amount of players that will be playing*/
 int getPlayerCount() {
 	int playerCount;
 	do {
+		
 		cout << "How many players will be playing the game? (2-6)" << endl;
 		cin >> playerCount;
 		if (!cin) {
@@ -67,49 +70,63 @@ vector<Player> setUpPlayers() {
 	currentPlayers=players;
 	return players;
 }
-/*Places the resources on map based on the configuration loaded*/
-void placeResourcesOnMap(){}
 
-void loadPowerPlants() {}
-void loadSummaryCards() {}
-void loadStep3() {}
+void placeResourcesOnMap(){
+	std::vector<Coal*> TotalCoal(24);
+	std::vector<Garbage*> TotalGarbage(24);
+	std::vector<Gas*> TotalGas(24);
+	std::vector<Uranium*> TotalUranium(12);
+	for (int i = 0; i < 8; i++) {
+		gameMap.addResource(i, 3, TotalCoal);
+	}
+	for (int i = 2; i < 8; i++) {
+		gameMap.addResource(i, 3, TotalGas);
+	}
+	gameMap.addResource(6, 3, TotalGarbage);
+	gameMap.addResource(7, 3, TotalGarbage);
+	gameMap.addResource(13, 1, TotalUranium);
+	gameMap.addResource(15, 1, TotalUranium);
+}
 
 GameMap selectMap() {
-	GameMap *gm = new GameMap();
+	GameMap * gm = new GameMap();
 	gm->loadMap();
 	gameMap = *gm;
+	placeResourcesOnMap();
 	return *gm;
 }
 
+void printResources() {
+	gameMap.printResourceMarket();
+}
 void setUpStartingArea() {
 	int pc = currentPlayers.size();
 	std::vector<std::string> districts(gameMap.getAllDistricts());
-	std::vector<std::string> playing_districts;
+	int max_districts;
+	if (pc < 4) {
+		max_districts = 3;
+	}
+	else if (pc < 5) {
+		max_districts = 4;
+	}
+	else {
+		max_districts = 5;
+	}
 	bool first_choice = true;
-	int previous_player = 0;
-	for (Player p : currentPlayers) {
+	for (int i = 0; i < max_districts; ++i) {
 		if (first_choice) {
-			string s = choosePlayableArea(p, districts);
-			p.setStartingDistrict(s);
-			playing_districts.push_back(s);
+			playing_districts.push_back(selectorHelper(districts));
 			first_choice = false;
 		}
 		else {
-
-			std::vector<std::string> districts_adj(gameMap.getAdjacentRegions(playing_districts[previous_player]));
+			std::vector<std::string> districts_adj(gameMap.getAdjacentRegions(playing_districts[(i - 1)]));
 			for (string d : playing_districts) {
 				auto itr = std::find(districts_adj.begin(), districts_adj.end(), d);
-				districts_adj.erase(itr);
+				if (itr != districts_adj.end()) {
+					districts_adj.erase(itr);
+				}
 			}
-			string s = choosePlayableArea(p, districts_adj);
-			p.setStartingDistrict(s);
-			playing_districts.push_back(s);
-			++previous_player;
+			playing_districts.push_back(selectorHelper(districts_adj));
 		}
-
 	}
-}
-string choosePlayableArea(Player p, vector<string> districts) {	
-	cout << p.getPlayerColour() <<  " choose your starting area: " << endl;
-	return selectorHelper(districts);
 }

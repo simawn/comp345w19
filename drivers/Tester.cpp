@@ -51,13 +51,23 @@ void testMarketplaceCreation() {
 
 // Have this part as a main game loop on a seperate file?
 void testGameSetup() {
-	vector<Player> players = setUpPlayers();
-	for (int i = 0; i < players.size(); ++i) {
-		cout << players[i].getPlayerColour() << endl;
-	}
-	selectMap();
+	vector<Player> players = setUpPlayers(); 
+	GameMap gm =selectMap();
 	setUpStartingArea();
-	
+	printResources();
+	for (Player p :players) {
+		cout <<"Current colour: "<< p.getPlayerColour() << endl;
+		cout <<"Money: "<< p.getPlayersMoney() << endl;
+		cout << "BUYS A SIMPLE GAS POWERPLANT" << endl;
+		p.buyPowerPlant(new PowerPlant(1, 1, 1, &Gas(1)));
+		p.getPowerPlants()[0]->print();
+		p.buyResources(&Gas(1)); p.buyResources(&Coal(2));
+		cout << "Owns resources: " << endl;
+		for (Resource * r : p.getResources()) {
+			cout <<"Type: "<<r->getName() << endl <<"Value: "<< r->getValue() << endl;
+		}
+		cout << "After purchase Elektro: " << p.getPlayersMoney()<<endl;
+	}
 }
 
 void testTurnOrder() {
@@ -89,11 +99,13 @@ int main() {
 		//testPlayer(); //Part 4
 		//testCardCreation(); //Part 5
 	
-	//testGameSetup();
+	testGameSetup();
 	//testMarketplaceCreation();
 	//testBureaucracy();
 	//testTurnOrder();
+
 	testResourceBuying();
+
 	system("pause");
 	return 0;
 }
