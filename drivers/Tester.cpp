@@ -99,7 +99,7 @@ int main() {
 		//testPlayer(); //Part 4
 		//testCardCreation(); //Part 5
 	
-	testGameSetup();
+	//testGameSetup();
 	//testMarketplaceCreation();
 	//testBureaucracy();
 	//testTurnOrder();

@@ -64,7 +64,7 @@ void Phase3() {
 	int price = -1;
 	int amount = -1;
 	std::string resource;
-	for (int i = 0; i < pv.size(); i++) {
+	for (int i = pv.size()-1; i >=0; i--) {
 		int coal = 0;
 		int garbage = 0;
 		int uranium = 0;
