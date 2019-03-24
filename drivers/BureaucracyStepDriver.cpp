@@ -2,17 +2,16 @@
 
 std::vector<int> EoTSupply; //amount of Resources added at EoT. [Coal, Gas, Garbage, Uranium]
 
-void doBureaucracy(Marketplace x) {
+void doBureaucracy() {
 	if (step == 1) { checkForStep2(); }
-	updateCardMarket(&x);
+	updateCardMarket();
 	resupplyResourceMarket();
-	std::cout << "Current step: " << step << std::endl; //debug
 	//payPlayer();
-	x.print();
+	market.print();
 }
 
-void updateCardMarket(Marketplace* x) {
-	x->remove(7);
+void updateCardMarket() {
+	market.remove(7);
 }
 
 void payPlayer() {
