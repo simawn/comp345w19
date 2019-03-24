@@ -9,8 +9,8 @@
 from the power plant market, replacing it with a new one from the stack.*/
 
 extern std::vector<Player> currentPlayers;
-extern int step; 
-//need to implement global access to a Marketplace object
+extern int step;
+extern Marketplace market;
 
 void doBureaucracy(Marketplace x);
 void updateCardMarket(Marketplace* x);
