@@ -84,6 +84,10 @@ void Phase3() {
 					uranium++;
 			}
 		}
+		uranium = uranium * 2;
+		coal = coal * 2;
+		garbage = garbage * 2;
+		gas = gas * 2;
 		std::cout << "Starting turn of player " << i + 1 << "can buy maximum of " << coal << " coal " << "can buy maximum of " << gas << " gas " << " can buy maximum of " << uranium << "uranium " << " can buy maximum of " << garbage << "garbage " << "\n";
 		while (true) {
 			std::cout << "Player " << i + 1 << "can buy maximum of " << coal << " coal " << "can buy maximum of " << gas << " gas " << " can buy maximum of " << uranium << "uranium " << " can buy maximum of " << garbage << "garbage " << "\n";
