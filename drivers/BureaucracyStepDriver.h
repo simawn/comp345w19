@@ -12,8 +12,8 @@ extern std::vector<Player> currentPlayers;
 extern int step;
 extern Marketplace market;
 
-void doBureaucracy(Marketplace x);
-void updateCardMarket(Marketplace* x);
+void doBureaucracy();
+void updateCardMarket();
 void payPlayer();
 void resupplyResourceMarket();
 void checkForStep2();	//must be implemented

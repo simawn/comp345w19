@@ -55,6 +55,7 @@ void GameMap::loadMap() {
 	}
 }
 GameMap::GameMap(std::string filePath) {
+	resourceMarket.resize(16);
 	openMap(filePath);
 }
 
@@ -150,6 +151,7 @@ void GameMap::processMap(json jsonMap) {
 	//this->checkMapValidity() ? std::cout << "Game map is VALID" << std::endl : std::cout << "Game map is INVALID" << std::endl;
 }
 
+
 void GameMap::addResource(int Grid, int nbOfResource, std::vector<Coal*> &resource) {
 	for (int i = 0; i < nbOfResource; i++) {
 		resource[0] = new Coal(Grid);
@@ -203,12 +205,17 @@ void GameMap::buyResource(std::string resourceType, int price,int nbOfResources)
 
 
 void GameMap::printResourceMarket() {
-	for (int i = 0; i < resourceMarket.size(); i++) {
-		std::cout << "\n In grid " << (i + 1) << " Resources: ";
-		for (int j = 0; j < resourceMarket[i].size(); j++) {
-			std::cout << resourceMarket[i][j]->getName() << " ";
+	int outer_size = this->resourceMarket.size();
+	int inner_size;
+	for (int i = 0; i < outer_size; i++) {
+		if (!resourceMarket[i].empty()) {
+			std::cout << "In grid " << (i + 1) << " Resources: ";
+			inner_size = this->resourceMarket[i].size();
+			for (int j = 0; j < inner_size; j++) {
+				std::cout << this->resourceMarket[i][j]->getName() << " ";
+			}
+			std::cout << "\n";
 		}
-
 	}
 }
 

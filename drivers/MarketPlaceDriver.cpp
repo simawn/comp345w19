@@ -20,6 +20,6 @@ void initializeMarketPlace(){
 Marketplace setupMarketplace() {
 	Deck* deck = new Deck();
 	Marketplace market(deck);
-	market.print();
+	//market.print();
 	return market;
 }
