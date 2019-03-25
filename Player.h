@@ -48,6 +48,8 @@ public:
 	std::vector<PowerPlant *> getPowerPlants();
 	/**Buy a power plant for the player.*/
 	bool buyPowerPlant(PowerPlant *pp);
+	/**Buy a power plant for a custom amount (Auction)*/
+	bool buyPowerPlant(PowerPlant * pp, int cost);
 	/**Set the colour of the player*/
 	void setPlayerColor(std::string c);
 	/**Set the starting district*/
@@ -58,7 +60,7 @@ public:
 	int getNbPowerPlants();
 	/**Returns the power plant with the highest cost that a player possesses*/
 	int getLargestNbPowerPlant();
-
-
+	/**Operator overload for Player comparison*/
+	bool operator==(Player & other);
 };
 #endif // !PLAYER_H

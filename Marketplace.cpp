@@ -43,3 +43,20 @@ void Marketplace::print() {
 std::map<int, Cards*> Marketplace::getMarket() {
 	return this->market;
 }
+
+std::map<int, Cards*> Marketplace::getCurrentMarket() {
+	std::map<int, Cards*> currentMarket;
+	int i = 0;
+	for (auto it = market.begin(); it != market.end(); it++) {
+		if (i == 4) break;
+		currentMarket[it->first] = it->second;
+		i++;
+	}
+	return currentMarket;
+}
+
+Cards* Marketplace::getCard(int cost) {
+	return market.find(cost)->second;
+}
+
+

@@ -9,6 +9,7 @@
 #include "BureaucracyStepDriver.h"
 #include "TurnManagerDriver.h"
 #include "ResourceBuyingDriver.h"
+#include "../Auction.h"
 
 using namespace std;
 
@@ -74,6 +75,31 @@ void testTurnOrder() {
 	TurnManagerDriver();
 }
 
+//Quick test
+void testAuction() {
+	//Player setup
+	Player* pa = new Player("(pa) RED");
+	Player* pb = new Player("(pb) BLUE");
+	Player* pc = new Player("(pc) GREEN");
+	Player* pd = new Player("(pd) YELLOW");
+	std::vector<Player*> pv = {pa,pb,pc,pd};
+
+	//Marketplace setup
+	Deck* deck = new Deck();
+	Marketplace* market = new Marketplace(deck);
+
+	//Auction
+	Auction auction(pv, market);
+
+	//Deletes
+	delete pa;
+	delete pb;
+	delete pc;
+	delete pd;
+	delete deck;
+	delete market;
+}
+
 void testBureaucracy() {
 	cout << "\n === TESTING BUREAUCRACY ===\n";
 //	doBureaucracy();
@@ -95,7 +121,7 @@ int main() {
 
 		//testMap(); //Part 1
 		//testMapLoader(); //Part 2
-		TestResourceLoader(); //Part3
+		//TestResourceLoader(); //Part3
 		//testPlayer(); //Part 4
 		//testCardCreation(); //Part 5
 	
@@ -104,8 +130,8 @@ int main() {
 	//testBureaucracy();
 	//testTurnOrder();
 
-	testResourceBuying();
-
+	//testResourceBuying();
+	testAuction();
 	system("pause");
 	return 0;
 }

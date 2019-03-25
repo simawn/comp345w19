@@ -91,6 +91,14 @@
 		return false;
 	}
 
+	bool Player::buyPowerPlant(PowerPlant * pp, int cost) {
+		if (money->removeMoney(cost)) {
+			powerplants.push_back(pp);
+			return true;
+		}
+		return false;
+	}
+
 	void Player::setPlayerColor(std::string c) {
 		delete house;
 		house = nullptr;
@@ -117,4 +125,8 @@
 				max = powerplants[i]->getCost();
 			}
 		}return max;
+	}
+
+	bool Player::operator==(Player &other) {
+		return this->getPlayerColour().compare(other.getPlayerColour()) == 0;
 	}

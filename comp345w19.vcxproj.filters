@@ -108,6 +108,9 @@
     <ClCompile Include="drivers\GameDriver.cpp">
       <Filter>Header Files</Filter>
     </ClCompile>
+    <ClCompile Include="Auction.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="House.h">
@@ -202,6 +205,9 @@
     </ClInclude>
     <ClInclude Include="drivers\ResourceBuyingDriver.h">
       <Filter>Header Files\DriverHeads</Filter>
+    </ClInclude>
+    <ClInclude Include="Auction.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -17,4 +17,8 @@ public:
 	void print();
 
 	std::map<int, Cards*> getMarket();
+
+	std::map<int, Cards*> getCurrentMarket();
+
+	Cards* getCard(int);
 };
