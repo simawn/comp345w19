@@ -55,6 +55,7 @@ void testGameSetup() {
 	GameMap gm =selectMap();
 	setUpStartingArea();
 	printResources();
+	Deck * d = new Deck();
 	for (Player p :players) {
 		cout <<"Current colour: "<< p.getPlayerColour() << endl;
 		cout <<"Money: "<< p.getPlayersMoney() << endl;
