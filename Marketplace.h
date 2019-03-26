@@ -20,5 +20,11 @@ public:
 
 	std::map<int, Cards*> getCurrentMarket();
 
+	std::map<int, Cards*> getFutureMarket();
+
+	void printCurrentMarket();
+
+	void printFutureMarket();
+
 	Cards* getCard(int);
 };

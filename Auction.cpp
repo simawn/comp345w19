@@ -37,6 +37,7 @@ void Auction::startAuction() {
 			int chosen = -2;
 			std::cout << "Player " << auctioneer->getPlayerColour() << ", choose a power plant for auction (Type -1 to pass): " << std::endl;
 			this->displayCurrentMarketPowerPlants();
+			this->marketplace->printFutureMarket();
 			std::cin >> chosen;
 			//Pass
 			if (chosen == -1) {
@@ -44,7 +45,7 @@ void Auction::startAuction() {
 				auctionPass = true;
 				break;
 			}
-			//Valid choice. TODO: check if user can actually start with the minimal bid?
+			//Valid choice.
 			else if (chosen >= 0 && chosen < this->currentMarket.size()) {
 				//Player is broke
 				if (choiceMapping.find(chosen)->second->getCost() > auctioneer->getPlayersMoney()) {
@@ -77,8 +78,13 @@ void Auction::startAuction() {
 			//Keeps track of the current bid. Initial bid must be >= to the PowerPlant cost
 			int currentBid = cardCost;
 
+			//This tracks if it is the first round of bids. It prevents the auctioneer from putting a card in auction then passing on their starting bid
+			bool firstRoundOfBids = true;
+
 			//Bidding starts
 			do {
+				
+
 				//The set of next bidders. We need this since removing a bidder directly from the current array messes up the order.
 				bidders = nextBidders;
 
@@ -92,12 +98,12 @@ void Auction::startAuction() {
 					bool validBid = false;
 
 					//User inputs a bid
-					do {
+					while(!validBid && this->nextBidders.size() != 1) {
 						//Keeps track of user bid input
 						int bidAmount = -2;
 
 						//Start of the bid. The auctioneer can bid the face value or greater than the PowerPlant cost
-						if (auctioneer == bidder && currentBid == cardCost) {
+						if (auctioneer == bidder && firstRoundOfBids) {
 							std::cout << "Player " << bidder->getPlayerColour() << ", choose a bid amount greater than or equal to " << currentBid << std::endl;
 						}
 						//The other bidders. They can only bid an amount greater than the current pid
@@ -107,13 +113,13 @@ void Auction::startAuction() {
 
 						std::cin >> bidAmount;
 
-						//The player wishes to pass. Prevents the auctioneer to put something in auction and passing; they must pass at the beginning of the auction.
-						if (bidAmount == -1 && currentBid != cardCost) {
+						//The player wishes to pass. A player can pass only if they are not the auctioneer and bidder during the first rounds of bids or it is currently not the first round of bids
+						if (bidAmount == -1 && ((auctioneer != bidder && firstRoundOfBids) || !firstRoundOfBids)) {
 							pass = validBid = true;
 						}
 						//The bid is not high enough
-						else if (((auctioneer == bidder && currentBid == cardCost) && bidAmount < cardCost) || //Starting player does bid the correct amount
-							((auctioneer != bidder && currentBid != cardCost) && bidAmount <= currentBid)) { //The other players do not bid the correct amount
+						else if (((auctioneer == bidder && firstRoundOfBids) && bidAmount < cardCost) || //Starting player does bid the correct amount (They can either bid the face value or greater)
+								(((auctioneer != bidder && firstRoundOfBids) || !firstRoundOfBids) && bidAmount <= currentBid)) { //The other players do not bid the correct amount
 							std::cout << "Invalid bid, try again" << std::endl;
 						}
 						//The player is broke
@@ -125,7 +131,7 @@ void Auction::startAuction() {
 							validBid = true;
 							std::cout << "Player " << bidder->getPlayerColour() << " bids " << currentBid << std::endl;
 						}
-					} while (!validBid);
+					}
 
 					//Pass
 					if (pass) {
@@ -135,7 +141,7 @@ void Auction::startAuction() {
 					}
 
 					//Only a single bidder is left => They win the auction. Needs to be down here since they have to enter a bid amount
-					if (this->bidders.size() == 1 && !pass) {
+					if (this->nextBidders.size() == 1 && !pass) {
 						std::cout << "Player " << bidder->getPlayerColour() << " has won the auction for " << currentBid << std::endl;
 
 						bidder->buyPowerPlant((PowerPlant*)currentAuction, currentBid);
@@ -147,10 +153,15 @@ void Auction::startAuction() {
 						this->bidWinners.push_back(bidder);
 
 						//The winner of a power plant cannot be part of the auctioners again
-						this->auctioneers.erase(std::remove(this->auctioneers.begin(), this->nextBidders.end(), bidder), this->auctioneers.end());
+						this->auctioneers.erase(std::remove(this->auctioneers.begin(), this->auctioneers.end(), bidder), this->auctioneers.end());
 
+						//Updates the market
+						this->updateCurrentMarket();
 						break;
 					}
+
+					firstRoundOfBids = false;
+
 				} //End of for (Player* bidder : this->bidders)
 
 				//Loops back to the potential bidders until there is one bidder left, which triggers the 'paid' flag
@@ -173,8 +184,8 @@ void Auction::startAuction() {
 
 		//Build the list of potential bidder by removing the PowerPlant winners
 		for (Player* player : this->currentPlayers) {
-			for (Player* winner : this->bidWinners) {
-				if (player == winner) continue;
+			//Checks if player if part of bidWinners, if not, add to bidders
+			if (std::find(this->bidWinners.begin(), this->bidWinners.end(), player) == this->bidWinners.end()) {
 				this->bidders.push_back(player);
 			}
 		}
