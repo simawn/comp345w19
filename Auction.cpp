@@ -97,8 +97,8 @@ void Auction::startAuction() {
 					//Checks if the input bid is valid
 					bool validBid = false;
 
-					//User inputs a bid
-					while(!validBid && this->nextBidders.size() != 1) {
+					//User inputs a bid. First condition will auto win when there are no more bidders in the current round, the condition after || is when there is 1 auctioneer left and they can choose anything without bid wars. We want them in here since they can choose to pay more than face value
+					while((!validBid && this->nextBidders.size() != 1) || this->auctioneers.size() == 1) {
 						//Keeps track of user bid input
 						int bidAmount = -2;
 
@@ -114,7 +114,7 @@ void Auction::startAuction() {
 						std::cin >> bidAmount;
 
 						//The player wishes to pass. A player can pass only if they are not the auctioneer and bidder during the first rounds of bids or it is currently not the first round of bids
-						if (bidAmount == -1 && ((auctioneer != bidder && firstRoundOfBids) || !firstRoundOfBids)) {
+						if (bidAmount == -1 && ((auctioneer != bidder && firstRoundOfBids) || !firstRoundOfBids) && this->auctioneers.size() != 1) {
 							pass = validBid = true;
 						}
 						//The bid is not high enough
@@ -130,6 +130,9 @@ void Auction::startAuction() {
 							currentBid = bidAmount;
 							validBid = true;
 							std::cout << "Player " << bidder->getPlayerColour() << " bids " << currentBid << std::endl;
+
+							//We need to kick the single auctioneer out of this loop when they selecta valid choice
+							if (this->auctioneers.size() == 1) break;
 						}
 					}
 
