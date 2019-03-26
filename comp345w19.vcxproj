@@ -19,8 +19,10 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Auction.cpp" />
     <ClCompile Include="City.cpp" />
     <ClCompile Include="Deck.cpp" />
+    <ClCompile Include="drivers\AuctionStepDriver.cpp" />
     <ClCompile Include="drivers\BureaucracyStepDriver.cpp" />
     <ClCompile Include="drivers\CardCreationDriver.cpp" />
     <ClCompile Include="drivers\GameDriver.cpp" />
@@ -49,6 +51,7 @@
     <ClCompile Include="TurnManager.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Auction.h" />
     <ClInclude Include="Cards.h" />
     <ClInclude Include="City.h" />
     <ClInclude Include="Coal.h" />
@@ -70,7 +73,7 @@
     <ClInclude Include="GameSetupDriver.h" />
     <ClInclude Include="ResourceBuyingDriver.h" />
     <ClInclude Include="BuildingStepDriver.h" />
-    <ClInclude Include="AuctionStepDriver.h" />
+    <ClInclude Include="drivers\AuctionStepDriver.h" />
     <ClInclude Include="House.h" />
     <ClInclude Include="Marketplace.h">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>

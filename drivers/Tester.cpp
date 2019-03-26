@@ -9,6 +9,7 @@
 #include "BureaucracyStepDriver.h"
 #include "TurnManagerDriver.h"
 #include "ResourceBuyingDriver.h"
+#include "AuctionStepDriver.h"
 
 using namespace std;
 
@@ -73,7 +74,15 @@ void testGameSetup() {
 }
 
 void testTurnOrder() {
+	cout << "\n === TESTING TURN ORDER ===\n";
 	TurnManagerDriver();
+	cout << "\n === END TESTING TURN ORDER ===\n";
+}
+
+void testAuction() {
+	cout << "\n === TESTING AUCTION ===\n";
+	testAuctionStep();
+	cout << "\n === END TESTING AUCTION ===\n";
 }
 
 void testBureaucracy() {
@@ -83,6 +92,7 @@ void testBureaucracy() {
 	market.print();
 	cout << "\n === END TESTING BUREAUCRACY ===\n";
 }
+
 void testResourceBuying() {
 	Phase3();
 }
@@ -92,21 +102,23 @@ Marketplace market = setupMarketplace(); //used for bureaucracy test
 
 int main() {
 
-	//step = 1;	//should be moved into a game driver eventually.
+	/*A2*/
 
+	/*Part 1: Game start*/
+	//testGameSetup();
 
-		//testMap(); //Part 1
-		//testMapLoader(); //Part 2
-		//TestResourceLoader(); //Part3
-		//testPlayer(); //Part 4
-		//testCardCreation(); //Part 5
-	
-	testGameSetup();
-	//testMarketplaceCreation();
-	//testBureaucracy();
+	/*Part 2: Game play: main game loop Phase 1 and 2*/
 	//testTurnOrder();
+	//testAuction();
 
+	/*Part 3: Game play: main game loop Phase 3 and 4*/
 	//testResourceBuying();
+
+	/*Part 4: Game play: main game loop Phase 5*/
+	//testBureaucracy();
+
+	/*Other tests*/
+	//testMarketplaceCreation();
 
 	system("pause");
 	return 0;

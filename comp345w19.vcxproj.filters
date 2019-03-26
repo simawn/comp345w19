@@ -108,6 +108,12 @@
     <ClCompile Include="drivers\GameDriver.cpp">
       <Filter>Header Files</Filter>
     </ClCompile>
+    <ClCompile Include="Auction.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="drivers\AuctionStepDriver.cpp">
+      <Filter>Source Files\Drivers</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="House.h">
@@ -179,9 +185,6 @@
     <ClInclude Include="BuildingStepDriver.h">
       <Filter>Header Files\DriverHeads</Filter>
     </ClInclude>
-    <ClInclude Include="AuctionStepDriver.h">
-      <Filter>Header Files\DriverHeads</Filter>
-    </ClInclude>
     <ClInclude Include="Marketplace.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -201,6 +204,12 @@
       <Filter>Header Files\DriverHeads</Filter>
     </ClInclude>
     <ClInclude Include="drivers\ResourceBuyingDriver.h">
+      <Filter>Header Files\DriverHeads</Filter>
+    </ClInclude>
+    <ClInclude Include="Auction.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="drivers\AuctionStepDriver.h">
       <Filter>Header Files\DriverHeads</Filter>
     </ClInclude>
   </ItemGroup>

@@ -93,6 +93,14 @@
 		return false;
 	}
 
+	bool Player::buyPowerPlant(PowerPlant * pp, int cost) {
+		if (money->removeMoney(cost)) {
+			powerplants.push_back(pp);
+			return true;
+		}
+		return false;
+	}
+
 	void Player::setPlayerColor(std::string c) {
 		delete house;
 		house = nullptr;
@@ -114,6 +122,32 @@
 			}
 		}return max;
 	}
+	
+	bool Player::operator==(Player &other) {
+		return this->getPlayerColour().compare(other.getPlayerColour()) == 0;
+	}
+
+	bool Player::operator!=(Player & other) {
+		return this->getPlayerColour().compare(other.getPlayerColour()) != 0;
+	}
+
+	void Player::printPlayerInfo() {
+		std::cout << "=== PLAYER INFO ===" << std::endl;
+		std::cout << "Player colour: " << this->getPlayerColour() << std::endl;
+		std::cout << "Money: " << this->getPlayersMoney() << std::endl;
+
+		std::cout << "PowerPlants: " << std::endl;
+		for (PowerPlant* pp : this->getPowerPlants()) {
+			std::cout << "   ";
+			pp->print();
+		}
+
+		std::cout << "Cities: " << std::endl;
+		for (City* city : this->getCities()) {
+			std::cout << "   " << city->getName() << std::endl;
+		}
+	}
+	
 	SummaryCard Player::getSummaryCard() {
 		return sc;
 	}

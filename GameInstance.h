@@ -3,7 +3,7 @@
 #include "../GameMap.h"
 #include "../Deck.h"
 #include "../GameSetupDriver.h"
-#include "../AuctionStepdriver.h"
+#include "drivers/AuctionStepDriver.h"
 #include "drivers/ResourceBuyingDriver.h"
 #include "../BuildingStepDriver.h"
 #include "drivers/BureaucracyStepDriver.h"
