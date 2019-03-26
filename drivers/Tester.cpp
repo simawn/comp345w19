@@ -56,6 +56,7 @@ void testGameSetup() {
 	GameMap gm =selectMap();
 	setUpStartingArea();
 	printResources();
+	Deck * d = new Deck();
 	for (Player p :players) {
 		cout <<"Current colour: "<< p.getPlayerColour() << endl;
 		cout <<"Money: "<< p.getPlayersMoney() << endl;
@@ -67,6 +68,7 @@ void testGameSetup() {
 		for (Resource * r : p.getResources()) {
 			cout <<"Type: "<<r->getName() << endl <<"Value: "<< r->getValue() << endl;
 		}
+		p.getSummaryCard().print();
 		cout << "After purchase Elektro: " << p.getPlayersMoney()<<endl;
 	}
 }
@@ -107,7 +109,7 @@ int main() {
 
 	/*Part 2: Game play: main game loop Phase 1 and 2*/
 	//testTurnOrder();
-	testAuction();
+	//testAuction();
 
 	/*Part 3: Game play: main game loop Phase 3 and 4*/
 	//testResourceBuying();

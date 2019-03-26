@@ -4,11 +4,13 @@
 	
 	Player::Player(){
 		money = new Money();
+		sc = SummaryCard();
 	}
 	
 	Player::Player(std::string c){
 		house = new House(c);
 		money = new Money();
+		sc = SummaryCard();
 	}
 	
 	int Player::getPlayersMoney() {
@@ -109,12 +111,6 @@
 		delete money;
 		delete house;
 	}
-	void Player::setStartingDistrict(std::string district) {
-		starting_district = district;
-	}
-	std::string Player::getStartingDistrict() {
-		return starting_district;
-	}
 	int Player:: getNbPowerPlants() {
 		return Player::powerplants.size();
 	}
@@ -126,7 +122,7 @@
 			}
 		}return max;
 	}
-
+	
 	bool Player::operator==(Player &other) {
 		return this->getPlayerColour().compare(other.getPlayerColour()) == 0;
 	}
@@ -150,4 +146,8 @@
 		for (City* city : this->getCities()) {
 			std::cout << "   " << city->getName() << std::endl;
 		}
+	}
+	
+	SummaryCard Player::getSummaryCard() {
+		return sc;
 	}
