@@ -16,8 +16,8 @@ private:
 	std::vector<PowerPlant *> powerplants;/**<The power plants that a player has.*/
 	Money* money;/**<The money pointer for money management.*/
 	House* house;/**<The house pointer for the house management, colour and amounts.*/
-	std::string starting_district;/**<The starting district for the player.*/
-	SummaryCard sc;
+	//std::string starting_district;/**<The starting district for the player.*/
+	SummaryCard sc;/**<The summary for the player*/
 
 public:
 	/**Default constructor.*/
@@ -50,15 +50,12 @@ public:
 	bool buyPowerPlant(PowerPlant *pp);
 	/**Set the colour of the player*/
 	void setPlayerColor(std::string c);
-	/**Set the starting district*/
-	void setStartingDistrict(std::string district);
-	/**Get the starting district*/
-	std::string getStartingDistrict();
 	/**Return the number of power plants a player possesses*/
 	int getNbPowerPlants();
 	/**Returns the power plant with the highest cost that a player possesses*/
 	int getLargestNbPowerPlant();
-
+	/**Get the summary card for the given player*/
+	SummaryCard getSummaryCard();
 
 };
 #endif // !PLAYER_H

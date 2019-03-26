@@ -66,6 +66,7 @@ void testGameSetup() {
 		for (Resource * r : p.getResources()) {
 			cout <<"Type: "<<r->getName() << endl <<"Value: "<< r->getValue() << endl;
 		}
+		p.getSummaryCard().print();
 		cout << "After purchase Elektro: " << p.getPlayersMoney()<<endl;
 	}
 }
@@ -95,16 +96,16 @@ int main() {
 
 		//testMap(); //Part 1
 		//testMapLoader(); //Part 2
-		TestResourceLoader(); //Part3
+		//TestResourceLoader(); //Part3
 		//testPlayer(); //Part 4
 		//testCardCreation(); //Part 5
 	
-	//testGameSetup();
+	testGameSetup();
 	//testMarketplaceCreation();
 	//testBureaucracy();
 	//testTurnOrder();
 
-	testResourceBuying();
+	//testResourceBuying();
 
 	system("pause");
 	return 0;

@@ -4,11 +4,13 @@
 	
 	Player::Player(){
 		money = new Money();
+		sc = SummaryCard();
 	}
 	
 	Player::Player(std::string c){
 		house = new House(c);
 		money = new Money();
+		sc = SummaryCard();
 	}
 	
 	int Player::getPlayersMoney() {
@@ -101,12 +103,6 @@
 		delete money;
 		delete house;
 	}
-	void Player::setStartingDistrict(std::string district) {
-		starting_district = district;
-	}
-	std::string Player::getStartingDistrict() {
-		return starting_district;
-	}
 	int Player:: getNbPowerPlants() {
 		return Player::powerplants.size();
 	}
@@ -117,4 +113,7 @@
 				max = powerplants[i]->getCost();
 			}
 		}return max;
+	}
+	SummaryCard Player::getSummaryCard() {
+		return sc;
 	}
