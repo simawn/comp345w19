@@ -9,7 +9,7 @@
 #include "BureaucracyStepDriver.h"
 #include "TurnManagerDriver.h"
 #include "ResourceBuyingDriver.h"
-#include "../Auction.h"
+#include "AuctionStepDriver.h"
 
 using namespace std;
 
@@ -72,32 +72,15 @@ void testGameSetup() {
 }
 
 void testTurnOrder() {
+	cout << "\n === TESTING TURN ORDER ===\n";
 	TurnManagerDriver();
+	cout << "\n === END TESTING TURN ORDER ===\n";
 }
 
-//Quick test
 void testAuction() {
-	//Player setup
-	Player* pa = new Player("(pa) RED");
-	Player* pb = new Player("(pb) BLUE");
-	Player* pc = new Player("(pc) GREEN");
-	Player* pd = new Player("(pd) YELLOW");
-	std::vector<Player*> pv = {pa,pb,pc,pd};
-
-	//Marketplace setup
-	Deck* deck = new Deck();
-	Marketplace* market = new Marketplace(deck);
-
-	//Auction
-	Auction auction(pv, market);
-
-	//Deletes
-	delete pa;
-	delete pb;
-	delete pc;
-	delete pd;
-	delete deck;
-	delete market;
+	cout << "\n === TESTING AUCTION ===\n";
+	testAuctionStep();
+	cout << "\n === END TESTING AUCTION ===\n";
 }
 
 void testBureaucracy() {
@@ -107,6 +90,7 @@ void testBureaucracy() {
 	market.print();
 	cout << "\n === END TESTING BUREAUCRACY ===\n";
 }
+
 void testResourceBuying() {
 	Phase3();
 }
@@ -116,22 +100,24 @@ Marketplace market = setupMarketplace(); //used for bureaucracy test
 
 int main() {
 
-	//step = 1;	//should be moved into a game driver eventually.
+	/*A2*/
 
-
-		//testMap(); //Part 1
-		//testMapLoader(); //Part 2
-		//TestResourceLoader(); //Part3
-		//testPlayer(); //Part 4
-		//testCardCreation(); //Part 5
-	
+	/*Part 1: Game start*/
 	//testGameSetup();
-	//testMarketplaceCreation();
-	//testBureaucracy();
-	//testTurnOrder();
 
-	//testResourceBuying();
+	/*Part 2: Game play: main game loop Phase 1 and 2*/
+	//testTurnOrder();
 	testAuction();
+
+	/*Part 3: Game play: main game loop Phase 3 and 4*/
+	//testResourceBuying();
+
+	/*Part 4: Game play: main game loop Phase 5*/
+	//testBureaucracy();
+
+	/*Other tests*/
+	//testMarketplaceCreation();
+
 	system("pause");
 	return 0;
 }

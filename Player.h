@@ -64,5 +64,7 @@ public:
 	bool operator==(Player & other);
 	/**Operator overload for Player comparison*/
 	bool operator!=(Player & other);
+	/**Prints the player's Name, Money, Cities, PowerPlants*/
+	void printPlayerInfo();
 };
 #endif // !PLAYER_H
