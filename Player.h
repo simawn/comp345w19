@@ -62,5 +62,7 @@ public:
 	int getLargestNbPowerPlant();
 	/**Operator overload for Player comparison*/
 	bool operator==(Player & other);
+	/**Operator overload for Player comparison*/
+	bool operator!=(Player & other);
 };
 #endif // !PLAYER_H

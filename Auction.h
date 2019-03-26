@@ -27,6 +27,7 @@ class Auction {
 	/*updates the current market information*/
 	void updateCurrentMarket();
 	void printPotentialBidders();
+	void printPotentialAuctioneers();
 public:
 	/*Auction ctor*/
 	Auction(std::vector<Player*> players, Marketplace* marketplace);
