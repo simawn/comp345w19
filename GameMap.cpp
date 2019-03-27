@@ -77,6 +77,13 @@ void GameMap::displayAllCities() {
 		std::cout << "City Name: " << it->first << " (ID: " << it->second->getCityId() << ")" << std::endl;
 	}
 }
+bool GameMap::isCity(std::string cityName) {
+	for (auto it = adjList.begin(); it != adjList.end(); it++) {
+		if (it->first == cityName)
+			return true;
+	}
+	return false;
+}
 
 bool GameMap::checkMapValidity() {
 	//Using 'new' so we can access it outside of scope

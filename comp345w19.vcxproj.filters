@@ -114,6 +114,9 @@
     <ClCompile Include="drivers\AuctionStepDriver.cpp">
       <Filter>Source Files\Drivers</Filter>
     </ClCompile>
+    <ClCompile Include="drivers\CityBuilding.cpp">
+      <Filter>Source Files\Drivers</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="House.h">
@@ -210,6 +213,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="drivers\AuctionStepDriver.h">
+      <Filter>Header Files\DriverHeads</Filter>
+    </ClInclude>
+    <ClInclude Include="drivers\CityBuilding.h">
       <Filter>Header Files\DriverHeads</Filter>
     </ClInclude>
   </ItemGroup>

@@ -10,6 +10,7 @@
 #include "TurnManagerDriver.h"
 #include "ResourceBuyingDriver.h"
 #include "AuctionStepDriver.h"
+#include "CityBuilding.h"
 
 using namespace std;
 
@@ -55,6 +56,7 @@ void testMarketplaceCreation() {
 	initializeMarketPlace();
 	cout << "\n === END TESTING MARKETPLACE ===\n";
 }
+
 
 // Have this part as a main game loop on a seperate file?
 void testGameSetup() {
@@ -178,6 +180,9 @@ void testBureaucracy() {
 void testResourceBuying() {
 	Phase3();
 }
+void testCityBuilding() {
+	Phase4();
+}
 
 int main() {
 
@@ -192,7 +197,7 @@ int main() {
 
 	/*Part 3: Game play: main game loop Phase 3 and 4*/
 	//testResourceBuying();
-
+	testCityBuilding();
 	/*Part 4: Game play: main game loop Phase 5*/
 	//testBureaucracy();
 

@@ -25,6 +25,7 @@
     <ClCompile Include="drivers\AuctionStepDriver.cpp" />
     <ClCompile Include="drivers\BureaucracyStepDriver.cpp" />
     <ClCompile Include="drivers\CardCreationDriver.cpp" />
+    <ClCompile Include="drivers\CityBuilding.cpp" />
     <ClCompile Include="drivers\GameDriver.cpp" />
     <ClCompile Include="drivers\GameMapDriver.cpp" />
     <ClCompile Include="drivers\GameMapLoaderDriver.cpp" />
@@ -58,6 +59,7 @@
     <ClInclude Include="Deck.h" />
     <ClInclude Include="drivers\BureaucracyStepDriver.h" />
     <ClInclude Include="drivers\CardCreationDriver.h" />
+    <ClInclude Include="drivers\CityBuilding.h" />
     <ClInclude Include="drivers\GameDriver.h" />
     <ClInclude Include="drivers\GameMapDriver.h" />
     <ClInclude Include="drivers\GameMapLoaderDriver.h" />
