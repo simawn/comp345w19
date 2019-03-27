@@ -57,9 +57,9 @@ public:
 	/**Returns the power plant with the highest cost that a player possesses*/
 	int getLargestNbPowerPlant();
 	/**Operator overload for Player comparison*/
-	bool operator==(Player & other);
+	const bool operator==(Player & other);
 	/**Operator overload for Player comparison*/
-	bool operator!=(Player & other);
+	const bool operator!=(Player & other);
 	/**Prints the player's Name, Money, Cities, PowerPlants*/
 	void printPlayerInfo();
 	/**Get the summary card for the given player*/
