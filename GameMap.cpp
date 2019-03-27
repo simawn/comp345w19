@@ -241,3 +241,19 @@ void GameMap::loadRegionAdjacency(json jsonMap) {
 std::vector<std::string> GameMap::getAdjacentRegions(std::string region) {
 	return adjRegion[region];
 }
+
+int GameMap::freeResourceGridSlots(int i, std::string resourceType) {
+	int freeslots = 3;
+	if (resourceType == "Uranium") { freeslots = 1;	}
+	if (!this->resourceMarket[i].empty()) {
+		for (int j = 0; j < this->resourceMarket[i].size(); j++) {
+			if (this->resourceMarket[i][j]->getName() == resourceType) {
+				freeslots--;
+			}
+		}
+	}else if(i==14 || i==12 || i==10){ //preents inserting uranium where there isnt supposed to be any.
+		freeslots = 0;
+	}
+	//returns the amount of free spots for a resource type in a grid i.
+	return freeslots;
+}

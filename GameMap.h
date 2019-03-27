@@ -123,5 +123,6 @@ public:
 	void printResourceMarket();
 	int buyResource(std::string resourceType, int price,int nbOfResources,Player *currentPlayer);
 
+	int freeResourceGridSlots(int i, std::string resourceType);
 
 };

@@ -18,6 +18,7 @@ using namespace std;
 int step = 1;	//should be declared in a game driver eventually
 Marketplace market = setupMarketplace();
 vector<Player*> currentPlayers_;
+GameMap map_;
 //--
 
 void testPlayer(){
@@ -91,7 +92,7 @@ void testAuction() {
 }
 
 void testBureaucracy() {
-
+	cout << "\n === TESTING BUREAUCRACY ===\nCreating a mock game-state...";
 	//generates mock gamestate to test bureaucracy
 	Player* pa = new Player("(pa) RED");
 	Player* pc = new Player("(pc) GREEN");
@@ -132,6 +133,7 @@ void testBureaucracy() {
 	std::cout << "Player (pc) buys PowerPlant8" << std::endl;
 	//Same amount of city but different powerplants
 	pc->buyPowerPlant((PowerPlant*)PowerPlantCard8);
+	pc->buyPowerPlant((PowerPlant*)PowerPlantCard6);
 	pc->buyResources(c);
 	pc->buyResources(c);
 	std::cout << "Player (pd) buys City 3 and City 4" << std::endl;
@@ -143,7 +145,10 @@ void testBureaucracy() {
 	pd->buyResources(g);
 	pd->buyResources(g);
 
-	cout << "\n === TESTING BUREAUCRACY ===\n";
+	market.print();
+	//end of mock setup
+
+	cout << "\n === BEGIN BUREAUCRACY===\n";
 	doBureaucracy();
 	cout << "\n === out of bureaucracy===\n";
 	market.print();
@@ -189,7 +194,7 @@ int main() {
 	//testResourceBuying();
 
 	/*Part 4: Game play: main game loop Phase 5*/
-	//testBureaucracy();
+	testBureaucracy();
 
 	/*Other tests*/
 	//testMarketplaceCreation();
