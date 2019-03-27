@@ -64,5 +64,12 @@ public:
 	void printPlayerInfo();
 	/**Get the summary card for the given player*/
 	SummaryCard getSummaryCard();
+
+	/**Pays the player*/
+	void income(int a);
+	/**Returns the amount a player has of a given resource*/
+	int totalPlayerResourcesOfType(std::string);
+	/**prints the resources the player has available*/
+	void printResources();
 };
 #endif // !PLAYER_H

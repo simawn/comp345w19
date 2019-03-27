@@ -151,3 +151,27 @@
 	SummaryCard Player::getSummaryCard() {
 		return sc;
 	}
+
+
+	void Player::income(int a) {
+		money->setMoney(money->getMoney() + a);
+		std::cout << "you earned " << a << " Elektro. Total:" << money->getMoney() << "\n" << std::endl;
+	}
+
+	int Player::totalPlayerResourcesOfType(std::string res) {
+		int total = 0;
+		for (int i = 0; i < resources.size(); ++i) {
+			if (resources[i]->getName().compare(res) == 0) {
+				total++;
+			}
+		}
+		return total;
+	}
+
+	void Player::printResources() {
+		std::cout << "::" << getPlayerColour() << "'s Resources::\n"
+			<< "Coal: [" << totalPlayerResourcesOfType("Coal")
+			<< "], Gas: [" << totalPlayerResourcesOfType("Gas")
+			<< "], Garbage: [" << totalPlayerResourcesOfType("Garbage")
+			<< "], Uranium: [" << totalPlayerResourcesOfType("Uranium") << "]" << std::endl;
+	}
