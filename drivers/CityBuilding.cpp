@@ -108,4 +108,15 @@ void Phase4() {
 			}
 		}
 	}
+	for (int i = 0; i < pv.size();i++ ) {
+		std::cout<<"Player "<< i+1 << " money:" << pv[i]->getPlayersMoney() << "\n";
+		std::cout << "Player " << i + 1 << "has cities: ";
+
+		for (City* a: pv[i]->getCities()
+			) {
+			std::cout << a->getName() << " ";
+
+		}
+		std::cout << "\n";
+	}
 }

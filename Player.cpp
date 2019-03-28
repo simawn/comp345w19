@@ -139,11 +139,11 @@
 		}return max;
 	}
 	
-	bool Player::operator==(Player &other) {
+	const bool Player::operator==(Player &other) {
 		return this->getPlayerColour().compare(other.getPlayerColour()) == 0;
 	}
 
-	bool Player::operator!=(Player & other) {
+	const bool Player::operator!=(Player & other) {
 		return this->getPlayerColour().compare(other.getPlayerColour()) != 0;
 	}
 
