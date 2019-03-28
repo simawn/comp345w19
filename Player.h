@@ -71,5 +71,6 @@ public:
 	int totalPlayerResourcesOfType(std::string);
 	/**prints the resources the player has available*/
 	void printResources();
+	int findCityConnectingCost(City* city);
 };
 #endif // !PLAYER_H

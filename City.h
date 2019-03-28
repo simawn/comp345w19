@@ -85,5 +85,6 @@ public:
 	 * @Return A list containing pointers to a City and their travel cost
 	 */
 	std::unordered_map<City*, int> getNeighbours();
+	int findCityConnectingCost(City* city);
 };
 

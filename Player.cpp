@@ -1,7 +1,7 @@
 #include "Player.h"
 #include <iostream>
 #include <string>
-	
+#
 	Player::Player(){
 		money = new Money();
 		sc = SummaryCard();
@@ -81,6 +81,22 @@
 		return false;
 	}
 	
+
+	int Player::findCityConnectingCost(City* city) {
+		for (City* a : cities) {
+			for (auto it : a->getNeighbours()) {
+				if (it.first->getName() == city->getName()) {
+					return it.second;
+
+				}
+			}
+			for (auto it : a->getNeighbours()) {
+				if(it.first->findCityConnectingCost(city)!=0)
+				return it.second +(it.first->findCityConnectingCost(city));
+			}
+		}
+
+	}
 	std::vector<PowerPlant *> Player::getPowerPlants() {
 		return powerplants;
 	}

@@ -69,3 +69,20 @@ void City::displayAllNeighbours() {
 std::unordered_map<City*, int> City::getNeighbours() {
 	return neighbours;
 }
+int City::findCityConnectingCost(City* city) {
+	for (auto it :neighbours) {
+		if (it.first->getName() == city->getName()) {
+			return it.second;
+
+		}
+		
+	}
+	if (neighbours.size() == 0) {
+		return 0;
+	}
+	for (auto it : neighbours) {
+		if (it.first->findCityConnectingCost(city)==0)
+			return 0;
+		return it.second + it.first->findCityConnectingCost(city);
+	}
+	}
