@@ -196,8 +196,9 @@ int main() {
 	//testAuction();
 
 	/*Part 3: Game play: main game loop Phase 3 and 4*/
-	testResourceBuying();
+	//testResourceBuying();
 	//testCityBuilding();
+
 	/*Part 4: Game play: main game loop Phase 5*/
 	//testBureaucracy();
 
