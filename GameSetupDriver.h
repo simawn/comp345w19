@@ -11,9 +11,6 @@ extern vector<Player> currentPlayers;
 extern GameMap gameMap;
 extern 	vector<string> playing_districts;
 
-void loadPowerPlants();
-void loadSummaryCards();
-void loadStep3();
 /**selesct the gamemap*/
 GameMap selectMap();
 /**Select teh starting distrcist that must be adjacent to be played in*/
@@ -28,5 +25,5 @@ std::string setColors(vector<string> colorArr);
 vector<Player> setUpPlayers();
 /**Place all the resources on the map*/
 void placeResourcesOnMap();
-
+/**Print all the resources that are on the map*/
 void printResources();

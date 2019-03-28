@@ -13,9 +13,11 @@ int getPlayerCount() {
 		cin >> playerCount;
 		if (!cin) {
 			cout <<"Invalid entry please enter a number between 2 and 6"<<endl;
+			playerCount = 0;
 		}
 		else if (playerCount < 2 || playerCount>6) {
 			cout << "Invalid entry please enter a number between 2 and 6" << endl;
+			playerCount = 0;
 		}
 	} while (playerCount < 2 || playerCount>6);
 	return playerCount;
@@ -39,7 +41,7 @@ string selectorHelper(vector<string> arr) {
 	}
 	int selection;
 	do {
-		cin >> selection;
+		cout << "Select: "; cin >> selection;
 		if (!cin) {
 			cout << "Invalid entry please enter a number between 1 and " << (size) << endl;
 		}
@@ -115,6 +117,7 @@ void setUpStartingArea() {
 	bool first_choice = true;
 	for (int i = 0; i < max_districts; ++i) {
 		if (first_choice) {
+			cout << "Select the districts" << endl;
 			playing_districts.push_back(selectorHelper(districts));
 			first_choice = false;
 		}
@@ -126,6 +129,7 @@ void setUpStartingArea() {
 					districts_adj.erase(itr);
 				}
 			}
+			cout << "Select the districts" << endl;
 			playing_districts.push_back(selectorHelper(districts_adj));
 		}
 	}
