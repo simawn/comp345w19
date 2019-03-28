@@ -53,9 +53,9 @@ void Phase3() {
 
 	//Player a
 	pa->buyPowerPlant((PowerPlant*)PowerPlantCard5);
-	pa->buyPowerPlant((PowerPlant*)PowerPlantCard7);
-	pa->buyPowerPlant((PowerPlant*)PowerPlantCard9);
-	pa->buyPowerPlant((PowerPlant*)PowerPlantCard3);
+	pd->buyPowerPlant((PowerPlant*)PowerPlantCard7);
+	pb->buyPowerPlant((PowerPlant*)PowerPlantCard9);
+	pc->buyPowerPlant((PowerPlant*)PowerPlantCard3);
 	pa->buyCity(c1);
 	//Player vector
 	std::vector<Player*> pv = { pa,pb,pc,pd };	
@@ -64,7 +64,7 @@ void Phase3() {
 	int price = -1;
 	int amount = -1;
 	std::string resource;
-	for (int i = pv.size()-1; i >=0; i--) {
+	for (int i = pv.size() - 1; i >= 0; i--) {
 		int coal = 0;
 		int garbage = 0;
 		int uranium = 0;
@@ -88,9 +88,9 @@ void Phase3() {
 		coal = coal * 2;
 		garbage = garbage * 2;
 		gas = gas * 2;
-		std::cout << "Starting turn of player " << i + 1 << "can buy maximum of " << coal << " coal " << "can buy maximum of " << gas << " gas " << " can buy maximum of " << uranium << "uranium " << " can buy maximum of " << garbage << "garbage " << "\n";
+		std::cout << "Starting turn of player " << i + 1 << "\n";
 		while (true) {
-			std::cout << "Player " << i + 1 << "can buy maximum of " << coal << " coal " << "can buy maximum of " << gas << " gas " << " can buy maximum of " << uranium << "uranium " << " can buy maximum of " << garbage << "garbage " << "\n";
+			std::cout << "Player " << i + 1 << " maximum of " << coal << " coal " << " maximum of " << gas << " gas " << " maximum of " << uranium << " uranium " << " maximum of " << garbage << " garbage " << "\n";
 
 			std::cout << "Please select your choice \n 1-Buy resources \n 2-Stop buying resources \n";
 			std::cin >> choice;
@@ -115,7 +115,7 @@ void Phase3() {
 			std::cin >> amount;
 			if (resource == "Coal") {
 				if (coal >= amount && pv[i]->getPlayersMoney() >= price * amount)
-					coal = coal -map.buyResource(resource, price, amount, pv[i]);
+					coal = coal - map.buyResource(resource, price, amount, pv[i]);
 
 				else {
 					std::cout << "Invalid amount \n";
@@ -124,7 +124,7 @@ void Phase3() {
 			}
 			else if (resource == "Gas") {
 				if (gas >= amount && pv[i]->getPlayersMoney() >= price * amount)
-					gas = gas -map.buyResource(resource, price, amount,pv[i]);
+					gas = gas - map.buyResource(resource, price, amount, pv[i]);
 				else {
 					std::cout << "Invalid amount \n";
 					continue;
@@ -132,7 +132,7 @@ void Phase3() {
 			}
 			else if (resource == "Uranium \n") {
 				if (uranium >= amount && pv[i]->getPlayersMoney() >= price * amount)
-			uranium = uranium -map.buyResource(resource, price, amount, pv[i]);
+					uranium = uranium - map.buyResource(resource, price, amount, pv[i]);
 				else {
 					std::cout << "Invalid amount \n";
 					continue;
@@ -140,17 +140,21 @@ void Phase3() {
 			}
 			else if (resource == "Garbage") {
 				if (garbage >= amount && pv[i]->getPlayersMoney() >= price * amount)
-				garbage =garbage -map.buyResource(resource, price, amount, pv[i]);
+					garbage = garbage - map.buyResource(resource, price, amount, pv[i]);
 				else {
 					std::cout << "Invalid amount \n";
 					continue;
 				}
 
 			}
-			
+
 		}
 		map.printResourceMarket();
-		
 	}
+		for (int i = 0; i < pv.size();i++) {
+			pv[i]->printResources();
+			std::cout << "Player " << i+1 << " " << pv[i]->getPlayersMoney() << "\n";
+		}
+	
 
 }

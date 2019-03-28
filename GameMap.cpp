@@ -211,7 +211,7 @@ int GameMap::buyResource(std::string resourceType, int price,int nbOfResources,P
 		}
 		counter++;
 	}
-	std::cout << "\n Not enough resources available to buy the requested amount";
+	std::cout << "\n Not enough resources available to buy the requested amount \n";
 	return resourceCounter;
 }
 
