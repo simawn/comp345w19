@@ -121,8 +121,14 @@ public:
 	*Indicates what is currently in the resource market
 	*/
 	void printResourceMarket();
+	/*
+	* Allows players to buy from the resource market
+	*/
 	int buyResource(std::string resourceType, int price,int nbOfResources,Player *currentPlayer);
 
 	int freeResourceGridSlots(int i, std::string resourceType);
+    /*
+	*Indicates if a valid city exits in GameMap
+	*/
 	bool isCity(std::string cityName);
 };

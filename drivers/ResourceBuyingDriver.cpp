@@ -153,7 +153,7 @@ void Phase3() {
 	}
 		for (int i = 0; i < pv.size();i++) {
 			pv[i]->printResources();
-			std::cout << "Player " << i+1 << " " << pv[i]->getPlayersMoney() << "\n";
+			std::cout << "Player " << i+1 << " money: " << pv[i]->getPlayersMoney() << "\n";
 		}
 	
 
