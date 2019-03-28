@@ -1,15 +1,10 @@
 var searchData=
 [
-  ['sethouseamount',['setHouseAmount',['../class_house.html#ae0efe0e1cf8bf7131fad52b7981559bd',1,'House']]],
-  ['setmoney',['setMoney',['../class_money.html#a6cf7cb7466ab5da97077abfee687d6f3',1,'Money']]],
-  ['setname',['setName',['../class_city.html#ae84271ae986e495c5a1dcbc5729b28c8',1,'City']]],
-  ['shuffle',['shuffle',['../class_deck.html#ae5a1e52ab00ae5924f2bc6b730dba3eb',1,'Deck']]],
-  ['stack',['stack',['../class_deck.html#adfbe5d242036823bce7293da49abc519',1,'Deck']]],
-  ['step3card',['Step3Card',['../class_step3_card.html',1,'Step3Card'],['../class_step3_card.html#a9bbed9ddffdedc903334f68a5df0a7c6',1,'Step3Card::Step3Card()']]],
-  ['step3card_2ecpp',['Step3Card.cpp',['../_step3_card_8cpp.html',1,'']]],
-  ['step3card_2eh',['Step3Card.h',['../_step3_card_8h.html',1,'']]],
-  ['stepsofthegame',['StepsOfTheGame',['../class_summary_card.html#ac348ce7575a1bd4fa5f3bcfd3a246205',1,'SummaryCard']]],
-  ['summarycard',['SummaryCard',['../class_summary_card.html',1,'SummaryCard'],['../class_summary_card.html#ac74ba74d68b788415ddc4e9843caf9f6',1,'SummaryCard::SummaryCard()']]],
-  ['summarycard_2ecpp',['SummaryCard.cpp',['../_summary_card_8cpp.html',1,'']]],
-  ['summarycard_2eh',['SummaryCard.h',['../_summary_card_8h.html',1,'']]]
+  ['readme_2emd',['README.md',['../_r_e_a_d_m_e_8md.html',1,'']]],
+  ['remove',['remove',['../class_marketplace.html#af595b7f4261218e9a73e4627601d2d9f',1,'Marketplace']]],
+  ['removemoney',['removeMoney',['../class_money.html#a067c48f453162f37df5995d55f0e764d',1,'Money']]],
+  ['resource',['Resource',['../class_resource.html',1,'Resource'],['../class_resource.html#a5a87b23dc0327bbf8d53c6f38f637f48',1,'Resource::Resource()'],['../class_resource.html#a9c17cc324f5a75ff3e4ec6c57a166a72',1,'Resource::Resource(int v)']]],
+  ['resources_2eh',['Resources.h',['../_resources_8h.html',1,'']]],
+  ['resourcetablesolution',['resourceTableSolution',['../_bureaucracy_step_driver_8cpp.html#adccf7d59b30f40ff52dc674b6b4d0389',1,'resourceTableSolution():&#160;BureaucracyStepDriver.cpp'],['../_bureaucracy_step_driver_8h.html#adccf7d59b30f40ff52dc674b6b4d0389',1,'resourceTableSolution():&#160;BureaucracyStepDriver.cpp']]],
+  ['resupplyresourcemarket',['resupplyResourceMarket',['../_bureaucracy_step_driver_8cpp.html#a41d50d7346ce2afd5cedf6d11a10d49e',1,'resupplyResourceMarket():&#160;BureaucracyStepDriver.cpp'],['../_bureaucracy_step_driver_8h.html#a41d50d7346ce2afd5cedf6d11a10d49e',1,'resupplyResourceMarket():&#160;BureaucracyStepDriver.cpp']]]
 ];

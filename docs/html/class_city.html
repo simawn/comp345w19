@@ -63,8 +63,6 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pri-attribs">Private Attributes</a> &#124;
-<a href="#pri-static-attribs">Static Private Attributes</a> &#124;
 <a href="class_city-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">City Class Reference</div>  </div>
@@ -93,22 +91,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a0d8e7ca7f06e88bb28f81a6c6e010384"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a509f583a31015676e93ca4493490e7de"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; <a class="el" href="class_city.html">City</a> *, int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_city.html#a509f583a31015676e93ca4493490e7de">getNeighbours</a> ()</td></tr>
 <tr class="separator:a509f583a31015676e93ca4493490e7de"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
-Private Attributes</h2></td></tr>
-<tr class="memitem:ac09fb9ef5fa83a64f30c7a37d84dabbe"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_city.html#ac09fb9ef5fa83a64f30c7a37d84dabbe">cityId</a></td></tr>
-<tr class="separator:ac09fb9ef5fa83a64f30c7a37d84dabbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0ae48eb67aea5e923b655ac46efec9b3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_city.html#a0ae48eb67aea5e923b655ac46efec9b3">cost</a> = 10</td></tr>
-<tr class="separator:a0ae48eb67aea5e923b655ac46efec9b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afea8cd8800a8600fa54af37ac05bf177"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_city.html#afea8cd8800a8600fa54af37ac05bf177">name</a></td></tr>
-<tr class="separator:afea8cd8800a8600fa54af37ac05bf177"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a79c848ea316db2e761e50a1884a0f00c"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; <a class="el" href="class_city.html">City</a> *, int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_city.html#a79c848ea316db2e761e50a1884a0f00c">neighbours</a></td></tr>
-<tr class="separator:a79c848ea316db2e761e50a1884a0f00c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
-Static Private Attributes</h2></td></tr>
-<tr class="memitem:aefc4c040a2eb8b384df206067a687cf6"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_city.html#aefc4c040a2eb8b384df206067a687cf6">cityIdGen</a> = 0</td></tr>
-<tr class="separator:aefc4c040a2eb8b384df206067a687cf6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9e93d302357e7045c3aa24b24454828"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_city.html#ab9e93d302357e7045c3aa24b24454828">findCityConnectingCost</a> (<a class="el" href="class_city.html">City</a> *city)</td></tr>
+<tr class="separator:ab9e93d302357e7045c3aa24b24454828"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A <a class="el" href="class_city.html">City</a> class </p>
@@ -195,6 +179,24 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Displays all neighbours of the city on the console </p>
+
+</div>
+</div>
+<a id="ab9e93d302357e7045c3aa24b24454828"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9e93d302357e7045c3aa24b24454828">&#9670;&nbsp;</a></span>findCityConnectingCost()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int City::findCityConnectingCost </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_city.html">City</a> *&#160;</td>
+          <td class="paramname"><em>city</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -286,122 +288,6 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Change the name of a city </p>
-
-</div>
-</div>
-<h2 class="groupheader">Member Data Documentation</h2>
-<a id="ac09fb9ef5fa83a64f30c7a37d84dabbe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac09fb9ef5fa83a64f30c7a37d84dabbe">&#9670;&nbsp;</a></span>cityId</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int City::cityId</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p><a class="el" href="class_city.html">City</a> object ID </p>
-
-</div>
-</div>
-<a id="aefc4c040a2eb8b384df206067a687cf6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aefc4c040a2eb8b384df206067a687cf6">&#9670;&nbsp;</a></span>cityIdGen</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int City::cityIdGen = 0</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>The next city ID to be assigned. An unique ID is generated for each <a class="el" href="class_city.html">City</a> object that is created. </p>
-
-</div>
-</div>
-<a id="a0ae48eb67aea5e923b655ac46efec9b3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0ae48eb67aea5e923b655ac46efec9b3">&#9670;&nbsp;</a></span>cost</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int City::cost = 10</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Default cost if a city </p>
-
-</div>
-</div>
-<a id="afea8cd8800a8600fa54af37ac05bf177"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afea8cd8800a8600fa54af37ac05bf177">&#9670;&nbsp;</a></span>name</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::string City::name</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>The name of the city </p>
-
-</div>
-</div>
-<a id="a79c848ea316db2e761e50a1884a0f00c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a79c848ea316db2e761e50a1884a0f00c">&#9670;&nbsp;</a></span>neighbours</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::unordered_map&lt;<a class="el" href="class_city.html">City</a>*, int&gt; City::neighbours</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>List of adjacent neighbours the city posseses </p>
 
 </div>
 </div>

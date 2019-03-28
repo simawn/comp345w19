@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['maxcitiessupplied',['maxCitiesSupplied',['../class_power_plant_card.html#a7917c3caac9665d4a99044753bf465fd',1,'PowerPlantCard']]],
-  ['money',['money',['../class_player.html#a97e8e1b7876b7e5d19b727ffe535f33d',1,'Player']]]
+  ['step',['step',['../_bureaucracy_step_driver_8h.html#abc16e65f240ed0c8f3e876e8732c0a33',1,'BureaucracyStepDriver.h']]],
+  ['stepsofthegame',['StepsOfTheGame',['../class_summary_card.html#ac348ce7575a1bd4fa5f3bcfd3a246205',1,'SummaryCard']]]
 ];

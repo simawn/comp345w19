@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['general',['General',['../struct_summary_card_1_1_game_steps.html#a81cf631cebe9a5e6a1216e4b6cfe8e03',1,'SummaryCard::GameSteps']]]
+  ['market',['market',['../_bureaucracy_step_driver_8h.html#a8b9260f220f097d79a216107a9a8b490',1,'BureaucracyStepDriver.h']]]
 ];

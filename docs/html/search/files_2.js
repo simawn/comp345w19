@@ -1,8 +1,7 @@
 var searchData=
 [
-  ['gamemap_2ecpp',['GameMap.cpp',['../_game_map_8cpp.html',1,'']]],
-  ['gamemap_2eh',['GameMap.h',['../_game_map_8h.html',1,'']]],
-  ['gamemapcustomizer_2ecpp',['GameMapCustomizer.cpp',['../_game_map_customizer_8cpp.html',1,'']]],
-  ['garbage_2eh',['Garbage.h',['../_garbage_8h.html',1,'']]],
-  ['gas_2eh',['Gas.h',['../_gas_8h.html',1,'']]]
+  ['cards_2eh',['Cards.h',['../_cards_8h.html',1,'']]],
+  ['city_2ecpp',['City.cpp',['../_city_8cpp.html',1,'']]],
+  ['city_2eh',['City.h',['../_city_8h.html',1,'']]],
+  ['coal_2eh',['Coal.h',['../_coal_8h.html',1,'']]]
 ];

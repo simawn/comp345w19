@@ -63,8 +63,6 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pri-methods">Private Member Functions</a> &#124;
-<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_game_map-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">GameMap Class Reference</div>  </div>
@@ -79,40 +77,40 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aae71e5694cf19612fcaa4c1e21b03b71"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeea4deb3243863e0ec5fcb7ab43280bc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_map.html#aeea4deb3243863e0ec5fcb7ab43280bc">GameMap</a> (std::string)</td></tr>
 <tr class="separator:aeea4deb3243863e0ec5fcb7ab43280bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a873ab457190957d1e89dddc944a62324"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_map.html#a873ab457190957d1e89dddc944a62324">loadMap</a> ()</td></tr>
+<tr class="separator:a873ab457190957d1e89dddc944a62324"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af2c8864de3c9b8f68e2b5e46d45fc9d4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_map.html#af2c8864de3c9b8f68e2b5e46d45fc9d4">addCity</a> (<a class="el" href="class_city.html">City</a> *)</td></tr>
 <tr class="separator:af2c8864de3c9b8f68e2b5e46d45fc9d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a70c22b1b5a63d4cabe5200c49632f417"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_city.html">City</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_map.html#a70c22b1b5a63d4cabe5200c49632f417">getCity</a> (std::string)</td></tr>
 <tr class="separator:a70c22b1b5a63d4cabe5200c49632f417"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae173d70898f7ba048d09befea2500771"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_map.html#ae173d70898f7ba048d09befea2500771">displayAllCities</a> ()</td></tr>
 <tr class="separator:ae173d70898f7ba048d09befea2500771"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e7e975bffc4da607ffddaf8048e4a59"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_map.html#a4e7e975bffc4da607ffddaf8048e4a59">getAllDistricts</a> ()</td></tr>
+<tr class="separator:a4e7e975bffc4da607ffddaf8048e4a59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab468680d627591d1d8718f25f6f45d49"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_map.html#ab468680d627591d1d8718f25f6f45d49">loadRegionAdjacency</a> (<a class="el" href="_game_map_8cpp.html#ab701e3ac61a85b337ec5c1abaad6742d">json</a> jsonMap)</td></tr>
+<tr class="separator:ab468680d627591d1d8718f25f6f45d49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40f00e66b6fa60d590b8afa17c6e85b4"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_map.html#a40f00e66b6fa60d590b8afa17c6e85b4">getAdjacentRegions</a> (std::string region)</td></tr>
+<tr class="separator:a40f00e66b6fa60d590b8afa17c6e85b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a05b2a4a5fae9caf1257c545dd15afe36"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_map.html#a05b2a4a5fae9caf1257c545dd15afe36">checkMapValidity</a> ()</td></tr>
 <tr class="separator:a05b2a4a5fae9caf1257c545dd15afe36"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adbd1bc50e7b0549d15ed9f1da9d668ee"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_map.html#adbd1bc50e7b0549d15ed9f1da9d668ee">traverse</a> (<a class="el" href="class_city.html">City</a> *, std::set&lt; std::string &gt; *)</td></tr>
 <tr class="separator:adbd1bc50e7b0549d15ed9f1da9d668ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0f1e00b3dfbc2d4c7a791a0a78b4362b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_map.html#a0f1e00b3dfbc2d4c7a791a0a78b4362b">addResource</a> (int Grid, int nbOfResource, std::vector&lt; <a class="el" href="class_coal.html">Coal</a> * &gt; resource)</td></tr>
-<tr class="separator:a0f1e00b3dfbc2d4c7a791a0a78b4362b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a941835d49e02f69eeef5e8aaec323c97"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_map.html#a941835d49e02f69eeef5e8aaec323c97">addResource</a> (int Grid, int nbOfResource, std::vector&lt; <a class="el" href="class_garbage.html">Garbage</a> * &gt; resource)</td></tr>
-<tr class="separator:a941835d49e02f69eeef5e8aaec323c97"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afa1e634e7700f262fb71734aa1ce1c84"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_map.html#afa1e634e7700f262fb71734aa1ce1c84">addResource</a> (int Grid, int nbOfResource, std::vector&lt; <a class="el" href="class_uranium.html">Uranium</a> * &gt; resource)</td></tr>
-<tr class="separator:afa1e634e7700f262fb71734aa1ce1c84"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac3969ea8a8cbeeb8d85fc5bc8b489445"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_map.html#ac3969ea8a8cbeeb8d85fc5bc8b489445">addResource</a> (int Grid, int nbOfResource, std::vector&lt; <a class="el" href="class_gas.html">Gas</a> * &gt; resource)</td></tr>
-<tr class="separator:ac3969ea8a8cbeeb8d85fc5bc8b489445"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade6d06199c6a6d0bb6d6f9d38393eed2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_map.html#ade6d06199c6a6d0bb6d6f9d38393eed2">addResource</a> (int Grid, int nbOfResource, std::vector&lt; <a class="el" href="class_coal.html">Coal</a> * &gt; &amp;resource)</td></tr>
+<tr class="separator:ade6d06199c6a6d0bb6d6f9d38393eed2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9204587dd2e721c38595391f944f7aab"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_map.html#a9204587dd2e721c38595391f944f7aab">addResource</a> (int Grid, int nbOfResource, std::vector&lt; <a class="el" href="class_garbage.html">Garbage</a> * &gt; &amp;resource)</td></tr>
+<tr class="separator:a9204587dd2e721c38595391f944f7aab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32229150a07eaf60f87e59dd627f96f3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_map.html#a32229150a07eaf60f87e59dd627f96f3">addResource</a> (int Grid, int nbOfResource, std::vector&lt; <a class="el" href="class_uranium.html">Uranium</a> * &gt; &amp;resource)</td></tr>
+<tr class="separator:a32229150a07eaf60f87e59dd627f96f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01055a20bc05fe6102ee7e91b4797da5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_map.html#a01055a20bc05fe6102ee7e91b4797da5">addResource</a> (int Grid, int nbOfResource, std::vector&lt; <a class="el" href="class_gas.html">Gas</a> * &gt; &amp;resource)</td></tr>
+<tr class="separator:a01055a20bc05fe6102ee7e91b4797da5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af3ed40bbea88f27ddfde1e26ffe21541"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_map.html#af3ed40bbea88f27ddfde1e26ffe21541">printResourceMarket</a> ()</td></tr>
 <tr class="separator:af3ed40bbea88f27ddfde1e26ffe21541"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
-Private Member Functions</h2></td></tr>
-<tr class="memitem:ac5a9099a555bcb4ca42755527f2ad171"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_map.html#ac5a9099a555bcb4ca42755527f2ad171">openMap</a> (std::string)</td></tr>
-<tr class="separator:ac5a9099a555bcb4ca42755527f2ad171"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a76ec4ee6dd5ee341568a5fff773b2997"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_map.html#a76ec4ee6dd5ee341568a5fff773b2997">processMap</a> (<a class="el" href="_game_map_8cpp.html#ab701e3ac61a85b337ec5c1abaad6742d">json</a>)</td></tr>
-<tr class="separator:a76ec4ee6dd5ee341568a5fff773b2997"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
-Private Attributes</h2></td></tr>
-<tr class="memitem:acdd8be07ba713ea5b914bd3cdb90494d"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::vector&lt; <a class="el" href="class_resource.html">Resource</a> * &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_map.html#acdd8be07ba713ea5b914bd3cdb90494d">resourceMarket</a></td></tr>
-<tr class="separator:acdd8be07ba713ea5b914bd3cdb90494d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a87f6ea7ee714d88e53cd52c061e93828"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; std::string, <a class="el" href="class_city.html">City</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_map.html#a87f6ea7ee714d88e53cd52c061e93828">adjList</a></td></tr>
-<tr class="separator:a87f6ea7ee714d88e53cd52c061e93828"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adcc5944369b1f6a99e465d06650fe2d7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_map.html#adcc5944369b1f6a99e465d06650fe2d7">buyResource</a> (std::string resourceType, int price, int nbOfResources, <a class="el" href="class_player.html">Player</a> *currentPlayer)</td></tr>
+<tr class="separator:adcc5944369b1f6a99e465d06650fe2d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa66c88012562e034535fb2e9d6ca187a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_map.html#aa66c88012562e034535fb2e9d6ca187a">freeResourceGridSlots</a> (int i, std::string resourceType)</td></tr>
+<tr class="separator:aa66c88012562e034535fb2e9d6ca187a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c48aa7dfea305f15d33e2151262ffce"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_map.html#a7c48aa7dfea305f15d33e2151262ffce">isCity</a> (std::string cityName)</td></tr>
+<tr class="separator:a7c48aa7dfea305f15d33e2151262ffce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Class that creates the game map </p>
@@ -174,8 +172,8 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a0f1e00b3dfbc2d4c7a791a0a78b4362b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0f1e00b3dfbc2d4c7a791a0a78b4362b">&#9670;&nbsp;</a></span>addResource() <span class="overload">[1/4]</span></h2>
+<a id="ade6d06199c6a6d0bb6d6f9d38393eed2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade6d06199c6a6d0bb6d6f9d38393eed2">&#9670;&nbsp;</a></span>addResource() <span class="overload">[1/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -195,7 +193,7 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::vector&lt; <a class="el" href="class_coal.html">Coal</a> * &gt;&#160;</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="class_coal.html">Coal</a> * &gt; &amp;&#160;</td>
           <td class="paramname"><em>resource</em>&#160;</td>
         </tr>
         <tr>
@@ -216,8 +214,8 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a941835d49e02f69eeef5e8aaec323c97"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a941835d49e02f69eeef5e8aaec323c97">&#9670;&nbsp;</a></span>addResource() <span class="overload">[2/4]</span></h2>
+<a id="a9204587dd2e721c38595391f944f7aab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9204587dd2e721c38595391f944f7aab">&#9670;&nbsp;</a></span>addResource() <span class="overload">[2/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -237,7 +235,7 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::vector&lt; <a class="el" href="class_garbage.html">Garbage</a> * &gt;&#160;</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="class_garbage.html">Garbage</a> * &gt; &amp;&#160;</td>
           <td class="paramname"><em>resource</em>&#160;</td>
         </tr>
         <tr>
@@ -258,8 +256,8 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="afa1e634e7700f262fb71734aa1ce1c84"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afa1e634e7700f262fb71734aa1ce1c84">&#9670;&nbsp;</a></span>addResource() <span class="overload">[3/4]</span></h2>
+<a id="a32229150a07eaf60f87e59dd627f96f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32229150a07eaf60f87e59dd627f96f3">&#9670;&nbsp;</a></span>addResource() <span class="overload">[3/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -279,7 +277,7 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::vector&lt; <a class="el" href="class_uranium.html">Uranium</a> * &gt;&#160;</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="class_uranium.html">Uranium</a> * &gt; &amp;&#160;</td>
           <td class="paramname"><em>resource</em>&#160;</td>
         </tr>
         <tr>
@@ -300,8 +298,8 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="ac3969ea8a8cbeeb8d85fc5bc8b489445"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac3969ea8a8cbeeb8d85fc5bc8b489445">&#9670;&nbsp;</a></span>addResource() <span class="overload">[4/4]</span></h2>
+<a id="a01055a20bc05fe6102ee7e91b4797da5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01055a20bc05fe6102ee7e91b4797da5">&#9670;&nbsp;</a></span>addResource() <span class="overload">[4/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -321,7 +319,7 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::vector&lt; <a class="el" href="class_gas.html">Gas</a> * &gt;&#160;</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="class_gas.html">Gas</a> * &gt; &amp;&#160;</td>
           <td class="paramname"><em>resource</em>&#160;</td>
         </tr>
         <tr>
@@ -339,6 +337,46 @@ Private Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="adcc5944369b1f6a99e465d06650fe2d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adcc5944369b1f6a99e465d06650fe2d7">&#9670;&nbsp;</a></span>buyResource()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int GameMap::buyResource </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>resourceType</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>price</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nbOfResources</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_player.html">Player</a> *&#160;</td>
+          <td class="paramname"><em>currentPlayer</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -378,6 +416,71 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="aa66c88012562e034535fb2e9d6ca187a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa66c88012562e034535fb2e9d6ca187a">&#9670;&nbsp;</a></span>freeResourceGridSlots()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int GameMap::freeResourceGridSlots </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>resourceType</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a40f00e66b6fa60d590b8afa17c6e85b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40f00e66b6fa60d590b8afa17c6e85b4">&#9670;&nbsp;</a></span>getAdjacentRegions()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; std::string &gt; GameMap::getAdjacentRegions </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>region</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get adjecent regions for a given region </p>
+
+</div>
+</div>
+<a id="a4e7e975bffc4da607ffddaf8048e4a59"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e7e975bffc4da607ffddaf8048e4a59">&#9670;&nbsp;</a></span>getAllDistricts()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; std::string &gt; GameMap::getAllDistricts </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get all the districts so that a player may choose their starting area </p>
+
+</div>
+</div>
 <a id="a70c22b1b5a63d4cabe5200c49632f417"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a70c22b1b5a63d4cabe5200c49632f417">&#9670;&nbsp;</a></span>getCity()</h2>
 
@@ -397,30 +500,58 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="ac5a9099a555bcb4ca42755527f2ad171"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac5a9099a555bcb4ca42755527f2ad171">&#9670;&nbsp;</a></span>openMap()</h2>
+<a id="a7c48aa7dfea305f15d33e2151262ffce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c48aa7dfea305f15d33e2151262ffce">&#9670;&nbsp;</a></span>isCity()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void GameMap::openMap </td>
+          <td class="memname">bool GameMap::isCity </td>
           <td>(</td>
           <td class="paramtype">std::string&#160;</td>
-          <td class="paramname"><em>path</em></td><td>)</td>
+          <td class="paramname"><em>cityName</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
-<p>Reads a .json and checks if it's valid before processing it </p>
+
+</div>
+</div>
+<a id="a873ab457190957d1e89dddc944a62324"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a873ab457190957d1e89dddc944a62324">&#9670;&nbsp;</a></span>loadMap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GameMap::loadMap </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Loads the map from a selected json file </p>
+
+</div>
+</div>
+<a id="ab468680d627591d1d8718f25f6f45d49"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab468680d627591d1d8718f25f6f45d49">&#9670;&nbsp;</a></span>loadRegionAdjacency()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GameMap::loadRegionAdjacency </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_game_map_8cpp.html#ab701e3ac61a85b337ec5c1abaad6742d">json</a>&#160;</td>
+          <td class="paramname"><em>jsonMap</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Limit the map size by getting the list of cities based on the number of districts </p>
 
 </div>
 </div>
@@ -438,33 +569,6 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-</div>
-</div>
-<a id="a76ec4ee6dd5ee341568a5fff773b2997"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a76ec4ee6dd5ee341568a5fff773b2997">&#9670;&nbsp;</a></span>processMap()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void GameMap::processMap </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="_game_map_8cpp.html#ab701e3ac61a85b337ec5c1abaad6742d">json</a>&#160;</td>
-          <td class="paramname"><em>jsonMap</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Processes the .json file by creating all the Cities and neighbours specified in the file </p>
 
 </div>
 </div>
@@ -494,52 +598,6 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>A recursive depth-first search algorithm to traverse the game map </p>
-
-</div>
-</div>
-<h2 class="groupheader">Member Data Documentation</h2>
-<a id="a87f6ea7ee714d88e53cd52c061e93828"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a87f6ea7ee714d88e53cd52c061e93828">&#9670;&nbsp;</a></span>adjList</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::unordered_map&lt;std::string, <a class="el" href="class_city.html">City</a>*&gt; GameMap::adjList</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Adjacency list for the cities </p>
-
-</div>
-</div>
-<a id="acdd8be07ba713ea5b914bd3cdb90494d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acdd8be07ba713ea5b914bd3cdb90494d">&#9670;&nbsp;</a></span>resourceMarket</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::vector&lt;std::vector&lt;<a class="el" href="class_resource.html">Resource</a>*&gt; &gt; GameMap::resourceMarket</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
 
 </div>
 </div>

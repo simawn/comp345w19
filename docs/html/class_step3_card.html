@@ -84,7 +84,15 @@ Inheritance diagram for Step3Card:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a9bbed9ddffdedc903334f68a5df0a7c6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_step3_card.html#a9bbed9ddffdedc903334f68a5df0a7c6">Step3Card</a> ()</td></tr>
 <tr class="separator:a9bbed9ddffdedc903334f68a5df0a7c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0ef9e9d97b34c657e58d167fa6b06c34"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_step3_card.html#a0ef9e9d97b34c657e58d167fa6b06c34">print</a> ()</td></tr>
+<tr class="memitem:a13c6cc162f9a0d4ba952ba530b334adf"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_step3_card.html#a13c6cc162f9a0d4ba952ba530b334adf">getCost</a> ()</td></tr>
+<tr class="separator:a13c6cc162f9a0d4ba952ba530b334adf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa59f76cc6ea92a0575cb9051b858b3ef"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_step3_card.html#aa59f76cc6ea92a0575cb9051b858b3ef">getResourceCost</a> ()</td></tr>
+<tr class="separator:aa59f76cc6ea92a0575cb9051b858b3ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f230172bfc673da2c7e81cce21f10de"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_step3_card.html#a6f230172bfc673da2c7e81cce21f10de">getHouseValue</a> ()</td></tr>
+<tr class="separator:a6f230172bfc673da2c7e81cce21f10de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8bf38f3c2630255ae2c639a2f61f703d"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="class_resource.html">Resource</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_step3_card.html#a8bf38f3c2630255ae2c639a2f61f703d">getResourceType</a> ()</td></tr>
+<tr class="separator:a8bf38f3c2630255ae2c639a2f61f703d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ef9e9d97b34c657e58d167fa6b06c34"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_step3_card.html#a0ef9e9d97b34c657e58d167fa6b06c34">print</a> ()</td></tr>
 <tr class="separator:a0ef9e9d97b34c657e58d167fa6b06c34"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
@@ -107,6 +115,118 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a13c6cc162f9a0d4ba952ba530b334adf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13c6cc162f9a0d4ba952ba530b334adf">&#9670;&nbsp;</a></span>getCost()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Step3Card::getCost </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Get the cost of the given powerplant. </p>
+
+<p>Implements <a class="el" href="class_cards.html#a90d4a433aeda82dc62e4a27d04a03a60">Cards</a>.</p>
+
+</div>
+</div>
+<a id="a6f230172bfc673da2c7e81cce21f10de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f230172bfc673da2c7e81cce21f10de">&#9670;&nbsp;</a></span>getHouseValue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Step3Card::getHouseValue </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Get the housing amount that it powers. </p>
+
+<p>Implements <a class="el" href="class_cards.html#a98d14287591bf47cbbfa574a10914f34">Cards</a>.</p>
+
+</div>
+</div>
+<a id="aa59f76cc6ea92a0575cb9051b858b3ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa59f76cc6ea92a0575cb9051b858b3ef">&#9670;&nbsp;</a></span>getResourceCost()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Step3Card::getResourceCost </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Get the amount of the given resource it costs. </p>
+
+<p>Implements <a class="el" href="class_cards.html#adb779ea546255f372691380435a67408">Cards</a>.</p>
+
+</div>
+</div>
+<a id="a8bf38f3c2630255ae2c639a2f61f703d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8bf38f3c2630255ae2c639a2f61f703d">&#9670;&nbsp;</a></span>getResourceType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="class_resource.html">Resource</a> *&gt; Step3Card::getResourceType </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Get the resource type for the powerplant ie <a class="el" href="class_coal.html">Coal</a>. </p>
+
+<p>Implements <a class="el" href="class_cards.html#ac292ea23b37e3160876033ca64da1e30">Cards</a>.</p>
+
+</div>
+</div>
 <a id="a0ef9e9d97b34c657e58d167fa6b06c34"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0ef9e9d97b34c657e58d167fa6b06c34">&#9670;&nbsp;</a></span>print()</h2>
 
@@ -129,9 +249,9 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>print Output class object details </p>
+<p>Print function </p>
 
-<p>Reimplemented from <a class="el" href="class_cards.html#afb9dc866fb40708299365f696319670d">Cards</a>.</p>
+<p>Reimplemented from <a class="el" href="class_cards.html#aed7f9b20e6f5c2dfce939e505bda5312">Cards</a>.</p>
 
 </div>
 </div>

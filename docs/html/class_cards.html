@@ -65,7 +65,7 @@ $(function() {
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="class_cards-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">Cards Class Reference</div>  </div>
+<div class="title">Cards Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -76,21 +76,27 @@ Inheritance diagram for Cards:</div>
  <div class="center">
   <img src="class_cards.png" usemap="#Cards_map" alt=""/>
   <map id="Cards_map" name="Cards_map">
-<area href="class_deck.html" alt="Deck" shape="rect" coords="0,56,104,80"/>
-<area href="class_power_plant_card.html" alt="PowerPlantCard" shape="rect" coords="114,56,218,80"/>
-<area href="class_step3_card.html" alt="Step3Card" shape="rect" coords="228,56,332,80"/>
-<area href="class_summary_card.html" alt="SummaryCard" shape="rect" coords="342,56,446,80"/>
+<area href="class_power_plant.html" alt="PowerPlant" shape="rect" coords="0,56,76,80"/>
+<area href="class_step3_card.html" alt="Step3Card" shape="rect" coords="86,56,162,80"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:afb9dc866fb40708299365f696319670d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cards.html#afb9dc866fb40708299365f696319670d">print</a> ()</td></tr>
-<tr class="separator:afb9dc866fb40708299365f696319670d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90d4a433aeda82dc62e4a27d04a03a60"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cards.html#a90d4a433aeda82dc62e4a27d04a03a60">getCost</a> ()=0</td></tr>
+<tr class="separator:a90d4a433aeda82dc62e4a27d04a03a60"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb779ea546255f372691380435a67408"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cards.html#adb779ea546255f372691380435a67408">getResourceCost</a> ()=0</td></tr>
+<tr class="separator:adb779ea546255f372691380435a67408"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98d14287591bf47cbbfa574a10914f34"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cards.html#a98d14287591bf47cbbfa574a10914f34">getHouseValue</a> ()=0</td></tr>
+<tr class="separator:a98d14287591bf47cbbfa574a10914f34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac292ea23b37e3160876033ca64da1e30"><td class="memItemLeft" align="right" valign="top">virtual std::vector&lt; <a class="el" href="class_resource.html">Resource</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cards.html#ac292ea23b37e3160876033ca64da1e30">getResourceType</a> ()=0</td></tr>
+<tr class="separator:ac292ea23b37e3160876033ca64da1e30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed7f9b20e6f5c2dfce939e505bda5312"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cards.html#aed7f9b20e6f5c2dfce939e505bda5312">print</a> ()</td></tr>
+<tr class="separator:aed7f9b20e6f5c2dfce939e505bda5312"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="afb9dc866fb40708299365f696319670d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afb9dc866fb40708299365f696319670d">&#9670;&nbsp;</a></span>print()</h2>
+<a id="a90d4a433aeda82dc62e4a27d04a03a60"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90d4a433aeda82dc62e4a27d04a03a60">&#9670;&nbsp;</a></span>getCost()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -99,7 +105,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void Cards::print </td>
+          <td class="memname">virtual int Cards::getCost </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -107,19 +113,130 @@ Public Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>print output class object description </p>
+<p>Get the cost of the given powerplant. </p>
 
-<p>Reimplemented in <a class="el" href="class_power_plant_card.html#a2bf74dde4b1807963b3f947942640bc1">PowerPlantCard</a>, <a class="el" href="class_summary_card.html#a92673fd238bcbea4c0061bfc91c119a3">SummaryCard</a>, <a class="el" href="class_deck.html#ac85e63ee0efe8930f8d6eb5d6de00a0d">Deck</a>, and <a class="el" href="class_step3_card.html#a0ef9e9d97b34c657e58d167fa6b06c34">Step3Card</a>.</p>
+<p>Implemented in <a class="el" href="class_power_plant.html#a8e8052cc7dacc349f0c7cca095d10933">PowerPlant</a>, and <a class="el" href="class_step3_card.html#a13c6cc162f9a0d4ba952ba530b334adf">Step3Card</a>.</p>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following files:<ul>
+<a id="a98d14287591bf47cbbfa574a10914f34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98d14287591bf47cbbfa574a10914f34">&#9670;&nbsp;</a></span>getHouseValue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int Cards::getHouseValue </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Get the housing amount that it powers. </p>
+
+<p>Implemented in <a class="el" href="class_power_plant.html#ae647d15d5dc3429c652404e59ffc2c96">PowerPlant</a>, and <a class="el" href="class_step3_card.html#a6f230172bfc673da2c7e81cce21f10de">Step3Card</a>.</p>
+
+</div>
+</div>
+<a id="adb779ea546255f372691380435a67408"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb779ea546255f372691380435a67408">&#9670;&nbsp;</a></span>getResourceCost()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int Cards::getResourceCost </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Get the amount of the given resource it costs. </p>
+
+<p>Implemented in <a class="el" href="class_power_plant.html#af2f55e0c19b298a2cd1dad89d793f42e">PowerPlant</a>, and <a class="el" href="class_step3_card.html#aa59f76cc6ea92a0575cb9051b858b3ef">Step3Card</a>.</p>
+
+</div>
+</div>
+<a id="ac292ea23b37e3160876033ca64da1e30"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac292ea23b37e3160876033ca64da1e30">&#9670;&nbsp;</a></span>getResourceType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::vector&lt;<a class="el" href="class_resource.html">Resource</a> *&gt; Cards::getResourceType </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Get the resource type for the powerplant ie <a class="el" href="class_coal.html">Coal</a>. </p>
+
+<p>Implemented in <a class="el" href="class_power_plant.html#a0c6da82e3679f84de84205c838b4d75f">PowerPlant</a>, and <a class="el" href="class_step3_card.html#a8bf38f3c2630255ae2c639a2f61f703d">Step3Card</a>.</p>
+
+</div>
+</div>
+<a id="aed7f9b20e6f5c2dfce939e505bda5312"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed7f9b20e6f5c2dfce939e505bda5312">&#9670;&nbsp;</a></span>print()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Cards::print </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Print function </p>
+
+<p>Reimplemented in <a class="el" href="class_power_plant.html#ae75fa5b7581f599b022bc7b71c1b5273">PowerPlant</a>, and <a class="el" href="class_step3_card.html#a0ef9e9d97b34c657e58d167fa6b06c34">Step3Card</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li>F:/Documents/Code/comp345w19/<a class="el" href="_cards_8h_source.html">Cards.h</a></li>
-<li>F:/Documents/Code/comp345w19/<a class="el" href="_cards_8cpp.html">Cards.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
