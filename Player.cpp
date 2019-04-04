@@ -53,6 +53,7 @@
 			}
 			
 			std::cout <<"\n Money after buying: " << this->getPlayersMoney() <<"\n";
+			notifyObservers();
 			return true;
 		}
 		return false;
@@ -76,6 +77,7 @@
 	bool Player::buyCity(City * city) {
 		if (money->removeMoney(city->getValue())) {
 			cities.push_back(city);
+			notifyObservers();
 			return true;
 		}
 		return false;
@@ -112,6 +114,7 @@
 	bool Player::buyPowerPlant(PowerPlant * pp, int cost) {
 		if (money->removeMoney(cost)) {
 			powerplants.push_back(pp);
+			notifyObservers();
 			return true;
 		}
 		return false;
@@ -190,4 +193,18 @@
 			<< "], Gas: [" << totalPlayerResourcesOfType("Gas")
 			<< "], Garbage: [" << totalPlayerResourcesOfType("Garbage")
 			<< "], Uranium: [" << totalPlayerResourcesOfType("Uranium") << "]" << std::endl;
+	}
+	void Player::attachObserver(Observer& o) {
+		observers.push_back(o);
+	}
+	void Player::removeObserver(Observer& o) {
+		auto itr = std::find(observers.begin(), observers.end(), o);
+		if (itr != observers.end()) {
+			observers.erase(itr);
+		}
+	}
+	void Player::notifyObservers() {
+		for (Observer &o : observers) {
+			o.notify();
+		}
 	}

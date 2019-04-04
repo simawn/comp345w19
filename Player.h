@@ -8,17 +8,17 @@
 #include <vector>
 #include <string>
 #include "SummaryCard.h"
+#include "Subject.h"
 /**Class that represents a player, playable character in the game*/
-class Player{
+class Player: public Subject{
 private:
 	std::vector<Resource *> resources;/**<The resources that a given player has.*/
 	std::vector<City *> cities;/**<The cities that a player owns.*/
 	std::vector<PowerPlant *> powerplants;/**<The power plants that a player has.*/
 	Money* money;/**<The money pointer for money management.*/
 	House* house;/**<The house pointer for the house management, colour and amounts.*/
-	//std::string starting_district;/**<The starting district for the player.*/
 	SummaryCard sc;/**<The summary for the player*/
-
+	std::vector<Observer> observers;/**<Observers for the player statistics*/
 public:
 	/**Default constructor.*/
 	Player(); //Added to prevent City.cpp errors
@@ -71,6 +71,9 @@ public:
 	int totalPlayerResourcesOfType(std::string);
 	/**prints the resources the player has available*/
 	void printResources();
+	void attachObserver(Observer & o);
+	void removeObserver(Observer & o);
+	void notifyObservers();
 	/**Find the weight between citites for cost*/
 	int findCityConnectingCost(City* city);
 };
