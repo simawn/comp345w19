@@ -194,17 +194,17 @@
 			<< "], Garbage: [" << totalPlayerResourcesOfType("Garbage")
 			<< "], Uranium: [" << totalPlayerResourcesOfType("Uranium") << "]" << std::endl;
 	}
-	void Player::attachObserver(Observer& o) {
+	void Player::attachObserver(Observer* o) {
 		observers.push_back(o);
 	}
-	void Player::removeObserver(Observer& o) {
+	void Player::removeObserver(Observer* o) {
 		auto itr = std::find(observers.begin(), observers.end(), o);
 		if (itr != observers.end()) {
 			observers.erase(itr);
 		}
 	}
 	void Player::notifyObservers() {
-		for (Observer &o : observers) {
-			o.notify();
+		for (Observer *o : observers) {
+			o->notify();
 		}
 	}

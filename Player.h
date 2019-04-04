@@ -18,7 +18,7 @@ private:
 	Money* money;/**<The money pointer for money management.*/
 	House* house;/**<The house pointer for the house management, colour and amounts.*/
 	SummaryCard sc;/**<The summary for the player*/
-	std::vector<Observer> observers;/**<Observers for the player statistics*/
+	std::vector<Observer *> observers;/**<Observers for the player statistics*/
 public:
 	/**Default constructor.*/
 	Player(); //Added to prevent City.cpp errors
@@ -71,9 +71,9 @@ public:
 	int totalPlayerResourcesOfType(std::string);
 	/**prints the resources the player has available*/
 	void printResources();
-	void attachObserver(Observer & o);
-	void removeObserver(Observer & o);
-	void notifyObservers();
+	void attachObserver(Observer * o) override;
+	void removeObserver(Observer * o) override;
+	void notifyObservers() override;
 	/**Find the weight between citites for cost*/
 	int findCityConnectingCost(City* city);
 };

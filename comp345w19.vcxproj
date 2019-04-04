@@ -73,6 +73,7 @@
     <ClInclude Include="Garbage.h" />
     <ClInclude Include="GameInstance.h" />
     <ClInclude Include="GameSetupDriver.h" />
+    <ClInclude Include="Observer.h" />
     <ClInclude Include="ResourceBuyingDriver.h" />
     <ClInclude Include="BuildingStepDriver.h" />
     <ClInclude Include="drivers\AuctionStepDriver.h" />
@@ -86,6 +87,7 @@
     <ClInclude Include="PowerPlant.h" />
     <ClInclude Include="Resources.h" />
     <ClInclude Include="Step3Card.h" />
+    <ClInclude Include="Subject.h" />
     <ClInclude Include="SummaryCard.h" />
     <ClInclude Include="TurnManager.h" />
     <ClInclude Include="Uranium.h" />

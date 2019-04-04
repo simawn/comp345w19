@@ -218,5 +218,11 @@
     <ClInclude Include="drivers\CityBuilding.h">
       <Filter>Header Files\DriverHeads</Filter>
     </ClInclude>
+    <ClInclude Include="Subject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Observer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
