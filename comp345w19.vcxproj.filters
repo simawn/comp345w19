@@ -34,6 +34,12 @@
     <Filter Include="Source Files\Drivers\A1">
       <UniqueIdentifier>{795d2e5b-0cf2-411a-8eb3-1db352f3825d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Strategy">
+      <UniqueIdentifier>{bdd8f215-5083-423f-a4ab-2897f5ba60f0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Strategy">
+      <UniqueIdentifier>{0d611d34-1c81-4816-9fe1-238c0801ad23}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Player.cpp">
@@ -116,6 +122,15 @@
     </ClCompile>
     <ClCompile Include="drivers\CityBuilding.cpp">
       <Filter>Source Files\Drivers</Filter>
+    </ClCompile>
+    <ClCompile Include="StrategyAggressive.cpp">
+      <Filter>Source Files\Strategy</Filter>
+    </ClCompile>
+    <ClCompile Include="StrategyModerate.cpp">
+      <Filter>Source Files\Strategy</Filter>
+    </ClCompile>
+    <ClCompile Include="StrategyEnv.cpp">
+      <Filter>Source Files\Strategy</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -223,6 +238,15 @@
     </ClInclude>
     <ClInclude Include="Observer.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="StrategyAggressive.h">
+      <Filter>Header Files\Strategy</Filter>
+    </ClInclude>
+    <ClInclude Include="StrategyModerate.h">
+      <Filter>Header Files\Strategy</Filter>
+    </ClInclude>
+    <ClInclude Include="StrategyEnv.h">
+      <Filter>Header Files\Strategy</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

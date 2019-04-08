@@ -41,6 +41,7 @@ void Auction::startAuction() {
 			std::cin >> chosen;
 			//Pass
 			if (chosen == -1) {
+				auctioneer->pass();
 				std::cout << "Player " << auctioneer->getPlayerColour() << " has passed on this auction." << std::endl;
 				auctionPass = true;
 				break;
@@ -54,6 +55,7 @@ void Auction::startAuction() {
 
 				else {
 					currentAuction = choiceMapping.find(chosen)->second;
+					auctioneer->auction(currentAuction);
 					valid = true;
 				}
 			}
@@ -196,6 +198,11 @@ void Auction::startAuction() {
 		//Assigning new list to next bidders
 		this->nextBidders = this->bidders;
 	} //End of auctioneers while loop
+
+	//Resets values of auction
+	for (Player* p : currentPlayers) {
+		p->auctionReset();
+	}
 
 	std::cout << "=== Auction is over ===" << std::endl;
 }

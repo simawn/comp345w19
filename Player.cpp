@@ -1,7 +1,7 @@
 #include "Player.h"
 #include <iostream>
 #include <string>
-#
+
 	Player::Player(){
 		money = new Money();
 		sc = SummaryCard();
@@ -99,6 +99,7 @@
 		}
 
 	}
+
 	std::vector<PowerPlant *> Player::getPowerPlants() {
 		return powerplants;
 	}
@@ -207,4 +208,16 @@
 		for (Observer *o : observers) {
 			o->notify();
 		}
+	}
+
+	void Player::pass() {
+		this->passAuction = true;
+	}
+	void Player::auction(Cards* pp) {
+		this->auctionPP = pp;
+	}
+
+	void Player::auctionReset() {
+		this->passAuction = false;
+		this->auctionPP = nullptr;
 	}

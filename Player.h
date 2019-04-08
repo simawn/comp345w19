@@ -9,6 +9,8 @@
 #include <string>
 #include "SummaryCard.h"
 #include "Subject.h"
+#include "Cards.h"
+
 /**Class that represents a player, playable character in the game*/
 class Player: public Subject{
 private:
@@ -19,6 +21,9 @@ private:
 	House* house;/**<The house pointer for the house management, colour and amounts.*/
 	SummaryCard sc;/**<The summary for the player*/
 	std::vector<Observer *> observers;/**<Observers for the player statistics*/
+	bool passAuction = false; /**Player passes on the auction*/
+	Cards* auctionPP = nullptr; /**The player puts this powerpoint in auction*/
+
 public:
 	/**Default constructor.*/
 	Player(); //Added to prevent City.cpp errors
@@ -76,5 +81,11 @@ public:
 	void notifyObservers() override;
 	/**Find the weight between citites for cost*/
 	int findCityConnectingCost(City* city);
+	/*Player passes on the auction*/
+	void pass();
+	/*Player puts a pp to auction*/
+	void auction(Cards* pp);
+	/*Resets the values of auctions*/
+	void auctionReset();
 };
 #endif // !PLAYER_H

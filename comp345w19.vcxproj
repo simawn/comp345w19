@@ -48,6 +48,9 @@
     <ClCompile Include="PowerPlant.cpp" />
     <ClCompile Include="GameInstance.cpp" />
     <ClCompile Include="Step3Card.cpp" />
+    <ClCompile Include="StrategyAggressive.cpp" />
+    <ClCompile Include="StrategyEnv.cpp" />
+    <ClCompile Include="StrategyModerate.cpp" />
     <ClCompile Include="SummaryCard.cpp" />
     <ClCompile Include="TurnManager.cpp" />
   </ItemGroup>
@@ -87,6 +90,9 @@
     <ClInclude Include="PowerPlant.h" />
     <ClInclude Include="Resources.h" />
     <ClInclude Include="Step3Card.h" />
+    <ClInclude Include="StrategyAggressive.h" />
+    <ClInclude Include="StrategyEnv.h" />
+    <ClInclude Include="StrategyModerate.h" />
     <ClInclude Include="Subject.h" />
     <ClInclude Include="SummaryCard.h" />
     <ClInclude Include="TurnManager.h" />
