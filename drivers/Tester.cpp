@@ -11,6 +11,7 @@
 #include "ResourceBuyingDriver.h"
 #include "AuctionStepDriver.h"
 #include "CityBuilding.h"
+#include "../PlayerHuman.h"
 
 using namespace std;
 
@@ -59,13 +60,15 @@ void testMarketplaceCreation() {
 
 
 // Have this part as a main game loop on a seperate file?
+
+/*
 void testGameSetup() {
-	vector<Player> players = setUpPlayers(); 
+	vector<Player*> players = setUpPlayers(); 
 	GameMap gm =selectMap();
 	setUpStartingArea();
 	printResources();
 	Deck * d = new Deck();
-	for (Player p :players) {
+	for (Player* p :players) {
 		cout <<"Current colour: "<< p.getPlayerColour() << endl;
 		cout <<"Money: "<< p.getPlayersMoney() << endl;
 		cout << "BUYS A SIMPLE GAS POWERPLANT" << endl;
@@ -80,7 +83,7 @@ void testGameSetup() {
 		cout << "After purchase Elektro: " << p.getPlayersMoney()<<endl;
 	}
 }
-
+*/
 void testTurnOrder() {
 	cout << "\n === TESTING TURN ORDER ===\n";
 	TurnManagerDriver();
@@ -96,9 +99,9 @@ void testAuction() {
 void testBureaucracy() {
 	cout << "\n === TESTING BUREAUCRACY ===\nCreating a mock game-state...";
 	//generates mock gamestate to test bureaucracy
-	Player* pa = new Player("(pa) RED");
-	Player* pc = new Player("(pc) GREEN");
-	Player* pd = new Player("(pd) YELLOW");
+	Player* pa = new PlayerHuman("(pa) RED");
+	Player* pc = new PlayerHuman("(pc) GREEN");
+	Player* pd = new PlayerHuman("(pd) YELLOW");
 	currentPlayers_.push_back(pa);
 	currentPlayers_.push_back(pc);
 	currentPlayers_.push_back(pd);

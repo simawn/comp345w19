@@ -3,13 +3,14 @@
 #include "../Coal.h"
 #include "../PowerPlant.h"
 #include "../Uranium.h"
+#include "../PlayerHuman.h"
 using namespace std;
 
 void GameDriver() {
 	//set up
 	cout << "Player testing" << endl;
-	Player * p = new Player("RED");
-	Player * p1 = new Player("BLUE");
+	Player * p = new PlayerHuman("RED");
+	Player * p1 = new PlayerHuman("BLUE");
 	cout << "Colour: " << p->getPlayerColour() << endl;
 	cout << "Default Balance: " << p->getPlayersMoney() << endl;
 	cout << "Colour: " << p1->getPlayerColour() << endl;

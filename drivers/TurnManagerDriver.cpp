@@ -5,6 +5,7 @@
 #include "../Coal.h"
 #include "../Garbage.h"
 #include "../Uranium.h"
+#include "../PlayerHuman.h"
 #include <vector>
 
 void printPlayerArray(std::vector<Player*> a) {
@@ -17,10 +18,10 @@ void printPlayerArray(std::vector<Player*> a) {
 
 void TurnManagerDriver() {
 	//Create test players
-	Player* pa = new Player("(pa) RED");
-	Player* pb = new Player("(pb) BLUE");
-	Player* pc = new Player("(pc) GREEN");
-	Player* pd = new Player("(pd) YELLOW");
+	Player* pa = new PlayerHuman("(pa) RED");
+	Player* pb = new PlayerHuman("(pb) BLUE");
+	Player* pc = new PlayerHuman("(pc) GREEN");
+	Player* pd = new PlayerHuman("(pd) YELLOW");
 
 	//Player vector
 	std::vector<Player*> pv = {pa,pb,pc,pd};

@@ -2,6 +2,7 @@
 #include "../Player.h"
 #include "../GameMap.h"
 #include "../drivers/ResourceBuyingDriver.h"
+#include "../PlayerHuman.h"
 
 void Phase3() {
 	Gas* g = new Gas(1);
@@ -26,10 +27,10 @@ void Phase3() {
 	map.printResourceMarket();
 
 
-	Player* pa = new Player("(pa) RED");
-	Player* pb = new Player("(pb) BLUE");
-	Player* pc = new Player("(pc) GREEN");
-	Player* pd = new Player("(pd) YELLOW");
+	Player* pa = new PlayerHuman("(pa) RED");
+	Player* pb = new PlayerHuman("(pb) BLUE");
+	Player* pc = new PlayerHuman("(pc) GREEN");
+	Player* pd = new PlayerHuman("(pd) YELLOW");
 	Cards* PowerPlantCard3 = new PowerPlant(3, 1, 2, g);
 	Cards* PowerPlantCard4 = new PowerPlant(4, 1, 2, c);
 	Cards* PowerPlantCard5 = new PowerPlant(5, 1, 2, g, c);
