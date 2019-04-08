@@ -2,13 +2,17 @@
 #include "../Player.h"
 #include "../Marketplace.h"
 #include "../Auction.h"
+#include "../PlayerBotAggressive.h"
+#include "../PlayerBotEnvironmentalist.h"
+#include "../PlayerBotModerate.h"
+#include "../PlayerHuman.h"
 
 void testAuctionStep() {
 	//Player setup
-	Player* pa = new Player("(pa) RED");
-	Player* pb = new Player("(pb) BLUE");
-	Player* pc = new Player("(pc) GREEN");
-	Player* pd = new Player("(pd) YELLOW");
+	Player* pa = new PlayerHuman("(pa) RED");
+	Player* pb = new PlayerBotAggressive("(pb) BLUE");
+	Player* pc = new PlayerBotModerate("(pc) GREEN");
+	Player* pd = new PlayerBotEnvironmentalist("(pd) YELLOW");
 	std::vector<Player*> pv = {pa,pb,pc,pd};
 
 	//Marketplace setup

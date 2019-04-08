@@ -2,6 +2,7 @@
 #include "../City.h"
 #include "../GameMap.h"
 #include "../Player.h"
+#include "../PlayerHuman.h"
 
 void Phase4() {
 	City city1("Toronto");
@@ -32,10 +33,10 @@ void Phase4() {
 	city2.displayAllNeighbours();
 	city3.displayAllNeighbours();
 	city4.displayAllNeighbours();
-	Player* pa = new Player("(pa) RED");
-	Player* pb = new Player("(pb) BLUE");
-	Player* pc = new Player("(pc) GREEN");
-	Player* pd = new Player("(pd) YELLOW");
+	Player* pa = new PlayerHuman("(pa) RED");
+	Player* pb = new PlayerHuman("(pb) BLUE");
+	Player* pc = new PlayerHuman("(pc) GREEN");
+	Player* pd = new PlayerHuman("(pd) YELLOW");
 
 	//Player vector
 	std::vector<Player*> pv = { pa,pb,pc,pd };
