@@ -1,9 +1,9 @@
 #pragma once
 #include "CardsDecorator.h"
 #include "Cards.h"
-class GarbagePowerPlant :public CardsDecorator {
+class EcologicalPowerPlant :public CardsDecorator {
 public:
-	GarbagePowerPlant(Cards * decoratedCards);
+	EcologicalPowerPlant(Cards * decoratedCards);
 	void print();
 	/**Get the cost of the given powerplant.*/
 	int getCost();

@@ -83,7 +83,7 @@
     <ClInclude Include="drivers\ResourceBuyingDriver.h" />
     <ClInclude Include="drivers\ResourcesLoaderDriver.h" />
     <ClInclude Include="drivers\TurnManagerDriver.h" />
-    <ClInclude Include="EcologialPowerPlant.h" />
+    <ClInclude Include="EcologicalPowerPlant.h" />
     <ClInclude Include="GameMap.h">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
     </ClInclude>
