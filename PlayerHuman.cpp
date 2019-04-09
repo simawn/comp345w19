@@ -1,27 +1,22 @@
 #include "PlayerHuman.h"
 
-
-
-PlayerHuman::PlayerHuman()
-{
+int PlayerHuman::auctionDecision(Marketplace * marketplace) {
+	int choice;
+	std::cin >> choice;
+	return choice;
 }
 
-PlayerHuman::PlayerHuman(std::string colour) : Player(colour)
-{
+int PlayerHuman::pass() {
+	return -1;
 }
 
-
-PlayerHuman::~PlayerHuman()
-{
+int PlayerHuman::auction() {
+	return -1;
 }
 
-void PlayerHuman::pass()
+int PlayerHuman::bidDecision(Cards * card, int currentBid)
 {
-	std::cout << "Human Pass" << std::endl;
-}
-
-void PlayerHuman::auction()
-{
+	return 0;
 }
 
 void PlayerHuman::buyResource()
@@ -29,5 +24,9 @@ void PlayerHuman::buyResource()
 }
 
 void PlayerHuman::buildCity()
+{
+}
+
+PlayerHuman::~PlayerHuman()
 {
 }

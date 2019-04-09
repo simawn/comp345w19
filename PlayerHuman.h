@@ -4,12 +4,15 @@ class PlayerHuman :
 	public Player
 {
 public:
-	PlayerHuman();
-	PlayerHuman(std::string);
-	~PlayerHuman();
-	void pass();
-	void auction();
+	PlayerHuman() : Player() {};
+	PlayerHuman(std::string colour) : Player(colour) {};
+	int auctionDecision(Marketplace* marketplace);
+	int pass();
+	int auction();
+	int bidDecision(Cards* card, int currentBid);
 	void buyResource();
 	void buildCity();
+
+	~PlayerHuman();
 };
 

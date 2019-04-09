@@ -210,5 +210,6 @@
 		}
 	}
 
-	void Player::auctionReset() {
+	Player::~Player()
+	{
 	}

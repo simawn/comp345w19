@@ -1,15 +1,9 @@
 #pragma once
-#include "Player.h"
-class PlayerBotEnvironmentalist :
-	public Player
-{
+#include "PlayerBot.h"
+class PlayerBotEnvironmentalist : public PlayerBot {
 public:
-	PlayerBotEnvironmentalist();
-	PlayerBotEnvironmentalist(std::string colour);
+	PlayerBotEnvironmentalist() : Player() {};
+	PlayerBotEnvironmentalist(std::string colour) : Player(colour) {};
 	~PlayerBotEnvironmentalist();
-	void pass();
-	void auction();
-	void buyResource();
-	void buildCity();
 };
 

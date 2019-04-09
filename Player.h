@@ -10,9 +10,13 @@
 #include "SummaryCard.h"
 #include "Subject.h"
 #include "Cards.h"
+#include "Marketplace.h"
 
 /**Class that represents a player, playable character in the game*/
 class Player: public Subject{
+protected:
+	//const static int DELAY = 500; /*Minimum break in ms before bot outputs its decision. Faking that the bot is thinking*/
+	//const static int MAX_OFFSET = 500; /*Maximum offset in ms for break. To add randomness*/
 private:
 	std::vector<Resource *> resources;/**<The resources that a given player has.*/
 	std::vector<City *> cities;/**<The cities that a player owns.*/
@@ -21,7 +25,6 @@ private:
 	House* house;/**<The house pointer for the house management, colour and amounts.*/
 	SummaryCard sc;/**<The summary for the player*/
 	std::vector<Observer *> observers;/**<Observers for the player statistics*/
-
 public:
 	/**Default constructor.*/
 	Player(); //Added to prevent City.cpp errors
@@ -81,12 +84,13 @@ public:
 	int findCityConnectingCost(City* city);
 
 
-	virtual void pass() = 0;
-	virtual void auction() = 0;
+	virtual int auctionDecision(Marketplace* marketplace) = 0;
+	virtual int pass() = 0;
+	virtual int auction() = 0;
+	virtual int bidDecision(Cards* card, int currentBid) = 0;
 	virtual void buyResource() = 0;
 	virtual void buildCity() = 0;
 
-	/*Resets the values of auctions*/
-	void auctionReset();
+	virtual ~Player();
 };
 #endif // !PLAYER_H

@@ -1,15 +1,9 @@
 #pragma once
-#include "Player.h"
-class PlayerBotModerate :
-	public Player
-{
+#include "PlayerBot.h"
+class PlayerBotModerate : public PlayerBot {
 public:
-	PlayerBotModerate();
-	PlayerBotModerate(std::string colour);
+	PlayerBotModerate() : Player() {};
+	PlayerBotModerate(std::string colour) : Player(colour) {};
 	~PlayerBotModerate();
-	void pass();
-	void auction();
-	void buyResource();
-	void buildCity();
 };
 

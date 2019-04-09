@@ -54,6 +54,7 @@
     </ClCompile>
     <ClCompile Include="Money.cpp" />
     <ClCompile Include="Player.cpp" />
+    <ClCompile Include="PlayerBot.cpp" />
     <ClCompile Include="PlayerBotAggressive.cpp" />
     <ClCompile Include="PlayerBotEnvironmentalist.cpp" />
     <ClCompile Include="PlayerBotModerate.cpp" />
@@ -94,6 +95,7 @@
     <ClInclude Include="HybridPowerPlant.h" />
     <ClInclude Include="Observer.h" />
     <ClInclude Include="GasPowerPlant.h" />
+    <ClInclude Include="PlayerBot.h" />
     <ClInclude Include="PlayerBotAggressive.h" />
     <ClInclude Include="PlayerBotEnvironmentalist.h" />
     <ClInclude Include="PlayerBotModerate.h" />
