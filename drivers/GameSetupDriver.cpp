@@ -1,14 +1,18 @@
+/* 
+//The new player.cpp breaks this...
+
+
 #include "../GameSetupDriver.h"
 #include <iostream>
 vector<Player> currentPlayers;//current players
 GameMap gameMap;//current gamemap
 vector<string>playing_districts;//the current playing districts for the game
 
-/*To get the amount of players that will be playing*/
+								//To get the amount of players that will be playing
 int getPlayerCount() {
 	int playerCount;
 	do {
-		
+
 		cout << "How many players will be playing the game? (2-6)" << endl;
 		cin >> playerCount;
 		if (!cin) {
@@ -134,3 +138,4 @@ void setUpStartingArea() {
 		}
 	}
 }
+*/

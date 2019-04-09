@@ -31,7 +31,10 @@
     <ClCompile Include="drivers\GameDriver.cpp" />
     <ClCompile Include="drivers\GameMapDriver.cpp" />
     <ClCompile Include="drivers\GameMapLoaderDriver.cpp" />
-    <ClCompile Include="drivers\GameSetupDriver.cpp" />
+    <ClCompile Include="drivers\GameSetupDriver.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="drivers\MarketPlaceDriver.cpp" />
     <ClCompile Include="drivers\ResourceBuyingDriver.cpp" />
     <ClCompile Include="drivers\ResourcesLoaderDriver.cpp" />
@@ -51,12 +54,13 @@
     </ClCompile>
     <ClCompile Include="Money.cpp" />
     <ClCompile Include="Player.cpp" />
+    <ClCompile Include="PlayerBotAggressive.cpp" />
+    <ClCompile Include="PlayerBotEnvironmentalist.cpp" />
+    <ClCompile Include="PlayerBotModerate.cpp" />
+    <ClCompile Include="PlayerHuman.cpp" />
     <ClCompile Include="PowerPlant.cpp" />
     <ClCompile Include="GameInstance.cpp" />
     <ClCompile Include="Step3Card.cpp" />
-    <ClCompile Include="StrategyAggressive.cpp" />
-    <ClCompile Include="StrategyEnv.cpp" />
-    <ClCompile Include="StrategyModerate.cpp" />
     <ClCompile Include="SummaryCard.cpp" />
     <ClCompile Include="TurnManager.cpp" />
     <ClCompile Include="UraniumPowerPlant.cpp" />
@@ -90,6 +94,10 @@
     <ClInclude Include="HybridPowerPlant.h" />
     <ClInclude Include="Observer.h" />
     <ClInclude Include="GasPowerPlant.h" />
+    <ClInclude Include="PlayerBotAggressive.h" />
+    <ClInclude Include="PlayerBotEnvironmentalist.h" />
+    <ClInclude Include="PlayerBotModerate.h" />
+    <ClInclude Include="PlayerHuman.h" />
     <ClInclude Include="ResourceBuyingDriver.h" />
     <ClInclude Include="BuildingStepDriver.h" />
     <ClInclude Include="drivers\AuctionStepDriver.h" />
@@ -103,9 +111,6 @@
     <ClInclude Include="PowerPlant.h" />
     <ClInclude Include="Resources.h" />
     <ClInclude Include="Step3Card.h" />
-    <ClInclude Include="StrategyAggressive.h" />
-    <ClInclude Include="StrategyEnv.h" />
-    <ClInclude Include="StrategyModerate.h" />
     <ClInclude Include="Subject.h" />
     <ClInclude Include="SummaryCard.h" />
     <ClInclude Include="TurnManager.h" />

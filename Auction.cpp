@@ -55,7 +55,7 @@ void Auction::startAuction() {
 
 				else {
 					currentAuction = choiceMapping.find(chosen)->second;
-					auctioneer->auction(currentAuction);
+					auctioneer->auction();
 					valid = true;
 				}
 			}

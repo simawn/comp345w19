@@ -21,8 +21,6 @@ private:
 	House* house;/**<The house pointer for the house management, colour and amounts.*/
 	SummaryCard sc;/**<The summary for the player*/
 	std::vector<Observer *> observers;/**<Observers for the player statistics*/
-	bool passAuction = false; /**Player passes on the auction*/
-	Cards* auctionPP = nullptr; /**The player puts this powerpoint in auction*/
 
 public:
 	/**Default constructor.*/
@@ -81,10 +79,13 @@ public:
 	void notifyObservers() override;
 	/**Find the weight between citites for cost*/
 	int findCityConnectingCost(City* city);
-	/*Player passes on the auction*/
-	void pass();
-	/*Player puts a pp to auction*/
-	void auction(Cards* pp);
+
+
+	virtual void pass() = 0;
+	virtual void auction() = 0;
+	virtual void buyResource() = 0;
+	virtual void buildCity() = 0;
+
 	/*Resets the values of auctions*/
 	void auctionReset();
 };

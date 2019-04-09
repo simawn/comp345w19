@@ -210,14 +210,5 @@
 		}
 	}
 
-	void Player::pass() {
-		this->passAuction = true;
-	}
-	void Player::auction(Cards* pp) {
-		this->auctionPP = pp;
-	}
-
 	void Player::auctionReset() {
-		this->passAuction = false;
-		this->auctionPP = nullptr;
 	}
