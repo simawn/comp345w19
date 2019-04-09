@@ -14,9 +14,10 @@ int PlayerHuman::auction() {
 	return -1;
 }
 
-int PlayerHuman::bidDecision(Cards * card, int currentBid)
-{
-	return 0;
+int PlayerHuman::bidDecision(Cards * card, int currentBid) {
+	int choice;
+	std::cin >> choice;
+	return choice;
 }
 
 void PlayerHuman::buyResource()

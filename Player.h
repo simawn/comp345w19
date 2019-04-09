@@ -14,9 +14,9 @@
 
 /**Class that represents a player, playable character in the game*/
 class Player: public Subject{
-protected:
-	//const static int DELAY = 500; /*Minimum break in ms before bot outputs its decision. Faking that the bot is thinking*/
-	//const static int MAX_OFFSET = 500; /*Maximum offset in ms for break. To add randomness*/
+protected: //DELAY and MAX_OFFSET are used by bot players
+	const int DELAY = 300; /*Minimum break in ms before bot outputs its decision. Faking that the bot is thinking*/
+	const int MAX_OFFSET = 200; /*Maximum additional offset in ms for break. To add randomness*/
 private:
 	std::vector<Resource *> resources;/**<The resources that a given player has.*/
 	std::vector<City *> cities;/**<The cities that a player owns.*/

@@ -112,7 +112,8 @@ void Auction::startAuction() {
 							std::cout << "Player " << bidder->getPlayerColour() << ", choose a bid amount greater than " << currentBid << ". (Type -1 to pass)" << std::endl;
 						}
 
-						std::cin >> bidAmount;
+						//std::cin >> bidAmount;
+						bidAmount = bidder->bidDecision(currentAuction, currentBid);
 
 						//The player wishes to pass. A player can pass only if they are not the auctioneer and bidder during the first rounds of bids or it is currently not the first round of bids
 						if (bidAmount == -1 && ((auctioneer != bidder && firstRoundOfBids) || !firstRoundOfBids) && this->auctioneers.size() != 1) {
