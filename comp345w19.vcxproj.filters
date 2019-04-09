@@ -287,9 +287,6 @@
     <ClInclude Include="HybridPowerPlant.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="EcologialPowerPlant.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="GarbagePowerPlant.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -304,6 +301,9 @@
     </ClInclude>
     <ClInclude Include="PlayerBot.h">
       <Filter>Header Files\Strategy</Filter>
+	</ClInclude>
+    <ClInclude Include="EcologicalPowerPlant.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
