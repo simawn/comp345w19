@@ -3,6 +3,8 @@
 #include "../Player.h"
 #include "../Resources.h"
 #include "../GameMap.h"
+#include "../GasPowerPlant.h"
+
 #include <vector>
 
 //Part 4 Phase 5
