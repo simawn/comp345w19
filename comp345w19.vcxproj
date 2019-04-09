@@ -20,7 +20,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Auction.cpp" />
+    <ClCompile Include="CardsDecorator.cpp" />
     <ClCompile Include="City.cpp" />
+    <ClCompile Include="CoalPowerPlant.cpp" />
     <ClCompile Include="Deck.cpp" />
     <ClCompile Include="drivers\AuctionStepDriver.cpp" />
     <ClCompile Include="drivers\BureaucracyStepDriver.cpp" />
@@ -38,11 +40,15 @@
     <ClCompile Include="drivers\ResourcesLoaderDriver.cpp" />
     <ClCompile Include="drivers\Tester.cpp" />
     <ClCompile Include="drivers\TurnManagerDriver.cpp" />
+    <ClCompile Include="EcologicalPowerPlant.cpp" />
     <ClCompile Include="GameMap.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="GarbagePowerPlant.cpp" />
+    <ClCompile Include="GasPowerPlant.cpp" />
     <ClCompile Include="House.cpp" />
     <ClCompile Include="GameMapCustomizer.cpp" />
+    <ClCompile Include="HybridPowerPlant.cpp" />
     <ClCompile Include="Marketplace.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
     </ClCompile>
@@ -57,12 +63,15 @@
     <ClCompile Include="Step3Card.cpp" />
     <ClCompile Include="SummaryCard.cpp" />
     <ClCompile Include="TurnManager.cpp" />
+    <ClCompile Include="UraniumPowerPlant.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Auction.h" />
     <ClInclude Include="Cards.h" />
+    <ClInclude Include="CardsDecorator.h" />
     <ClInclude Include="City.h" />
     <ClInclude Include="Coal.h" />
+    <ClInclude Include="CoalPowerPlant.h" />
     <ClInclude Include="Deck.h" />
     <ClInclude Include="drivers\BureaucracyStepDriver.h" />
     <ClInclude Include="drivers\CardCreationDriver.h" />
@@ -74,13 +83,17 @@
     <ClInclude Include="drivers\ResourceBuyingDriver.h" />
     <ClInclude Include="drivers\ResourcesLoaderDriver.h" />
     <ClInclude Include="drivers\TurnManagerDriver.h" />
+    <ClInclude Include="EcologialPowerPlant.h" />
     <ClInclude Include="GameMap.h">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
     </ClInclude>
     <ClInclude Include="Garbage.h" />
     <ClInclude Include="GameInstance.h" />
     <ClInclude Include="GameSetupDriver.h" />
+    <ClInclude Include="GarbagePowerPlant.h" />
+    <ClInclude Include="HybridPowerPlant.h" />
     <ClInclude Include="Observer.h" />
+    <ClInclude Include="GasPowerPlant.h" />
     <ClInclude Include="PlayerBotAggressive.h" />
     <ClInclude Include="PlayerBotEnvironmentalist.h" />
     <ClInclude Include="PlayerBotModerate.h" />
@@ -102,6 +115,7 @@
     <ClInclude Include="SummaryCard.h" />
     <ClInclude Include="TurnManager.h" />
     <ClInclude Include="Uranium.h" />
+    <ClInclude Include="UraniumPowerPlant.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>

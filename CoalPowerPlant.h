@@ -1,10 +1,9 @@
 #pragma once
-#include "Cards.h";
-class CardsDecorator :public Cards {
-protected: 
-	Cards *decoratedCard;
+#include "CardsDecorator.h"
+#include "Cards.h"
+class CoalPowerPlant :public CardsDecorator {
 public:
-	CardsDecorator(Cards * decoratedCard);
+	CoalPowerPlant(Cards * decoratedCards);
 	void print();
 	/**Get the cost of the given powerplant.*/
 	int getCost();
