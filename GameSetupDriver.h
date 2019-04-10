@@ -12,7 +12,7 @@ extern GameMap gameMap;
 extern 	vector<string> playing_districts;
 
 /**selesct the gamemap*/
-GameMap selectMap();
+GameMap* selectMap();
 /**Select teh starting distrcist that must be adjacent to be played in*/
 void setUpStartingArea();
 /**Get the total number of players playing*/
@@ -24,6 +24,6 @@ std::string setColors(vector<string> colorArr);
 /**Set up the players choices and return the vecotr of players*/
 vector<Player> setUpPlayers();
 /**Place all the resources on the map*/
-void placeResourcesOnMap();
+void placeResourcesOnMap(GameMap* gameMap);
 /**Print all the resources that are on the map*/
 void printResources();

@@ -13,6 +13,7 @@
 //#include "CityBuilding.h"
 #include "../PlayerHuman.h"
 #include  "../drivers/DecoratorDriver.h"
+#include "StrategyDriver.h"
 
 using namespace std;
 
@@ -191,10 +192,14 @@ void testDecorator() {
 	decoratorTest();
 }
 
+void testStrategy() {
+	StrategyDriver();
+}
+
 int main() {
 
 	/*A3*/
-	testAuction();
+	testStrategy();
 
 
 	testDecorator();

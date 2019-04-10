@@ -6,14 +6,20 @@
 #include "../PlayerBotEnvironmentalist.h"
 #include "../PlayerBotModerate.h"
 #include "../PlayerHuman.h"
+#include "../GameSetupDriver.h"
 
 void StrategyDriver() {
 	//Player setup
+
 	Player* pa = new PlayerHuman("(pa) RED - HUMAN");
 	Player* pb = new PlayerBotAggressive("(pb) BLUE - AGRESSIVE");
 	Player* pc = new PlayerBotModerate("(pc) GREEN - MODERATE");
 	Player* pd = new PlayerBotEnvironmentalist("(pd) YELLOW - ENVIRONMENTALIST");
+
 	std::vector<Player*> pv = {pa,pb,pc,pd};
+
+	//Map setup
+	GameMap* gameMap = selectMap();
 
 	//Marketplace setup
 	Deck* deck = new Deck();

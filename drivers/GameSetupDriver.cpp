@@ -1,8 +1,15 @@
-/* 
+
 //The new player.cpp breaks this...
 
 
 #include "../GameSetupDriver.h"
+#include "../Player.h"
+#include "../PlayerBot.h"
+#include "../PlayerBotAggressive.h"
+#include "../PlayerBotEnvironmentalist.h"
+#include "../PlayerBotModerate.h"
+#include "../PlayerHuman.h"
+
 #include <iostream>
 vector<Player> currentPlayers;//current players
 GameMap gameMap;//current gamemap
@@ -62,6 +69,8 @@ string setColors(vector<string> colorArr) {
 	return selectorHelper(colorArr);
 }
 
+/*
+New Player.cpp breaks this
 vector<Player> setUpPlayers() {
 	const int pc = getPlayerCount();
 	vector<Player> players;
@@ -69,37 +78,38 @@ vector<Player> setUpPlayers() {
 	vector<string> colorArr = getColorArray();
 	for (int i = 0; i < pc; ++i) {
 		std::string s = setColors(colorArr);
-		players.push_back(Player(s));
+		players.push_back(PlayerHuman(s));
 		auto itr = std::find(colorArr.begin(), colorArr.end(), s);
 		colorArr.erase(itr);
 	}
 	currentPlayers=players;
 	return players;
 }
+*/
 
-void placeResourcesOnMap(){
+void placeResourcesOnMap(GameMap* gameMap){
 	std::vector<Coal*> TotalCoal(24);
 	std::vector<Garbage*> TotalGarbage(24);
 	std::vector<Gas*> TotalGas(24);
 	std::vector<Uranium*> TotalUranium(12);
 	for (int i = 0; i < 8; i++) {
-		gameMap.addResource(i, 3, TotalCoal);
+		gameMap->addResource(i, 3, TotalCoal);
 	}
 	for (int i = 2; i < 8; i++) {
-		gameMap.addResource(i, 3, TotalGas);
+		gameMap->addResource(i, 3, TotalGas);
 	}
-	gameMap.addResource(6, 3, TotalGarbage);
-	gameMap.addResource(7, 3, TotalGarbage);
-	gameMap.addResource(13, 1, TotalUranium);
-	gameMap.addResource(15, 1, TotalUranium);
+	gameMap->addResource(6, 3, TotalGarbage);
+	gameMap->addResource(7, 3, TotalGarbage);
+	gameMap->addResource(13, 1, TotalUranium);
+	gameMap->addResource(15, 1, TotalUranium);
 }
 
-GameMap selectMap() {
-	GameMap * gm = new GameMap();
+GameMap* selectMap() {
+	GameMap* gm = new GameMap();
 	gm->loadMap();
 	gameMap = *gm;
-	placeResourcesOnMap();
-	return *gm;
+	placeResourcesOnMap(gm);
+	return gm;
 }
 
 void printResources() {
@@ -138,4 +148,3 @@ void setUpStartingArea() {
 		}
 	}
 }
-*/
