@@ -31,7 +31,9 @@
 		//TODO: dtor for all
 		Cards* PowerPlantCard11 = new PowerPlant(11, 2, 1, u);
 		Cards* PowerPlantCard12 = new PowerPlant(12, 2, 2, g, c);
-		Cards* PowerPlantCard13 = new PowerPlant(12, 1, 0);
+
+		Cards* PowerPlantCard13 = new PowerPlant(13, 1, 0); //Ecological on top
+
 		Cards* PowerPlantCard14 = new PowerPlant(14, 2, 2, ga);
 		Cards* PowerPlantCard15 = new PowerPlant(15, 3, 2, c);
 		Cards* PowerPlantCard16 = new PowerPlant(16, 3, 2, g);
@@ -65,16 +67,17 @@
 		Cards* PowerPlantCard50 = new PowerPlant(50, 6, 0);
 		//End cards to be shuffled
 
-		Cards *src[34] = {PowerPlantCard11,PowerPlantCard12,PowerPlantCard13,PowerPlantCard14,PowerPlantCard15,PowerPlantCard16,PowerPlantCard17,PowerPlantCard18,PowerPlantCard19,
+		Cards *src[33] = {PowerPlantCard11,PowerPlantCard12,PowerPlantCard14,PowerPlantCard15,PowerPlantCard16,PowerPlantCard17,PowerPlantCard18,PowerPlantCard19,
 PowerPlantCard20,PowerPlantCard21,PowerPlantCard22,PowerPlantCard23,PowerPlantCard24,PowerPlantCard25,PowerPlantCard26,PowerPlantCard27,PowerPlantCard28,PowerPlantCard29,
 PowerPlantCard30,PowerPlantCard31,PowerPlantCard32,PowerPlantCard33,PowerPlantCard34,PowerPlantCard35,PowerPlantCard36,PowerPlantCard37,PowerPlantCard38,PowerPlantCard39,
 PowerPlantCard40,PowerPlantCard42,PowerPlantCard44,PowerPlantCard46,PowerPlantCard50 };
 
 		Cards* step3Card = new Step3Card();
 
-		this->fill(src, 34);
+		this->fill(src, 33);
 		this->shuffle();
 		this->insert(step3Card);
+		this->push(PowerPlantCard13);
 
 		/* Messes things up if we delete here
 		for (Cards* a : src) delete a;

@@ -4,7 +4,7 @@
 
 class ResourceBuying {
 public:
-	ResourceBuying(std::vector<Player*> pv, GameMap* map);
+	ResourceBuying(std::vector<Player*> pv, GameMap* map, int turn);
 	~ResourceBuying();
 };
 

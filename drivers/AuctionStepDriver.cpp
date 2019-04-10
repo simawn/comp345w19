@@ -20,7 +20,7 @@ void testAuctionStep() {
 	Marketplace* market = new Marketplace(deck);
 
 	//Auction
-	Auction auction(pv, market);
+	Auction auction(pv, market, 1);
 
 	//Show players possessions
 	for (Player* player : pv) {

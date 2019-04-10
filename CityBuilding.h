@@ -3,5 +3,5 @@
 #include "GameMap.h"
 class CityBuilding {
 public:
-	CityBuilding(std::vector<Player*> pv, GameMap* map);
+	CityBuilding(std::vector<Player*> pv, GameMap* map, int turn);
 };

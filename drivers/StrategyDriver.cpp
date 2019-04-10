@@ -7,32 +7,50 @@
 #include "../PlayerBotModerate.h"
 #include "../PlayerHuman.h"
 #include "../GameSetupDriver.h"
+#include "../ResourceBuying.h"
+#include "../CityBuilding.h"
+#include "../TurnManager.h"
 
 void StrategyDriver() {
-	//Player setup
+	//Turn tracker
+	int turn = 1;
 
+	//Player setup - All aggressive for fun
 	Player* pa = new PlayerHuman("(pa) RED - HUMAN");
-	Player* pb = new PlayerBotAggressive("(pb) BLUE - AGRESSIVE");
-	Player* pc = new PlayerBotModerate("(pc) GREEN - MODERATE");
+	Player* pb = new PlayerBotEnvironmentalist("(pb) BLUE - AGRESSIVE");
+	Player* pc = new PlayerBotEnvironmentalist("(pc) GREEN - MODERATE");
 	Player* pd = new PlayerBotEnvironmentalist("(pd) YELLOW - ENVIRONMENTALIST");
 
-	std::vector<Player*> pv = {pa,pb,pc,pd};
+	std::vector<Player*> pv = { pa,pb,pc,pd };
 
-	//Map setup
+	//Map + resource setup
 	GameMap* gameMap = selectMap();
 
 	//Marketplace setup
 	Deck* deck = new Deck();
 	Marketplace* market = new Marketplace(deck);
 
-	//Auction
-	Auction auction(pv, market);
+	//Game starts
+	while (true) {
+		if (turn == 17) break; //Game ends on turn 17?
 
-	//Show players possessions
-	for (Player* player : pv) {
-		std::cout << std::endl;
-		player->printPlayerInfo();
-		std::cout << std::endl;
+		//Determine Turn Order - Phase 1
+		determineOrder(&pv, turn == 1 ? true : false);
+
+		//Auction - Phase 2
+		Auction auction(pv, market, turn);
+		showPlayersPossessions(pv);
+
+		//Buy resources - Phase 3
+		ResourceBuying(pv, gameMap, turn);
+		showPlayersPossessions(pv);
+
+		//Build cities - Phase 4
+		CityBuilding(pv, gameMap, turn);
+		showPlayersPossessions(pv);
+
+		//Increase turn
+		turn++;
 	}
 
 	//Deletes
@@ -42,4 +60,13 @@ void StrategyDriver() {
 	delete pd;
 	delete deck;
 	delete market;
+	delete gameMap;
+}
+
+void showPlayersPossessions(std::vector<Player*> pv) {
+	for (Player* player : pv) {
+		std::cout << std::endl;
+		player->printPlayerInfo();
+		std::cout << std::endl;
+	}
 }

@@ -3,7 +3,7 @@
 #include "Player.h"
 #include "GameMap.h"
 
-CityBuilding::CityBuilding(std::vector<Player*> pv, GameMap* gameMap) {
+CityBuilding::CityBuilding(std::vector<Player*> pv, GameMap* gameMap, int turn) {
 	std::string cityChosen = "";
 	for (int i = pv.size() - 1; i >= 0; i--) {
 		std::cout << "Player " << i + 1 << " 'turn \n";

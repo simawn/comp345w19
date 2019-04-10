@@ -84,10 +84,10 @@ public:
 	int findCityConnectingCost(City* city);
 
 
-	virtual int auctionDecision(Marketplace* marketplace) = 0;
+	virtual int auctionDecision(Marketplace* marketplace, int turn) = 0;
 	virtual int pass() = 0;
 	virtual int auction() = 0;
-	virtual int bidDecision(Cards* card, int currentBid) = 0;
+	virtual int bidDecision(Cards* card, int currentBid, int turn) = 0;
 	virtual void buyResource() = 0;
 	virtual void buildCity() = 0;
 

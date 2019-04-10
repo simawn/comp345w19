@@ -30,10 +30,12 @@ class Auction {
 	void printPotentialBidders();
 	/**Prints the list of potential auctioneers in the current auction*/
 	void printPotentialAuctioneers();
+	/**Tracks the current turn #*/
+	int turn;
 public:
 	/**Auction Constructor
 	@param players An array of the current players participating in the auction
 	@param marketplace A pointer to the current marketplace
 	*/
-	Auction(std::vector<Player*> players, Marketplace* marketplace);
+	Auction(std::vector<Player*> players, Marketplace* marketplace, int turn);
 };

@@ -85,6 +85,11 @@ bool GameMap::isCity(std::string cityName) {
 	return false;
 }
 
+std::vector<std::vector<Resource*>> GameMap::getResourceMarket() const
+{
+	return this->resourceMarket;
+}
+
 bool GameMap::checkMapValidity() {
 	//Using 'new' so we can access it outside of scope
 	std::set<std::string>* checked = new std::set<std::string>();

@@ -1,6 +1,6 @@
 #include "PlayerHuman.h"
 
-int PlayerHuman::auctionDecision(Marketplace * marketplace) {
+int PlayerHuman::auctionDecision(Marketplace * marketplace, int turn) {
 	int choice;
 	std::cin >> choice;
 	return choice;
@@ -14,7 +14,7 @@ int PlayerHuman::auction() {
 	return -1;
 }
 
-int PlayerHuman::bidDecision(Cards * card, int currentBid) {
+int PlayerHuman::bidDecision(Cards * card, int currentBid, int turn) {
 	int choice;
 	std::cin >> choice;
 	return choice;

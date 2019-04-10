@@ -6,7 +6,8 @@
 #include <unordered_map>
 #include <algorithm>	
 
-Auction::Auction(std::vector<Player*> players, Marketplace* marketplace) {
+Auction::Auction(std::vector<Player*> players, Marketplace* marketplace, int turn) {
+	this->turn = turn;
 	this->currentPlayers = this->auctioneers = this->bidders = this->nextBidders = players;
 	this->marketplace = marketplace;
 	this->updateCurrentMarket();
@@ -38,10 +39,14 @@ void Auction::startAuction() {
 			std::cout << "Player " << auctioneer->getPlayerColour() << ", choose a power plant for auction (Type -1 to pass): " << std::endl;
 			this->displayCurrentMarketPowerPlants();
 			this->marketplace->printFutureMarket();
-			//std::cin >> chosen;
-			chosen = auctioneer->auctionDecision(this->marketplace);
+//std::cin >> chosen;
+			chosen = auctioneer->auctionDecision(this->marketplace, this->turn);
 			//Pass
 			if (chosen == -1) {
+				if (this->turn == 1) {
+					std::cout << "Cannot skip auction on the first turn" << std::endl;
+					continue;
+				}
 				std::cout << "Player " << auctioneer->getPlayerColour() << " has passed on this auction." << std::endl;
 				auctionPass = true;
 				break;
@@ -112,8 +117,8 @@ void Auction::startAuction() {
 							std::cout << "Player " << bidder->getPlayerColour() << ", choose a bid amount greater than " << currentBid << ". (Type -1 to pass)" << std::endl;
 						}
 
-						//std::cin >> bidAmount;
-						bidAmount = bidder->bidDecision(currentAuction, currentBid);
+//std::cin >> bidAmount;
+						bidAmount = bidder->bidDecision(currentAuction, currentBid, auctioneer == bidder && firstRoundOfBids ? -1 : this->turn);
 
 						//The player wishes to pass. A player can pass only if they are not the auctioneer and bidder during the first rounds of bids or it is currently not the first round of bids
 						if (bidAmount == -1 && ((auctioneer != bidder && firstRoundOfBids) || !firstRoundOfBids) && this->auctioneers.size() != 1) {
@@ -147,7 +152,7 @@ void Auction::startAuction() {
 
 					//Only a single bidder is left => They win the auction. Needs to be down here since they have to enter a bid amount
 					if (this->nextBidders.size() == 1 && !pass) {
-						std::cout << "Player " << bidder->getPlayerColour() << " has won the auction for " << currentBid << std::endl;
+						std::cout << "Player " << bidder->getPlayerColour() << " has won the auc3tion for " << currentBid << std::endl;
 
 						bidder->buyPowerPlant((PowerPlant*)currentAuction, currentBid);
 						paid = true;

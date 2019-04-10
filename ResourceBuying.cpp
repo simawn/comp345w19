@@ -8,8 +8,7 @@
 #include "GameMap.h"
 #include <vector>
 
-//map needs to setup resource
-ResourceBuying::ResourceBuying(std::vector<Player*> pv, GameMap* map) {
+ResourceBuying::ResourceBuying(std::vector<Player*> pv, GameMap* map, int turn) {
 	std::cout << "Entering Phase 3 of the game" << std::endl;
 	int choice = -1;
 	int price = -1;
@@ -39,9 +38,16 @@ ResourceBuying::ResourceBuying(std::vector<Player*> pv, GameMap* map) {
 		coal = coal * 2;
 		garbage = garbage * 2;
 		gas = gas * 2;
-		std::cout << "Starting turn of player " << i + 1 << "\n";
+
+
+		std::cout << "Starting turn of player " << pv[i]->getPlayerColour() << "\n";
 		while (true) {
-			std::cout << "Player " << i + 1 << " maximum of " << coal << " coal " << " maximum of " << gas << " gas " << " maximum of " << uranium << " uranium " << " maximum of " << garbage << " garbage " << "\n";
+
+			std::cout << "\n";
+			map->printResourceMarket();
+			std::cout << "\n";
+
+			std::cout << "Player " << pv[i]->getPlayerColour() << " maximum of " << coal << " coal " << " maximum of " << gas << " gas " << " maximum of " << uranium << " uranium " << " maximum of " << garbage << " garbage " << "\n";
 
 			std::cout << "Please select your choice \n 1-Buy resources \n 2-Stop buying resources \n";
 //CIN resourceDecision()
@@ -104,14 +110,15 @@ ResourceBuying::ResourceBuying(std::vector<Player*> pv, GameMap* map) {
 			}
 
 		}
-		map->printResourceMarket();
 	}
 	for (int i = 0; i < pv.size();i++) {
 		pv[i]->printResources();
 		std::cout << "Player " << i+1 << " money: " << pv[i]->getPlayersMoney() << "\n";
 	}
 
-
+	std::cout << "\n";
+	map->printResourceMarket();
+	std::cout << "\n";
 }
 
 ResourceBuying::~ResourceBuying() {}

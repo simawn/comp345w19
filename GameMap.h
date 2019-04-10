@@ -131,4 +131,9 @@ public:
 	*Indicates if a valid city exits in GameMap
 	*/
 	bool isCity(std::string cityName);
+
+	/*
+	* Returns resourceMarket
+	*/
+	std::vector<std::vector<Resource*>> getResourceMarket() const;
 };
