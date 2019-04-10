@@ -191,6 +191,80 @@ void testDecorator() {
 	decoratorTest();
 }
 
+void testPlayerObserver() {
+	cout << "\n === START TESTING PLAYER DISPLAY === \n";
+	Player* pa = new PlayerHuman("RED");
+	Player* pb = new PlayerHuman("GREEN");
+	currentPlayers_.push_back(pa);
+	currentPlayers_.push_back(pb);
+
+	//attaching observers
+	PlayerDisplay Adisplay = PlayerDisplay(pa);
+	pa->attachObserver(&Adisplay);
+
+	PlayerDisplay Bdisplay = PlayerDisplay(pb);
+	pb->attachObserver(&Bdisplay);
+
+	Gas* g = new Gas(1);
+	Coal* c = new Coal(1);
+	Garbage* ga = new Garbage(1);
+	Uranium* u = new Uranium(1);
+	Cards* PowerPlantCard3 = new PowerPlant(3, 1, 2, g);
+	Cards* PowerPlantCard6 = new PowerPlant(6, 1, 1, ga);
+	Cards* PowerPlantCard8 = new PowerPlant(8, 2, 3, c);
+	City* c1 = new City("Montreal");
+	City* c2 = new City("Toronto");
+	City* c3 = new City("Ottawa");
+
+
+	//player a does things
+	cout << "RED buys a powerplant ";
+	pa->buyPowerPlant((PowerPlant*)PowerPlantCard3, 10);
+	system("pause");
+	cout << "RED buys a city ";
+	pa->buyCity(c1);
+	system("pause");
+	cout << "RED buys a city ";
+	pa->buyCity(c3);
+	system("pause");
+	cout << "RED buys a resource ";
+	pa->buyResources(g);
+	system("pause");
+
+	//Player b does things
+	cout << "GREEN buys a city ";
+	pb->buyCity(c2);
+	system("pause");
+	cout << "GREEN buys a powerplant ";
+	pb->buyPowerPlant((PowerPlant*)PowerPlantCard8, 8);
+	system("pause");
+	cout << "GREEN buys a powerplant ";
+	pb->buyPowerPlant((PowerPlant*)PowerPlantCard6, 7);
+	system("pause");
+	cout << "GREEN buys a reource ";
+	pb->buyResources(c);
+	system("pause");
+	cout << "GREEN buys a reource ";
+	pb->buyResources(c);
+
+	//removing observers
+	pa->removeObserver(&Adisplay);
+	pb->removeObserver(&Bdisplay);
+
+	currentPlayers_.pop_back();
+	currentPlayers_.pop_back();
+	delete pa;
+	delete pb;
+	delete PowerPlantCard3;
+	delete PowerPlantCard6;
+	delete PowerPlantCard8;
+	delete c1;
+	delete c2;
+	delete c3;
+	cout << "\n ===END TESTING PLAYER DISPLAY === \n";
+
+}
+
 int main() {
 
 	/*A2*/
@@ -213,6 +287,10 @@ int main() {
 	//testMarketplaceCreation();
 
 	testDecorator();
+	
+	/*Test Player Observers (PlayerDisplay class)*/
+	testPlayerObserver();
+	
 	system("pause");
 	return 0;
 }
