@@ -14,6 +14,7 @@
 #include "../PlayerHuman.h"
 #include  "../drivers/DecoratorDriver.h"
 #include "StrategyDriver.h"
+#include "PlayerDisplay.h"
 
 using namespace std;
 

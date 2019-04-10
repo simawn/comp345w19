@@ -37,6 +37,7 @@
       </ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="drivers\MarketPlaceDriver.cpp" />
+    <ClCompile Include="drivers\PlayerDisplay.cpp" />
     <ClCompile Include="drivers\ResourceBuyingDriver.cpp" />
     <ClCompile Include="drivers\ResourcesLoaderDriver.cpp" />
     <ClCompile Include="drivers\StrategyDriver.cpp" />
@@ -85,6 +86,7 @@
     <ClInclude Include="drivers\GameMapDriver.h" />
     <ClInclude Include="drivers\GameMapLoaderDriver.h" />
     <ClInclude Include="drivers\MarketPlaceDriver.h" />
+    <ClInclude Include="drivers\PlayerDisplay.h" />
     <ClInclude Include="drivers\ResourceBuyingDriver.h" />
     <ClInclude Include="drivers\ResourcesLoaderDriver.h" />
     <ClInclude Include="drivers\StrategyDriver.h" />

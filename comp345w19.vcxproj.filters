@@ -169,7 +169,10 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="drivers\StrategyDriver.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Drivers</Filter>
+    </ClCompile>
+    <ClCompile Include="drivers\PlayerDisplay.cpp">
+      <Filter>Source Files\Drivers</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -318,6 +321,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="drivers\StrategyDriver.h">
+      <Filter>Header Files\DriverHeads</Filter>
+    </ClInclude>
+    <ClInclude Include="drivers\PlayerDisplay.h">
       <Filter>Header Files\DriverHeads</Filter>
     </ClInclude>
   </ItemGroup>

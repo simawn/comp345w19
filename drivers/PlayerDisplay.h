@@ -1,10 +1,10 @@
 #pragma once
-#include "Observer.h"
+#include "../Observer.h"
 #include <vector>
 #include <string>
-#include "Player.h"
-#include "City.h"
-#include "PowerPlant.h"
+#include "../Player.h"
+#include "../City.h"
+#include "../PowerPlant.h"
 
 
 /*

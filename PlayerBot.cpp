@@ -22,7 +22,7 @@ int PlayerBot::pass() { return -1; }
 int PlayerBot::auction() { return -1; }
 
 int PlayerBot::bidDecision(Cards* card, int currentBid, int turn) {
-	std::cout << "In Player Bot" << std::endl;
+	//std::cout << "In Player Bot" << std::endl;
 	//Code below adds a delay (defined in Player.h) before output
 	std::this_thread::sleep_for(std::chrono::milliseconds(this->DELAY + std::rand() % this->MAX_OFFSET));
 	//If the bot has enough money, there's a 50% chance that it will bid +1 for the current card in auction
