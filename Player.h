@@ -88,7 +88,13 @@ public:
 	virtual int pass() = 0;
 	virtual int auction() = 0;
 	virtual int bidDecision(Cards* card, int currentBid, int turn) = 0;
-	virtual void buyResource() = 0;
+	
+	virtual int resourceDecision() = 0;
+	virtual std::string resourceType() = 0;
+	virtual int resourcePrice() = 0;
+	virtual int resourceAmount() = 0;
+
+
 	virtual void buildCity() = 0;
 
 	virtual ~Player();

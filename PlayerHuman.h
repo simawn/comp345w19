@@ -10,7 +10,12 @@ public:
 	int pass();
 	int auction();
 	int bidDecision(Cards* card, int currentBid, int turn);
-	void buyResource();
+	
+	int resourceDecision();
+	std::string resourceType();
+	int resourcePrice();
+	int resourceAmount();
+
 	void buildCity();
 
 	~PlayerHuman();

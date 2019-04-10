@@ -1,5 +1,6 @@
 #pragma once
 #include "Player.h"
+#include <string>
 
 /*
 This class contains the default behaviour of a bot, since not all of the behaviours have
@@ -17,7 +18,12 @@ public:
 	int pass();
 	int auction();
 	int bidDecision(Cards* card, int currentBid, int turn);
-	void buyResource();
+	
+	int resourceDecision();
+	std::string resourceType();
+	int resourcePrice();
+	int resourceAmount();
+	
 	void buildCity();
 	virtual ~PlayerBot();
 };

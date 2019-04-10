@@ -3,7 +3,7 @@
 #include <thread>
 
 int PlayerBot::auctionDecision(Marketplace* marketplace, int turn) {
-	std::cout << "In Player Bot" << std::endl;
+	//std::cout << "In Player Bot" << std::endl;
 	//Code below adds a delay (defined in Player.h) before output
 	std::this_thread::sleep_for(std::chrono::milliseconds(this->DELAY + std::rand() % this->MAX_OFFSET));
 	//If it is the first turn, bot will put the first powerplant in auction
@@ -35,8 +35,22 @@ int PlayerBot::bidDecision(Cards* card, int currentBid, int turn) {
 	return choice;
 }
 
-void PlayerBot::buyResource() {
+int PlayerBot::resourceDecision() {
+	return 2; //skips
+}
 
+std::string PlayerBot::resourceType() {
+	return "Coal";
+}
+
+int PlayerBot::resourcePrice()
+{
+	return 0;
+}
+
+int PlayerBot::resourceAmount()
+{
+	return 0;
 }
 
 void PlayerBot::buildCity() {

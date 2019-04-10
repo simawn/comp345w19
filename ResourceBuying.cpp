@@ -51,21 +51,24 @@ ResourceBuying::ResourceBuying(std::vector<Player*> pv, GameMap* map, int turn) 
 
 			std::cout << "Please select your choice \n 1-Buy resources \n 2-Stop buying resources \n";
 //CIN resourceDecision()
-			std::cin >> choice;
+//std::cin >> choice;
+			choice = pv[i]->resourceDecision();
 			if (choice == 2)
 				break;
 			if (choice != 1)
 				continue;
 			std::cout << "Input resource to buy \n";
 //CIN resourceType()
-			std::cin >> resource;
+//std::cin >> resource;
+			resource = pv[i]->resourceType();
 			if (resource != "Coal" && resource != "Gas" &&resource != "Uranium" &&resource != "Garbage") {
 				std::cout << "Invalid resource \n";
 				continue;
 			}
 			std::cout << "Input price to buy \n";
 //CIN resourcePrice()
-			std::cin >> price;
+//std::cin >> price;
+			price = pv[i]->resourcePrice();
 			if (price < 1 || price > 16) {
 				std::cout << "Invalid price \n";
 				continue;
@@ -73,7 +76,8 @@ ResourceBuying::ResourceBuying(std::vector<Player*> pv, GameMap* map, int turn) 
 			price = price - 1;
 			std::cout << "Input amount to buy \n";
 //CIN resourceAmount()
-			std::cin >> amount;
+//std::cin >> amount;
+			amount = pv[i]->resourceAmount();
 			if (resource == "Coal") {
 				if (coal >= amount && pv[i]->getPlayersMoney() >= price * amount)
 					coal = coal - map->buyResource(resource, price, amount, pv[i]);

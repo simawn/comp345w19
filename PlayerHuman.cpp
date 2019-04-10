@@ -20,8 +20,32 @@ int PlayerHuman::bidDecision(Cards * card, int currentBid, int turn) {
 	return choice;
 }
 
-void PlayerHuman::buyResource()
+int PlayerHuman::resourceDecision()
 {
+	int choice;
+	std::cin >> choice;
+	return choice;
+}
+
+std::string PlayerHuman::resourceType()
+{
+	std::string choice;
+	std::cin >> choice;
+	return choice;
+}
+
+int PlayerHuman::resourcePrice()
+{
+	int choice;
+	std::cin >> choice;
+	return choice;
+}
+
+int PlayerHuman::resourceAmount()
+{
+	int choice;
+	std::cin >> choice;
+	return choice;
 }
 
 void PlayerHuman::buildCity()
