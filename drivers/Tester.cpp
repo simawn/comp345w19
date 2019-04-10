@@ -12,6 +12,7 @@
 #include "AuctionStepDriver.h"
 #include "CityBuilding.h"
 #include "../PlayerHuman.h"
+#include  "../drivers/DecoratorDriver.h"
 
 using namespace std;
 
@@ -186,6 +187,9 @@ void testResourceBuying() {
 void testCityBuilding() {
 	Phase4();
 }
+void testDecorator() {
+	decoratorTest();
+}
 
 int main() {
 
@@ -196,7 +200,7 @@ int main() {
 
 	/*Part 2: Game play: main game loop Phase 1 and 2*/
 	//testTurnOrder();
-	testAuction();
+	//testAuction();
 
 	/*Part 3: Game play: main game loop Phase 3 and 4*/
 	//testResourceBuying();
@@ -208,6 +212,7 @@ int main() {
 	/*Other tests*/
 	//testMarketplaceCreation();
 
+	testDecorator();
 	system("pause");
 	return 0;
 }

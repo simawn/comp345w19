@@ -4,7 +4,7 @@ GasPowerPlant::GasPowerPlant(Cards * decoratedCards) :CardsDecorator(decoratedCa
 }
 void GasPowerPlant::print() {
 	CardsDecorator::print();
-	std::cout << " This powerplant is of a GasPowerPlant\n";
+	std::cout << " This powerplant is a GasPowerPlant\n";
 
 }
 int GasPowerPlant :: getCost() {

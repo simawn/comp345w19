@@ -162,6 +162,9 @@
     <ClCompile Include="PlayerBot.cpp">
       <Filter>Source Files\Strategy</Filter>
     </ClCompile>
+    <ClCompile Include="drivers\DecoratorDriver.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="House.h">
@@ -301,9 +304,12 @@
     </ClInclude>
     <ClInclude Include="PlayerBot.h">
       <Filter>Header Files\Strategy</Filter>
-	</ClInclude>
+    </ClInclude>
     <ClInclude Include="EcologicalPowerPlant.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="drivers\DecoratorDriver.h">
+      <Filter>Header Files\DriverHeads</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
