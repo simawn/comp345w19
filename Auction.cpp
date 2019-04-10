@@ -152,7 +152,7 @@ void Auction::startAuction() {
 
 					//Only a single bidder is left => They win the auction. Needs to be down here since they have to enter a bid amount
 					if (this->nextBidders.size() == 1 && !pass) {
-						std::cout << "Player " << bidder->getPlayerColour() << " has won the auc3tion for " << currentBid << std::endl;
+						std::cout << "Player " << bidder->getPlayerColour() << " has won the auction for " << currentBid << std::endl;
 
 						bidder->buyPowerPlant((PowerPlant*)currentAuction, currentBid);
 						paid = true;
