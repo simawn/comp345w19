@@ -22,12 +22,12 @@
     <ClCompile Include="Auction.cpp" />
     <ClCompile Include="CardsDecorator.cpp" />
     <ClCompile Include="City.cpp" />
+    <ClCompile Include="CityBuilding.cpp" />
     <ClCompile Include="CoalPowerPlant.cpp" />
     <ClCompile Include="Deck.cpp" />
     <ClCompile Include="drivers\AuctionStepDriver.cpp" />
     <ClCompile Include="drivers\BureaucracyStepDriver.cpp" />
     <ClCompile Include="drivers\CardCreationDriver.cpp" />
-    <ClCompile Include="drivers\CityBuilding.cpp" />
     <ClCompile Include="drivers\DecoratorDriver.cpp" />
     <ClCompile Include="drivers\GameDriver.cpp" />
     <ClCompile Include="drivers\GameMapDriver.cpp" />
@@ -39,6 +39,7 @@
     <ClCompile Include="drivers\MarketPlaceDriver.cpp" />
     <ClCompile Include="drivers\ResourceBuyingDriver.cpp" />
     <ClCompile Include="drivers\ResourcesLoaderDriver.cpp" />
+    <ClCompile Include="drivers\StrategyDriver.cpp" />
     <ClCompile Include="drivers\Tester.cpp" />
     <ClCompile Include="drivers\TurnManagerDriver.cpp" />
     <ClCompile Include="EcologicalPowerPlant.cpp" />
@@ -62,6 +63,7 @@
     <ClCompile Include="PlayerHuman.cpp" />
     <ClCompile Include="PowerPlant.cpp" />
     <ClCompile Include="GameInstance.cpp" />
+    <ClCompile Include="ResourceBuying.cpp" />
     <ClCompile Include="Step3Card.cpp" />
     <ClCompile Include="SummaryCard.cpp" />
     <ClCompile Include="TurnManager.cpp" />
@@ -72,12 +74,12 @@
     <ClInclude Include="Cards.h" />
     <ClInclude Include="CardsDecorator.h" />
     <ClInclude Include="City.h" />
+    <ClInclude Include="CityBuilding.h" />
     <ClInclude Include="Coal.h" />
     <ClInclude Include="CoalPowerPlant.h" />
     <ClInclude Include="Deck.h" />
     <ClInclude Include="drivers\BureaucracyStepDriver.h" />
     <ClInclude Include="drivers\CardCreationDriver.h" />
-    <ClInclude Include="drivers\CityBuilding.h" />
     <ClInclude Include="drivers\DecoratorDriver.h" />
     <ClInclude Include="drivers\GameDriver.h" />
     <ClInclude Include="drivers\GameMapDriver.h" />
@@ -85,6 +87,7 @@
     <ClInclude Include="drivers\MarketPlaceDriver.h" />
     <ClInclude Include="drivers\ResourceBuyingDriver.h" />
     <ClInclude Include="drivers\ResourcesLoaderDriver.h" />
+    <ClInclude Include="drivers\StrategyDriver.h" />
     <ClInclude Include="drivers\TurnManagerDriver.h" />
     <ClInclude Include="EcologicalPowerPlant.h" />
     <ClInclude Include="GameMap.h">
@@ -102,7 +105,7 @@
     <ClInclude Include="PlayerBotEnvironmentalist.h" />
     <ClInclude Include="PlayerBotModerate.h" />
     <ClInclude Include="PlayerHuman.h" />
-    <ClInclude Include="ResourceBuyingDriver.h" />
+    <ClInclude Include="ResourceBuying.h" />
     <ClInclude Include="BuildingStepDriver.h" />
     <ClInclude Include="drivers\AuctionStepDriver.h" />
     <ClInclude Include="House.h" />

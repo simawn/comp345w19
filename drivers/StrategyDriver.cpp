@@ -1,4 +1,4 @@
-#include "AuctionStepDriver.h"
+#include "StrategyDriver.h"
 #include "../Player.h"
 #include "../Marketplace.h"
 #include "../Auction.h"
@@ -7,7 +7,7 @@
 #include "../PlayerBotModerate.h"
 #include "../PlayerHuman.h"
 
-void testAuctionStep() {
+void StrategyDriver() {
 	//Player setup
 	Player* pa = new PlayerHuman("(pa) RED - HUMAN");
 	Player* pb = new PlayerBotAggressive("(pb) BLUE - AGRESSIVE");

@@ -108,9 +108,6 @@
     <ClCompile Include="drivers\BureaucracyStepDriver.cpp">
       <Filter>Source Files\Drivers\A2</Filter>
     </ClCompile>
-    <ClCompile Include="drivers\CityBuilding.cpp">
-      <Filter>Source Files\Drivers\A2</Filter>
-    </ClCompile>
     <ClCompile Include="GameInstance.cpp">
       <Filter>Source Files\Drivers\A2</Filter>
     </ClCompile>
@@ -163,6 +160,15 @@
       <Filter>Source Files\Strategy</Filter>
     </ClCompile>
     <ClCompile Include="drivers\DecoratorDriver.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ResourceBuying.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CityBuilding.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="drivers\StrategyDriver.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -251,9 +257,6 @@
     <ClInclude Include="drivers\TurnManagerDriver.h">
       <Filter>Header Files\DriverHeads</Filter>
     </ClInclude>
-    <ClInclude Include="ResourceBuyingDriver.h">
-      <Filter>Header Files\DriverHeads</Filter>
-    </ClInclude>
     <ClInclude Include="drivers\ResourceBuyingDriver.h">
       <Filter>Header Files\DriverHeads</Filter>
     </ClInclude>
@@ -261,9 +264,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="drivers\AuctionStepDriver.h">
-      <Filter>Header Files\DriverHeads</Filter>
-    </ClInclude>
-    <ClInclude Include="drivers\CityBuilding.h">
       <Filter>Header Files\DriverHeads</Filter>
     </ClInclude>
     <ClInclude Include="Subject.h">
@@ -309,6 +309,15 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="drivers\DecoratorDriver.h">
+      <Filter>Header Files\DriverHeads</Filter>
+    </ClInclude>
+    <ClInclude Include="ResourceBuying.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CityBuilding.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="drivers\StrategyDriver.h">
       <Filter>Header Files\DriverHeads</Filter>
     </ClInclude>
   </ItemGroup>

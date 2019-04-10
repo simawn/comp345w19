@@ -10,7 +10,7 @@
 #include "TurnManagerDriver.h"
 #include "ResourceBuyingDriver.h"
 #include "AuctionStepDriver.h"
-#include "CityBuilding.h"
+//#include "CityBuilding.h"
 #include "../PlayerHuman.h"
 #include  "../drivers/DecoratorDriver.h"
 
@@ -185,7 +185,7 @@ void testResourceBuying() {
 	Phase3();
 }
 void testCityBuilding() {
-	Phase4();
+	//Phase4();
 }
 void testDecorator() {
 	decoratorTest();
@@ -193,24 +193,9 @@ void testDecorator() {
 
 int main() {
 
-	/*A2*/
+	/*A3*/
+	testAuction();
 
-	/*Part 1: Game start*/
-	//testGameSetup();
-
-	/*Part 2: Game play: main game loop Phase 1 and 2*/
-	//testTurnOrder();
-	//testAuction();
-
-	/*Part 3: Game play: main game loop Phase 3 and 4*/
-	//testResourceBuying();
-	//testCityBuilding();
-
-	/*Part 4: Game play: main game loop Phase 5*/
-	//testBureaucracy();
-
-	/*Other tests*/
-	//testMarketplaceCreation();
 
 	testDecorator();
 	system("pause");
