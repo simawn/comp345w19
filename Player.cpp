@@ -107,7 +107,7 @@
 	bool Player::buyPowerPlant(PowerPlant * pp) {
 		if (money->removeMoney(pp->getCost())) {
 			powerplants.push_back(pp);
-			notifyObservers()
+			notifyObservers();
 			return true;
 		}
 		return false;

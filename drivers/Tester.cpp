@@ -274,13 +274,20 @@ void testPlayerObserver() {
 int main() {
 
 	/*A3*/
-	testStrategy();
 
+	//Part 1: Phase Observer
 
-	testDecorator();
-	
+	//Part 2: Game statistics Observer
 	/*Test Player Observers (PlayerDisplay class)*/
 	testPlayerObserver();
+
+	//Part 3: Player Strategy Pattern
+	testStrategy();
+
+	//Part 4: FreeDesign pattern choice implementation
+	testDecorator();
+	
+	
 	
 	system("pause");
 	return 0;
