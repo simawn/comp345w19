@@ -11,6 +11,11 @@ The other bots may override some of the default behaviours
 */
 
 class PlayerBot : virtual public Player {
+	/*Checks if the bot is done buying resources*/
+	bool doneBuyingResource = false;
+	std::string resourceTypeToBuy = "";
+	int resourcePriceToPay = 0;
+	int resourceAmountToBuy = 0;
 public:
 	PlayerBot() : Player() {};
 	PlayerBot(std::string colour) : Player(colour) {};
@@ -19,7 +24,7 @@ public:
 	int auction();
 	int bidDecision(Cards* card, int currentBid, int turn);
 	
-	int resourceDecision();
+	int resourceDecision(std::vector<std::vector<Resource*>> resourceMarket);
 	std::string resourceType();
 	int resourcePrice();
 	int resourceAmount();

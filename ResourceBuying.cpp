@@ -52,7 +52,7 @@ ResourceBuying::ResourceBuying(std::vector<Player*> pv, GameMap* map, int turn) 
 			std::cout << "Please select your choice \n 1-Buy resources \n 2-Stop buying resources \n";
 //CIN resourceDecision()
 //std::cin >> choice;
-			choice = pv[i]->resourceDecision();
+			choice = pv[i]->resourceDecision(map->getResourceMarket());
 			if (choice == 2)
 				break;
 			if (choice != 1)

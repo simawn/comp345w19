@@ -3,7 +3,7 @@
 #include <vector>
 
 class PlayerBotEnvironmentalist : public PlayerBot {
-	std::vector<int> cleanPP = { 13, 18, 22, 27, 33, 37, 44, 50 };
+	std::vector<int> cleanPP = { 5, 13, 18, 22, 27, 33, 37, 44, 50 };
 	//std::vector<int> cleanPP = { 5, 8, 13, 18, 22, 27, 33, 37, 44, 50 }; //Powerplant 5, 8 added for testing purposes
 public:
 	PlayerBotEnvironmentalist() : Player() {};

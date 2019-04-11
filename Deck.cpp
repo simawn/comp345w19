@@ -19,7 +19,12 @@
 
 		Cards* PowerPlantCard3 = new PowerPlant(3, 1, 2, g);
 		Cards* PowerPlantCard4 = new PowerPlant(4, 1, 2, c);
-		Cards* PowerPlantCard5 = new PowerPlant(5, 1, 2, g, c);
+
+		//Cards* PowerPlantCard5 = new PowerPlant(5, 1, 2, g, c);
+		//Changing deck for environmental testing
+
+		Cards* PowerPlantCard5 = new PowerPlant(5, 1, 0); //Ecological
+
 		Cards* PowerPlantCard6 = new PowerPlant(6, 1, 1, ga);
 		Cards* PowerPlantCard7 = new PowerPlant(7, 2, 3, g);
 		Cards* PowerPlantCard8 = new PowerPlant(8, 2, 3, c);

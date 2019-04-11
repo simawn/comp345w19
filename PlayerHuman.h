@@ -11,7 +11,7 @@ public:
 	int auction();
 	int bidDecision(Cards* card, int currentBid, int turn);
 	
-	int resourceDecision();
+	int resourceDecision(std::vector<std::vector<Resource*>> resourceMarket);
 	std::string resourceType();
 	int resourcePrice();
 	int resourceAmount();

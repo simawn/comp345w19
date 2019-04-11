@@ -20,7 +20,7 @@ int PlayerHuman::bidDecision(Cards * card, int currentBid, int turn) {
 	return choice;
 }
 
-int PlayerHuman::resourceDecision()
+int PlayerHuman::resourceDecision(std::vector<std::vector<Resource*>> resourceMarket)
 {
 	int choice;
 	std::cin >> choice;
