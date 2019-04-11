@@ -83,20 +83,25 @@ public:
 	/**Find the weight between citites for cost*/
 	int findCityConnectingCost(City* city);
 
+	/*The methods below will be implemented by PlayerBot and PlayerHuman*/
 
+	//During auction phase
 	virtual int auctionDecision(Marketplace* marketplace, int turn) = 0;
 	virtual int pass() = 0;
 	virtual int auction() = 0;
 	virtual int bidDecision(Marketplace* marketplace, Cards* card, int currentBid, int turn) = 0;
 	
+	//During resource buying phase
 	virtual int resourceDecision(std::vector<std::vector<Resource*>> resourceMarket) = 0;
 	virtual std::string resourceType() = 0;
 	virtual int resourcePrice() = 0;
 	virtual int resourceAmount() = 0;
 
+	//During city building phase
 	virtual int buildCityDecision(std::unordered_map<std::string, City*> cities) = 0;
 	virtual std::string selectCity() = 0;
 
+	//Destructor for Player
 	virtual ~Player();
 };
 #endif // !PLAYER_H
