@@ -107,6 +107,7 @@
 	bool Player::buyPowerPlant(PowerPlant * pp) {
 		if (money->removeMoney(pp->getCost())) {
 			powerplants.push_back(pp);
+			notifyObservers()
 			return true;
 		}
 		return false;
@@ -178,6 +179,7 @@
 	void Player::income(int a) {
 		money->setMoney(money->getMoney() + a);
 		std::cout << "you earned " << a << " Elektro. Total:" << money->getMoney() << "\n" << std::endl;
+		notifyObservers();
 	}
 
 	int Player::totalPlayerResourcesOfType(std::string res) {
