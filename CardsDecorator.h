@@ -4,7 +4,9 @@ class CardsDecorator :public Cards {
 protected: 
 	Cards *decoratedCard;
 public:
+	/**Decorator constructor */
 	CardsDecorator(Cards * decoratedCard);
+	/** display information of the given powerplant*/
 	void print();
 	/**Get the cost of the given powerplant.*/
 	int getCost();

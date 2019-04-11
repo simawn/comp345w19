@@ -4,6 +4,7 @@
 class EcologicalPowerPlant :public CardsDecorator {
 public:
 	EcologicalPowerPlant(Cards * decoratedCards);
+	/** display information of the given powerplant*/
 	void print();
 	/**Get the cost of the given powerplant.*/
 	int getCost();

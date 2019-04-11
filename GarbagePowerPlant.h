@@ -3,7 +3,9 @@
 #include "Cards.h"
 class GarbagePowerPlant :public CardsDecorator {
 public:
+	/** Constructor takes in an object of Card type*/
 	GarbagePowerPlant(Cards * decoratedCards);
+	/** display information of the given powerplant*/
 	void print();
 	/**Get the cost of the given powerplant.*/
 	int getCost();
