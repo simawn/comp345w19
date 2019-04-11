@@ -166,6 +166,8 @@
 		for (City* city : this->getCities()) {
 			std::cout << "   " << city->getName() << std::endl;
 		}
+
+		this->printResources();
 	}
 	
 	SummaryCard Player::getSummaryCard() {

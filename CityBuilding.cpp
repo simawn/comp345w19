@@ -6,15 +6,17 @@
 CityBuilding::CityBuilding(std::vector<Player*> pv, GameMap* gameMap, int turn) {
 	std::string cityChosen = "";
 	for (int i = pv.size() - 1; i >= 0; i--) {
-		std::cout << "Player " << i + 1 << " 'turn \n";
-		std::cout << "Player " << i + 1 << " current money: " << pv[i]->getPlayersMoney() << "\n";
+		std::cout << "Player " << pv[i]->getPlayerColour() << " 'turn \n";
+		std::cout << "Player " << pv[i]->getPlayerColour() << " current money: " << pv[i]->getPlayersMoney() << "\n";
 		int choice = -1;
 
 		while (true) {
 			if (pv[i]->getCities().size() == 0) {
 				std::cout << "1-Build first city \n2-End turn \n";
-//CIN buildCity()
-				std::cin >> choice;
+
+//CIN buildCityDecision()
+//std::cin >> choice;
+				choice = pv[i]->buildCityDecision(gameMap->getCities());
 
 				if (choice == 2) {
 					break;
@@ -22,13 +24,16 @@ CityBuilding::CityBuilding(std::vector<Player*> pv, GameMap* gameMap, int turn) 
 
 				if (choice == 1) {
 					std::cout << "Select city: \n";
+
 //CIN selectCity()
-					std::cin >> cityChosen;
+//std::cin >> cityChosen;
+					cityChosen = pv[i]->selectCity();
+
 					if (gameMap->isCity(cityChosen)) {
 						if (pv[i]->buyCity(gameMap->getCity(cityChosen))) {
 
 							std::cout << "Bought city sucessfully\n";
-							std::cout << "Player " << i + 1 << " current money: " << pv[i]->getPlayersMoney() << "\n";
+							std::cout << "Player " << pv[i]->getPlayerColour() << " current money: " << pv[i]->getPlayersMoney() << "\n";
 						}
 						else {
 							std::cout << "City buying conditions not met\n";
@@ -41,17 +46,19 @@ CityBuilding::CityBuilding(std::vector<Player*> pv, GameMap* gameMap, int turn) 
 			}
 
 			if (pv[i]->getCities().size() != 0) {
-				std::cout << "Player " << i + 1 << " current money: " << pv[i]->getPlayersMoney() << "\n";
+				std::cout << "Player " << pv[i]->getPlayerColour() << " current money: " << pv[i]->getPlayersMoney() << "\n";
 				std::cout << "1-Add adjacent city to network  \n2-End turn \n";
 //CIN buildCity()
-				std::cin >> choice;
+//std::cin >> choice;
+				choice = pv[i]->buildCityDecision(gameMap->getCities());
 				if (choice == 2) {
 					break;
 				}
 				if (choice == 1) {
 					std::cout << "Select city: \n";
 //CIN selectCity()
-					std::cin >> cityChosen;
+//std::cin >> cityChosen;
+					cityChosen = pv[i]->selectCity();
 					bool isSameCity = false;
 					if (gameMap->isCity(cityChosen)) {
 						for (City * a : pv[i]->getCities()) {
@@ -68,15 +75,15 @@ CityBuilding::CityBuilding(std::vector<Player*> pv, GameMap* gameMap, int turn) 
 								std::cout << "Bought adjacent city sucessfully \n";
 							}
 					}
-					std::cout << "Player " << i+1 << " current money: "<< pv[i]->getPlayersMoney() << "\n";
+					std::cout << "Player " << pv[i]->getPlayerColour() << " current money: "<< pv[i]->getPlayersMoney() << "\n";
 				}
 
 			}
 		}
 	}
 	for (int i = 0; i < pv.size();i++ ) {
-		std::cout<<"Player "<< i+1 << " money:" << pv[i]->getPlayersMoney() << "\n";
-		std::cout << "Player " << i + 1 << " has cities: ";
+		std::cout<<"Player "<< pv[i]->getPlayerColour() << " money:" << pv[i]->getPlayersMoney() << "\n";
+		std::cout << "Player " << pv[i]->getPlayerColour() << " has cities: ";
 
 		for (City* a: pv[i]->getCities()
 			 ) {

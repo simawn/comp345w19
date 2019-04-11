@@ -48,10 +48,16 @@ int PlayerHuman::resourceAmount()
 	return choice;
 }
 
-void PlayerHuman::buildCity()
+int PlayerHuman::buildCityDecision(std::unordered_map<std::string, City*> cities)
 {
+	int choice;
+	std::cin >> choice;
+	return choice;
 }
 
-PlayerHuman::~PlayerHuman()
+std::string PlayerHuman::selectCity()
 {
+	std::string choice;
+	std::cin >> choice;
+	return choice;
 }

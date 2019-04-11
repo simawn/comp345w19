@@ -1,5 +1,7 @@
 #pragma once
 #include "Player.h"
+#include "GameMap.h"
+
 class PlayerHuman :
 	public Player
 {
@@ -16,8 +18,9 @@ public:
 	int resourcePrice();
 	int resourceAmount();
 
-	void buildCity();
+	int buildCityDecision(std::unordered_map<std::string, City*> cities);
+	std::string selectCity();
 
-	~PlayerHuman();
+	~PlayerHuman() {};
 };
 

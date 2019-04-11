@@ -1,4 +1,5 @@
 #include "PlayerBot.h"
+#include "GameMap.h"
 #include <chrono>
 #include <thread>
 
@@ -158,8 +159,69 @@ int PlayerBot::resourceAmount() {
 	return this->resourceAmountToBuy;
 }
 
-void PlayerBot::buildCity() {
+int PlayerBot::buildCityDecision(std::unordered_map<std::string, City*> cities) {
+	//Done buying cities
+	if (this->doneBuyingCities) {
+		std::this_thread::sleep_for(std::chrono::milliseconds(this->DELAY + std::rand() % this->MAX_OFFSET));
+		std::cout << "2 - Done buying" << std::endl;
+		return 2;
+	}
+	else if (std::rand() % 100 < 10) {
+		std::this_thread::sleep_for(std::chrono::milliseconds(this->DELAY + std::rand() % this->MAX_OFFSET));
+		std::cout << "2 - RNG skip" << std::endl;
+		return 2;
+	}
+	//Checks if enough money to buy a city
+	else if (this->getPlayersMoney() < 10) {
+		std::this_thread::sleep_for(std::chrono::milliseconds(this->DELAY + std::rand() % this->MAX_OFFSET));
+		std::cout << "2 - Not enough money" << std::endl;
+		return 2;
+	}
+	//If no cities, choose one at random
+	else if (this->getCities().size() == 0) {
 
+		//Put all the keys into a vector for rng selection
+		std::vector<std::string> citiesString;
+		for (auto name : cities) {
+			citiesString.push_back(name.first);
+		}
+
+		this->cityToBuild = citiesString[std::rand() % citiesString.size()];
+
+
+		std::this_thread::sleep_for(std::chrono::milliseconds(this->DELAY + std::rand() % this->MAX_OFFSET));
+		std::cout << "1" << std::endl;
+		return 1;
+	}
+	//If have existing cities, build one next to it
+	else {
+		std::vector<City*> playerCities = this->getCities();
+		City* chosenCity = playerCities[std::rand() % playerCities.size()];
+		std::unordered_map<City*, int> chosenCityNeighbours = chosenCity->getNeighbours();
+		
+
+		//Put all the keys into vector for rng selection
+		std::vector<City*> neighbourToChoose;
+		for (auto city : chosenCityNeighbours) {
+			neighbourToChoose.push_back(city.first);
+		}
+
+		this->cityToBuild = neighbourToChoose[std::rand() % neighbourToChoose.size()]->getName();
+		
+		std::this_thread::sleep_for(std::chrono::milliseconds(this->DELAY + std::rand() % this->MAX_OFFSET));
+		std::cout << "1" << std::endl;
+		return 1;
+	}
+
+	return 2;
 }
 
-PlayerBot::~PlayerBot() {}
+std::string PlayerBot::selectCity() {
+	std::this_thread::sleep_for(std::chrono::milliseconds(this->DELAY + std::rand() % this->MAX_OFFSET));
+	std::cout << this->cityToBuild << std::endl;
+
+	//There's a 50% chance that they will stop buying more cities
+	this->doneBuyingCities = std::rand() % 100 < 50 ? true : false;
+
+	return this->cityToBuild;
+}

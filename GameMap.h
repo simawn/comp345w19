@@ -136,4 +136,9 @@ public:
 	* Returns resourceMarket
 	*/
 	std::vector<std::vector<Resource*>> getResourceMarket() const;
+
+	/*
+	* Returns the list of all cities
+	*/
+	std::unordered_map<std::string, City*> getCities() const;
 };

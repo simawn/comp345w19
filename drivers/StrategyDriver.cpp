@@ -16,7 +16,9 @@ void StrategyDriver() {
 	int turn = 1;
 
 	//Player setup - All aggressive for fun
-	Player* pa = new PlayerHuman("(pa) RED - HUMAN");
+
+	//Player* pa = new PlayerHuman("(pa) RED - HUMAN");
+	Player* pa = new PlayerBot("(pa) RED - DEFAULT"); //for fun
 	Player* pb = new PlayerBotAggressive("(pb) BLUE - AGRESSIVE");
 	Player* pc = new PlayerBotModerate("(pc) GREEN - MODERATE");
 	Player* pd = new PlayerBotEnvironmentalist("(pd) YELLOW - ENVIRONMENTALIST");
@@ -31,8 +33,8 @@ void StrategyDriver() {
 	Marketplace* market = new Marketplace(deck);
 
 	//Game starts
-	while (true) {
-		if (turn == 17) break; //Game ends on turn 17?
+	//while (true) {
+		//if (turn == 17) break; //Game ends on turn 17?
 
 		//Determine Turn Order - Phase 1
 		determineOrder(&pv, turn == 1 ? true : false);
@@ -49,9 +51,10 @@ void StrategyDriver() {
 		CityBuilding(pv, gameMap, turn);
 		showPlayersPossessions(pv);
 
+		//Need to reset all flags for resourceBuying and cityBuilding
 		//Increase turn
-		turn++;
-	}
+		//turn++;
+	//}
 
 	//Deletes
 	delete pa;

@@ -94,8 +94,8 @@ public:
 	virtual int resourcePrice() = 0;
 	virtual int resourceAmount() = 0;
 
-
-	virtual void buildCity() = 0;
+	virtual int buildCityDecision(std::unordered_map<std::string, City*> cities) = 0;
+	virtual std::string selectCity() = 0;
 
 	virtual ~Player();
 };

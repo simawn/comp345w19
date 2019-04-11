@@ -90,6 +90,11 @@ std::vector<std::vector<Resource*>> GameMap::getResourceMarket() const
 	return this->resourceMarket;
 }
 
+std::unordered_map<std::string, City*> GameMap::getCities() const
+{
+	return this->adjList;
+}
+
 bool GameMap::checkMapValidity() {
 	//Using 'new' so we can access it outside of scope
 	std::set<std::string>* checked = new std::set<std::string>();

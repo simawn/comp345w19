@@ -1,5 +1,6 @@
 #pragma once
 #include "Player.h"
+#include "GameMap.h"
 #include <string>
 
 /*
@@ -17,6 +18,8 @@ protected:
 	std::string resourceTypeToBuy = "";
 	int resourcePriceToPay = 0;
 	int resourceAmountToBuy = 0;
+	std::string cityToBuild = "";
+	bool doneBuyingCities = false;
 public:
 	PlayerBot() : Player() {};
 	PlayerBot(std::string colour) : Player(colour) {};
@@ -30,7 +33,9 @@ public:
 	int resourcePrice();
 	int resourceAmount();
 	
-	void buildCity();
-	virtual ~PlayerBot();
+	int buildCityDecision(std::unordered_map<std::string, City*> cities);
+	std::string selectCity();
+
+	virtual ~PlayerBot() {};
 };
 

@@ -2,6 +2,13 @@
 #include <chrono>
 #include <thread>
 
+/*
+Differences from PlayerBot:
+- 1% chance of skipping resource buying instead of 10%
+- Will always buy 2x the amount of resource
+*/
+
+
 int PlayerBotModerate::resourceDecision(std::vector<std::vector<Resource*>> resourceMarket) {
 
 
