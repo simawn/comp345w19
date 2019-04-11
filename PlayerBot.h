@@ -11,6 +11,7 @@ The other bots may override some of the default behaviours
 */
 
 class PlayerBot : virtual public Player {
+protected:
 	/*Checks if the bot is done buying resources*/
 	bool doneBuyingResource = false;
 	std::string resourceTypeToBuy = "";
