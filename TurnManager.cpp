@@ -11,8 +11,10 @@ bool compare(Player* a, Player* b) { //Custom sort function
 }
 
 void determineOrder(std::vector<Player*>* playersVector, bool gameBegin) {
+	std::default_random_engine rngEngine;
+	rngEngine.seed(time(0));
 	if (gameBegin) {
-		std::shuffle(std::begin(*playersVector), std::end(*playersVector), std::default_random_engine{});
+		std::shuffle(std::begin(*playersVector), std::end(*playersVector), rngEngine);
 	}
 	else {
 		std::sort(std::begin(*playersVector), std::end(*playersVector), compare);

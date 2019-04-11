@@ -87,7 +87,7 @@ public:
 	virtual int auctionDecision(Marketplace* marketplace, int turn) = 0;
 	virtual int pass() = 0;
 	virtual int auction() = 0;
-	virtual int bidDecision(Cards* card, int currentBid, int turn) = 0;
+	virtual int bidDecision(Marketplace* marketplace, Cards* card, int currentBid, int turn) = 0;
 	
 	virtual int resourceDecision(std::vector<std::vector<Resource*>> resourceMarket) = 0;
 	virtual std::string resourceType() = 0;

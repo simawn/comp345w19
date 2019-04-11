@@ -29,7 +29,7 @@ int PlayerBotEnvironmentalist::auctionDecision(Marketplace* marketplace, int tur
 	}
 }
 
-int PlayerBotEnvironmentalist::bidDecision(Cards* card, int currentBid, int turn) {
+int PlayerBotEnvironmentalist::bidDecision(Marketplace* marketplace, Cards* card, int currentBid, int turn) {
 	//Code below adds a delay (defined in Player.h) before output
 	std::this_thread::sleep_for(std::chrono::milliseconds(this->DELAY + std::rand() % this->MAX_OFFSET));
 
@@ -38,6 +38,15 @@ int PlayerBotEnvironmentalist::bidDecision(Cards* card, int currentBid, int turn
 	for (int num : this->cleanPP) {
 		if (card->getCost() == num) {
 			isCleanPP = true;
+			break;
+		}
+	}
+
+	//Checking if current market has a clean powerplant
+	bool hasCleanPP = false;
+	for (int num : this->cleanPP) {
+		if (marketplace->getCurrentMarket().count(num) > 0) {
+			hasCleanPP = true;
 			break;
 		}
 	}
@@ -56,10 +65,15 @@ int PlayerBotEnvironmentalist::bidDecision(Cards* card, int currentBid, int turn
 		std::cout << bidAmount << std::endl;
 		return bidAmount;
 	}
+	//If the bot sees a clean powerplant in the current market, skips all bids
+	else if (hasCleanPP) {
+		std::cout << "-1" << std::endl;
+		return -1;
+	}
 	//If not go back to default bot behaviour
 	else {
 		std::cout << "ENVIRONMENTAL: No clean PowerPlant found, going to normal behaviour" << std::endl;
-		return PlayerBot::bidDecision(card, currentBid, turn);
+		return PlayerBot::bidDecision(marketplace, card, currentBid, turn);
 	}
 	return 0;
 }

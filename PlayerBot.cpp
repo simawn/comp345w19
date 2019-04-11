@@ -21,7 +21,7 @@ int PlayerBot::pass() { return -1; }
 
 int PlayerBot::auction() { return -1; }
 
-int PlayerBot::bidDecision(Cards* card, int currentBid, int turn) {
+int PlayerBot::bidDecision(Marketplace* marketplace, Cards* card, int currentBid, int turn) {
 	//std::cout << "In Player Bot" << std::endl;
 	//Code below adds a delay (defined in Player.h) before output
 	std::this_thread::sleep_for(std::chrono::milliseconds(this->DELAY + std::rand() % this->MAX_OFFSET));
@@ -54,8 +54,15 @@ int PlayerBot::resourceDecision(std::vector<std::vector<Resource*>> resourceMark
 	
 	else {
 
-	//bot selects a PowerPlant of their choice for resource buying
-	Cards* targetPowerPlant = this->getPowerPlants()[std::rand() % this->getPowerPlants().size()];
+		//bot selects a PowerPlant of their choice for resource buying
+		Cards* targetPowerPlant = this->getPowerPlants()[std::rand() % this->getPowerPlants().size()];
+
+		//If green pp
+		if (targetPowerPlant->getResourceType().empty()) {
+			std::this_thread::sleep_for(std::chrono::milliseconds(this->DELAY + std::rand() % this->MAX_OFFSET));
+			std::cout << "2 - Green" << std::endl;
+			return 2;
+		}
 
 		//10% chance of skipping resource buying
 		if (std::rand() % 100 < 10) {

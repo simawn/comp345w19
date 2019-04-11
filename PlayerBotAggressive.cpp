@@ -16,7 +16,7 @@ int PlayerBotAggressive::auctionDecision(Marketplace* marketplace, int turn) {
 	return choice;
 }
 
-int PlayerBotAggressive::bidDecision(Cards * card, int currentBid, int turn) {
+int PlayerBotAggressive::bidDecision(Marketplace* marketplace, Cards * card, int currentBid, int turn) {
 	//Code below adds a delay (defined in Player.h) before output
 	std::this_thread::sleep_for(std::chrono::milliseconds(this->DELAY + std::rand() % this->MAX_OFFSET));
 	//If the bot has enough money, there's a 95% chance that it will bid +1 for the current card in auction
