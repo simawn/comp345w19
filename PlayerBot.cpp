@@ -39,7 +39,7 @@ int PlayerBot::resourceDecision(std::vector<std::vector<Resource*>> resourceMark
 
 	
 	//Bot will only go through the buying resource driver once
-	if (doneBuyingResource) {
+	if (this->doneBuyingResource) {
 		std::this_thread::sleep_for(std::chrono::milliseconds(this->DELAY + std::rand() % this->MAX_OFFSET));
 		std::cout << "2 - Done buying resources" << std::endl;
 		return 2;
@@ -130,11 +130,15 @@ int PlayerBot::resourceDecision(std::vector<std::vector<Resource*>> resourceMark
 		this->resourcePriceToPay = gridCost + 1; //+1 since gridCost is an index
 		this->resourceAmountToBuy = firstPPResourceCost;
 
+		this->doneBuyingResource = true;
+
 		std::this_thread::sleep_for(std::chrono::milliseconds(this->DELAY + std::rand() % this->MAX_OFFSET));
+		
+		std::cout << "1" << std::endl;
 		return 1;
 	}
 
-	doneBuyingResource = true;
+	this->doneBuyingResource = true;
 
 	return 2; //skips
 }
