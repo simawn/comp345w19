@@ -1,5 +1,7 @@
 var searchData=
 [
+  ['biddecision',['bidDecision',['../class_player.html#ae6d9b68117afac9aef7c4cffe7b9807c',1,'Player::bidDecision()'],['../class_player_bot.html#ae185d715ca05c680a2d845bda11217fe',1,'PlayerBot::bidDecision()'],['../class_player_bot_aggressive.html#a24755f0ca17d2ddbcc3779a4caf17e6d',1,'PlayerBotAggressive::bidDecision()'],['../class_player_bot_environmentalist.html#a7939eee8bbd962c54365a8e64ba03ff7',1,'PlayerBotEnvironmentalist::bidDecision()'],['../class_player_human.html#a64219431d36d2efbf4065c4b26309c47',1,'PlayerHuman::bidDecision()']]],
+  ['buildcitydecision',['buildCityDecision',['../class_player.html#a79fd65f910cebeaf2326e72da21e811e',1,'Player::buildCityDecision()'],['../class_player_bot.html#aa3448050d3c0c76c2657e124e4d6fe17',1,'PlayerBot::buildCityDecision()'],['../class_player_human.html#aec3405c226bb6f56c9c5553a1139abb6',1,'PlayerHuman::buildCityDecision()']]],
   ['buildingstepdriver_2eh',['BuildingStepDriver.h',['../_building_step_driver_8h.html',1,'']]],
   ['bureaucracystepdriver_2ecpp',['BureaucracyStepDriver.cpp',['../_bureaucracy_step_driver_8cpp.html',1,'']]],
   ['bureaucracystepdriver_2eh',['BureaucracyStepDriver.h',['../_bureaucracy_step_driver_8h.html',1,'']]],

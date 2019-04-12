@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['resource',['Resource',['../class_resource.html',1,'']]]
+  ['observer',['Observer',['../class_observer.html',1,'']]]
 ];

@@ -63,13 +63,28 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="class_player-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">Player Class Reference</div>  </div>
+<div class="title">Player Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="_player_8h_source.html">Player.h</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for Player:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="class_player.png" usemap="#Player_map" alt=""/>
+  <map id="Player_map" name="Player_map">
+<area href="class_subject.html" alt="Subject" shape="rect" coords="253,0,412,24"/>
+<area href="class_player_bot.html" alt="PlayerBot" shape="rect" coords="169,112,328,136"/>
+<area href="class_player_human.html" alt="PlayerHuman" shape="rect" coords="338,112,497,136"/>
+<area href="class_player_bot_aggressive.html" alt="PlayerBotAggressive" shape="rect" coords="0,168,159,192"/>
+<area href="class_player_bot_environmentalist.html" alt="PlayerBotEnvironmentalist" shape="rect" coords="169,168,328,192"/>
+<area href="class_player_bot_moderate.html" alt="PlayerBotModerate" shape="rect" coords="338,168,497,192"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -117,6 +132,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aaadd06c8e5b1caab4deede8deb0887da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7a557c7fa7b85eff320f46a422af9960"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_summary_card.html">SummaryCard</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a7a557c7fa7b85eff320f46a422af9960">getSummaryCard</a> ()</td></tr>
 <tr class="separator:a7a557c7fa7b85eff320f46a422af9960"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac934d8b5d2528520d2c5ffbc4e0c6766"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#ac934d8b5d2528520d2c5ffbc4e0c6766">setCurrentStep</a> (std::string <a class="el" href="_bureaucracy_step_driver_8h.html#abc16e65f240ed0c8f3e876e8732c0a33">step</a>)</td></tr>
+<tr class="separator:ac934d8b5d2528520d2c5ffbc4e0c6766"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a30e878f00908aac11f51b5613708a792"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a30e878f00908aac11f51b5613708a792">income</a> (int a)</td></tr>
 <tr class="separator:a30e878f00908aac11f51b5613708a792"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acfc86419a6fc1ee2e62e4851d5a570ba"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#acfc86419a6fc1ee2e62e4851d5a570ba">totalPlayerResourcesOfType</a> (std::string)</td></tr>
@@ -125,6 +142,41 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a494eb3302410025dcd0185847a3784f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5bfd6086230f287431ce239c1a380414"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a5bfd6086230f287431ce239c1a380414">findCityConnectingCost</a> (<a class="el" href="class_city.html">City</a> *city)</td></tr>
 <tr class="separator:a5bfd6086230f287431ce239c1a380414"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b439238343d88f1d9cb7cfa6e8fbc09"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a3b439238343d88f1d9cb7cfa6e8fbc09">attachObserver</a> (<a class="el" href="class_observer.html">Observer</a> *o) override</td></tr>
+<tr class="separator:a3b439238343d88f1d9cb7cfa6e8fbc09"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab362bbbe01440f692c1ede7f800786ef"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#ab362bbbe01440f692c1ede7f800786ef">notifyObservers</a> () override</td></tr>
+<tr class="separator:ab362bbbe01440f692c1ede7f800786ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91a83e8cfc3fe5280f1cc909a99b45b9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a91a83e8cfc3fe5280f1cc909a99b45b9">removeObserver</a> (<a class="el" href="class_observer.html">Observer</a> *o) override</td></tr>
+<tr class="separator:a91a83e8cfc3fe5280f1cc909a99b45b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a577b43fd49e2cdd83a5973998ed667ab"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a577b43fd49e2cdd83a5973998ed667ab">auctionDecision</a> (<a class="el" href="class_marketplace.html">Marketplace</a> *marketplace, int turn)=0</td></tr>
+<tr class="separator:a577b43fd49e2cdd83a5973998ed667ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf78ff5ee46823abef8ea4e40c10568c"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#adf78ff5ee46823abef8ea4e40c10568c">pass</a> ()=0</td></tr>
+<tr class="separator:adf78ff5ee46823abef8ea4e40c10568c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab51431ef7b976081feea30aceb0c24f4"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#ab51431ef7b976081feea30aceb0c24f4">auction</a> ()=0</td></tr>
+<tr class="separator:ab51431ef7b976081feea30aceb0c24f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6d9b68117afac9aef7c4cffe7b9807c"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#ae6d9b68117afac9aef7c4cffe7b9807c">bidDecision</a> (<a class="el" href="class_marketplace.html">Marketplace</a> *marketplace, <a class="el" href="class_cards.html">Cards</a> *card, int currentBid, int turn)=0</td></tr>
+<tr class="separator:ae6d9b68117afac9aef7c4cffe7b9807c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44b57ea8bd7637d416afaf4310e9643f"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a44b57ea8bd7637d416afaf4310e9643f">resourceDecision</a> (std::vector&lt; std::vector&lt; <a class="el" href="class_resource.html">Resource</a> * &gt;&gt; resourceMarket)=0</td></tr>
+<tr class="separator:a44b57ea8bd7637d416afaf4310e9643f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21b5058255f524bf0ee7ce31aa2631f2"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a21b5058255f524bf0ee7ce31aa2631f2">resourceType</a> ()=0</td></tr>
+<tr class="separator:a21b5058255f524bf0ee7ce31aa2631f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4342239ae9fd327906c83acae9277f5"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#ad4342239ae9fd327906c83acae9277f5">resourcePrice</a> ()=0</td></tr>
+<tr class="separator:ad4342239ae9fd327906c83acae9277f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a815ef1a6471e6168002b5c9caefc48f3"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a815ef1a6471e6168002b5c9caefc48f3">resourceAmount</a> ()=0</td></tr>
+<tr class="separator:a815ef1a6471e6168002b5c9caefc48f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79fd65f910cebeaf2326e72da21e811e"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a79fd65f910cebeaf2326e72da21e811e">buildCityDecision</a> (std::unordered_map&lt; std::string, <a class="el" href="class_city.html">City</a> * &gt; cities)=0</td></tr>
+<tr class="separator:a79fd65f910cebeaf2326e72da21e811e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb8fc234b4c4f6b8b7c2fee7128393d7"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#abb8fc234b4c4f6b8b7c2fee7128393d7">selectCity</a> ()=0</td></tr>
+<tr class="separator:abb8fc234b4c4f6b8b7c2fee7128393d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a749d2c00e1fe0f5c2746f7505a58c062"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a749d2c00e1fe0f5c2746f7505a58c062">~Player</a> ()</td></tr>
+<tr class="separator:a749d2c00e1fe0f5c2746f7505a58c062"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:a22494c1a5bd8a39835c3f0b4b9ead96d"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a22494c1a5bd8a39835c3f0b4b9ead96d">DELAY</a> = 300</td></tr>
+<tr class="separator:a22494c1a5bd8a39835c3f0b4b9ead96d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87d7cf759699b66627d7402f518d3463"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a87d7cf759699b66627d7402f518d3463">MAX_OFFSET</a> = 200</td></tr>
+<tr class="separator:a87d7cf759699b66627d7402f518d3463"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Class that represents a player, playable character in the game </p>
@@ -166,7 +218,203 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a749d2c00e1fe0f5c2746f7505a58c062"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a749d2c00e1fe0f5c2746f7505a58c062">&#9670;&nbsp;</a></span>~Player()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Player::~Player </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a3b439238343d88f1d9cb7cfa6e8fbc09"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b439238343d88f1d9cb7cfa6e8fbc09">&#9670;&nbsp;</a></span>attachObserver()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Player::attachObserver </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_observer.html">Observer</a> *&#160;</td>
+          <td class="paramname"><em>o</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="class_subject.html#a401324312eb364a9c7d99593892f80b2">Subject</a>.</p>
+
+</div>
+</div>
+<a id="ab51431ef7b976081feea30aceb0c24f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab51431ef7b976081feea30aceb0c24f4">&#9670;&nbsp;</a></span>auction()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int Player::auction </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="class_player_bot.html#a9d947393f5ec08f76324957598daaef5">PlayerBot</a>, and <a class="el" href="class_player_human.html#a32c78a8049e394dc63349c06efbc1dd2">PlayerHuman</a>.</p>
+
+</div>
+</div>
+<a id="a577b43fd49e2cdd83a5973998ed667ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a577b43fd49e2cdd83a5973998ed667ab">&#9670;&nbsp;</a></span>auctionDecision()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int Player::auctionDecision </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_marketplace.html">Marketplace</a> *&#160;</td>
+          <td class="paramname"><em>marketplace</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>turn</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="class_player_bot.html#a78eca22171ba9c957839b7bf0c15ea11">PlayerBot</a>, <a class="el" href="class_player_bot_environmentalist.html#a39f112e3d34811ffa8403dbfe7b80e52">PlayerBotEnvironmentalist</a>, <a class="el" href="class_player_human.html#a445c8a75db72c22adddd9920422a414e">PlayerHuman</a>, and <a class="el" href="class_player_bot_aggressive.html#aa926c035ba155b518585b1d192afc868">PlayerBotAggressive</a>.</p>
+
+</div>
+</div>
+<a id="ae6d9b68117afac9aef7c4cffe7b9807c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6d9b68117afac9aef7c4cffe7b9807c">&#9670;&nbsp;</a></span>bidDecision()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int Player::bidDecision </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_marketplace.html">Marketplace</a> *&#160;</td>
+          <td class="paramname"><em>marketplace</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_cards.html">Cards</a> *&#160;</td>
+          <td class="paramname"><em>card</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>currentBid</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>turn</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="class_player_bot.html#ae185d715ca05c680a2d845bda11217fe">PlayerBot</a>, <a class="el" href="class_player_human.html#a64219431d36d2efbf4065c4b26309c47">PlayerHuman</a>, <a class="el" href="class_player_bot_environmentalist.html#a7939eee8bbd962c54365a8e64ba03ff7">PlayerBotEnvironmentalist</a>, and <a class="el" href="class_player_bot_aggressive.html#a24755f0ca17d2ddbcc3779a4caf17e6d">PlayerBotAggressive</a>.</p>
+
+</div>
+</div>
+<a id="a79fd65f910cebeaf2326e72da21e811e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79fd65f910cebeaf2326e72da21e811e">&#9670;&nbsp;</a></span>buildCityDecision()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int Player::buildCityDecision </td>
+          <td>(</td>
+          <td class="paramtype">std::unordered_map&lt; std::string, <a class="el" href="class_city.html">City</a> * &gt;&#160;</td>
+          <td class="paramname"><em>cities</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="class_player_bot.html#aa3448050d3c0c76c2657e124e4d6fe17">PlayerBot</a>, and <a class="el" href="class_player_human.html#aec3405c226bb6f56c9c5553a1139abb6">PlayerHuman</a>.</p>
+
+</div>
+</div>
 <a id="ad32130409629b25b833740e092b8b1b6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad32130409629b25b833740e092b8b1b6">&#9670;&nbsp;</a></span>buyCity()</h2>
 
@@ -472,6 +720,33 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="ab362bbbe01440f692c1ede7f800786ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab362bbbe01440f692c1ede7f800786ef">&#9670;&nbsp;</a></span>notifyObservers()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Player::notifyObservers </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="class_subject.html#adb3adcf5638dda8dbd4b1d4356d02453">Subject</a>.</p>
+
+</div>
+</div>
 <a id="ac02dab58f19991921360be48ed79fafc"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac02dab58f19991921360be48ed79fafc">&#9670;&nbsp;</a></span>operator!=()</h2>
 
@@ -507,6 +782,33 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Operator overload for <a class="el" href="class_player.html">Player</a> comparison </p>
+
+</div>
+</div>
+<a id="adf78ff5ee46823abef8ea4e40c10568c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf78ff5ee46823abef8ea4e40c10568c">&#9670;&nbsp;</a></span>pass()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int Player::pass </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="class_player_bot.html#a282a670161c8cedf81b54bd613f1fd57">PlayerBot</a>, and <a class="el" href="class_player_human.html#ad78b44573780fc9c9853ac3794ec78f6">PlayerHuman</a>.</p>
 
 </div>
 </div>
@@ -584,6 +886,189 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a91a83e8cfc3fe5280f1cc909a99b45b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91a83e8cfc3fe5280f1cc909a99b45b9">&#9670;&nbsp;</a></span>removeObserver()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Player::removeObserver </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_observer.html">Observer</a> *&#160;</td>
+          <td class="paramname"><em>o</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="class_subject.html#ab3cf3afd13f9ac0cc0fd450ef8304e42">Subject</a>.</p>
+
+</div>
+</div>
+<a id="a815ef1a6471e6168002b5c9caefc48f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a815ef1a6471e6168002b5c9caefc48f3">&#9670;&nbsp;</a></span>resourceAmount()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int Player::resourceAmount </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="class_player_bot.html#a9476fd86cd090f4d5d9764f4c8d0d001">PlayerBot</a>, <a class="el" href="class_player_human.html#a06cebc6e456fc04052b6871df8589de8">PlayerHuman</a>, and <a class="el" href="class_player_bot_moderate.html#a63799f4d85cf1974c2ca337391c8082c">PlayerBotModerate</a>.</p>
+
+</div>
+</div>
+<a id="a44b57ea8bd7637d416afaf4310e9643f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44b57ea8bd7637d416afaf4310e9643f">&#9670;&nbsp;</a></span>resourceDecision()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int Player::resourceDecision </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; std::vector&lt; <a class="el" href="class_resource.html">Resource</a> * &gt;&gt;&#160;</td>
+          <td class="paramname"><em>resourceMarket</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="class_player_bot.html#a44c7d5a6e3ef9175374312edc320d63e">PlayerBot</a>, <a class="el" href="class_player_human.html#a259849473bc017a17c1dfd349321e2d9">PlayerHuman</a>, and <a class="el" href="class_player_bot_moderate.html#ae1028d7445ecdd1b5ec97e0918387dfb">PlayerBotModerate</a>.</p>
+
+</div>
+</div>
+<a id="ad4342239ae9fd327906c83acae9277f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4342239ae9fd327906c83acae9277f5">&#9670;&nbsp;</a></span>resourcePrice()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int Player::resourcePrice </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="class_player_bot.html#a5f67e047196f08d1db2da7ef87286723">PlayerBot</a>, <a class="el" href="class_player_human.html#a06e7fd058ebe12fa9b4aa59bdee8b0bd">PlayerHuman</a>, and <a class="el" href="class_player_bot_moderate.html#ac7a75339f4a0263a50054d74b3e3abfc">PlayerBotModerate</a>.</p>
+
+</div>
+</div>
+<a id="a21b5058255f524bf0ee7ce31aa2631f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21b5058255f524bf0ee7ce31aa2631f2">&#9670;&nbsp;</a></span>resourceType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::string Player::resourceType </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="class_player_bot.html#afb1cbf0d7b8826428a0f77870164e4ed">PlayerBot</a>, <a class="el" href="class_player_human.html#a624be7dfc9c6a0f26c47cb922ebf9804">PlayerHuman</a>, and <a class="el" href="class_player_bot_moderate.html#a586c12d9790b233184fbb30057e43106">PlayerBotModerate</a>.</p>
+
+</div>
+</div>
+<a id="abb8fc234b4c4f6b8b7c2fee7128393d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb8fc234b4c4f6b8b7c2fee7128393d7">&#9670;&nbsp;</a></span>selectCity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::string Player::selectCity </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="class_player_bot.html#a9034ee8b082061e53fc044d5b1efb0ee">PlayerBot</a>, and <a class="el" href="class_player_human.html#aac7ded8d22d5aad133ba2906fc52c65b">PlayerHuman</a>.</p>
+
+</div>
+</div>
+<a id="ac934d8b5d2528520d2c5ffbc4e0c6766"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac934d8b5d2528520d2c5ffbc4e0c6766">&#9670;&nbsp;</a></span>setCurrentStep()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Player::setCurrentStep </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>step</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set the current step </p>
+
+</div>
+</div>
 <a id="a748f01a5022dea8218e05102c4538f59"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a748f01a5022dea8218e05102c4538f59">&#9670;&nbsp;</a></span>setPlayerColor()</h2>
 
@@ -619,6 +1104,51 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Returns the amount a player has of a given resource </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a22494c1a5bd8a39835c3f0b4b9ead96d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22494c1a5bd8a39835c3f0b4b9ead96d">&#9670;&nbsp;</a></span>DELAY</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int Player::DELAY = 300</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a87d7cf759699b66627d7402f518d3463"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a87d7cf759699b66627d7402f518d3463">&#9670;&nbsp;</a></span>MAX_OFFSET</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int Player::MAX_OFFSET = 200</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>

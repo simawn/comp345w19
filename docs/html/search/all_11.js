@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['updatecardmarket',['updateCardMarket',['../_bureaucracy_step_driver_8cpp.html#a3ca6700e0e88b6ac39207ba9175617c8',1,'updateCardMarket():&#160;BureaucracyStepDriver.cpp'],['../_bureaucracy_step_driver_8h.html#a3ca6700e0e88b6ac39207ba9175617c8',1,'updateCardMarket():&#160;BureaucracyStepDriver.cpp']]],
-  ['uranium',['Uranium',['../class_uranium.html',1,'Uranium'],['../class_uranium.html#a794700b8655c53a42cce67b99d7ab962',1,'Uranium::Uranium()']]],
-  ['uranium_2eh',['Uranium.h',['../_uranium_8h.html',1,'']]]
+  ['totalplayerresourcesoftype',['totalPlayerResourcesOfType',['../class_player.html#acfc86419a6fc1ee2e62e4851d5a570ba',1,'Player']]],
+  ['traverse',['traverse',['../class_game_map.html#adbd1bc50e7b0549d15ed9f1da9d668ee',1,'GameMap']]],
+  ['turnmanager_2ecpp',['TurnManager.cpp',['../_turn_manager_8cpp.html',1,'']]],
+  ['turnmanager_2eh',['TurnManager.h',['../_turn_manager_8h.html',1,'']]]
 ];

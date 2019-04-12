@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['uranium',['Uranium',['../class_uranium.html',1,'']]]
+  ['resource',['Resource',['../class_resource.html',1,'']]],
+  ['resourcebuying',['ResourceBuying',['../class_resource_buying.html',1,'']]]
 ];

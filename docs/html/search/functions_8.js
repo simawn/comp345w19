@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['loadmap',['loadMap',['../class_game_map.html#a873ab457190957d1e89dddc944a62324',1,'GameMap']]],
-  ['loadregionadjacency',['loadRegionAdjacency',['../class_game_map.html#ab468680d627591d1d8718f25f6f45d49',1,'GameMap']]]
+  ['income',['income',['../class_player.html#a30e878f00908aac11f51b5613708a792',1,'Player']]],
+  ['insert',['insert',['../class_deck.html#aee2124c7d9064514ff529eb0b097980e',1,'Deck::insert()'],['../class_marketplace.html#a5539dfa0efc451212f00c6c22fce00fd',1,'Marketplace::insert()']]],
+  ['iscity',['isCity',['../class_game_map.html#a7c48aa7dfea305f15d33e2151262ffce',1,'GameMap']]],
+  ['isnewentry',['isNewEntry',['../_bureaucracy_step_driver_8cpp.html#a4725a5b46a47b2360958cae584214ec3',1,'isNewEntry(const std::vector&lt; int &gt; E, const int i):&#160;BureaucracyStepDriver.cpp'],['../_bureaucracy_step_driver_8h.html#a26c3d3967348f3e9688f537d3029236d',1,'isNewEntry(const std::vector&lt; int &gt;, const int):&#160;BureaucracyStepDriver.cpp']]]
 ];

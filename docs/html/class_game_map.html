@@ -111,6 +111,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aa66c88012562e034535fb2e9d6ca187a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7c48aa7dfea305f15d33e2151262ffce"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_map.html#a7c48aa7dfea305f15d33e2151262ffce">isCity</a> (std::string cityName)</td></tr>
 <tr class="separator:a7c48aa7dfea305f15d33e2151262ffce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd53aecaf1b967c762e173734f3459e7"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::vector&lt; <a class="el" href="class_resource.html">Resource</a> * &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_map.html#afd53aecaf1b967c762e173734f3459e7">getResourceMarket</a> () const</td></tr>
+<tr class="separator:afd53aecaf1b967c762e173734f3459e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a075bfe522cef306aa2c1ec9d6d87669b"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; std::string, <a class="el" href="class_city.html">City</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_map.html#a075bfe522cef306aa2c1ec9d6d87669b">getCities</a> () const</td></tr>
+<tr class="separator:a075bfe522cef306aa2c1ec9d6d87669b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Class that creates the game map </p>
@@ -481,6 +485,23 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a075bfe522cef306aa2c1ec9d6d87669b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a075bfe522cef306aa2c1ec9d6d87669b">&#9670;&nbsp;</a></span>getCities()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unordered_map&lt; std::string, <a class="el" href="class_city.html">City</a> * &gt; GameMap::getCities </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a70c22b1b5a63d4cabe5200c49632f417"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a70c22b1b5a63d4cabe5200c49632f417">&#9670;&nbsp;</a></span>getCity()</h2>
 
@@ -497,6 +518,23 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Searches for a <a class="el" href="class_city.html">City</a> object that matches the name </p><dl class="section return"><dt>Returns</dt><dd>A pointer to a <a class="el" href="class_city.html">City</a> object </dd></dl>
+
+</div>
+</div>
+<a id="afd53aecaf1b967c762e173734f3459e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd53aecaf1b967c762e173734f3459e7">&#9670;&nbsp;</a></span>getResourceMarket()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; std::vector&lt; <a class="el" href="class_resource.html">Resource</a> * &gt; &gt; GameMap::getResourceMarket </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>
