@@ -270,13 +270,32 @@ void testPlayerObserver() {
 	cout << "\n ===END TESTING PLAYER DISPLAY === \n";
 
 }
+void testGameObserver() {
+	Player* pa = new PlayerHuman("BLUE");
+	Player* pb = new PlayerHuman("YELLOW");
+	currentPlayers_.push_back(pa);
+	currentPlayers_.push_back(pb);
+	pa->buyPowerPlant(new PowerPlant(1, 1,1, &Coal(1)));
+	pb->buyPowerPlant(new PowerPlant(2, 2, 2, &Gas(2)));
+	pa->buyResources(&Coal(1));
+	pb->buyResources(&Gas(2));
+	pb->buyResources(&Gas(2));
+	pa->buyCity(new City("Dusseldorf"));
+	pb->buyCity(new City("Berlin"));
+	doBureaucracy();
+	pa->setCurrentStep("2");
+	pb->setCurrentStep("2");
+	cout << "TESTING CHANGING STEP" << endl;
+	pa->buyPowerPlant(new PowerPlant(5, 2, 1, &Coal(1)));
+	pb->buyPowerPlant(new PowerPlant(6,2, 1, &Gas(2)));
+}
 
 int main() {
 
 	/*A3*/
 
 	//Part 1: Phase Observer
-	//OBSERVES PHASES IN THE GAME
+	testGameObserver();
 	//Part 2: Game statistics Observer
 	/*Test Player Observers (PlayerDisplay class)*/
 	testPlayerObserver();
