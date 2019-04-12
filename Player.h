@@ -11,6 +11,7 @@
 #include "Subject.h"
 #include "Cards.h"
 #include "Marketplace.h"
+#include "PhaseObserver.h"
 
 /**Class that represents a player, playable character in the game*/
 class Player: public Subject{
@@ -24,7 +25,11 @@ private:
 	Money* money;/**<The money pointer for money management.*/
 	House* house;/**<The house pointer for the house management, colour and amounts.*/
 	SummaryCard sc;/**<The summary for the player*/
-	std::vector<Observer *> observers;/**<Observers for the player statistics*/
+	std::vector<Observer *> observers;
+	//PhaseObserver phaseObserver;
+	/**notify observer for the phase*/
+	void notifyObserver(std::string step, std::string phase, std::string action);
+
 public:
 	/**Default constructor.*/
 	Player(); //Added to prevent City.cpp errors
@@ -77,14 +82,13 @@ public:
 	int totalPlayerResourcesOfType(std::string);
 	/**prints the resources the player has available*/
 	void printResources();
-	void attachObserver(Observer * o) override;
-	void removeObserver(Observer * o) override;
-	void notifyObservers() override;
-	/**Find the weight between citites for cost*/
+/**Find the weight between citites for cost*/
 	int findCityConnectingCost(City* city);
 
 	/*The methods below will be implemented by PlayerBot and PlayerHuman*/
-
+	 void attachObserver(Observer* o) override;
+	 void notifyObservers() override;
+	 void removeObserver(Observer* o) override;
 	//During auction phase
 	virtual int auctionDecision(Marketplace* marketplace, int turn) = 0;
 	virtual int pass() = 0;

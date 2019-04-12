@@ -65,6 +65,7 @@
     <ClCompile Include="PowerPlant.cpp" />
     <ClCompile Include="GameInstance.cpp" />
     <ClCompile Include="ResourceBuying.cpp" />
+    <ClCompile Include="PhaseObserver.cpp" />
     <ClCompile Include="Step3Card.cpp" />
     <ClCompile Include="SummaryCard.cpp" />
     <ClCompile Include="TurnManager.cpp" />
@@ -102,6 +103,7 @@
     <ClInclude Include="HybridPowerPlant.h" />
     <ClInclude Include="Observer.h" />
     <ClInclude Include="GasPowerPlant.h" />
+    <ClInclude Include="PhaseObserver.h" />
     <ClInclude Include="PlayerBot.h" />
     <ClInclude Include="PlayerBotAggressive.h" />
     <ClInclude Include="PlayerBotEnvironmentalist.h" />

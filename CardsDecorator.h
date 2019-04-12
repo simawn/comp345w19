@@ -1,6 +1,8 @@
 #pragma once
+
 #include "Cards.h";
-class CardsDecorator :public Cards {
+
+class CardsDecorator : public Cards {
 protected: 
 	Cards *decoratedCard;
 public:

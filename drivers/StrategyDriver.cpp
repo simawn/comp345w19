@@ -10,6 +10,7 @@
 #include "../ResourceBuying.h"
 #include "../CityBuilding.h"
 #include "../TurnManager.h"
+#include "../PhaseObserver.h"
 
 void StrategyDriver() {
 	//Turn tracker
@@ -31,7 +32,7 @@ void StrategyDriver() {
 	//Marketplace setup
 	Deck* deck = new Deck();
 	Marketplace* market = new Marketplace(deck);
-
+	PhaseObserver phaseObserver;
 	//Game starts
 	//while (true) {
 		//if (turn == 17) break; //Game ends on turn 17?
@@ -40,6 +41,7 @@ void StrategyDriver() {
 		determineOrder(&pv, turn == 1 ? true : false);
 
 		//Auction - Phase 2
+		
 		Auction auction(pv, market, turn);
 		showPlayersPossessions(pv);
 

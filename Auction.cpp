@@ -12,6 +12,7 @@ Auction::Auction(std::vector<Player*> players, Marketplace* marketplace, int tur
 	this->marketplace = marketplace;
 	this->updateCurrentMarket();
 	this->startAuction();
+
 }
 
 void Auction::startAuction() {

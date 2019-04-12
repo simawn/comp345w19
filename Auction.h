@@ -3,7 +3,8 @@
 #include "Marketplace.h"
 #include <vector>
 
-class Auction {
+class Auction{
+
 	/**An array of the current players in the game*/
 	std::vector<Player*> currentPlayers;
 	/**An array of the current auctioneers. Updates as auction goes on*/
@@ -32,6 +33,7 @@ class Auction {
 	void printPotentialAuctioneers();
 	/**Tracks the current turn #*/
 	int turn;
+
 public:
 	/**Auction Constructor
 	@param players An array of the current players participating in the auction
