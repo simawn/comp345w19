@@ -26,9 +26,10 @@ private:
 	House* house;/**<The house pointer for the house management, colour and amounts.*/
 	SummaryCard sc;/**<The summary for the player*/
 	std::vector<Observer *> observers;
-	//PhaseObserver phaseObserver;
+	std::string currentStep;/**<Says what the current step is*/
+	PhaseObserver pObs;/**<The phase observer*/
 	/**notify observer for the phase*/
-	void notifyObserver(std::string step, std::string phase, std::string action);
+	void notifyObserver(std::string phase, std::string action);
 
 public:
 	/**Default constructor.*/
@@ -75,7 +76,8 @@ public:
 	void printPlayerInfo();
 	/**Get the summary card for the given player*/
 	SummaryCard getSummaryCard();
-
+	/**Set the current step*/
+	void setCurrentStep(std::string step);
 	/**Pays the player*/
 	void income(int a);
 	/**Returns the amount a player has of a given resource*/

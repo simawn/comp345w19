@@ -276,7 +276,7 @@ int main() {
 	/*A3*/
 
 	//Part 1: Phase Observer
-
+	//OBSERVES PHASES IN THE GAME
 	//Part 2: Game statistics Observer
 	/*Test Player Observers (PlayerDisplay class)*/
 	testPlayerObserver();

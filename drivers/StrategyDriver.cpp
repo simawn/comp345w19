@@ -23,7 +23,7 @@ void StrategyDriver() {
 	Player* pb = new PlayerBotAggressive("(pb) BLUE - AGRESSIVE");
 	Player* pc = new PlayerBotModerate("(pc) GREEN - MODERATE");
 	Player* pd = new PlayerBotEnvironmentalist("(pd) YELLOW - ENVIRONMENTALIST");
-
+	
 	std::vector<Player*> pv = { pa,pb,pc,pd };
 
 	//Map + resource setup

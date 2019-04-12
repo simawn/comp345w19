@@ -3,11 +3,13 @@
 #include <string>
 
 	Player::Player(){
+		currentStep = "1";
 		money = new Money();
 		sc = SummaryCard();
 	}
 	
 	Player::Player(std::string c){
+		currentStep = "1";
 		house = new House(c);
 		money = new Money();
 		sc = SummaryCard();
@@ -53,7 +55,7 @@
 			}
 			
 			std::cout <<"\n Money after buying: " << this->getPlayersMoney() <<"\n";
-			notifyObserver("1","3","Buying resource");
+			notifyObserver("3","Buying a Resource");
 			return true;
 		}
 		return false;
@@ -77,7 +79,7 @@
 	bool Player::buyCity(City * city) {
 		if (money->removeMoney(city->getValue())) {
 			cities.push_back(city);
-			notifyObserver("1", "4", "Buying city");
+			notifyObserver("4", "Buying a City");
 			return true;
 		}
 		return false;
@@ -107,7 +109,7 @@
 	bool Player::buyPowerPlant(PowerPlant * pp) {
 		if (money->removeMoney(pp->getCost())) {
 			powerplants.push_back(pp);
-			notifyObserver("1", "2", "Buying a Powerplant");
+			notifyObserver("2", "Buying a Powerplant");
 			return true;
 		}
 		return false;
@@ -116,7 +118,7 @@
 	bool Player::buyPowerPlant(PowerPlant * pp, int cost) {
 		if (money->removeMoney(cost)) {
 			powerplants.push_back(pp);
-			notifyObserver("1", "2", "Buying a Powerplant");
+			notifyObserver( "2", "Buying a Powerplant");
 			return true;
 		}
 		return false;
@@ -179,7 +181,7 @@
 	void Player::income(int a) {
 		money->setMoney(money->getMoney() + a);
 		std::cout << "you earned " << a << " Elektro. Total:" << money->getMoney() << "\n" << std::endl;
-		notifyObserver("1","5","Burocracy Money Earned");
+		notifyObserver("5","Bureaucracy Money Earned");
 	}
 
 	int Player::totalPlayerResourcesOfType(std::string res) {
@@ -191,7 +193,9 @@
 		}
 		return total;
 	}
-
+	void Player::setCurrentStep(std::string step) {
+		currentStep = step;
+	}
 	void Player::printResources() {
 		std::cout << "::" << getPlayerColour() << "'s Resources::\n"
 			<< "Coal: [" << totalPlayerResourcesOfType("Coal")
@@ -200,9 +204,8 @@
 			<< "], Uranium: [" << totalPlayerResourcesOfType("Uranium") << "]" << std::endl;
 	}
 	
-	void Player::notifyObserver(std::string step, std::string phase,std::string action) {
-		PhaseObserver p;
-		p.notify(this->getPlayerColour(),step,phase,action );
+	void Player::notifyObserver(std::string phase,std::string action) {
+		pObs.notify(this->getPlayerColour(),currentStep,phase,action );
 	}
 	void Player::attachObserver(Observer* o) {
 		observers.push_back(o);
